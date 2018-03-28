@@ -1,37 +1,31 @@
-## Welcome to GitHub Pages
+## 欢迎来到12306fast的官方git地址
 
-You can use the [editor on GitHub](https://github.com/sid2656/sid2656.github.io/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+当前12306fast官方地址使用github进行发布和维护，均为静态页面；数据不会实时更新。
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### 软件介绍
 
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+根据一票难求的现状，我们团队历时一个月时间，创建了12306快速抢票刷票软件。让每个人都有一张回家的车票!
 
 ```markdown
-Syntax highlighted code block
+12306fast优点
 
-# Header 1
-## Header 2
-### Header 3
+1. 账号通用
+	为实现在线购买火车票，本软件需要登录您在12306的账户信息。方便模拟用户的车票查询和自助下单功能。
 
-- Bulleted
-- List
+2. 简单实用
+	操作步骤简单：
+		1.登录12306账号；
+		2.选择出发地目的地；
+		3.选取想要购买的车次；
+		4.在线进行座位的预选功能；
+		5.开启抢票刷票模式
 
-1. Numbered
-2. List
+3. 云识别
+	后续会为VIP用户，提供验证码云识别功能，此功能目前正在研发过程中
 
-**Bold** and _Italic_ and `Code` text
 
-[Link](url) and ![Image](src)
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+### 支持服务
 
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/sid2656/sid2656.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+如果有任何问题，可以右键至：fast12306@126.com或者apesay@qq.com
