@@ -28,4 +28,4 @@
 
 ### 支持服务
 
-如果有任何问题，可以右键至：fast12306@126.com或者apesay@qq.com
+如果有任何问题，可以mail至：fast12306@126.com或者apesay@qq.com
