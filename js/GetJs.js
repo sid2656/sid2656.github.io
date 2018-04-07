@@ -2109,13 +2109,23 @@
                         h = "";
                         for (m = 0; m <
                         q.length; m++) h = 0 == m ? h + q[m].value : h + "x" + q[m].value;
+                        console.log("l:"+l);
                         k.push(new p("storeDb", l));
+                        console.log("n:"+n);
                         k.push(new p("srcScreenSize", n));
+                        console.log("h:"+h);
                         k.push(new p("scrAvailSize", h));
+                        console.log("d:"+d);
                         "" != d && k.push(new p("localCode", nb(d)));
+                        console.log("nb:"+nb(d));
+                        console.log("a:"+a);
+                        console.log("e:"+e);
+                        console.log("k:"+k);
                         e = c.hashAlg(k, a, e);
                         a = e.key;
+                        console.log("a:"+a);
                         e = e.value;
+                        console.log("e:"+e);
                         a += "\x26timestamp\x3d" + (new Date).getTime();
                         Za.getJSON("/otn/HttpZF/logdevice" + ("?algID\x3dBgKBsMtJg3\x26hashCode\x3d" + e + a), null, function (a) {
                             var b = JSON.parse(a);
@@ -2191,6 +2201,7 @@
             e = d.length;
             f = 0 == e % 3 ? parseInt(e / 3) : parseInt(e / 3) + 1;
             3 > e ? a = d : (a = d.substring(0, 1 * f), c = d.substring(1 * f, 2 * f), d = d.substring(2 * f, e), a = c + d + a);
+            console.log("key a:"+a);
             a = R.SHA256(a).toString(R.enc.Base64);
             c = a.length;
             d = "";
@@ -2245,8 +2256,14 @@
             return new p("plugins", ba(b))
         },
         getMachineCode: function () {
-            return [this.getUUID(), this.getCookieCode(), this.getUserAgent(), this.getScrHeight(), this.getScrWidth(), this.getScrAvailHeight(), this.getScrAvailWidth(), this.md5ScrColorDepth(), this.getScrDeviceXDPI(), this.getAppCodeName(), this.getAppName(), this.getJavaEnabled(), this.getMimeTypes(), this.getPlatform(), this.getAppMinorVersion(), this.getBrowserLanguage(), this.getCookieEnabled(), this.getCpuClass(), this.getOnLine(), this.getSystemLanguage(), this.getUserLanguage(), this.getTimeZone(),
-                this.getFlashVersion(), this.getHistoryList(), this.getCustId(), this.getSendPlatform()]
+            var kk = [this.getUUID(), this.getCookieCode(), this.getUserAgent(), this.getScrHeight(), this.getScrWidth(), this.getScrAvailHeight(), this.getScrAvailWidth(),
+                this.md5ScrColorDepth(), this.getScrDeviceXDPI(), this.getAppCodeName(), this.getAppName(), this.getJavaEnabled(), this.getMimeTypes(), this.getPlatform(), this.getAppMinorVersion(), this.getBrowserLanguage(), this.getCookieEnabled(), this.getCpuClass(), this.getOnLine(), this.getSystemLanguage(), this.getUserLanguage(), this.getTimeZone(),
+                this.getFlashVersion(), this.getHistoryList(), this.getCustId(), this.getSendPlatform()];
+            for (var i=0;i<kk.length;i++){
+                var p = kk[i];
+                console.log(p.key+":"+p.value);
+            }
+            return kk;
         }, getIndexedDb: function (a) {
             return new p("indexedDb", a)
         }, getBrowserLanguage: function () {
@@ -2264,3 +2281,7 @@
             lb || "interactive" != u.readyState && "complete" != u.readyState || (u.detachEvent("onreadystatechange", c), Pa(), lb = !0)
         })
 })();
+
+
+
+
