@@ -295,7 +295,7 @@ function hashAlg(a, b, c) {
     f = 0 == e % 3 ? parseInt(e / 3) : parseInt(e / 3) + 1;
     3 > e ? a = d : (a = d.substring(0, 1 * f), c = d.substring(1 * f, 2 * f), d = d.substring(2 * f, e), a = c + d + a);
 
-    console.log("key a:" + a);
+    // console.log("key a:" + a);
     a = R.SHA256(a).toString(R.enc.Base64);
     c = a.length;
     var d = "";
@@ -314,7 +314,7 @@ function nb(a) {
     if (4 !== b.length) throw Error("Invalid format -- expecting a.b.c.d");
     for (var c = a = 0; c < b.length; ++c) {
         var d = parseInt(b[c], 10);
-        if (Number.isNaN(d) || 0 > d || 255 < d) throw Error("Each octet must be between 0 and 255");
+        if (0 > d || 255 < d) throw Error("Each octet must be between 0 and 255");
         a |= d << 8 * (b.length - c - 1);
         a >>>= 0
     }
@@ -369,41 +369,41 @@ function getpackStr(a) {
     return b
 }
 
-function fill() {
+function fill(d) {
     var k = [];
     k = getpackStr("");
     var a = "", e = "";
     var l = "i1l1o1s1";
     var n = "24xx1080x1920";
     var h = "1040x1920";
-    var d = "192.168.1.100";
-    console.log("l:" + l);
+    // var d = "192.168.1.100";
+    // console.log("l:" + l);
     k.push(new p("storeDb", l));
-    console.log("n:" + n);
+    // console.log("n:" + n);
     k.push(new p("srcScreenSize", n));
-    console.log("h:" + h);
+    // console.log("h:" + h);
     k.push(new p("scrAvailSize", h));
-    console.log("d:" + d);
+    // console.log("d:" + d);
     "" != d && k.push(new p("localCode", nb(d)));
-    console.log("nb:" + nb(d));
-    console.log("a:" + a);
-    console.log("e:" + e);
-    console.log("k:" + k);
+    // console.log("nb:" + nb(d));
+    // console.log("a:" + a);
+    // console.log("e:" + e);
+    // console.log("k:" + k);
 
-    for (var i=0;i<k.length;i++){
-        var pp = k[i];
-        if(undefined==pp)
-            continue;
-        console.log(pp.key+":"+pp.value);
-    }
+    // for (var i=0;i<k.length;i++){
+    //     var pp = k[i];
+    //     if(undefined==pp)
+    //         continue;
+    //     // console.log(pp.key+":"+pp.value);
+    // }
 
     e = hashAlg(k, a, e);
     a = e.key;
-    console.log("a:" + a);
+    // console.log("a:" + a);
     e = e.value;
-    console.log("e:" + e);
+    // console.log("e:" + e);
     a += "\x26timestamp\x3d" + (new Date).getTime();
-    console.log("/otn/HttpZF/logdevice" + "?algID\x3dBgKBsMtJg3\x26hashCode\x3d" + e + a);
+    // console.log("/otn/HttpZF/logdevice" + "?algID\x3dBgKBsMtJg3\x26hashCode\x3d" + e + a);
 
     return "https://kyfw.12306.cn/otn/HttpZF/logdevice" + "?algID\x3dBgKBsMtJg3\x26hashCode\x3d" + e + a;
 }
