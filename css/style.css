@@ -646,7 +646,7 @@ button.close:hover {
 			}
 			.bg-color .list-icon ul li .ion { color:#FFF; }
 			
-.btn-appstore, .btn-playstore {
+.btn-appstore, .btn-playstore, .btn-github {
 	display:inline-block;
 	width:168px;
 	height:50px;
@@ -661,7 +661,11 @@ button.close:hover {
 	width:166px;
 	background-image:url(../images/btn-playstore.png);
 }
-.btn-appstore:hover, .btn-playstore:hover { opacity:.8; }
+.btn-github {
+	width:166px;
+	background-image:url(../images/btn-github.png);
+}
+.btn-appstore:hover, .btn-playstore, .btn-github:hover { opacity:.8; }
 
 .sep-border {
 	height:1px;
