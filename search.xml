@@ -1,63 +1,627 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>泰国</title>
-    <url>/2023/02/22/%E6%96%87%E7%AB%A0%E6%B5%8B%E8%AF%95/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
+    <title>《怪诞行为学》读书笔记</title>
+    <url>/2025/01/13/reads/behaviour/%E3%80%8A%E6%80%AA%E8%AF%9E%E8%A1%8C%E4%B8%BA%E5%AD%A6%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[]]></content>
       <categories>
-        <category>测试</category>
-        <category>Life</category>
+        <category>读书笔记</category>
+        <category>行为学</category>
       </categories>
       <tags>
-        <tag>旅行</tag>
-        <tag>技术</tag>
-        <tag>随笔</tag>
+        <tag>行为学</tag>
+        <tag>读书笔记</tag>
       </tags>
   </entry>
   <entry>
-    <title>第二章：生来即轻</title>
-    <url>/2023/02/22/%E7%AC%AC%E4%BA%8C%E7%AB%A0%EF%BC%9A%E7%94%9F%E6%9D%A5%E5%8D%B3%E8%BD%BB/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
+    <title>《贫穷的本质》读书笔记</title>
+    <url>/2025/01/13/reads/economics/%E3%80%8A%E8%B4%AB%E7%A9%B7%E7%9A%84%E6%9C%AC%E8%B4%A8%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[]]></content>
       <categories>
-        <category>少年的失乐园</category>
-        <category>第二章：生来即轻</category>
+        <category>读书笔记</category>
+        <category>经济学</category>
       </categories>
       <tags>
-        <tag>少年的失乐园</tag>
+        <tag>经济学</tag>
+        <tag>读书笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>《影响力》读书笔记</title>
+    <url>/2025/01/13/reads/marketing/%E3%80%8A%E5%BD%B1%E5%93%8D%E5%8A%9B%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>读书笔记</category>
+        <category>营销学</category>
+      </categories>
+      <tags>
+        <tag>读书笔记</tag>
+        <tag>营销学</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>2500块带你玩转Stable Diffusion</title>
+    <url>/2025/01/13/tech/AI/2500%E5%9D%97%E5%B8%A6%E4%BD%A0%E7%8E%A9%E8%BD%ACStable%20Diffusion/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>零基础</category>
+        <category>AI</category>
+      </categories>
+      <tags>
+        <tag>技术</tag>
+        <tag>零基础</tag>
+        <tag>AI</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>明星送祝福</title>
+    <url>/2025/01/13/tech/AI/%E6%98%8E%E6%98%9F%E9%80%81%E7%A5%9D%E7%A6%8F/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>零基础</category>
+        <category>AI</category>
+      </categories>
+      <tags>
+        <tag>技术</tag>
+        <tag>零基础</tag>
+        <tag>AI</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>AI设计大赛总结</title>
+    <url>/2025/01/13/tech/AI/AI%E8%AE%BE%E8%AE%A1%E5%A4%A7%E8%B5%9B%E6%80%BB%E7%BB%93/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>零基础</category>
+        <category>AI</category>
+      </categories>
+      <tags>
+        <tag>技术</tag>
+        <tag>零基础</tag>
+        <tag>AI</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>看我72变</title>
+    <url>/2025/01/13/tech/AI/%E7%9C%8B%E6%88%9172%E5%8F%98/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>零基础</category>
+        <category>AI</category>
+      </categories>
+      <tags>
+        <tag>技术</tag>
+        <tag>零基础</tag>
+        <tag>AI</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>量化交易</title>
+    <url>/2025/01/13/tech/%20quantify/%E9%87%8F%E5%8C%96%E4%BA%A4%E6%98%93/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>零基础</category>
+        <category>量化交易</category>
+      </categories>
+      <tags>
+        <tag>技术</tag>
+        <tag>零基础</tag>
+        <tag>量化交易</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>抖音带货</title>
+    <url>/2025/01/13/blogs/life/%E6%84%9F%E6%82%9F%E5%95%A5%E7%9A%84/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>生活琐事</category>
+        <category>心情碎片</category>
+      </categories>
+      <tags>
+        <tag>心情碎片</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>抖音带货</title>
+    <url>/2025/01/13/blogs/life/%E6%8A%96%E9%9F%B3%E5%B8%A6%E8%B4%A7/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>财务自由</category>
+        <category>万两金</category>
+      </categories>
+      <tags>
+        <tag>财务自由</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>旅行的意义</title>
+    <url>/2025/01/13/blogs/travel/%E6%97%85%E8%A1%8C%E7%9A%84%E6%84%8F%E4%B9%89/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>旅行</category>
+      </categories>
+      <tags>
+        <tag>旅行</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>学历提升</title>
+    <url>/2025/01/13/blogs/better/5years/2013%E5%B9%B4%E7%9A%84%E9%98%B3%E5%B0%8F%E8%89%AF/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>生活琐事</category>
+        <category>投资自己</category>
+      </categories>
+      <tags>
+        <tag>投资自己</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>正畸</title>
+    <url>/2025/01/13/blogs/better/orthodontics/%E6%AD%A3%E7%95%B8/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>生活琐事</category>
+        <category>投资自己</category>
+      </categories>
+      <tags>
+        <tag>投资自己</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>学历提升</title>
+    <url>/2025/01/13/blogs/better/educate/%E5%AD%A6%E5%8E%86/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>生活琐事</category>
+        <category>投资自己</category>
+      </categories>
+      <tags>
+        <tag>投资自己</tag>
       </tags>
   </entry>
   <entry>
     <title>Hello World</title>
-    <url>/2023/02/22/hello-world/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+    <url>/2025/01/13/hello-world/</url>
+    <content><![CDATA[<p>318<br>正畸<br>旅行<br>186<br>备战研究生<br>stable Diffusion<br>ai换脸<br>ai换音</p>
+<p>设计大赛<br>量化交易<br>读书笔记<br>心情碎片</p>
+<p>遇见更好的自己之五年计划</p>
+<p>github访问 翻墙</p>
 ]]></content>
   </entry>
   <entry>
-    <title>第一章：泰山压顶</title>
-    <url>/2023/01/22/%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BC%9A%E6%B3%B0%E5%B1%B1%E5%8E%8B%E9%A1%B6/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
-<p>我叫叶少青，是一个漂泊在京都十二年的外乡人……</p>
-<p><a href="https://read.qidian.com/chapter/FsKiZqqdNkBRGoWu-UQg7Q2/c19xgxt1zrpOBDFlr9quQA2/">阅读更多&gt;&gt;</a></p>
-</blockquote>
-]]></content>
+    <title>第二章：生来即轻</title>
+    <url>/2023/03/13/books/feather/%E7%AC%AC%E4%BA%8C%E7%AB%A0%EF%BC%9A%E7%94%9F%E6%9D%A5%E5%8D%B3%E8%BD%BB/</url>
+    <content><![CDATA[]]></content>
       <categories>
+        <category>原著</category>
         <category>少年的失乐园</category>
-        <category>第一章：泰山压顶</category>
       </categories>
       <tags>
         <tag>少年的失乐园</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>第一章：泰山压顶</title>
+    <url>/2023/03/10/books/feather/%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BC%9A%E6%B3%B0%E5%B1%B1%E5%8E%8B%E9%A1%B6/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>原著</category>
+        <category>少年的失乐园</category>
+      </categories>
+      <tags>
+        <tag>少年的失乐园</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>零基础-搭建个人博客-hexo的基础命令&amp;插件补充</title>
+    <url>/2015/01/30/tech/createBlogs/%E9%9B%B6%E5%9F%BA%E7%A1%80-%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2-hexo%E7%9A%84%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/</url>
+    <content><![CDATA[<h2 id="本篇目的"><a href="#本篇目的" class="headerlink" title="本篇目的"></a>本篇目的</h2><blockquote>
+<p>学习hexo的基础命令，了解相关内容。方便日常迭代过程中快速处理博客部署等问题。</p>
+</blockquote>
+<h2 id="hexo的基础命令："><a href="#hexo的基础命令：" class="headerlink" title="hexo的基础命令："></a>hexo的基础命令：</h2><h3 id="1-主要基础命令："><a href="#1-主要基础命令：" class="headerlink" title="1.主要基础命令："></a>1.主要基础命令：</h3><details>
+<summary>基本命令：</summary>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1.初始化网站 </span><br><span class="line">&gt;&gt; cd myblog </span><br><span class="line">&gt;&gt; hexo init</span><br><span class="line">2.新建一篇文章</span><br><span class="line">&gt;&gt; hexo new [layout] &lt;title&gt;</span><br><span class="line">&gt;&gt; hexo new post &quot;article_name&quot; # 新建文章</span><br><span class="line">&gt;&gt; hexo new page &quot;name&quot; # 少用</span><br><span class="line">3.生成静态文件,可简写为 hexo g</span><br><span class="line">&gt;&gt; hexo generate</span><br><span class="line">&gt;&gt; hexo g #</span><br><span class="line">4.生成草稿</span><br><span class="line">&gt;&gt; hexo putlish [layout] &lt;filename&gt;</span><br><span class="line">5.启动服务器 可以简写为 hexo s</span><br><span class="line">&gt;&gt; hexo server # 参数: -p:指定端口 -s:只使用静态文件 -i:指定ip地址</span><br><span class="line">6.部署网站,可以简写为 hexo d</span><br><span class="line">&gt;&gt; hexo deploy</span><br><span class="line">7.清除缓存文件 db.json 和已经成成的静态文件 public</span><br><span class="line">&gt;&gt; hexo clean</span><br><span class="line">8.查看版本</span><br><span class="line">&gt;&gt; hexo version</span><br></pre></td></tr></table></figure>
+</details>
+
+<h3 id="2-使用插件："><a href="#2-使用插件：" class="headerlink" title="2.使用插件："></a>2.使用插件：</h3><blockquote>
+<p>本博客使用到什么插件就会在此文章下面补充相应的插件：</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>技术</category>
+        <category>零基础</category>
+        <category>搭建个人博客</category>
+      </categories>
+      <tags>
+        <tag>技术</tag>
+        <tag>hexo</tag>
+        <tag>零基础</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>零基础-搭建个人博客7-自动部署</title>
+    <url>/2015/01/19/tech/createBlogs/%E9%9B%B6%E5%9F%BA%E7%A1%80-%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A27-%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2/</url>
+    <content><![CDATA[<h2 id="本篇目的"><a href="#本篇目的" class="headerlink" title="本篇目的"></a>本篇目的</h2><blockquote>
+<p>持续的迭代和更新，每次处理完成后都需要反复的执行git的相关命令，有时候还有未知网络问题导致传输更新失败。所以想通过曲线救国，集成工具实现一步上传编辑处理后的静态网页文件。</p>
+</blockquote>
+<h2 id="自动部署："><a href="#自动部署：" class="headerlink" title="自动部署："></a>自动部署：</h2><h3 id="1-文件夹关联代码仓库："><a href="#1-文件夹关联代码仓库：" class="headerlink" title="1.文件夹关联代码仓库："></a>1.文件夹关联代码仓库：</h3><h3 id="2-一同处理多个仓库内容："><a href="#2-一同处理多个仓库内容：" class="headerlink" title="2.一同处理多个仓库内容："></a>2.一同处理多个仓库内容：</h3><h3 id="3-实现一件部署到github："><a href="#3-实现一件部署到github：" class="headerlink" title="3.实现一件部署到github："></a>3.实现一件部署到github：</h3>]]></content>
+      <categories>
+        <category>技术</category>
+        <category>零基础</category>
+        <category>搭建个人博客</category>
+      </categories>
+      <tags>
+        <tag>技术</tag>
+        <tag>hexo</tag>
+        <tag>零基础</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>零基础-搭建个人博客6-编辑器</title>
+    <url>/2015/01/18/tech/createBlogs/%E9%9B%B6%E5%9F%BA%E7%A1%80-%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A26-%E7%BC%96%E8%BE%91%E5%99%A8%E6%8E%A8%E8%8D%90/</url>
+    <content><![CDATA[<h2 id="本篇目的"><a href="#本篇目的" class="headerlink" title="本篇目的"></a>本篇目的</h2><blockquote>
+<p>由于博客的迭代是持续更新的，包括对git的推送处理，如果一直使用普通的文本或者命令行，效率确实很低，所以做一下个人的经验推荐。</p>
+</blockquote>
+<h2 id="编辑器选择："><a href="#编辑器选择：" class="headerlink" title="编辑器选择："></a>编辑器选择：</h2><h3 id="1-命令行-系统自带的文本编辑："><a href="#1-命令行-系统自带的文本编辑：" class="headerlink" title="1.命令行&amp;系统自带的文本编辑："></a>1.命令行&amp;系统自带的文本编辑：</h3><h3 id="2-命令行-markDown编辑器："><a href="#2-命令行-markDown编辑器：" class="headerlink" title="2.命令行&amp;markDown编辑器："></a>2.命令行&amp;markDown编辑器：</h3><h3 id="3-集成编辑器："><a href="#3-集成编辑器：" class="headerlink" title="3.集成编辑器："></a>3.集成编辑器：</h3><h2 id="markdown语法学习："><a href="#markdown语法学习：" class="headerlink" title="markdown语法学习："></a>markdown语法学习：</h2><blockquote>
+<p>基础语法可以参考：</p>
+<p><a href="https://www.runoob.com/markdown/md-tutorial.html">Markdown语法</a></p>
+<p><a href="https://www.baidu.com/s?ie=UTF-8&wd=markdown%20%E8%AF%AD%E6%B3%95">资源搜索</a></p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>技术</category>
+        <category>零基础</category>
+        <category>搭建个人博客</category>
+      </categories>
+      <tags>
+        <tag>技术</tag>
+        <tag>hexo</tag>
+        <tag>零基础</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>零基础-搭建个人博客5-资源存储</title>
+    <url>/2015/01/17/tech/createBlogs/%E9%9B%B6%E5%9F%BA%E7%A1%80-%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A25-%E8%B5%84%E6%BA%90%E5%AD%98%E5%82%A8/</url>
+    <content><![CDATA[<h2 id="本篇目的"><a href="#本篇目的" class="headerlink" title="本篇目的"></a>本篇目的</h2><blockquote>
+<p>由于部分资源文件占用带宽较大，如果使用海外的网站可能会进一步拖累网站的运行速度，所以需要寻找一个可以在国内使用，且尽量减少花销的资源存储方案。</p>
+</blockquote>
+<h2 id="图片存储选择："><a href="#图片存储选择：" class="headerlink" title="图片存储选择："></a>图片存储选择：</h2><h3 id="1-github："><a href="#1-github：" class="headerlink" title="1.github："></a>1.github：</h3><h3 id="2-云服务商："><a href="#2-云服务商：" class="headerlink" title="2.云服务商："></a>2.云服务商：</h3><h3 id="3-其他开放社区："><a href="#3-其他开放社区：" class="headerlink" title="3.其他开放社区："></a>3.其他开放社区：</h3>]]></content>
+      <categories>
+        <category>技术</category>
+        <category>零基础</category>
+        <category>搭建个人博客</category>
+      </categories>
+      <tags>
+        <tag>技术</tag>
+        <tag>hexo</tag>
+        <tag>零基础</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>零基础-搭建个人博客4-部署到github上</title>
+    <url>/2015/01/16/tech/createBlogs/%E9%9B%B6%E5%9F%BA%E7%A1%80-%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A24-%E9%83%A8%E7%BD%B2%E5%88%B0github%E4%B8%8A/</url>
+    <content><![CDATA[<h2 id="本篇目的"><a href="#本篇目的" class="headerlink" title="本篇目的"></a>本篇目的</h2><blockquote>
+<p>本地完成博客的建设后，部署到服务器上，接受广大网友的洗礼。</p>
+</blockquote>
+<h2 id="github环境配置："><a href="#github环境配置：" class="headerlink" title="github环境配置："></a>github环境配置：</h2><h3 id="1-注册-创建仓库-名称-："><a href="#1-注册-创建仓库-名称-：" class="headerlink" title="1.注册&amp;创建仓库(名称)："></a>1.注册&amp;创建仓库(名称)：</h3><blockquote>
+<p>打开github仓库地址：</p>
+<blockquote>
+<p><a href="https://github.com/login">https://github.com/login</a></p>
+</blockquote>
+<p>如果有账号直接登录，如果没有点击 create a account；</p>
+<p>注册时需要关注您的用户名，英文字母数字组成，这个用户名也是你后续创建域名访问博客的二级域名。</p>
+<p>创建完成用户后，可以回到个人主页，并在主页中寻找Create Repository来进行项目创建。</p>
+<p>为后续github博客访问和域名映射顺利完成，这里我们注册的项目名称需要满足如下的要求：</p>
+<blockquote>
+<p>{你的用户名}.github.io</p>
+</blockquote>
+<p>比如我的用户名是sid2656，则我创建的项目名称为：sid2656.github.io</p>
+<p>其余保持默认即可，也可以填写一下描述信息。</p>
+</blockquote>
+<h3 id="2-hexo生成静态文件上传："><a href="#2-hexo生成静态文件上传：" class="headerlink" title="2.hexo生成静态文件上传："></a>2.hexo生成静态文件上传：</h3><blockquote>
+</blockquote>
+<h3 id="3-仓库的pages服务设置："><a href="#3-仓库的pages服务设置：" class="headerlink" title="3.仓库的pages服务设置："></a>3.仓库的pages服务设置：</h3><h3 id="4-自定义域名（备案）："><a href="#4-自定义域名（备案）：" class="headerlink" title="4.自定义域名（备案）："></a>4.自定义域名（备案）：</h3><p>https</p>
+]]></content>
+      <categories>
+        <category>技术</category>
+        <category>零基础</category>
+        <category>搭建个人博客</category>
+      </categories>
+      <tags>
+        <tag>技术</tag>
+        <tag>hexo</tag>
+        <tag>零基础</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>零基础-搭建个人博客3-博客环境</title>
+    <url>/2015/01/15/tech/createBlogs/%E9%9B%B6%E5%9F%BA%E7%A1%80-%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A23-%E5%8D%9A%E5%AE%A2%E7%8E%AF%E5%A2%83/</url>
+    <content><![CDATA[<h2 id="本篇目的"><a href="#本篇目的" class="headerlink" title="本篇目的"></a>本篇目的</h2><blockquote>
+<p>通过挑选好的自定义的模板来完成自己博客的本地化运行，并理解hexo的相关配置信息和文件结构；为后续的博客精进化之路打下一定的基础。</p>
+</blockquote>
+<h2 id="博客环境："><a href="#博客环境：" class="headerlink" title="博客环境："></a>博客环境：</h2><h3 id="1-初始hexo文件目录："><a href="#1-初始hexo文件目录：" class="headerlink" title="1.初始hexo文件目录："></a>1.初始hexo文件目录：</h3><blockquote>
+<p><img src="http://imgs.sid2656.life/createBlogs/hexoDir.jpg" alt="个人博客" title="初始化 hexo"></p>
+<p>node_modules：是你初始化博客需要的一些基础依赖的三方模块。这里不需要你关注和改动；</p>
+<p>scaffolds：应该是hexo的模板类文件；这里也不需要你关注和改动；</p>
+<p>source：这个是你写文章的源码目录，后续的所有文章都在这里添加；</p>
+<p>public：这个是服务启动后生成的静态页面&amp;资源文件的目录；这个也就是后续需要部署到github的pages服务中的全部文件；</p>
+<p>themes：这个是hexo你依赖的主题模板，这个可以在hexo社区中找你自己喜欢的模板；</p>
+<blockquote>
+<p><a href="https://hexo.io/themes/">https://hexo.io/themes/</a></p>
+</blockquote>
+<p>我选择的是Ayer模板：</p>
+<blockquote>
+<p><a href="https://github.com/shen-yu/hexo-theme-ayer">https://github.com/shen-yu/hexo-theme-ayer</a></p>
+</blockquote>
+<p>此模板目前已经不再维护了；但是基础功能还是可以使用的，样式简洁清晰，分类标签满足诉求，打赏功能集成在里面。<br>接下来我就根据这个模板来进行的的博客系统的初始化工作；</p>
+<p>剩余的文件只需要关注_config.yml即可，这个是你博客系统的核心配置文件。稍后步骤3中我们会提到。</p>
+</blockquote>
+<h3 id="2-将选定的模板部署到本地："><a href="#2-将选定的模板部署到本地：" class="headerlink" title="2.将选定的模板部署到本地："></a>2.将选定的模板部署到本地：</h3><blockquote>
+<blockquote>
+<p>git clone <a href="https://github.com/Shen-Yu/hexo-theme-ayer.git">https://github.com/Shen-Yu/hexo-theme-ayer.git</a> themes&#x2F;ayer</p>
+</blockquote>
+<p>在终端或者bash窗口中，进入到你的博客系统文件夹；就是1中图片展示的文件目录；</p>
+<p>在终端或者bash窗口中执行上述的git命令，目的是将github上的模板拷贝到本机</p>
+</blockquote>
+<h3 id="3-设置博客的基础配置："><a href="#3-设置博客的基础配置：" class="headerlink" title="3.设置博客的基础配置："></a>3.设置博客的基础配置：</h3><blockquote>
+<p>在终端或者bash窗口中，进入到你的博客系统文件夹；就是1中图片展示的文件目录；</p>
+<p>打开基础配置文件：_config.yml（这里是系统配置）</p>
+<p><img src="http://imgs.sid2656.life/createBlogs/base_config.jpg" alt="个人博客" title="启动 ayer"></p>
+</blockquote>
+<details>
+<summary>展开详情——修改如下配置：</summary>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">title: 阳小良</span><br><span class="line">subtitle: &#x27;体验式人生&#x27;</span><br><span class="line">description: &#x27;不想做插画师的程序猿，不是好厨师&#x27;</span><br><span class="line">keywords: 阳小良,个人博客,程序猿,插画师,技术博客,人生感悟</span><br><span class="line">author: 阿良</span><br><span class="line">language:</span><br><span class="line">  - zh-CN</span><br><span class="line">  - en</span><br><span class="line">theme: ayer</span><br></pre></td></tr></table></figure>
+</details>
+
+<blockquote>
+<p>如果不想修改博客名称等配置，可以只修改主题：</p>
+<blockquote>
+<p>theme: ayer</p>
+</blockquote>
+<p>然后在终端执行如下命令：</p>
+<blockquote>
+<p>hexo s</p>
+</blockquote>
+<p><img src="http://imgs.sid2656.life/createBlogs/hexo-s.jpg" alt="个人博客" title="启动 ayer"></p>
+<p>能提示ayer主题，并打印出：<a href="http://localhost:4000/">http://localhost:4000</a> ，即表明hexo模板安装成功；</p>
+</blockquote>
+<h3 id="4-访问基础模板网页："><a href="#4-访问基础模板网页：" class="headerlink" title="4.访问基础模板网页："></a>4.访问基础模板网页：</h3><blockquote>
+<p>在浏览器中执行：<a href="http://localhost:4000/">http://localhost:4000</a> ，我们可以得到如下网页：</p>
+<p><img src="http://imgs.sid2656.life/createBlogs/home_v.gif" alt="个人博客" title="启动 ayer"></p>
+<p>可以看到基本上的博客框架已经出来了，里面的页面title，网页描述，关键字这些我都没有调整；仅仅是修改了theme对应的主题；</p>
+</blockquote>
+<h3 id="5-配置分类和标签："><a href="#5-配置分类和标签：" class="headerlink" title="5.配置分类和标签："></a>5.配置分类和标签：</h3><blockquote>
+<p>我们通过步骤4已经将基础的模块和效果呈现出来了，但是我们点击分类和标签发现是找不到对应的路径。</p>
+<p>这是因为我们默认的系统中并未设置对应的分类和配置；我们可以按照模板上说明的步骤去创建分类和标签。</p>
+<p>创建基础分类模块：（以下命令均需要在您的博客从基础文件夹根路径中执行）</p>
+<blockquote>
+<p>hexo new page categories</p>
+</blockquote>
+<p><img src="http://imgs.sid2656.life/createBlogs/cate.jpg" alt="个人博客" title="启动 ayer"></p>
+<p>接下来我们打开categories文件夹下面的index.md，并修改其文件内容如下：</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: 分类列表</span><br><span class="line">type: categories</span><br><span class="line">layout: &quot;categories&quot;</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>tags的创建方式类似于categories；只不过需要修改tags&#x2F;index.md的文件内容如下：</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: 标签列表</span><br><span class="line">type: &quot;tags&quot;</span><br><span class="line">layout: &quot;tags&quot;</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>friends的创建方式类似于categories；只不过需要修改friends&#x2F;index.md的文件内容如下：</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: 友情链接</span><br><span class="line">type: friends</span><br><span class="line">layout: &quot;friends&quot;</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>为了让上面的内容生效后，大家更容易理解，我们可以打开默认的hello-world.md（其位置在{你博客的根目录}&#x2F;source&#x2F;_post&#x2F;hello-world.md）</p>
+<p>在头几行修改配置，增加分类和标签，如下配置：</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: Hello World</span><br><span class="line">tags:</span><br><span class="line">  - 旅行</span><br><span class="line">categories:</span><br><span class="line">  - 零基础</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>这样，我们再次打开主页，点击分类和标签，便可以看到数据都正常了；</p>
+<p><img src="http://imgs.sid2656.life/createBlogs/home_v2.gif" alt="个人博客" title="启动 ayer"></p>
+</blockquote>
+<h3 id="6-模板细节调整："><a href="#6-模板细节调整：" class="headerlink" title="6.模板细节调整："></a>6.模板细节调整：</h3><h4 id="6-1模板配置文件调整："><a href="#6-1模板配置文件调整：" class="headerlink" title="6.1模板配置文件调整："></a>6.1模板配置文件调整：</h4><blockquote>
+<p>模板的基础配置我们可以根据自己的诉求进行调整，具体调整的位置路径：</p>
+<blockquote>
+<p>{你博客的根目录}&#x2F;themes&#x2F;ayer&#x2F;_config.yml</p>
+</blockquote>
+<p>这里的config文件对应的是你的页面模板的配置，不是根目录下面的那个基础环境的配置；</p>
+<p>这个每个人按照你自己的博客诉求进行调整即可。</p>
+</blockquote>
+<h4 id="6-2日志内容填写："><a href="#6-2日志内容填写：" class="headerlink" title="6.2日志内容填写："></a>6.2日志内容填写：</h4><blockquote>
+<p>接下来我们就可以按照自己的意愿去分类填写自己的个人博客内容了；<br><img src="https://imgs.sid2656.life/createBlogs/post.jpg" alt="个人博客" title="install hexo"></p>
+<p>如上图所示，你创建的md文档只有都放在_post文件夹中，这里可以安装自己的喜好设置不同的文件件，方便文章的管理和区分</p>
+<p>我们在_post下新建md文件，并设置好上面我们提到抬头分类，比如本章的抬头分类我设置如下：</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: 零基础-搭建个人博客3-博客环境</span><br><span class="line">date: 2015-01-14 23:13:14</span><br><span class="line">tags:</span><br><span class="line">  - 技术</span><br><span class="line">  - hexo</span><br><span class="line">  - 零基础</span><br><span class="line">categories:</span><br><span class="line">  - 技术</span><br><span class="line">  - [零基础,搭建个人博客]</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>其中[零基础,搭建个人博客]；这个表示的是二级分类；<br>展示效果如下：<br><img src="https://imgs.sid2656.life/createBlogs/cate-2.jpg" alt="个人博客" title="启动 hexo"></p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>技术</category>
+        <category>零基础</category>
+        <category>搭建个人博客</category>
+      </categories>
+      <tags>
+        <tag>技术</tag>
+        <tag>hexo</tag>
+        <tag>零基础</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>零基础-搭建个人博客2-方案选择</title>
+    <url>/2015/01/14/tech/createBlogs/%E9%9B%B6%E5%9F%BA%E7%A1%80-%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A22-%E5%9F%BA%E7%A1%80%E7%8E%AF%E5%A2%83/</url>
+    <content><![CDATA[<h2 id="本篇目的"><a href="#本篇目的" class="headerlink" title="本篇目的"></a>本篇目的</h2><blockquote>
+<p>在通过本篇可以完成博客基础环境的搭建，并能正常在本地运行属于自己的博客基础模板样式。</p>
+</blockquote>
+<h2 id="基础环境："><a href="#基础环境：" class="headerlink" title="基础环境："></a>基础环境：</h2><h3 id="1-安装nodejs："><a href="#1-安装nodejs：" class="headerlink" title="1.安装nodejs："></a>1.安装nodejs：</h3><blockquote>
+<p><a href="https://nodejs.org/zh-cn">https://nodejs.org/zh-cn</a></p>
+<p>点击上述网站，选择适合自己系统的nodejs安装包，一路默认安装配置。<br>安装完成后在终端执行如下命令：</p>
+<blockquote>
+<p>npm -v </p>
+</blockquote>
+<p>能正常展示版本号，即表明nodejs安装成功；</p>
+</blockquote>
+<h3 id="2-配置nodejs地址仓库："><a href="#2-配置nodejs地址仓库：" class="headerlink" title="2.配置nodejs地址仓库："></a>2.配置nodejs地址仓库：</h3><blockquote>
+<p>阿里云：npm config set registry <a href="http://registry.npmmirror.com/">http://registry.npmmirror.com</a></p>
+<p>原始仓库：npm config set registry <a href="http://registry.npmjs.org/">http://registry.npmjs.org</a></p>
+<p>由于海外地址和资源的限制等问题，导致默认的原始仓库无法链接时；<br>可以使用国内阿里云的仓库。具体配置方法，在终端或者bash窗口中输入：</p>
+<blockquote>
+<p>npm config set registry <a href="http://registry.npmmirror.com/">http://registry.npmmirror.com</a></p>
+</blockquote>
+</blockquote>
+<h3 id="3-安装git："><a href="#3-安装git：" class="headerlink" title="3.安装git："></a>3.安装git：</h3><blockquote>
+<p><a href="https://git-scm.com/">https://git-scm.com/</a></p>
+<p>点击上述网站，选择适合自己系统的nodejs安装包，一路默认安装配置。<br>安装完成后在终端执行如下命令：</p>
+<blockquote>
+<p>git -v</p>
+</blockquote>
+<p>能正常展示版本号，即表明git安装成功；</p>
+</blockquote>
+<h3 id="4-安装Hexo："><a href="#4-安装Hexo：" class="headerlink" title="4.安装Hexo："></a>4.安装Hexo：</h3><blockquote>
+<p>打开终端或者bash窗口执行：</p>
+<blockquote>
+<p>sudo npm install hexo-cli -g</p>
+</blockquote>
+<p>安装完成后在终端执行如下命令：</p>
+<blockquote>
+<p>hexo -v</p>
+</blockquote>
+<p>能正常展示版本号，即表明hexo安装成功；</p>
+</blockquote>
+<h3 id="5-初始化blog文件夹："><a href="#5-初始化blog文件夹：" class="headerlink" title="5.初始化blog文件夹："></a>5.初始化blog文件夹：</h3><blockquote>
+<p>打开终端或者bash窗口，进入到计划您防止代码的文件夹。</p>
+<p>然后，执行如下命令进行博客系统的初始化：</p>
+<blockquote>
+<p>hexo init test(这个可以自定义) </p>
+</blockquote>
+<p>test 为创建的目录，你可以自己定义(您的名字或者昵称都可以)</p>
+<p>这样便可以直接启动初始化的博客，启动后控制台输出相关信息，我们发现存在问题：</p>
+<p><img src="http://imgs.sid2656.life/createBlogs/inittest.jpg" alt="个人博客" title="初始化 hexo"></p>
+<p>根据提示，我们做出如下调整后，再次启动；<br><img src="https://imgs.sid2656.life/createBlogs/install.jpg" alt="个人博客" title="install hexo"></p>
+</blockquote>
+<h3 id="6-初次访问系统："><a href="#6-初次访问系统：" class="headerlink" title="6.初次访问系统："></a>6.初次访问系统：</h3><blockquote>
+<p>通过步骤5我们已经完成了博客的初始化工作；</p>
+<p>接下来我们通过终端或者bash窗口进入到刚刚创建的test目录中，后续我们称这里为根目录，接下来启动hexo服务：</p>
+<blockquote>
+<p>hexo s</p>
+</blockquote>
+<p>我们看到本次启动成功，并提示了博客的访问路径：<br><img src="https://imgs.sid2656.life/createBlogs/s-test.jpg" alt="个人博客" title="启动 hexo"></p>
+<p>我们将 <a href="http://localhost:4000/">http://localhost:4000/</a> 复制粘贴到浏览器，敲下回车<br>最终展示效果如下：<br><img src="https://imgs.sid2656.life/createBlogs/hello.jpg" alt="个人博客" title="启动 hexo"></p>
+<p>至此，我们的博客初始化环境工作全部完成！</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>技术</category>
+        <category>零基础</category>
+        <category>搭建个人博客</category>
+      </categories>
+      <tags>
+        <tag>技术</tag>
+        <tag>hexo</tag>
+        <tag>零基础</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>零基础-搭建个人博客1-方案选择</title>
+    <url>/2015/01/13/tech/createBlogs/%E9%9B%B6%E5%9F%BA%E7%A1%80-%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A21-%E6%96%B9%E6%A1%88%E9%80%89%E6%8B%A9/</url>
+    <content><![CDATA[<h2 id="本篇目的"><a href="#本篇目的" class="headerlink" title="本篇目的"></a>本篇目的</h2><blockquote>
+<p>在真正去启动博客开发之前，我们先尝试思考可行的路径和方案，在重复满足自己预期的情况下，能让博客保持持久的更新和迭代。</p>
+</blockquote>
+<h2 id="先问自己几个问题"><a href="#先问自己几个问题" class="headerlink" title="先问自己几个问题"></a>先问自己几个问题</h2><h3 id="问题1：博客的功能？"><a href="#问题1：博客的功能？" class="headerlink" title="问题1：博客的功能？"></a>问题1：博客的功能？</h3><blockquote>
+<p>首先确认一下您博客都想记录一些什么内容；</p>
+<p>比如我的个人博客定位：技术总结、个人感悟、小说写作、绘画作品、摄影作品、个人的社交媒体展示等；</p>
+<p>除了上述的基础功能，如果有评论，点赞，打赏功能就更好了；收到网友的反馈可能会更加激励自己前进的动力。</p>
+</blockquote>
+<h3 id="问题2：是否有服务端？"><a href="#问题2：是否有服务端？" class="headerlink" title="问题2：是否有服务端？"></a>问题2：是否有服务端？</h3><blockquote>
+<p>理论上来说，想要有很好的用户体验，服务端是一定要有的，毕竟可能需要有评论系统跟网友进行互动。</p>
+<p>这样就需要申请云主机，基本上有独立ip的云主机年度可能要花费几百上千块大洋。如果用心找可以找到一些免费试用的主机，但是这并不是长久之计。总归是要回到付费处理。</p>
+<p>也就是说，在我博客还没起色的时候，或者说还没有粉丝或者网友支持的时候就在不断往外掏钱了，这不是我做博客的初衷。<br>我个人还是觉得尽量要少财力上的支出就能达到最基本的满足功能的诉求。</p>
+</blockquote>
+<h3 id="问题3：用什么语言开发？"><a href="#问题3：用什么语言开发？" class="headerlink" title="问题3：用什么语言开发？"></a>问题3：用什么语言开发？</h3><blockquote>
+<p>我个人主业是java语言，但是之前搭建博客学习过php和python，不论何种语言开发其实都是需要服务端有个解析器进行语言的部署和解析。</p>
+<p>所以就当前的诉求和期望来看这几个服务端的语言可能都不符合我的预期。</p>
+<p>在纠结期间我想到了之前做的cms的内容生成管理系统，其实我完全可以简历一个html的纯静态网站，然后再利用免费代码库的基础服务将静态网站进行解析。</p>
+<p>经过一系列的搜索和验证，最终确定使用github代码仓库提供的pages服务，毕竟就稳定性和长期性来看，github还是比国内的码云要靠谱一些的。</p>
+</blockquote>
+<h3 id="问题4：代码编写怎么搞？"><a href="#问题4：代码编写怎么搞？" class="headerlink" title="问题4：代码编写怎么搞？"></a>问题4：代码编写怎么搞？</h3><blockquote>
+<p>我是服务端开发，对前端代码不能说一窍不通吧，只能说是九牛一毛。<br>外加上最近几年的前端发展，各种框架和脚手架的开花，已经不再是简单是html语言和普通的js文件能解决的了。</p>
+<blockquote>
+<p>直接手撸代码？用别人写好的前端模板？还是直接拿AI去生成？</p>
+</blockquote>
+<p>目前手撸代码的成本极高，加上我上面说的前端的基础比较薄弱，学习成本也比较高。</p>
+<p>如果用AI的话，调试和想法很重要，前端基础也很重要，而且在相对复杂的系统里面，AI会生成一坨屎山，后续的维护成本极高。</p>
+<p>所以最终还是决定使用别人写好的前端模板来尝试创作个人博客。</p>
+</blockquote>
+<h3 id="问题5：模板选择？"><a href="#问题5：模板选择？" class="headerlink" title="问题5：模板选择？"></a>问题5：模板选择？</h3><blockquote>
+<p>往上搜索了一些博客相关的系统和推荐的模板；</p>
+<blockquote>
+<p>有：vue、bootstrap、WordPress、Docsify、hexo</p>
+</blockquote>
+<p>这么多相关的博客模板，使用的前端技术不一样，对应的服务依赖也不同。</p>
+</blockquote>
+<h2 id="最终选择"><a href="#最终选择" class="headerlink" title="最终选择"></a>最终选择</h2><blockquote>
+<p>问题1：基础功能必须满足，其他锦上添花。</p>
+<p>问题2：不要服务端，不要数据库。</p>
+<p>问题3：纯静态页面</p>
+<p>问题4：选模板</p>
+<p>问题5：用hexo</p>
+<p>根据问题1-4的基本诉求，最终在问题5上我选择了hexo；并且配合github的pages服务能达到预期的效果；<br>后续也可以结合hexo社区开放的一些接口实现其他的增值服务。</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>技术</category>
+        <category>零基础</category>
+        <category>搭建个人博客</category>
+      </categories>
+      <tags>
+        <tag>技术</tag>
+        <tag>hexo</tag>
+        <tag>零基础</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>关于我</title>
+    <url>/2011/02/14/about/</url>
+    <content><![CDATA[<h2 id="人生进度条"><a href="#人生进度条" class="headerlink" title="人生进度条"></a>人生进度条</h2><table>
+<thead>
+<tr>
+<th align="center">■■■</th>
+<th align="center">■■■</th>
+<th align="center">□□□</th>
+<th align="center">□□□</th>
+<th align="center">□□□</th>
+</tr>
+</thead>
+</table>
+
+<h2 id="人生格言"><a href="#人生格言" class="headerlink" title="人生格言"></a>人生格言</h2><blockquote>
+<p>去做你害怕的事情，害怕自然就会消失</p>
+</blockquote>
+<h2 id="人生理想"><a href="#人生理想" class="headerlink" title="人生理想"></a>人生理想</h2><blockquote>
+<p>成为一个每天不为了生计而忧愁，有充足时间可以自由支配，开心画画的自由插画师</p>
+</blockquote>
+<h2 id="自我描述"><a href="#自我描述" class="headerlink" title="自我描述"></a>自我描述</h2><blockquote>
+<p>偶尔颓废，偶尔忧伤，偶尔充满干劲儿。我会三分钟热血，也会半途而废，但我坚信只要做了，就有收获。也许达不到我想要的预期，但是那三分钟的热血也一定会在我的血液里，沉淀下他该有的痕迹。</p>
+<p>超级喜欢漫画和画画，也喜欢尝试新鲜玩意儿。</p>
+</blockquote>
+<h2 id="技能-爱好"><a href="#技能-爱好" class="headerlink" title="技能&amp;爱好"></a>技能&amp;爱好</h2><blockquote>
+<p>技能&amp;标签</p>
+<blockquote>
+<p>technologist</p>
+<p>java</p>
+</blockquote>
+<p>爱好&amp;兴趣</p>
+<blockquote>
+<p>绘画</p>
+<p>摄影</p>
+</blockquote>
+</blockquote>
+<h2 id="个人大事件"><a href="#个人大事件" class="headerlink" title="个人大事件"></a>个人大事件</h2><details>
+<summary>详细展开</summary>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"># 2004-09</span><br><span class="line">- 第一次离家读高中</span><br><span class="line"></span><br><span class="line"># 2011-02</span><br><span class="line">- 尝试京都漂泊</span><br><span class="line"></span><br><span class="line"># 2012-04</span><br><span class="line">- 第一次跳槽</span><br><span class="line"></span><br><span class="line"># 2014-12</span><br><span class="line">- 第一次出国旅行</span><br><span class="line">- 第一次潜水</span><br><span class="line">- 第一次纹身</span><br><span class="line"></span><br><span class="line"># 2015-03</span><br><span class="line">- 第一次得公司的奖状</span><br><span class="line"></span><br><span class="line"># 2015-06</span><br><span class="line">- 第一次股票套现</span><br><span class="line">- 第一次带父母游京</span><br><span class="line"></span><br><span class="line"># 2015-07</span><br><span class="line">- 第一次蹦极</span><br><span class="line">- 第一次骑行318国道(自行车，27天，2000+公里)</span><br><span class="line"></span><br><span class="line"># 2015-10</span><br><span class="line">- 第一次集齐186块钱背景</span><br><span class="line"></span><br><span class="line"># 2016-01</span><br><span class="line">- 第一次两情相悦</span><br><span class="line"></span><br><span class="line"># 2016-05</span><br><span class="line">- 第一次拍好银河拱桥</span><br><span class="line"></span><br><span class="line"># 2016-07</span><br><span class="line">- 第一次带藏刀进地铁被关地铁小黑屋谈话</span><br><span class="line"></span><br><span class="line"># 2016-08</span><br><span class="line">- 第一次获得深水区游泳证</span><br><span class="line"></span><br><span class="line"># 2017-05</span><br><span class="line">- 结婚</span><br><span class="line"></span><br><span class="line"># 2018-06</span><br><span class="line">- 入职互联网大厂</span><br><span class="line"></span><br><span class="line"># 2018-09</span><br><span class="line">- 第一次体验大公司的年会</span><br><span class="line">- 第一次出陪宝宝出国看演唱会</span><br><span class="line"></span><br><span class="line"># 2020-10</span><br><span class="line">- 第一次隔空约会看电影</span><br><span class="line"></span><br><span class="line"># 2020-11</span><br><span class="line">- 第一次装完自己的房子</span><br><span class="line"></span><br><span class="line"># 2021-02</span><br><span class="line">- 第一次留京过年</span><br><span class="line"></span><br><span class="line"># 2021-04</span><br><span class="line">- 第一次参加技术以外的成长类培训</span><br><span class="line"></span><br><span class="line"># 2021-06</span><br><span class="line">- 第一次带团队</span><br><span class="line"></span><br><span class="line"># 2021-12</span><br><span class="line">- 第一次当了爸爸</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+</details>
+
+<h2 id="了解更多"><a href="#了解更多" class="headerlink" title="了解更多"></a>了解更多</h2>]]></content>
   </entry>
 </search>

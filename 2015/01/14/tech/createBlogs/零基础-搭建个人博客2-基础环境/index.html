@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+
+
+<html lang="zh-CN,en,default">
+  
+
+    <head>
+      <meta charset="utf-8" />
+       
+      <meta name="keywords" content="阳小良,个人博客,程序猿,插画师,技术博客,人生感悟" />
+       
+      <meta name="description" content="不想做插画师的程序猿，不是好厨师" />
+      
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1"
+      />
+      <title>零基础-搭建个人博客2-方案选择 |  阳小良</title>
+  <meta name="generator" content="hexo-theme-ayer">
+      
+      <link rel="shortcut icon" href="/favicon.ico" />
+       
+<link rel="stylesheet" href="/dist/main.css">
+
+      
+<link rel="stylesheet" href="/css/fonts/remixicon.css">
+
+      
+<link rel="stylesheet" href="/css/custom.css">
+ 
+      <script src="https://cdn.staticfile.org/pace/1.2.4/pace.min.js"></script>
+       
+ 
+
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-bulma@5.0.1/bulma.min.css"
+      />
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.js"></script>
+
+      <!-- mermaid -->
+      
+      <style>
+        .swal2-styled.swal2-confirm {
+          font-size: 1.6rem;
+        }
+      </style>
+    </head>
+  </html>
+</html>
+
+
+<body>
+  <div id="app">
+    
+      
+    <main class="content on">
+      <section class="outer">
+  <article
+  id="post-tech/createBlogs/零基础-搭建个人博客2-基础环境"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  零基础-搭建个人博客2-方案选择
+</h1>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2015/01/14/tech/createBlogs/%E9%9B%B6%E5%9F%BA%E7%A1%80-%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A22-%E5%9F%BA%E7%A1%80%E7%8E%AF%E5%A2%83/" class="article-date">
+  <time datetime="2015-01-14T15:13:14.000Z" itemprop="datePublished">2015-01-14</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a> / <a class="article-category-link" href="/categories/%E9%9B%B6%E5%9F%BA%E7%A1%80/">零基础</a> / <a class="article-category-link" href="/categories/%E9%9B%B6%E5%9F%BA%E7%A1%80/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">搭建个人博客</a>
+  </div>
+  
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> 字数统计:</span>
+            <span class="post-count">607</span>
+        </span>
+    </span>
+
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> 阅读时长≈</span>
+            <span class="post-count">2 分钟</span>
+        </span>
+    </span>
+</div>
+ 
+    </div>
+      
+    <div class="tocbot"></div>
+
+
+
+
+  
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h2 id="本篇目的"><a href="#本篇目的" class="headerlink" title="本篇目的"></a>本篇目的</h2><blockquote>
+<p>在通过本篇可以完成博客基础环境的搭建，并能正常在本地运行属于自己的博客基础模板样式。</p>
+</blockquote>
+<h2 id="基础环境："><a href="#基础环境：" class="headerlink" title="基础环境："></a>基础环境：</h2><h3 id="1-安装nodejs："><a href="#1-安装nodejs：" class="headerlink" title="1.安装nodejs："></a>1.安装nodejs：</h3><blockquote>
+<p><a target="_blank" rel="noopener" href="https://nodejs.org/zh-cn">https://nodejs.org/zh-cn</a></p>
+<p>点击上述网站，选择适合自己系统的nodejs安装包，一路默认安装配置。<br>安装完成后在终端执行如下命令：</p>
+<blockquote>
+<p>npm -v </p>
+</blockquote>
+<p>能正常展示版本号，即表明nodejs安装成功；</p>
+</blockquote>
+<h3 id="2-配置nodejs地址仓库："><a href="#2-配置nodejs地址仓库：" class="headerlink" title="2.配置nodejs地址仓库："></a>2.配置nodejs地址仓库：</h3><blockquote>
+<p>阿里云：npm config set registry <a target="_blank" rel="noopener" href="http://registry.npmmirror.com/">http://registry.npmmirror.com</a></p>
+<p>原始仓库：npm config set registry <a target="_blank" rel="noopener" href="http://registry.npmjs.org/">http://registry.npmjs.org</a></p>
+<p>由于海外地址和资源的限制等问题，导致默认的原始仓库无法链接时；<br>可以使用国内阿里云的仓库。具体配置方法，在终端或者bash窗口中输入：</p>
+<blockquote>
+<p>npm config set registry <a target="_blank" rel="noopener" href="http://registry.npmmirror.com/">http://registry.npmmirror.com</a></p>
+</blockquote>
+</blockquote>
+<h3 id="3-安装git："><a href="#3-安装git：" class="headerlink" title="3.安装git："></a>3.安装git：</h3><blockquote>
+<p><a target="_blank" rel="noopener" href="https://git-scm.com/">https://git-scm.com/</a></p>
+<p>点击上述网站，选择适合自己系统的nodejs安装包，一路默认安装配置。<br>安装完成后在终端执行如下命令：</p>
+<blockquote>
+<p>git -v</p>
+</blockquote>
+<p>能正常展示版本号，即表明git安装成功；</p>
+</blockquote>
+<h3 id="4-安装Hexo："><a href="#4-安装Hexo：" class="headerlink" title="4.安装Hexo："></a>4.安装Hexo：</h3><blockquote>
+<p>打开终端或者bash窗口执行：</p>
+<blockquote>
+<p>sudo npm install hexo-cli -g</p>
+</blockquote>
+<p>安装完成后在终端执行如下命令：</p>
+<blockquote>
+<p>hexo -v</p>
+</blockquote>
+<p>能正常展示版本号，即表明hexo安装成功；</p>
+</blockquote>
+<h3 id="5-初始化blog文件夹："><a href="#5-初始化blog文件夹：" class="headerlink" title="5.初始化blog文件夹："></a>5.初始化blog文件夹：</h3><blockquote>
+<p>打开终端或者bash窗口，进入到计划您防止代码的文件夹。</p>
+<p>然后，执行如下命令进行博客系统的初始化：</p>
+<blockquote>
+<p>hexo init test(这个可以自定义) </p>
+</blockquote>
+<p>test 为创建的目录，你可以自己定义(您的名字或者昵称都可以)</p>
+<p>这样便可以直接启动初始化的博客，启动后控制台输出相关信息，我们发现存在问题：</p>
+<p><img src="http://imgs.sid2656.life/createBlogs/inittest.jpg" alt="个人博客" title="初始化 hexo"></p>
+<p>根据提示，我们做出如下调整后，再次启动；<br><img src="https://imgs.sid2656.life/createBlogs/install.jpg" alt="个人博客" title="install hexo"></p>
+</blockquote>
+<h3 id="6-初次访问系统："><a href="#6-初次访问系统：" class="headerlink" title="6.初次访问系统："></a>6.初次访问系统：</h3><blockquote>
+<p>通过步骤5我们已经完成了博客的初始化工作；</p>
+<p>接下来我们通过终端或者bash窗口进入到刚刚创建的test目录中，后续我们称这里为根目录，接下来启动hexo服务：</p>
+<blockquote>
+<p>hexo s</p>
+</blockquote>
+<p>我们看到本次启动成功，并提示了博客的访问路径：<br><img src="https://imgs.sid2656.life/createBlogs/s-test.jpg" alt="个人博客" title="启动 hexo"></p>
+<p>我们将 <a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000/</a> 复制粘贴到浏览器，敲下回车<br>最终展示效果如下：<br><img src="https://imgs.sid2656.life/createBlogs/hello.jpg" alt="个人博客" title="启动 hexo"></p>
+<p>至此，我们的博客初始化环境工作全部完成！</p>
+</blockquote>
+ 
+      <!-- reward -->
+      
+      <div id="reword-out">
+        <div id="reward-btn">
+          打赏
+        </div>
+      </div>
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <div class="declare">
+      <ul class="post-copyright">
+        <li>
+          <i class="ri-copyright-line"></i>
+          <strong>版权声明： </strong>
+          
+          本博客所有文章除特别声明外，著作权归作者所有。转载请注明出处！
+          
+        </li>
+      </ul>
+    </div>
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%8A%80%E6%9C%AF/" rel="tag">技术</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%9B%B6%E5%9F%BA%E7%A1%80/" rel="tag">零基础</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+  <nav class="article-nav">
+    
+      <a href="/2015/01/15/tech/createBlogs/%E9%9B%B6%E5%9F%BA%E7%A1%80-%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A23-%E5%8D%9A%E5%AE%A2%E7%8E%AF%E5%A2%83/" class="article-nav-link">
+        <strong class="article-nav-caption">上一篇</strong>
+        <div class="article-nav-title">
+          
+            零基础-搭建个人博客3-博客环境
+          
+        </div>
+      </a>
+    
+    
+      <a href="/2015/01/13/tech/createBlogs/%E9%9B%B6%E5%9F%BA%E7%A1%80-%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A21-%E6%96%B9%E6%A1%88%E9%80%89%E6%8B%A9/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">零基础-搭建个人博客1-方案选择</div>
+      </a>
+    
+  </nav>
+
+  
+   
+    
+    <script src="https://cdn.staticfile.org/twikoo/1.4.18/twikoo.all.min.js"></script>
+    <div id="twikoo" class="twikoo"></div>
+    <script>
+        twikoo.init({
+            envId: ""
+        })
+    </script>
+ 
+</article>
+
+</section>
+      <footer class="footer">
+  <div class="outer">
+    <ul>
+      <li>
+        Copyrights &copy;
+        2011-2025
+        <i class="ri-heart-fill heart_icon"></i> 阿良
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+        
+        <span>
+  <span><i class="ri-user-3-fill"></i>访问人数:<span id="busuanzi_value_site_uv"></span></span>
+  <span class="division">|</span>
+  <span><i class="ri-eye-fill"></i>浏览次数:<span id="busuanzi_value_page_pv"></span></span>
+</span>
+        
+      </li>
+    </ul>
+    <ul>
+      
+        <li>
+          <a href="https://beian.miit.gov.cn/" target="_black" rel="nofollow">京ICP备14051636号-4</a>
+        </li>
+        
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      <li>
+        <!-- cnzz统计 -->
+        
+      </li>
+    </ul>
+  </div>
+</footer>    
+    </main>
+    <div class="float_btns">
+      <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+
+<div class="todark" id="todark">
+  <i class="ri-moon-line"></i>
+</div>
+
+    </div>
+    <aside class="sidebar on">
+      <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/images/ayer-side.svg" alt="阳小良"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">归档</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories/">分类</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags/">标签</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories/%E5%8E%9F%E8%91%97/">原著</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories/%E6%97%85%E8%A1%8C/">旅行</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/">读书</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" target="_blank" rel="noopener" href="https://hi.huitu.com/1145549/">摄影</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" target="_blank" rel="noopener" href="https://space.bilibili.com/3546831053129882/channel/seriesdetail?sid=4562367&ctype=0">画廊</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/friends">友链</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/2011/02/14/blogs/about">关于我</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="搜索">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+    </aside>
+    <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
+  <div class="reward-box">
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/alipay.jpg">
+      <span class="reward-type">支付宝</span>
+    </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/wechat.jpg">
+      <span class="reward-type">微信</span>
+    </div>
+    
+  </div>
+</div>
+    
+<script src="/js/jquery-3.6.0.min.js"></script>
+ 
+<script src="/js/lazyload.min.js"></script>
+
+<!-- Tocbot -->
+ 
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  tocbot.init({
+    tocSelector: ".tocbot",
+    contentSelector: ".article-entry",
+    headingSelector: "h1, h2, h3, h4, h5, h6",
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    scrollContainer: "main",
+    positionFixedSelector: ".tocbot",
+    positionFixedClass: "is-position-fixed",
+    fixedSidebarOffset: "auto",
+  });
+</script>
+
+<script src="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.js"></script>
+<link
+  rel="stylesheet"
+  href="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.css"
+/>
+<script src="https://cdn.staticfile.org/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js"></script>
+
+<script src="/dist/main.js"></script>
+
+<!-- ImageViewer -->
+ <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/default-skin/default-skin.min.css">
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.js"></script>
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe-ui-default.min.js"></script>
+
+<script>
+    function viewer_init() {
+        let pswpElement = document.querySelectorAll('.pswp')[0];
+        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
+
+        $imgArr.forEach(($em, i) => {
+            $em.onclick = () => {
+                // slider展开状态
+                // todo: 这样不好，后面改成状态
+                if (document.querySelector('.left-col.show')) return
+                let items = []
+                $imgArr.forEach(($em2, i2) => {
+                    let img = $em2.getAttribute('data-idx', i2)
+                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
+                    let title = $em2.getAttribute('alt')
+                    // 获得原图尺寸
+                    const image = new Image()
+                    image.src = src
+                    items.push({
+                        src: src,
+                        w: image.width || $em2.width,
+                        h: image.height || $em2.height,
+                        title: title
+                    })
+                })
+                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
+                    index: parseInt(i)
+                });
+                gallery.init()
+            }
+        })
+    }
+    viewer_init()
+</script> 
+<!-- MathJax -->
+
+<!-- Katex -->
+
+<!-- busuanzi  -->
+ 
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+ 
+<!-- ClickLove -->
+
+<!-- ClickBoom1 -->
+
+<!-- ClickBoom2 -->
+
+<!-- CodeCopy -->
+
+<!-- CanvasBackground -->
+
+<script>
+  if (window.mermaid) {
+    mermaid.initialize({ theme: "forest" });
+  }
+</script>
+
+
+    
+    
+
+  </div>
+</body>
+
+</html>
