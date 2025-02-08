@@ -88,7 +88,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">91</span>
+            <span class="post-count">2k</span>
         </span>
     </span>
 
@@ -97,7 +97,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> 阅读时长≈</span>
-            <span class="post-count">1 分钟</span>
+            <span class="post-count">7 分钟</span>
         </span>
     </span>
 </div>
@@ -115,7 +115,148 @@
   <h2 id="本篇目的"><a href="#本篇目的" class="headerlink" title="本篇目的"></a>本篇目的</h2><blockquote>
 <p>由于部分资源文件占用带宽较大，如果使用海外的网站可能会进一步拖累网站的运行速度，所以需要寻找一个可以在国内使用，且尽量减少花销的资源存储方案。</p>
 </blockquote>
-<h2 id="图片存储选择："><a href="#图片存储选择：" class="headerlink" title="图片存储选择："></a>图片存储选择：</h2><h3 id="1-github："><a href="#1-github：" class="headerlink" title="1.github："></a>1.github：</h3><h3 id="2-云服务商："><a href="#2-云服务商：" class="headerlink" title="2.云服务商："></a>2.云服务商：</h3><h3 id="3-其他开放社区："><a href="#3-其他开放社区：" class="headerlink" title="3.其他开放社区："></a>3.其他开放社区：</h3> 
+<h2 id="图片存储选择："><a href="#图片存储选择：" class="headerlink" title="图片存储选择："></a>图片存储选择：</h2><h3 id="1-github："><a href="#1-github：" class="headerlink" title="1.github："></a>1.github：</h3><h4 id="github仓库："><a href="#github仓库：" class="headerlink" title="github仓库："></a>github仓库：</h4><blockquote>
+<p>可以将图片直接放置到自己博客对应的服务目录下面，这样的好处是不需要额外管理图片；随着服务的部署和迭代自动存储；不需要自己去寻找额外的存储服务商；</p>
+<p>当然，除了好处还有坏处：</p>
+<blockquote>
+<ol>
+<li>github的仓库有容量限制，单一仓库容量限制为1G，单个文件不能超过100M，账号的整体存储上线为100G；</li>
+<li>部署花费的时长不能超过10分钟；理论上咱们的博客不会有这个限制；</li>
+<li>github pages站点的软带宽限制是每个月100G；</li>
+</ol>
+</blockquote>
+<p>所以，我们可以看到，如果随着你图片的不断上传，你的博客仓库会受到仓库大小的限制，而且由于你在使用软带宽，所以整体的流量也会收到影响。</p>
+<p>当然针对这两个问题，重点是第一个，仓库大小，软带宽每个月100G理论上来说是足够我们使用的。</p>
+<p>所以，问题变为怎么解决仓库大小限制问题；这里我经过多方探索，本着将github榨干的原则，我找到了一款github app名为：picx</p>
+<p>picx非常适合我们的场景，他是使用github作为免费的图床，进行图片的上传和存储。</p>
+<blockquote>
+<p>图床地址： <a target="_blank" rel="noopener" href="https://picx-docs.xpoet.cn/">https://picx-docs.xpoet.cn/</a></p>
+</blockquote>
+<p>picx的具体使用文档我这里就不赘述了，简单说一下他的基本原理，picx是将github的存储作为底层服务，然后依托于github的api，将仓库管理和推送等进行封装，这样用户便可以在picx进行图片的存储和处理操作，然后通过github的api上传数据，并返回可访问的对公url。</p>
+<p>此时，您将获取的url放到您的博客文档即可，这样您博客的内容基本上都是文字，1G的存储空间绝对是够用的。</p>
+</blockquote>
+<h3 id="2-云服务商："><a href="#2-云服务商：" class="headerlink" title="2.云服务商："></a>2.云服务商：</h3><blockquote>
+<p>虽然可以通过上述的方式解决github本身的容量限制问题；但是长期来看依然是有一定上限的；另外，因为还是github的资源链接，所以国内访问还是需要想办法进行调整和转换，这部分可以看一下我上一篇讲的资源部署和最后说的域名解析部分的内容。</p>
+<p>1.腾讯云<br>新用户可以使用六个月的免费存储容量、免费请求和免费流量<br>限制：时间、流量、空间大小均有限制</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://cloud.tencent.com/">https://cloud.tencent.com/</a></p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p>2.阿里云OSS<br>海量、安全、低成本、高可靠的云存储服务，提供99.999999999%的数据可靠性。使用RESTful API 可以在互联网任何位置存储和访问，容量和处理能力弹性扩展，多种存储类型供选择全面优化存储成本。<br>不一定存储图片，文件也是ok的，不过以前扣量很严重，现在好多了，目前再用。</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://www.aliyun.com/">https://www.aliyun.com/</a></p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p>3.七牛云<br>国内云厂商服务器基本上是需要花钱的，目前我自己的使用的是七牛云，因为我是七牛云初创时间段注册使用的，当时有个终身的会员额度，不知道现在还有没有，至于额度的用量，目前就我个人来看，存储和带宽都足够我博客的使用了。</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://www.qiniu.com/">https://www.qiniu.com/</a></p>
+</blockquote>
+<p>图床这部分，我个人建议还是花一点钱，使用一个相对稳定的云服务厂商，如果完全不花钱，后续很有可能图床倒闭，你所有的博客都需要重新调整，那个代价是很大的。</p>
+<p>当然，如果确实是资金有限，那就按照我上面说的，用github作为图床服务商，然后自己搞域名，再找解析处理。</p>
+</blockquote>
+<h3 id="3-其他图床服务："><a href="#3-其他图床服务：" class="headerlink" title="3.其他图床服务："></a>3.其他图床服务：</h3><blockquote>
+<p>1.全球 CDN 免费图床 (IMG.TG)： </p>
+<p>图片大小限制为5MB。存储容量不限，每月限制500张，时不时会维护 </p>
+<blockquote>
+<p>改为收费：<a target="_blank" rel="noopener" href="https://imgtg.com/">https://imgtg.com/</a> </p>
+<p>附带免费：<a target="_blank" rel="noopener" href="https://img.tg/">https://img.tg/</a></p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p>2.聚合图床 </p>
+<p>免费无限图片上传：</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://www.superbed.cn/">https://www.superbed.cn/</a></p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p>3.Z4A图床：</p>
+<p>最大64MB 图片大小. 直接的源图片链接，储存图片超过2000张（暂定）的用户，商业用户需进行赞助。</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://www.z4a.net/">https://www.z4a.net/</a></p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p>4.imagehub：</p>
+<p>支持单张最大10MB图片上传全球CDN加速，多地数据实时备份。</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://www.imagehub.cc/">https://www.imagehub.cc/</a></p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p>5.helloimg：</p>
+<p>最大 20 MB 图片大小. 直接的源图片，这个很好用但是每个小时限10张，每天好像限制100，速度很快，需要注册，实名是跳转到腾讯云人脸，我也一直在用的。</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://www.helloimg.com/">https://www.helloimg.com/</a></p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p>6.路过图床：</p>
+<p>老牌图床了，从2011年就开始向大家开放，提供高速稳定的图片上传和外链分享服务，最大单张图片支持10MB，提供全球CDN加速、支持外链、 原图保存、无需注册。官方承诺，全站启用SSL加密链接，保障您的信息安全，不会删除图片, 即使是多年无任何流量的图片也不会删除。说是这么说，但是有些敏感图片照样删</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://imgse.com/">https://imgse.com/</a></p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p>7.SM.MS图床:</p>
+<p>土豪兽兽建的图床，2015 年开始正式运营。速度：现在估计是被滥用了没那么快了 烧风购买了更多节点、修改了服务架构，现在全球速度还是不错的。CDN：烧风自建的 CDN，有香港阿里云、DigitalOcean 欧洲和 Linode 北美等节点 HTTPS：HTTP 会被 301 跳转 HTTPS（支持 HTTP2）<br>支持 API 操作，图片存储非常可靠，V2EX 钦点的图床。iOS 和 Android 应用 即将开发完毕已经分别上架 iTunes 和 Play Store，甚至有第三方做的 Telegram Bot</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://sm.ms/">https://sm.ms/</a></p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p>8.即刻图床 : </p>
+<p>大厂全球CDN加速,支持外链,不限流量,支持粘贴上传、拖放上传</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://jiketuchuang.com/">https://jiketuchuang.com/</a></p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p>9.图片映客–水墨图床:</p>
+<p>免费的高速外链图床-免费高速图床-致力于创建一流的图片加速空间 最大可上传 50.00 MB 的图片 单次同时可选择 50 张 注册登陆后自主管理</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://img.ink/">https://img.ink/</a></p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p>10.图几度图床:</p>
+<p>存储图片：我们是认真的,无需登陆即可上传 单个文件支持最大 3 M 每次最多允许 5 张图片上传</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://img.tujidu.com/">https://img.tujidu.com/</a></p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p>11.PostImage：</p>
+<p>速度：国外速度杠杠的，国内别被墙就好 CDN：AdvancedHosted CDN ；HTTPS：支持<br>PostImage 图床的介绍说是为了方便用户在 Facebook 和 Twitter 上传图。这个图床用的 CDN 服务商不太有名</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://postimages.org/">https://postimages.org/</a></p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p>12.ImgBox ：</p>
+<p>实在不敢恭维，估计只有在北美地区的访客才能保证最快的速度 CDN：两台位于美国的 Leaseweb 的服务器 HTTPS：支持 上传地址 虽然用的服务器挺一般，但是毕竟也是一家国外老牌图床了。自 2010 年起开始运营以来，已经托管了上百万张图片，看起来还是令人放心的。</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://imgbox.com/">https://imgbox.com/</a></p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p>13.小贱贱图床：<br>速度：一般般~获取一个简单的外链，图床用的是微博空间，速度很快，但是图片清晰度会变低。每日可以上传图片20张</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://pic.xiaojianjian.net/">https://pic.xiaojianjian.net/</a></p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p>14.Imgbb（付费）：</p>
+<p>任意拖放图片到这里, 即开始上传您的图片. 最大 32 MB 图片大小. 直接的源图片链接, BBCode代码和HTML缩略图显示</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://zh-cn.imgbb.com/">https://zh-cn.imgbb.com/</a></p>
+</blockquote>
+<p>以下比较推荐，虽然付费，但是不担心跑路，新用户可以白嫖几个月；</p>
+<p>以上图床推荐来自：<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/58863378">https://zhuanlan.zhihu.com/p/58863378</a></p>
+</blockquote>
+ 
       <!-- reward -->
       
       <div id="reword-out">
@@ -170,15 +311,7 @@
 
   
    
-    
-    <script src="https://cdn.staticfile.org/twikoo/1.4.18/twikoo.all.min.js"></script>
-    <div id="twikoo" class="twikoo"></div>
-    <script>
-        twikoo.init({
-            envId: ""
-        })
-    </script>
- 
+     
 </article>
 
 </section>
@@ -292,7 +425,7 @@
     </li>
     
     <li class="nav-item">
-      <a class="nav-item-link" href="/2011/02/14/blogs/about">关于我</a>
+      <a class="nav-item-link" href="/2011/02/14/about">关于我</a>
     </li>
     
   </ul>
