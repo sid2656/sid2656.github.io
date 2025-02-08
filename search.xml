@@ -626,6 +626,7 @@
 <p>选中三个文件夹，一起进行git提交：</p>
 <p><img src="http://imgs.sid2656.life/createBlogs/git-push2.jpg" alt="hexo项目目录" title="hexo项目目录 hexo"></p>
 <p>这里我们选择commit and push；</p>
+<p>PS：public中有生成的文件需要进行add操作！</p>
 <p>至此，多仓库的关联和一键提交，也完成啦！</p>
 </blockquote>
 <h3 id="3-实现一件部署到github："><a href="#3-实现一件部署到github：" class="headerlink" title="3.实现一件部署到github："></a>3.实现一件部署到github：</h3><blockquote>
@@ -652,7 +653,7 @@
       </tags>
   </entry>
   <entry>
-    <title>零基础-搭建个人博客7-自动部署</title>
+    <title>零基础-搭建个人博客8-Cloudflare免费解析域名到githubPages</title>
     <url>/2015/01/19/tech/createBlogs/%E9%9B%B6%E5%9F%BA%E7%A1%80-%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A28-Cloudflare%E5%85%8D%E8%B4%B9%E8%A7%A3%E6%9E%90%E5%9F%9F%E5%90%8D%E5%88%B0githubPages/</url>
     <content><![CDATA[<h2 id="本篇目的"><a href="#本篇目的" class="headerlink" title="本篇目的"></a>本篇目的</h2><blockquote>
 <p>由于存在很多的不可抗力因素，导致我们部署在海外github上面的服务pages是无法通过国内进行访问的，但是绝大多数的国内用户建立博客的目的都是给身边或者志同道合的人一个认识自己的路径，所以受众基本上就是国内用户。本文的目的就是为了解决上述问题而产生的。</p>
