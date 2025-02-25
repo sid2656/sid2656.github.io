@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+
+
+<html lang="zh-CN,en,default">
+  
+
+    <head>
+      <meta charset="utf-8" />
+       
+      <meta name="keywords" content="阳小良,个人博客,程序猿,插画师,技术博客,人生感悟" />
+       
+      <meta name="description" content="不想做插画师的程序猿，不是好厨师" />
+      
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1"
+      />
+      <title>01.TensorFlow介绍 |  阳小良</title>
+  <meta name="generator" content="hexo-theme-ayer">
+      
+      <link rel="shortcut icon" href="/favicon.ico" />
+       
+<link rel="stylesheet" href="/dist/main.css">
+
+      
+<link rel="stylesheet" href="/css/fonts/remixicon.css">
+
+      
+<link rel="stylesheet" href="/css/custom.css">
+ 
+      <script src="https://cdn.staticfile.org/pace/1.2.4/pace.min.js"></script>
+       
+ 
+
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-bulma@5.0.1/bulma.min.css"
+      />
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.js"></script>
+
+      <!-- mermaid -->
+      
+      <style>
+        .swal2-styled.swal2-confirm {
+          font-size: 1.6rem;
+        }
+      </style>
+    </head>
+  </html>
+</html>
+
+
+<body>
+  <div id="app">
+    
+      
+    <main class="content on">
+      <section class="outer">
+  <article
+  id="post-tech/AI/tensorFlow/01.TensorFlow介绍"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  01.TensorFlow介绍
+</h1>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2018/01/18/tech/AI/tensorFlow/01.TensorFlow%E4%BB%8B%E7%BB%8D/" class="article-date">
+  <time datetime="2018-01-18T07:59:44.000Z" itemprop="datePublished">2018-01-18</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E8%B0%8B%E7%94%9F%E6%89%8B%E6%AE%B5/">谋生手段</a> / <a class="article-category-link" href="/categories/%E8%B0%8B%E7%94%9F%E6%89%8B%E6%AE%B5/AI/">AI</a> / <a class="article-category-link" href="/categories/%E8%B0%8B%E7%94%9F%E6%89%8B%E6%AE%B5/AI/%E6%95%99%E7%A8%8B/">教程</a>
+  </div>
+  
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> 字数统计:</span>
+            <span class="post-count">4.1k</span>
+        </span>
+    </span>
+
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> 阅读时长≈</span>
+            <span class="post-count">14 分钟</span>
+        </span>
+    </span>
+</div>
+ 
+    </div>
+      
+
+
+
+  
+    <div class="article-entry" itemprop="articleBody">
+       
+  <blockquote>
+<blockquote>
+</blockquote>
+ <img src="https://static.leiphone.com/uploads/new/article/740_740/201511/5642febc29406.jpg?imageMogr2/format/jpg/quality/90" style="font-weight: bold; font-family: microsoft yahei; font-size: 18pt; color: rgb(63, 63, 63);"/>
+
+<p> TensorFlow资源</p>
+<p> TensorFlow源码：</p>
+<p> <a target="_blank" rel="noopener" href="https://github.com/tensorflow/tensorflow">https://github.com/tensorflow/tensorflow</a></p>
+<p> 中文社区：</p>
+<p> <a target="_blank" rel="noopener" href="http://www.tensorfly.cn/">http://www.tensorfly.cn/</a></p>
+<p> 本文是对TensorFlow以及相关领域知识的简单介绍，所有介绍和资料均来源于网络，秉承TensorFlow的分享和共享的精神，借鉴了其他文章对TensorFlow的理解和认知；楼主也会将自己对TF的理解逐渐融合进此教程中，如有错误之处，还请同学原谅，并以包容和理解的态度指出问题所在，让我们共同进步。谢谢！</p>
+<p> PS：楼主是神经网络和深度学习领域的小白，目前是凭着一腔热情在学习，后续会持续推出相关的教程，以及自己搭建环境和处理学习的所有过程，希望可以帮助后来人，更快的前行。</p>
+</blockquote>
+<p>初识TensorFlow&gt;</p>
+<blockquote>
+<p> 2016年3月份，Google的围棋人工智能程序AlphaGo以4比1的大比分，战胜人类选手李世石，在全球成功引起广泛关注，引起了一波人工智能的热潮。从智能手机的语音助手，到相机的人脸识别，人工智能技术已经进入到我们生活的方方面面，在未来将深刻的影响我们的生活。</p>
+<p> 为了加速深度学习领域的发展，2015年11月9日，Google发布深度学习框架TensorFlow并宣布开源。在短短的一年时间内，在GitHub上，TensorFlow就成为了最流行的深度学习项目。</p>
+<p> TensorFlow在图形分类、音频处理、推荐系统和自然语言处理等场景下都有丰富的应用。虽然Tenforflow开源时间刚满一年，但是它正在以迅猛的速度渗入到我们的寻常生活中。</p>
+<p> 在澳大利亚，海洋生物学家与来自昆士兰大学（Queensland University）的计算机科学家合作，通过TensorFlow技术，使用探测器自动地在数以万计的航拍照片中寻找海牛；在日本，一位年轻人利用TensorFlow运用到农业上，按照黄瓜大小、形状、颜色以及其他特征来挑选黄瓜并对它们进行分类；在医学领域，发射科的医生通过采用TensorFlow，使其在医学扫描中能够识别帕金森病的迹象。湾区的数据科学家在树莓派上使用TensorFlow来追踪记录加州火车的动态。最近， AlphaGo开发团队Deepmind也声称，将从Torch迁移到TensorFlow中，这无不印证了TensorFlow在业界的流行程度。</p>
+<p> 什么是深度学习？</p>
+<p> 在机器学习流行之前，都是基于规则的系统，因此做语音的需要了解语音学，做NLP的需要很多语言学知识，做深蓝需要很多国际象棋大师。</p>
+<p> 而到后来统计方法成为主流之后，领域知识就不再那么重要，但是我们还是需要一些领域知识或者经验来提取合适的feature（特征），feature的好坏往往决定了机器学习算法的成败。对于NLP来说，feature还相对比较好提取，因为语言本身就是高度的抽象；而对于Speech或者Image来说，我们人类自己也很难描述我们是怎么提取feature的。比如我们识别一只猫，我们隐隐约约觉得猫有两个眼睛一个鼻子有个长尾巴，而且它们之间有一定的空间约束关系，比如两只眼睛到鼻子的距离可能差不多。但怎么用像素来定义”眼睛“呢？如果仔细想一下就会发现很难。当然我们有很多特征提取的方法，比如提取边缘轮廓等等。</p>
+<p> 但是人类学习似乎不需要这么复杂，我们只要给几张猫的照片给人看，他就能学习到什么是猫。人似乎能自动“学习”出feature来，你给他看了几张猫的照片，然后问猫有什么特征，他可能会隐隐预约地告诉你猫有什么特征，甚至是猫特有的特征，这些特征豹子或者老虎没有。</p>
+<p> 深度学习为什么最近这么火，其中一个重要的原因就是不需要（太多）提取feature。</p>
+<p> 从机器学习的使用者来说，我们以前做的大部分事情是feature engineering，然后调一些参数，一般是为了防止过拟合。而有了深度学习之后，如果我们不需要实现一个CNN或者LSTM，那么我们似乎什么也不用干。（机器让工人失业，机器学习让搞机器学习的人失业！人工智能最终的目的是让人类失业？）</p>
+ <img src="https://static.leiphone.com/uploads/new/article/740_740/201511/5642fff4f0f25.jpg?imageMogr2/format/jpg/quality/90" style="border: medium none; max-width: 100%; height: auto;"/>
+
+<p> 但是深度学习也不是万能的，至少现在的一个问题是它需要更强的计算能力才能训练出一个比较好的模型。它还不能像人类那样通过很少的训练样本就能学习很好的效果。</p>
+<p> 其实神经网络提出好几十年了，为什么最近才火呢？其中一个原因就是之前它的效果并不比非深度学习算法好，比如SVM。</p>
+<p> 到了2006年之后，随着计算能力的增强（尤其是GPU的出现），深度神经网络在很多传统的机器学习数据集上体现出优势来之后，后来用到Image和Speech，因为它自动学出的feature不需要人工提取feature，效果提升更加明显。这是否也说明，我们之前提取的图像feature都不够好，或者是根据人脑的经验提取的feature不适合机器的模型？</p>
+<p> 很多人对深度学习颇有微词的一个理由就是它没有太多理论依据，更多的像蛮力的搜索——非常深的层数，几千万甚至上亿参数，然后调整参数拟合输入与输出。其实目前所有的机器学习都是这样，人类的大脑的学习有所不同吗，不是神经元连接的调整吗？</p>
+<p> 但不管怎么说，从深度神经网络的使用者（我们这样的工程师）的角度来说，如果我们选定了一种网络结构，比如CNN，那么我们要做的就是根据经验，选择合适的层数，每层的神经元数量，激活函数，损失函数，正则化的参数，然后使用validation数据来判定这次训练的效果。从效果来说，一般层次越多效果越好（至少相对一两层的网络来说），但是层次越多参数也越多，训练就越慢。单机训练一个网络花几天甚至几周的时间非常常见。因此用多个节点的计算机集群来训练就是深度学习的核心竞争力——尤其对于用户数据瞬息万变的互联网应用来说更是如此。</p>
+<p> 常见深度神经网络的训练和问题</p>
+<p> 对于机器学习来说，训练是最关键也最困难的部分，一般的机器学习模型都是参数化的模型，我们可以把它看成一个函数y&#x3D;f(w;x)。</p>
+<p> 比如拿识别图像来说，输入x是这张图片的每个像素值，比如MNIST的数据是28<em>28的图片，每个点是RGB的颜色值，那么x就是一个28</em>28*3的向量。而一个模型有很多参数，用w表示。输出y是一个向量，比如MNIST的数据是0-9的10个数字，所以我们可以让y输出一个10维的向量，分别代表识别成0-9的置信度（概率），选择最大的那个作为我们的识别结果（当然更常见的是最后一层是softmax而不是普通的激活函数，这样这个10维向量加起来等于1，可以认为是分类的概率）。</p>
+<p> 而训练就是给这个模型很多(x,y)，然后训练的过程就是不断的调整参数w，然后使得分类错误尽可能少（由于分类错误相对w不连续因而不可求导，所以一般使用一个连续的Loss Function）。</p>
+<p> 对于神经网络来说，标准的训练算法就是反向传播算法（BackPropagation）。从数学上来说就是使用（随机）梯度下降算法，求Loss Function对每个参数的梯度。另外我们也可以从另外一个角度来看反向传播算法，比如最后一层的神经网络参数，直接造成错误（Loss）；而倒数第二层的神经网络参数，通过这一次的激活函数影响最后一层，然后间接影响最终的输出。反向传播算法也可以看成错误不断往前传播的过程。</p>
+<p> 由于深度神经网络的参数非常多，比如GoogleNet， 2014年ILSVRC挑战赛冠军，将Top5 的错误率降低到6.67%，它是一个22层的CNN，有5百多万个参数。所以需要强大的计算资源来训练这么深的神经网络。</p>
+<p> 其中，CNN是Image领域常见的一种深度神经网络。由Yann LeCun提出，通过卷积来发现位置无关的feature，而且这些feature的参数是相同的，从而与全连接的神经网络相比大大减少了参数的数量。</p>
+ <img src="https://static.leiphone.com/uploads/new/article/740_740/201511/5643043384601.png?imageMogr2/format/jpg/quality/90" style="border: medium none; max-width: 100%; height: auto;"/>
+
+<p> （cnn深度神经网络）</p>
+<p> 最开始的改进是使用GPU来加速训练，GPU可以看成一种SIMT的架构，和SIMD有些类似，但是执行相同指令的warp里的32个core可以有不同的代码路径。对于反向传播算法来说，基本计算就是矩阵向量乘法，对一个向量应用激活函数这样的向量化指令，而不像在传统的代码里会有很多if-else这样的逻辑判断，所以使用GPU加速非常有用。</p>
+<p> 但即使这样，单机的计算能力还是相对有限的。</p>
+<p> 深度学习开源工具</p>
+<p> 从数学上来讲，深度神经网络其实不复杂，我们定义不同的网络结构，比如层次之间怎么连接，每层有多少神经元，每层的激活函数是什么。前向算法非常简单，根据网络的定义计算就好了。</p>
+<p> 而反向传播算法就比较复杂了，所以现在有很多深度学习的开源框架来帮助我们把深度学习用到实际的系统中。</p>
+<p> 我们可以从以下几个不同的角度来分类这些开源的深度学习框架。</p>
+<p> 通用vs专用</p>
+<p> 深度学习抽象到最后都是一个数学模型，相对于传统的机器学习方法来说少了很多特征抽取的工作，但是要把它用到实际的系统中还有很多事情要做。而且对于很多系统来说，深度学习只是其中的一个模块。</p>
+<p> 拿语音识别来说，语音识别包含很多模块，比如声学模型和语言模型，现在的声学模型可以用LSTMs（一种RNN，也是一种深度学习网络）来做，但是我们需要把它融入整个系统，这就有很多工作需要做。而且目前大部分的机器学习方法包括深度学习，都必须假设训练数据和测试数据是相同（或者类似）的分布的。所以在实际的应用中，我们需要做很多数据相关的预处理工作。</p>
+<p> 比如Kaldi，它是一个语音识别的工具，实现了语音识别的所有模块，也包括一些语音识别常用的深度神经网络模型，比如DNN和LSTM。</p>
+<p> 而Caffe更多的是用在图像识别，它实现了CNN，因为这个模型在图像识别上效果非常好。</p>
+<p> 框架vs库</p>
+<p> 大部分开源的深度学习工具把整个模型都封装好了，我们只需要指定一些参数就行了。比如我们使用Caffe的CNN。</p>
+<p> 但是还有一些工具只是提供一些基础库，比如Theano，它提供了自动求梯度的工具。</p>
+<p> 我们可以自己定义网络的结构，我们不需要自己求梯度。使用Theano的好处是如果我们“创造”一个新的网络结构或者是很新的深度神经网络，那么其它框架很可能还没有实现，所以Theano在学术界很流行。当然坏处就是因为它不可能针对特定的模型做优化，所以可能性能不如特定的实现那么好。</p>
+<p> 单机vs集群</p>
+<p> 目前大部分的开源工具都是单机版的，有些支持在一个节点的多个GPU训练，但是支持GPU cluster比较少，目前支持多机训练的有GraphLab和Deeplearning4j。</p>
+<p> Tensor Flow到底是什么？</p>
+<p> Tensor（张量）意味着N维数组，Flow（流）意味着基于数据流图的计算，TensorFlow即为张量从图的一端流动到另一端。</p>
+<p> TensorFlow 表达了高层次的机器学习计算，大幅简化了第一代系统，并且具备更好的灵活性和可延展性。TensorFlow一大亮点是支持异构设备分布式计算，它能够在各个平台上自动运行模型，从电话、单个CPU &#x2F; GPU到成百上千GPU卡组成的分布式系统。</p>
+ <img src="https://static.leiphone.com/uploads/new/article/740_740/201511/5643016fbc0a3.png?imageMogr2/format/jpg/quality/90" style="border: medium none; max-width: 100%; height: auto;"/>
+
+<p> 从目前的文档看，TensorFlow支持CNN、RNN和LSTM算法，这都是目前在Image，Speech和NLP最流行的深度神经网络模型。</p>
+<p> 而且从Jeff Dean的论文来看，它肯定是支持集群上的训练的。</p>
+<p> 在论文里的例子来看，这个架构有点像Spark或者Dryad等图计算模型。就像写Map-reduce代码一样，我们从高层的角度来定义我们的业务逻辑，然后这个架构帮我们调度和分配计算资源（甚至容错，比如某个计算节点挂了或者太慢）。目前开源的实现分布式Deep learning的GraphLab就是GAS的架构，我们必须按照它的抽象来编写Deep Learing代码（或者其它分布式代码，如果PageRank），而Deeplearning4j直接使用了Spark。</p>
+<p> Map-Reduce的思想非常简单，但是要写出一个稳定可用的工����产品来就不容易了。而支持分布式机器学习尤其是深度学习的产品就更难了，Google的TensorFlow应该是一种抽象方式，可惜现在开源的部分并没有这些内容。有点像Google开源了一个单机版的Hadoop，可以用这种抽象（Map-reduce）来简化大数据编程，但是实际应用肯定就大大受限制了。</p>
+<p> 深度学习能解决所有问题吗？</p>
+<p> 至少目前来看，深度学习只是在Speech和Image这种比较“浅层”的智能问题上效果是比较明显的，而对于语言理解和推理这些问题效果就不那么好了，也许未来的深度神经网络能解决更“智能”的问题，但只是目前还不行。</p>
+<p> Google开源TensorFlow的意义</p>
+<p> 这一次的Google开源深度学习系统TensorFlow在很多地方可以应用，如语音识别，自然语言理解，计算机视觉，广告等等。但是，基于以上论点，我们也不能过分夸大TensorFlow这种通用深度学习框架在一个工业界机器学习系统里的作用。在一个完整的工业界语音识别系统里, 除了深度学习算法外，还有很多工作是专业领域相关的算法，以及海量数据收集和工程系统架构的搭建。</p>
+<p> 不过总的来说，这次谷歌的开源很有意义，尤其是对于中国的很多创业公司来说，他们大都没有能力理解并开发一个与国际同步的深度学习系统，所以TensorFlow会大大降低深度学习在各个行业中的应用难度。</p>
+</blockquote>
+ 
+      <!-- reward -->
+      
+      <div id="reword-out">
+        <div id="reward-btn">
+          打赏
+        </div>
+      </div>
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <div class="declare">
+      <ul class="post-copyright">
+        <li>
+          <i class="ri-copyright-line"></i>
+          <strong>版权声明： </strong>
+          
+          本博客所有文章除特别声明外，著作权归作者所有。转载请注明出处！
+          
+        </li>
+      </ul>
+    </div>
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/AI/" rel="tag">AI</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%B0%8B%E7%94%9F%E6%89%8B%E6%AE%B5/" rel="tag">谋生手段</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+  <nav class="article-nav">
+    
+      <a href="/2018/01/19/tech/python/01.%E5%AE%89%E8%A3%85Python3/" class="article-nav-link">
+        <strong class="article-nav-caption">上一篇</strong>
+        <div class="article-nav-title">
+          
+            01.Windows下安装python3&amp;pip
+          
+        </div>
+      </a>
+    
+    
+      <a href="/2018/01/17/tech/web/%E6%AF%94%E7%89%B9%E5%B8%81%E7%99%BD%E7%9A%AE%E4%B9%A6/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">比特币白皮书：一种点对点的电子现金系统</div>
+      </a>
+    
+  </nav>
+
+  
+   
+     
+</article>
+
+</section>
+      <footer class="footer">
+  <div class="outer">
+    <ul>
+      <li>
+        Copyrights &copy;
+        2011-2025
+        <i class="ri-heart-fill heart_icon"></i> 阿良
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+        
+        <span>
+  <span><i class="ri-user-3-fill"></i>访问人数:<span id="busuanzi_value_site_uv"></span></span>
+  <span class="division">|</span>
+  <span><i class="ri-eye-fill"></i>浏览次数:<span id="busuanzi_value_page_pv"></span></span>
+</span>
+        
+      </li>
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      <li>
+        <!-- cnzz统计 -->
+        
+      </li>
+    </ul>
+  </div>
+</footer>    
+    </main>
+    <div class="float_btns">
+      <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+
+<div class="todark" id="todark">
+  <i class="ri-moon-line"></i>
+</div>
+
+    </div>
+    <aside class="sidebar on">
+      <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/images/ayer-side.svg" alt="阳小良"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">归档</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories/">分类</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags/">标签</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories/%E5%8E%9F%E8%91%97/">原著</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories/%E4%BA%94%E5%91%B3%E6%9D%82%E9%99%88/%E5%A4%A9%E6%B6%AF%E6%B5%B7%E8%A7%92/">旅行</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories/%E8%B0%8B%E7%94%9F%E6%89%8B%E6%AE%B5/">技术</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories/%E6%8A%95%E8%B5%84%E8%87%AA%E5%B7%B1/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/">读书</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" target="_blank" rel="noopener" href="https://hi.huitu.com/1145549/">摄影</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" target="_blank" rel="noopener" href="https://space.bilibili.com/3546831053129882/channel/seriesdetail?sid=4562367&ctype=0">画廊</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/friends">友链</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/2011/02/14/about">关于我</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="搜索">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+    </aside>
+    <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
+  <div class="reward-box">
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/alipay.jpg">
+      <span class="reward-type">支付宝</span>
+    </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/wechat.jpg">
+      <span class="reward-type">微信</span>
+    </div>
+    
+  </div>
+</div>
+    
+<script src="/js/jquery-3.6.0.min.js"></script>
+ 
+<script src="/js/lazyload.min.js"></script>
+
+<!-- Tocbot -->
+ 
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  tocbot.init({
+    tocSelector: ".tocbot",
+    contentSelector: ".article-entry",
+    headingSelector: "h1, h2, h3, h4, h5, h6",
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    scrollContainer: "main",
+    positionFixedSelector: ".tocbot",
+    positionFixedClass: "is-position-fixed",
+    fixedSidebarOffset: "auto",
+  });
+</script>
+
+<script src="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.js"></script>
+<link
+  rel="stylesheet"
+  href="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.css"
+/>
+<script src="https://cdn.staticfile.org/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js"></script>
+
+<script src="/dist/main.js"></script>
+
+<!-- ImageViewer -->
+ <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/default-skin/default-skin.min.css">
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.js"></script>
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe-ui-default.min.js"></script>
+
+<script>
+    function viewer_init() {
+        let pswpElement = document.querySelectorAll('.pswp')[0];
+        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
+
+        $imgArr.forEach(($em, i) => {
+            $em.onclick = () => {
+                // slider展开状态
+                // todo: 这样不好，后面改成状态
+                if (document.querySelector('.left-col.show')) return
+                let items = []
+                $imgArr.forEach(($em2, i2) => {
+                    let img = $em2.getAttribute('data-idx', i2)
+                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
+                    let title = $em2.getAttribute('alt')
+                    // 获得原图尺寸
+                    const image = new Image()
+                    image.src = src
+                    items.push({
+                        src: src,
+                        w: image.width || $em2.width,
+                        h: image.height || $em2.height,
+                        title: title
+                    })
+                })
+                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
+                    index: parseInt(i)
+                });
+                gallery.init()
+            }
+        })
+    }
+    viewer_init()
+</script> 
+<!-- MathJax -->
+
+<!-- Katex -->
+
+<!-- busuanzi  -->
+ 
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+ 
+<!-- ClickLove -->
+
+<!-- ClickBoom1 -->
+
+<!-- ClickBoom2 -->
+
+<!-- CodeCopy -->
+
+<!-- CanvasBackground -->
+
+<script>
+  if (window.mermaid) {
+    mermaid.initialize({ theme: "forest" });
+  }
+</script>
+
+
+    
+    
+
+  </div>
+</body>
+
+</html>

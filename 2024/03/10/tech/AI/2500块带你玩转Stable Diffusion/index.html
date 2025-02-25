@@ -1,0 +1,1109 @@
+<!DOCTYPE html>
+
+
+<html lang="zh-CN,en,default">
+  
+
+    <head>
+      <meta charset="utf-8" />
+       
+      <meta name="keywords" content="阳小良,个人博客,程序猿,插画师,技术博客,人生感悟" />
+       
+      <meta name="description" content="不想做插画师的程序猿，不是好厨师" />
+      
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1"
+      />
+      <title>2500块带你玩转Stable Diffusion |  阳小良</title>
+  <meta name="generator" content="hexo-theme-ayer">
+      
+      <link rel="shortcut icon" href="/favicon.ico" />
+       
+<link rel="stylesheet" href="/dist/main.css">
+
+      
+<link rel="stylesheet" href="/css/fonts/remixicon.css">
+
+      
+<link rel="stylesheet" href="/css/custom.css">
+ 
+      <script src="https://cdn.staticfile.org/pace/1.2.4/pace.min.js"></script>
+       
+ 
+
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-bulma@5.0.1/bulma.min.css"
+      />
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.js"></script>
+
+      <!-- mermaid -->
+      
+      <style>
+        .swal2-styled.swal2-confirm {
+          font-size: 1.6rem;
+        }
+      </style>
+    </head>
+  </html>
+</html>
+
+
+<body>
+  <div id="app">
+    
+      
+    <main class="content on">
+      <section class="outer">
+  <article
+  id="post-tech/AI/2500块带你玩转Stable Diffusion"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  2500块带你玩转Stable Diffusion
+</h1>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2024/03/10/tech/AI/2500%E5%9D%97%E5%B8%A6%E4%BD%A0%E7%8E%A9%E8%BD%ACStable%20Diffusion/" class="article-date">
+  <time datetime="2024-03-10T13:11:57.000Z" itemprop="datePublished">2024-03-10</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E8%B0%8B%E7%94%9F%E6%89%8B%E6%AE%B5/">谋生手段</a> / <a class="article-category-link" href="/categories/%E8%B0%8B%E7%94%9F%E6%89%8B%E6%AE%B5/AI/">AI</a> / <a class="article-category-link" href="/categories/%E8%B0%8B%E7%94%9F%E6%89%8B%E6%AE%B5/AI/%E5%BA%94%E7%94%A8/">应用</a>
+  </div>
+  
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> 字数统计:</span>
+            <span class="post-count">8.1k</span>
+        </span>
+    </span>
+
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> 阅读时长≈</span>
+            <span class="post-count">28 分钟</span>
+        </span>
+    </span>
+</div>
+ 
+    </div>
+      
+    <div class="tocbot"></div>
+
+
+
+
+  
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h2 id="本文背景："><a href="#本文背景：" class="headerlink" title="本文背景："></a>本文背景：</h2><blockquote>
+<p>OpenAI于22年11月发布ChatGPT，点燃了人工智能之火，也让大家开始意识到，人工智能真的上升到人工“智能”而不是人工“智障”。随之而来的是各种火遍全网的角色扮演和大模型的培训韭菜课程。</p>
+<p>个人不是AI学习的第一批人员，当时被ATA的一篇文章：问元从面试官的视角，和ChatGPT进行了一场有深度的技术面试《关于我面试了ChatGPT一下午》给惊艳到了。在问元关键字拼错的情况下，能识别原本的意图，这技术敏感性令人叹服。</p>
+<p>后面我开始去ata找AI相关的文章，看看是否有我感兴趣，或者能参与的玩法项目。直到我看了另一个特别感兴趣的文章：清都利用AI绘图+原神这两个大热点，B站半个月涨粉2W《亲身经历从0开始涨粉1W+2日2W….》，我个人平时也会玩抖音和B站，知道涨粉的难度。</p>
+<p>我个人是特别喜欢绘画，一直存在的一个小理想，就是在能养活自己的前提下，做一个自由插画师。贴几张我自己下班时间临摹的电脑绘画：</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><img src="https://files.sid2656.space/blogs/tech/AI/2500SD/临摹的电脑绘画-1.jpeg?imageView2/1/w/200/h/200"/></td>
+<td><img src="https://files.sid2656.space/blogs/tech/AI/2500SD/临摹的电脑绘画-2.jpeg?imageView2/1/w/200/h/200"/></td>
+<td><img src="https://files.sid2656.space/blogs/tech/AI/2500SD/临摹的电脑绘画-3.jpeg?imageView2/1/w/200/h/200"/></td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>因为本身是技术出身，所以对新东西接受度相对好一些，我本身并不排斥AI绘画，但是网上有很多大佬当时都在抵制AI绘画。本着打不过就加入的原则，我开始去了解AIGC中关于生图的相关内容和技术，内网+外网找了很多帖子，了解相关的软件。基本上罗列的就三个主要AI绘画工具：</p>
+</blockquote>
+<h3 id="Midjourney："><a href="#Midjourney：" class="headerlink" title="Midjourney："></a>Midjourney：</h3><ul>
+<li>优点：<blockquote>
+<p>效果炸裂，上手容易，模型质量高，多种风格可选支持，自动化程度很高，丰富的绘图功能模块。</p>
+</blockquote>
+</li>
+<li>缺点：<blockquote>
+<p>不是开源的，依赖程度高，插件相对较少，扩展性弱，会员制需要不断缴费，需要科学上网才能正常使用，且账号有屏蔽风险。</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="Stable-Diffusion："><a href="#Stable-Diffusion：" class="headerlink" title="Stable Diffusion："></a>Stable Diffusion：</h3><ul>
+<li>优点：<blockquote>
+<p>开源项目，可生成高质量图片(基于不同的checkpoint)，生成的过程可控，有极其丰富的插件。定制化功能较完善。</p>
+</blockquote>
+</li>
+<li>缺点：<blockquote>
+<p>对本机资源配置要求较高，需要一定的经验上手有一定难度，相同promot的选择对不同的模型产生的效果完全不同。</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="其他类型："><a href="#其他类型：" class="headerlink" title="其他类型："></a>其他类型：</h3><blockquote>
+<p>各大小厂扎堆推出的图像生成类产品，基本上都是围绕上面两个项目进行的升级或者定制化改造。已经产品化的用户使用方式，基本上也是参照上面两个产品进行的模仿。</p>
+</blockquote>
+<h3 id="最终选择："><a href="#最终选择：" class="headerlink" title="最终选择："></a>最终选择：</h3><blockquote>
+<p>最终对比整合各种优缺点，以及自身的情况和学习的沉淀积累的成长可能性，我选择了跳进stable diffusion的坑。</p>
+</blockquote>
+<blockquote>
+<p>按照我个人以往的学习流程：</p>
+<ul>
+<li>先粗略看一下软件的基本原理</li>
+<li>通过实操项目进行进一步的学习沉淀</li>
+<li>再反过来根据功能实操，深度了解原理的具体应用场景和软件设计的思路</li>
+</ul>
+</blockquote>
+<blockquote>
+<p>但作为总结性质的文章，还是先按照背景-原理-实操这个流程来做总结吧。</p>
+</blockquote>
+<h2 id="一：Stable-Diffusion绘图原理"><a href="#一：Stable-Diffusion绘图原理" class="headerlink" title="一：Stable Diffusion绘图原理"></a>一：Stable Diffusion绘图原理</h2><blockquote>
+<p>原理这部分，是基于网络上的参考文章、论文、讨论，并结合个人的理解尝试去表述，可能有部分不准确，欢迎大家反馈和指正。</p>
+<p><font color="red">PS：对原理不感兴趣的，可以直接跳转到：2500R搭建本地Stable Diffusion。</font></p>
+</blockquote>
+<h3 id="基本流程："><a href="#基本流程：" class="headerlink" title="基本流程："></a>基本流程：</h3><blockquote>
+<p>这里假如我是一个原画需求的甲方，我可能会对需求的承接方提出一系列的要求，比如：五彩斑斓的黑，一个像狗的猫，要有丁达尔光，logo小一点的同时大一点。</p>
+<p>绘画项目的流程基本上是承接方跟进甲方的需求，然后小组内进行拆分划重点，然后思考用什么类型或者风格的画面去承接客户的需求，画面上有哪些元素去丰富整体的表现。然后经过几天的放空，最后两天加班通宵将稿件完成。发给甲方，甲方再经过需求调整，反复修改，来回拉扯十几次，逐渐清晰了自己的需求和风格，最终选择了第一版。<br>基本上是这么个过程。</p>
+<p>而stable diffusion的绘画原理类似于就是上面这么个流程，只不过反复推敲的过程全部由Diffusion的过程替代了。</p>
+</blockquote>
+<h3 id="生图原理：（文章收集-个人理解的简化版）"><a href="#生图原理：（文章收集-个人理解的简化版）" class="headerlink" title="生图原理：（文章收集&amp;个人理解的简化版）"></a>生图原理：（文章收集&amp;个人理解的简化版）</h3><h4 id="主流生成模型："><a href="#主流生成模型：" class="headerlink" title="主流生成模型："></a>主流生成模型：</h4><blockquote>
+<p>图片生成领域来说，有四大主流生成模型：</p>
+<ul>
+<li><p>生成对抗模型（GAN）：GAN由两个神经网络组成：生成器（G）和判别器（D）。生成器用于生成假数据；判别器用于判断数据的真假。两个网络相互对抗又彼此促进，生成器生成的假数据越来越逼真，而判别器的判断能力也越来越强。最终，生成器生成的假数据足以骗过判别器，达到了生成真实数据的目的。</p>
+</li>
+<li><p>变分自动编码器（VAE）：是一种无监督学习方法，将高维的原始数据映射到一个低维特征空间，然后从低维特征学习重建原始的数据。</p>
+</li>
+<li><p>流模型（Flow based Model）：做法和VAE相反，我们将一张图片输入Encoder然后输出一个向量，我们希望Encoder同样可以通过向量反向生成图片，我们就可以直接把Encoder当作一个Decoder来用，那么经过训练之后我们就能马上知道这个向量的逆向图片是什么样子了。</p>
+</li>
+<li><p>扩散模型（Diffusion Model）：选择一张都是噪音的图片，也就是从Guassion Distribution中sample出来的向量的维度是和图片的尺寸是一样的，接下来就是有一个Denoise的架构，它能够把nosie滤掉一点，不停的叠加直至图片清晰。</p>
+</li>
+</ul>
+</blockquote>
+<p><img src="https://files.sid2656.space/blogs/tech/AI/2500SD/%E7%94%9F%E6%88%90%E6%A8%A1%E5%9E%8B.png?imageView2/1/w/850/h/550" alt="生成模型" title="生成模型 stable diffusion"></p>
+<blockquote>
+<p>当前DALL-E, Midjourney, Stable Diffusion图片生成的核心都是Diffusion Model(扩散模型)，它就是通过不停去除噪音期望获得好结果的生成模型。</p>
+</blockquote>
+<h4 id="stable-diffusion工作机制："><a href="#stable-diffusion工作机制：" class="headerlink" title="stable diffusion工作机制："></a>stable diffusion工作机制：</h4><p><img src="https://files.sid2656.space/blogs/tech/AI/2500SD/%E5%B7%A5%E4%BD%9C%E6%9C%BA%E5%88%B6.png?imageView2/1/w/850/h/300" alt="工作机制" title="工作机制 stable diffusion"></p>
+<h5 id="核心步骤："><a href="#核心步骤：" class="headerlink" title="核心步骤："></a>核心步骤：</h5><blockquote>
+<p>stable diffusion的工作机制，主要可以拆分为三个步骤：</p>
+<ul>
+<li>第一步：输入&amp;解析提示词：文本图片编码器CLIP<blockquote>
+<p>Input: 输入文本</p>
+<p>Output: 77 token embeddings vectors, 每个向量有 768 个维度</p>
+</blockquote>
+</li>
+<li>第二步：基于提示词，反复迭代，逐步处理数据信息：基于U-Net的Diffusion过程（U-Net + Scheduler）<blockquote>
+<p>Input: 文本嵌入和由噪点组成的起始多维矩阵（结构化数字列表，也称为张量Tensor）</p>
+<p>Output: 处理后的信息矩阵</p>
+</blockquote>
+</li>
+<li>第三步：图像解码&amp;输出：VAE（图像解码器负责latent space到pixel space的图像生成）<blockquote>
+<p>Input: 处理后的信息矩阵，维度: (4,64,64)</p>
+<p>Output: 生成的图像，维度: (3, 512, 512) 为（红&#x2F;绿&#x2F;蓝，宽，高）</p>
+</blockquote>
+</li>
+</ul>
+<p>﻿</p>
+</blockquote>
+<h6 id="CLIP："><a href="#CLIP：" class="headerlink" title="CLIP："></a>CLIP：</h6><blockquote>
+<p>CLIP不是完全的理解语义，只是想个方法把文字和图像对应起来。<br>他的训练过程，如图：</p>
+</blockquote>
+<p><img src="https://files.sid2656.space/blogs/tech/AI/2500SD/CLIP-1.png" alt="CLIP-1" title="CLIP-1 stable diffusion"><br><img src="https://files.sid2656.space/blogs/tech/AI/2500SD/CLIP-2.png" alt="CLIP-2" title="CLIP-2 stable diffusion"></p>
+<blockquote>
+<p>感兴趣的可以直接看openai的相关文章：<a target="_blank" rel="noopener" href="https://openai.com/research/clip">https://openai.com/research/clip</a></p>
+<p>最终的实现：就是把文字和图片放到一个矩阵空间里，用来解决文本到图片的映射和相似性交集，方便通过文本找到对应图像的分布。</p>
+</blockquote>
+<p><img src="https://files.sid2656.space/blogs/tech/AI/2500SD/CLIP-3.png" alt="CLIP-3" title="CLIP-3 stable diffusion"><br><img src="https://files.sid2656.space/blogs/tech/AI/2500SD/CLIP-4.png" alt="CLIP-4" title="CLIP-4 stable diffusion"></p>
+<blockquote>
+<p>这样第一步，解决了图像语义理解转换的问题。</p>
+<p>基于U-Net的Diffusion过程：</p>
+<p>这一过程是基于Diffusion Model的思路实现DDPM（Denoising Diffusion Probabilistic Models，去噪扩散概率模型）。</p>
+<p>通过对数据不断加噪成为真实噪声，和从真实噪声不断去噪还原成原始数据的过程中，学习到去噪的过程，进而就能对真实噪声进行随机采样，还原（生成）成各式各样的数据了。</p>
+</blockquote>
+<p><img src="https://files.sid2656.space/blogs/tech/AI/2500SD/CLIP-5.png?imageView2/1/w/750/h/150" alt="正向加噪过程" title="CLIP-5 stable diffusion"></p>
+<p><img src="https://files.sid2656.space/blogs/tech/AI/2500SD/CLIP-6.png?imageView2/1/w/750/h/150" alt="逆向降噪过程" title="CLIP-6 stable diffusion"></p>
+<blockquote>
+<p>整个过程的每一步骤都的需要经历反复的测试训练，让模型清晰每一步的过程和流程。为了减小空间的使用量，这里stable Diffusion使用了里了一个潜空间（latent space）的技术，可以简单的理解为，其在原有的像素图像的大小下，将其不断压缩降维至指定大小，保留基本特性，然后在此大小下进行相关的计算处理，会大大缩减整体的计算量级，最后再将计算好的数据通过解码器进行到像素空间的转换。<br>还原图片的过程：</p>
+</blockquote>
+<p><img src="https://files.sid2656.space/blogs/tech/AI/2500SD/CLIP-7.webp?imageView2/1/w/750/h/350" alt="CLIP-7" title="CLIP-7 stable diffusion"></p>
+<blockquote>
+<blockquote>
+<p>1）输入原图（覆盖了step&#x3D;50的noise）和step&#x3D;50，用U-Net预测图片的noise，这里每个step都共用相同的U-Net</p>
+<p>2）噪声很多时，U-Net无法预测精准的图片细节，只能预测很模型的图片大概轮廓</p>
+</blockquote>
+</blockquote>
+<p><img src="https://files.sid2656.space/blogs/tech/AI/2500SD/CLIP-8.webp?imageView2/1/w/750/h/450" alt="CLIP-8" title="CLIP-8 stable diffusion"></p>
+<blockquote>
+<blockquote>
+<p>3）这样不断重复预测，直到得到原图。</p>
+</blockquote>
+<p>UNet是2015年《U-Net: Convolutional Networks for Biomedical Image Segmentation》提出的模型。<br>这里不再深入展开，感兴趣的同学可以去拜读一下原文。</p>
+</blockquote>
+<h6 id="VAE："><a href="#VAE：" class="headerlink" title="VAE："></a>VAE：</h6><blockquote>
+<p>在Stable Diffusion中，VAE（变分自编码器，Variational Auto-Encoder）是基于Encoder-Decoder架构的生成模型。VAE的Encoder（编码器）结构能将输入图像转换为低维Latent特征，并作为U-Net的输入。VAE的Decoder（解码器）结构能将低维Latent特征重建还原成像素级图像。</p>
+<p>总的来说，在Stable Diffusion中，VAE模型主要起到了图像压缩和图像重建的作用。</p>
+<p>因为虽然VAE对图像的压缩与重建过程是一个有损压缩与重建过程，但图像全图级特征关联并不是随机的，它们的分布具有很强的规律性：比如人脸的眼睛、鼻子、脸颊和嘴巴之间遵循特定的空间关系，又比如一只猫有四条腿，并且这是一个特定的生物结构特征。下面Rocky也使用VAE将图像重建成不同尺寸的生成图像，实验结论发现如果我们重建生成的图像尺寸在512×512之上时，其实特征损失带来的影响非常小。</p>
+<p>与此同时，VAE模型除了能进行图像压缩和图像重建的工作外，如果我们在SD系列模型中切换不同微调训练版本的VAE模型，能够发现生成图片的细节与整体颜色也会随之改变（更改生成图像的颜色表现，类似于色彩滤镜）。</p>
+<p>举个例子，实际使用附加VAE效果对比：</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><img src="https://files.sid2656.space/blogs/tech/AI/2500SD/VAE-1.png?imageView2/1/w/350/h/600"/></td>
+<td><img src="https://files.sid2656.space/blogs/tech/AI/2500SD/VAE-2.png?imageView2/1/w/350/h/600"/></td>
+</tr>
+</tbody></table>
+<h5 id="整体架构："><a href="#整体架构：" class="headerlink" title="整体架构："></a>整体架构：</h5><blockquote>
+<p>最后我们总结收尾一下，根据上面提到的工作机制以及核心步骤，再来看一下stable Diffusion整体架构设计图：</p>
+</blockquote>
+<p><img src="https://files.sid2656.space/blogs/tech/AI/2500SD/%E6%95%B4%E4%BD%93%E6%9E%B6%E6%9E%84.png?imageView2/1/w/750/h/500" alt="整体架构" title="整体架构 stable diffusion"></p>
+<blockquote>
+<p>为了加快图像生成过程，Stable Diffusion 并不是在像素图像本身上运行扩散过程，而是在图像的压缩版本上运行。该论文称其为“Departure to Latent Space”。</p>
+<p>这种压缩（以及后来的解压缩&#x2F;绘画）是通过自动编码器完成的。自动编码器将图像压缩到潜空间（Latents），然后使用解码器凭借这些压缩后的数据重建。</p>
+<p>正向扩散（forward diffusion）的过程是在潜空间（Latents）中完成的。正向过程 forward process（使用自动编码器的编码器）是生成数据以训练噪点预测器的主要方式。训练完成后，我们可以通过运行反向过程（使用自动编码器的解码器）来生成图像。</p>
+<p>上图中由像素空间（pixel space）到潜空间（latents）的两个流转方向说明了这个流程。</p>
+</blockquote>
+<h2 id="二：2500R搭建本地stable-diffusion"><a href="#二：2500R搭建本地stable-diffusion" class="headerlink" title="二：2500R搭建本地stable diffusion"></a>二：2500R搭建本地stable diffusion</h2><h3 id="执着于本地的原因："><a href="#执着于本地的原因：" class="headerlink" title="执着于本地的原因："></a>执着于本地的原因：</h3><blockquote>
+<p>有朋友问过我，明明有那么多在线免费的网站和工具，为什么还要自己去摸索，搭建一个本地的环境，在线免费的网站对应的模型也基本上算成熟，内容也算得上丰富，自己投那么多的时间去摸索，还得考虑后续的升级以及插件的兼容性问题，是否值得呢？还有有一些stable diffusion的封装软件已经做了环境的集成，为什么还有自己去搞环境呢？</p>
+<p>首先说明一下，为什么我执着于在本地搭建stable diffusion的环境？有这么几点：</p>
+<ul>
+<li>这个过程中，自己能学习到一些新东西。</li>
+<li>对软件的理解会相对更深入一些。</li>
+<li>自己搭建的绘图软件可控性会比较高，因为绘图的结果可能是需要有后续应用的场景，如果可控性不在自己手里，会很难受。</li>
+<li>最主要的原因是因为不想被卡脖子，如果完全依赖在线的服务，后续某一天网络，或者账号受限，可能会直接影响到自己后续的计划或者安排。包括集成的软件也是一样，插件的依赖版本的依赖都是看软件作者的心情，能自己把控的东西，尽量自己把控(个人思路，不适合所有人)。</li>
+</ul>
+</blockquote>
+<h3 id="成本的管控："><a href="#成本的管控：" class="headerlink" title="成本的管控："></a>成本的管控：</h3><blockquote>
+<p>最核心的成本：显卡！而且是大内存的显卡。</p>
+<p>大家可以看一下网络上普通台式机的内存在8G以上的显卡成本是多少。我自己的台式机是3060TI，12G的显卡，21年中当时的价格是5000R，买的时候跟割肉一样，现在价格没有那么高了，但依然是一笔不小的成本，而且我在实际使用的过程中发现12G的显存根本不够用，如果想参加一些对公众举办的一些AI大赛(如果能拿到名次，基本上获奖一次整机的成本就回来了。PS：我的已经回本了)，对图的质量是有一定要求的，12G的显卡在图片放大的过程中，很容易崩掉。所以优选的显存容量是16G，24G甚至更高。</p>
+</blockquote>
+<p><img src="https://files.sid2656.space/blogs/tech/AI/2500SD/%E6%98%BE%E5%8D%A1.png?imageView2/1/w/750/h/200" alt="显卡" title="显卡 stable diffusion"></p>
+<blockquote>
+<p>如果想AI绘图玩得更好肯定是需要升级显存的，但是我家里现有的机器配置的显卡其实已经完全满足我的日常游戏、绘画、视频剪辑的诉求了。再投入7、8千的成本去升级一个显卡感觉特别不划算，所以我开始在网上找相关的文章，看看是否有大神有经验或者建议。</p>
+<p>首先是找到目标显卡：</p>
+<blockquote>
+<p>唯二的要求：</p>
+<ul>
+<li>1.现存足够大</li>
+<li>2.成本在2000以内<br>多番查找看到N卡有专门针对高端制图的系列显卡：Tesla<br><img src="https://files.sid2656.space/blogs/tech/AI/2500SD/Tesla.png" alt="Tesla" title="Tesla stable diffusion"></li>
+</ul>
+</blockquote>
+</blockquote>
+<blockquote>
+<p>最终考虑成本、显存、计算力等因素，综合选择了P40这款显卡。但是因为本身这款显卡就不是针对PC用户的，主要场景是在计算场景的服务器显卡。所以如果想用在PC上面需要做一些改装。改装之前，我先列一下我后面组装的机器成本和各个配件的型号；</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th align="center">配件</th>
+<th align="center">品牌</th>
+<th align="center">型号</th>
+<th align="center">购买渠道</th>
+<th align="center">原因</th>
+<th align="center">成本</th>
+</tr>
+<tr>
+<td align="center">主板</td>
+<td align="center">华南</td>
+<td align="center">X79-豪华大板</td>
+<td align="center">咸鱼</td>
+<td align="center">可开启：above4g，成本相对可控，插口满足整体预期</td>
+<td align="center">+140R</td>
+</tr>
+<tr>
+<td align="center">CPU</td>
+<td align="center">intel</td>
+<td align="center">E5-2650V2<br/>+铜管散热风扇</td>
+<td align="center">淘宝</td>
+<td align="center">看个人诉求，可适当升配</td>
+<td align="center">+16R<br/>+59R</td>
+</tr>
+<tr>
+<td align="center">内存</td>
+<td align="center">金士顿</td>
+<td align="center">1600骇客神条*2</td>
+<td align="center">咸鱼</td>
+<td align="center">DDR3主要是考虑主办是否支撑，可以选择个人喜好的</td>
+<td align="center">+48*2R</td>
+</tr>
+<tr>
+<td align="center">鼠标</td>
+<td align="center">菲利普</td>
+<td align="center">力镁-T15套装</td>
+<td align="center">淘宝</td>
+<td align="center" rowspan="2">如果是游戏党，不建议入，效果很差，对自己好点</td>
+<td align="center" rowspan="2">+17.5R</td>
+</tr>
+<tr>
+<td align="center">键盘</td>
+<td align="center">菲利普</td>
+<td align="center">力镁-T15套装</td>
+<td align="center">淘宝</td>
+</tr>
+<tr>
+<td align="center">硬盘</td>
+<td align="center">爱国者</td>
+<td align="center">DP3-1T</td>
+<td align="center">淘宝</td>
+<td align="center">硬盘量级按照自己需求，但是尽量不要咸鱼买，容易买到扩容盘，我就踩坑了</td>
+<td align="center">+350R</td>
+</tr>
+<tr>
+<td align="center">电源</td>
+<td align="center">艾湃电竞</td>
+<td align="center">AJ850M</td>
+<td align="center">咸鱼</td>
+<td align="center">整体功率可满足主机运行的通晒支撑P40显卡供电</td>
+<td align="center">+299R</td>
+</tr>
+<tr>
+<td align="center">显示器</td>
+<td align="center">宏碁</td>
+<td align="center">K242HQL</td>
+<td align="center">咸鱼</td>
+<td align="center">这个可以自选，根据自己的使用场景决定显示器型号</td>
+<td align="center">+125R</td>
+</tr>
+<tr>
+<td align="center">机箱</td>
+<td align="center">航嘉</td>
+<td align="center">暗影猎手5</td>
+<td align="center">淘宝</td>
+<td align="center"></td>
+<td align="center">+99R</td>
+</tr>
+<tr>
+<td align="center">显卡1</td>
+<td align="center">AMD</td>
+<td align="center">HD6570 2G</td>
+<td align="center">淘宝</td>
+<td align="center">在满足日常游戏的基础上选择便宜的，主要是亮机卡</td>
+<td align="center">+49R</td>
+</tr>
+<tr>
+<td align="center">风扇1</td>
+<td align="center">冰漫</td>
+<td align="center">12CM*2无灯</td>
+<td align="center">淘宝</td>
+<td align="center">如果不经常跑这个也可选，CPU和显卡都自带风扇</td>
+<td align="center">+19.51R</td>
+</tr>
+<tr>
+<td align="center">显卡2</td>
+<td align="center">NVIDIA</td>
+<td align="center">TESLA p40</td>
+<td align="center">淘宝</td>
+<td align="center">考虑成本、显存、计算力等因素，<font color="red">现在涨价了,好像1500</font></td>
+<td align="center">+959R</td>
+</tr>
+<tr>
+<td align="center">风扇2</td>
+<td align="center">EVGA</td>
+<td align="center">1080ti FTW3 风扇</td>
+<td align="center">咸鱼</td>
+<td align="center">因P40无风扇，搭配给P40使用，需要有一定动手能力</td>
+<td align="center">+138R</td>
+</tr>
+<tr>
+<td align="center">配件</td>
+<td align="center"></td>
+<td align="center">显卡风扇小4pin延长线<br/>机箱小4pin延长线<br/>显卡小4p转机选小4p一分二<br/>显卡风扇小4p一分二<br/>GPU显卡供电双8P转8PX线<br/>导热硅胶*2<br/>显卡支架<br/>系统序列号</td>
+<td align="center">淘宝</td>
+<td align="center">GPU显卡供电双8P转8PX线要看你购买的P40是否送，如果送可以不买。<br/><br/>这部分大家可以比价看看，我的不是最优解</td>
+<td align="center">+5.25R<br/>+2.76R<br/>+9.40R<br/>+11R<br/>+18.46R<br/>+13.9R*2<br/>+21.8R<br/>+5.98R</td>
+</tr>
+<tr>
+<td align="center">工具</td>
+<td align="center"></td>
+<td align="center">锉刀<br/>小手锯<br/>电烙铁<br/>其他工具(自己已经有了)</td>
+<td align="center">咸鱼</td>
+<td align="center"></td>
+<td align="center">+4.3R<br/>+10.9R<br/>+64R</td>
+</tr>
+</thead>
+</table>
+
+<blockquote>
+<p>成本累计起来：2548.66 四舍五入：2500块钱(如果有时间逛咸鱼，成本还能降)；</p>
+</blockquote>
+<h3 id="显卡改造："><a href="#显卡改造：" class="headerlink" title="显卡改造："></a>显卡改造：</h3><blockquote>
+<p>由于P40是服务器计算卡，本身没有风扇，默认的TCC纯计算模式，也无法进行游戏或者图像的渲染使用。所以需要有一定的改造工作，主要是两个方面的改造：</p>
+<ul>
+<li>a.添加主动散热风扇(必选，否则机箱温度扛不住)；</li>
+<li>b.修改注册表使其支持游戏或图像渲染使用(可选)。</li>
+</ul>
+</blockquote>
+<h4 id="添加主动散热风扇："><a href="#添加主动散热风扇：" class="headerlink" title="添加主动散热风扇："></a>添加主动散热风扇：</h4><blockquote>
+<p>此次改造参考了B站大佬的相关帖子，并做了一部分自己主板相关的适配工作，感兴趣的可以看看博主原文：《特斯拉P40显卡改装EVGA 1080ti FTW3散热器》(本文的部分图文取自此文[文章链接件文末附录]，原因自己改的时候没留图！😭)</p>
+<p>本次风扇(EVGA 1080ti FTW3)的改装操作只适用于P40显卡，其余的特斯拉显卡不适用，风扇的改造也只适配EVGA 1080ti FTW3，如果有其他版本的散热器可能需要额外的调整。</p>
+<p>好了，废话不多说，动手开干吧！</p>
+</blockquote>
+<h4 id="动手改造："><a href="#动手改造：" class="headerlink" title="动手改造："></a>动手改造：</h4><h5 id="一：工具准备："><a href="#一：工具准备：" class="headerlink" title="一：工具准备："></a>一：工具准备：</h5><blockquote>
+<p>p40显卡：直接淘宝现在便宜很多</p>
+<p>evga 1080ti ftw3散热器：其他版本的不适合本改造教程</p>
+<p>cpu导热硅脂：这个不贵，可以买相对好一点的导热硅胶</p>
+<p>胶带：高温胶带+透明胶带</p>
+<p>铝箔：我用的是家里烤箱的锡纸</p>
+<p>15公分长的三棱锉刀：尽量选尖细的，比较好操作</p>
+<p>钢锯条：建议买24齿或者32齿的</p>
+<p>螺丝刀套装(需要用到不同大小十字和内六角的螺丝批头)、</p>
+<p>斜口钳、尖嘴钳、镊子、剪刀、小刀</p>
+<p>小扎带或者捆线钢丝若干：准备10条左右吧</p>
+<p>延长线：显卡风扇小4pin延长线、机箱小4pin延长线</p>
+<p>二分线：显卡小4p转机箱小4p一分二、显卡风扇小4p一分二</p>
+</blockquote>
+<p><img src="https://files.sid2656.space/blogs/tech/AI/2500SD/%E5%B7%A5%E5%85%B7%E5%87%86%E5%A4%87.png?imageView2/1/w/350/h/350" alt="工具准备" title="工具准备 stable diffusion"></p>
+<h5 id="二：改装过程："><a href="#二：改装过程：" class="headerlink" title="二：改装过程："></a>二：改装过程：</h5><blockquote>
+<ul>
+<li>第一步：</li>
+</ul>
+<p>把我们的显卡所有螺丝卸下来，协助过程中尽量保持对角螺丝操作，减少对核心的挤压。</p>
+</blockquote>
+<p><img src="https://files.sid2656.space/blogs/tech/AI/2500SD/%E6%94%B9%E8%A3%85%E8%BF%87%E7%A8%8B-1.png?imageView2/1/w/750/h/450" alt="左为ftw3显卡散热器，中间为p40显卡主板，右为p40显卡散热器" title="改装过程 stable diffusion"></p>
+<blockquote>
+<p>然后需要给显卡散热器的硅脂垫都贴上薄薄的铝箔，避免硅脂垫在改装过程中受到损坏或者沾染杂物，铝箔周围也可以再贴点普通胶带封住缝隙。铝箔不需要特别厚的，一般超市有卖，我是直接拿的家里厨房的烧烤用的锡纸。</p>
+</blockquote>
+<p><img src="https://files.sid2656.space/blogs/tech/AI/2500SD/%E6%94%B9%E8%A3%85%E8%BF%87%E7%A8%8B-2.png?imageView2/1/w/750/h/450" alt="改装过程-2" title="改装过程 stable diffusion"></p>
+<blockquote>
+<p>当然你也可以直接将硅脂垫都揭下来贴在p40显卡上，不然改装过程中会很容易沾染锉刀改造时留下的金属碎屑，这样硅脂垫就废了。</p>
+</blockquote>
+<blockquote>
+<ul>
+<li>第二步：</li>
+</ul>
+<p>接着将ftw3显卡散热器整个拆开，将中框、散热器、风扇框架都分开。风扇框架需使用内六角螺丝刀和小十字螺丝卸下来。中框、风扇框的螺丝请分别放不同的袋子里，方便分清。</p>
+<p>怕风扇损坏的也可以把风扇拆了，我是没有拆，不过改装的时候要注意轻拿轻放，避免折断风扇叶。</p>
+<p>一定要将硅脂垫都贴上铝箔做好保护。</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><img src="https://files.sid2656.space/blogs/tech/AI/2500SD/改装过程-3.png?imageView2/1/w/350/h/450"/></td>
+<td><img src="https://files.sid2656.space/blogs/tech/AI/2500SD/改装过程-4.png?imageView2/1/w/350/h/450"/></td>
+</tr>
+</tbody></table>
+<p><img src="https://files.sid2656.space/blogs/tech/AI/2500SD/%E6%94%B9%E8%A3%85%E8%BF%87%E7%A8%8B-5.png?imageView2/1/w/750/h/350" alt="改装过程-5" title="改装过程 stable diffusion"></p>
+<blockquote>
+<ul>
+<li>第三步：</li>
+</ul>
+<p>接下来需要用钢锯条和三棱锉刀对中框尾部进行开孔，用锉刀扩孔方便很多，开成下图这样。红圈框出的位置需要用锉刀锉得和下面铜管一样平，这个地方下面有元器件，注意别锉到铜管。蓝圈框出的那个螺丝柱直接用锉刀锉平，不要有凸起。</p>
+</blockquote>
+<p><img src="https://files.sid2656.space/blogs/tech/AI/2500SD/%E6%94%B9%E8%A3%85%E8%BF%87%E7%A8%8B-6.png?imageView2/1/w/750/h/450" alt="此处使用钢锯条及锉刀对散热器中框进行开孔" title="改装过程 stable diffusion"></p>
+<blockquote>
+<p>散热器中框铜板旁边那个螺丝柱需要用锉刀锉得和周围铜板一样平，也可以直接使用斜口钳一点点把它剪掉，然后贴上黄色高温胶带做防漏电保护。</p>
+</blockquote>
+<p><img src="https://files.sid2656.space/blogs/tech/AI/2500SD/%E6%94%B9%E8%A3%85%E8%BF%87%E7%A8%8B-77.png?imageView2/1/w/750/h/450" alt="将这个螺丝柱锉平并贴上高温胶带" title="改装过程 stable diffusion"></p>
+<blockquote>
+<ul>
+<li>第四步：</li>
+</ul>
+<p>中框显存和电感这里需要开个槽，这里下面有个小电感会顶着，可以用斜口钳一点点剪开个孔后，然后上锉刀修平。蓝色这里开个槽：</p>
+</blockquote>
+<p><img src="https://files.sid2656.space/blogs/tech/AI/2500SD/%E6%94%B9%E8%A3%85%E8%BF%87%E7%A8%8B-7.png?imageView2/1/w/750/h/450" alt="改装过程-7" title="改装过程 stable diffusion"></p>
+<blockquote>
+<p>接下来是改装散热器的背板，ftw3散热器下半块背板是不能直接装上的，同样需要使用锉刀改造。</p>
+</blockquote>
+<p><img src="https://files.sid2656.space/blogs/tech/AI/2500SD/%E6%94%B9%E8%A3%85%E8%BF%87%E7%A8%8B-8.png?imageView2/1/w/750/h/450" alt="改装过程-8" title="改装过程 stable diffusion"></p>
+<blockquote>
+<p>如图将蓝圈位置使用锉刀锉平，这里是p40背面小芯片的位置，ftw3虽然也有给这个芯片散热的设计，但是正好偏了一点。</p>
+</blockquote>
+<blockquote>
+<ul>
+<li>第五步：</li>
+</ul>
+<p>给这些电容和芯片都贴好硅脂垫，因为ftw3散热器比p40显卡宽，其实可以把盖不住p40板子的那一部分硅脂垫切下来用的。</p>
+</blockquote>
+<p><img src="https://files.sid2656.space/blogs/tech/AI/2500SD/%E6%94%B9%E8%A3%85%E8%BF%87%E7%A8%8B-9.png?imageView2/1/w/750/h/450" alt="给贴上硅脂垫" title="改装过程 stable diffusion"></p>
+<blockquote>
+<p>先将p40的双8pin转单8pin电源线从开出的槽里插到p40显卡上，然后将ftw3的散热器对好位置放到p40主板上，记得提前撕掉用作保护的铝箔，撕的时候慢点，别把硅脂垫也扯下来。</p>
+</blockquote>
+<p><img src="https://files.sid2656.space/blogs/tech/AI/2500SD/%E6%94%B9%E8%A3%85%E8%BF%87%E7%A8%8B-10.png?imageView2/1/w/750/h/450" alt="插上p40显卡原装供电线后再盖好中框" title="改装过程 stable diffusion"></p>
+<blockquote>
+<p>接着再将上半部分背板的螺丝装上就行，硅脂垫和螺丝孔位都是能对上的，一定使用和散热器配套的螺丝，除了那4颗弹簧螺丝，其余原来p40的螺丝是不能装上的。<br><img src="https://files.sid2656.space/blogs/tech/AI/2500SD/%E6%94%B9%E8%A3%85%E8%BF%87%E7%A8%8B-11.png?imageView2/1/w/750/h/450" alt="安装散热器的上半块显卡背板" title="改装过程 stable diffusion"></p>
+</blockquote>
+<blockquote>
+<ul>
+<li>第六步：</li>
+</ul>
+<p>给p40板子背面下半部分小芯片贴上硅脂垫，将下半部分背板如图3中蓝色框标出的这两个螺丝柱底下贴上黄色高温胶带做好漏电屏蔽，然后就可以将背板盖上去拧上其它螺丝固定了。<br>背板和p40有几个位置螺丝孔是对不上的，所以别随便硬拧，把周围的螺丝拧上就行。</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><img src="https://files.sid2656.space/blogs/tech/AI/2500SD/改装过程-12.png?imageView2/1/w/350/h/220"/></td>
+<td><img src="https://files.sid2656.space/blogs/tech/AI/2500SD/改装过程-13.png?imageView2/1/w/350/h/220"/></td>
+</tr>
+</tbody></table>
+<p><img src="https://files.sid2656.space/blogs/tech/AI/2500SD/%E6%94%B9%E8%A3%85%E8%BF%87%E7%A8%8B-14.png?imageView2/1/w/700/h/450" alt="改装过程-14" title="改装过程 stable diffusion"></p>
+<blockquote>
+<ul>
+<li>第七步：</li>
+</ul>
+<p>下面需要将散热鳍片剪掉几块，需要能塞下p40显卡的供电接口，鳍片一定要剪成我这个样子，少剪了可能会有鳍片接触到供电接口后面的金属丝导致供电短路。</p>
+</blockquote>
+<blockquote>
+<p>下剪刀的位置正好在鳍片上有打孔，用比较硬的剪刀剪断，然后用手反复弯折几下就下来了。弄弯的鳍片再用镊子掰直，掰直后如图：</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><img src="https://files.sid2656.space/blogs/tech/AI/2500SD/改装过程-15.png?imageView2/1/w/350/h/450"/></td>
+<td><img src="https://files.sid2656.space/blogs/tech/AI/2500SD/改装过程-16.png?imageView2/1/w/350/h/450"/></td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>p40显卡供电线接口高出来这一小块需要用斜口钳剪掉或用刀削平，避免顶着散热鳍片。</p>
+</blockquote>
+<p><img src="https://files.sid2656.space/blogs/tech/AI/2500SD/%E6%94%B9%E8%A3%85%E8%BF%87%E7%A8%8B-17.png?imageView2/1/w/350/h/450" alt="改装过程-17" title="改装过程 stable diffusion"></p>
+<blockquote>
+<ul>
+<li>第八步：</li>
+</ul>
+<p>接着给显卡gp102核心上涂上硅脂，我直接上的利民tfx硅脂，接着将散热器对好位置扣上中框。翻到背面再把弹簧螺丝拧上，一定要对角拧螺丝！！！避免压坏晶片。</p>
+</blockquote>
+<p><img src="https://files.sid2656.space/blogs/tech/AI/2500SD/%E6%94%B9%E8%A3%85%E8%BF%87%E7%A8%8B-18.png?imageView2/1/w/350/h/450" alt="改装过程-18" title="改装过程 stable diffusion"></p>
+<blockquote>
+<p>最后装回显卡的风扇框就行了，到此散热器就算是成功装上去了😁。</p>
+<ul>
+<li>第九步：</li>
+</ul>
+<p>将购买的风扇外接线按照我这个方式固定就可以，这是我试过最合适也最方便的安装方式，大部分走线都在显卡内部，这样比较美观，也不会对显卡外面的空间有太大的挤占</p>
+</blockquote>
+<p><img src="https://files.sid2656.space/blogs/tech/AI/2500SD/%E6%94%B9%E8%A3%85%E8%BF%87%E7%A8%8B-19.png?imageView2/1/w/750/h/450" alt="改装过程-19" title="改装过程 stable diffusion"></p>
+<blockquote>
+<p>到这里风扇线的改装基本完成，因为我自己的机器上显卡的位置和后面风险控制接口相对较远，所以我上面的清单列表里面额外多了小4p的延长线。<br>如果有强迫症，可以把显卡的风扇延长线再整理一下，现在太懒散了。比如这样：</p>
+</blockquote>
+<p><img src="https://files.sid2656.space/blogs/tech/AI/2500SD/%E6%94%B9%E8%A3%85%E8%BF%87%E7%A8%8B-20.png?imageView2/1/w/750/h/450" alt="改装过程-20" title="改装过程 stable diffusion"></p>
+<blockquote>
+<p>下面的图是我自己的显卡安装完成后的上机测试风扇的图：</p>
+</blockquote>
+<p><img src="https://files.sid2656.space/blogs/tech/AI/2500SD/%E6%94%B9%E8%A3%85%E8%BF%87%E7%A8%8B-21.png?imageView2/1/w/350/h/450" alt="改装过程-21" title="改装过程 stable diffusion"></p>
+<h5 id="三：驱动安装："><a href="#三：驱动安装：" class="headerlink" title="三：驱动安装："></a>三：驱动安装：</h5><blockquote>
+<p>P40显卡由于是计算卡，所以显卡驱动跟其他的桌面版驱动不一样。</p>
+<p>这里因为我的亮机卡是A卡，所以不需要安装其他N卡的驱动后，再卸载，再重新安装，再看要保留哪个驱动，我这里直接使用的是显卡渠道是551.61版本的桌面+Tesla的驱动，版本号我贴一下：</p>
+</blockquote>
+<p><font color="red">551.61-data-center-tesla-desktop-win10-win11-64bit-dch-international</font></p>
+<blockquote>
+<p>最终安装完显卡的效果，可以直接看N卡的驱动命令：P40正常可以看到，计算模式TCC，后面测试stable diffusion也完全没有问题。</p>
+</blockquote>
+<p><img src="https://files.sid2656.space/blogs/tech/AI/2500SD/%E9%A9%B1%E5%8A%A8%E5%AE%89%E8%A3%85-1.png?imageView2/1/w/750/h/400" alt="驱动安装-1" title="驱动安装 stable diffusion"></p>
+<blockquote>
+<p>可以查看设备管理器，驱动，显卡都正常展示：</p>
+</blockquote>
+<p><img src="https://files.sid2656.space/blogs/tech/AI/2500SD/%E9%A9%B1%E5%8A%A8%E5%AE%89%E8%A3%85-2.png?imageView2/1/w/750/h/400" alt="驱动安装-2" title="驱动安装 stable diffusion"></p>
+<h5 id="四：开启WDDM模式："><a href="#四：开启WDDM模式：" class="headerlink" title="四：开启WDDM模式："></a>四：开启WDDM模式：</h5><blockquote>
+<ul>
+<li>注册表调整：<br>有很多小伙伴入这款P40显卡不是为了做stable diffusion或者其他的计算量相关的内容，而是看中了显存，想做一些大型游戏或者图片的渲染工作。</li>
+</ul>
+<p>网上也有一些教程，教你如何开启P40显卡的WDDM模式。</p>
+<p>基本上都是修改注册表的方式，我尝试过，确实是可以开启的，但是可能是我本身设置的有问题，开启后，虽然可以在任务管理器中看到P40的显卡GPU状态，但是原本的一些渲染类型的软件无法使用了，比如我之前做视频后期用的AE，提升找不到xxxx；网上查询也是说显卡注册表有问题。</p>
+<p>但是看网上其他的小伙伴按照帖子方法是实现了预期的结果。</p>
+<p>所以，这部分我本身不做推荐和整理，大家看自己的需求，如果需要，就自己去琢磨，如果像我一样只玩stable diffusion才用P40显卡，那就没必要改造。</p>
+</blockquote>
+<blockquote>
+<p><font color="red">PS：</font></p>
+<blockquote>
+<p><font color="red">如果想改注册表的话，改之前，最好备份一下！！！</font></p>
+</blockquote>
+<blockquote>
+<p><font color="red">如果想改注册表的话，改之前，最好备份一下！！！</font></p>
+</blockquote>
+<blockquote>
+<p><font color="red">如果想改注册表的话，改之前，最好备份一下！！！</font></p>
+</blockquote>
+</blockquote>
+<blockquote>
+<ul>
+<li>控制转速：<br>此外改装EVGA 1080ti FTW3散热器的过程中需要较多工具(见上方的成本管控表格)，而且会产生很大噪音。至于有多大的噪音，为什么一定要进行风扇转速，我给大家贴一下我个人的风扇转速效果视频。</li>
+</ul>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th align="center">开启转速控制前的风扇声音</th>
+<th align="center">开启转速控制后的风扇声音</th>
+</tr>
+<tr>
+<td align="center"><iframe height=300 width=350 src='https://player.youku.com/embed/XNjQ2Mjg0ODk5Ng=='></iframe></td>
+<td align="center"><iframe height=300 width=350 src='https://player.youku.com/embed/XNjQ2Mjg0OTAyNA=='></iframe></td>
+</tr>
+</thead>
+</table>
+
+<blockquote>
+<p>如果不做转速控制，玩一小时之后，突然关掉电脑，脑子会嗡嗡的，像耳鸣一样。</p>
+<p>后来我调整了，使用到的转速控制软件是：&gt; FanControl</p>
+<p>具体的软件使用教程，网上有很多，可以参考你的情况，选择你喜欢的方式进行控制。</p>
+<p>我这里是直接用温度监控一项，没有做特别复杂的逻辑，CPU的风扇和P40的风扇全部是通过FanControl进行管控。我如果不用FanControl进行管控，P40的风扇转速会默认直接打到60%；</p>
+</blockquote>
+<p><img src="https://files.sid2656.space/blogs/tech/AI/2500SD/%E6%B8%A9%E5%BA%A6%E6%8E%A7%E5%88%B6-1.png?imageView2/1/w/850/h/400" alt="温度控制-1" title="温度控制 stable diffusion"></p>
+<blockquote>
+<p>开启转速控制软件后，在不使用P40进行跑图的前提下，风扇转速默认是我设置的最低10%；基本上没有什么噪音，实际效果可参考上面发的视频文件。</p>
+</blockquote>
+<p><img src="https://files.sid2656.space/blogs/tech/AI/2500SD/%E6%B8%A9%E5%BA%A6%E6%8E%A7%E5%88%B6-2.png?imageView2/1/w/850/h/400" alt="温度控制-2" title="温度控制 stable diffusion"></p>
+<h3 id="出图测试："><a href="#出图测试：" class="headerlink" title="出图测试："></a>出图测试：</h3><blockquote>
+<p>这里我就不再详细去介绍stable diffusion的软件本地化部署，以及相关使用插件的安装，相信大家都有自己是诉求和玩软件的初心，其他的困难用这个初心去解决吧。嘿嘿😋！</p>
+<p>第一步：网络搜索美女图片，我选中了这个：</p>
+</blockquote>
+<p><img src="https://files.sid2656.space/blogs/tech/AI/2500SD/%E5%87%BA%E5%9B%BE%E6%B5%8B%E8%AF%95-1.png?imageView2/1/w/750/h/600" alt="出图测试-2" title="出图测试 stable diffusion"></p>
+<blockquote>
+<p>第二步：图片导入到stable diffusion，提取文件关键词（懒得自己写）：</p>
+</blockquote>
+<p><img src="https://files.sid2656.space/blogs/tech/AI/2500SD/%E5%87%BA%E5%9B%BE%E6%B5%8B%E8%AF%95-2.png?imageView2/1/w/750/h/400" alt="出图测试-2" title="出图测试 stable diffusion"></p>
+<blockquote>
+<p>第三步：选中你喜欢的checkpoint和lora：</p>
+</blockquote>
+<p><img src="https://files.sid2656.space/blogs/tech/AI/2500SD/%E5%87%BA%E5%9B%BE%E6%B5%8B%E8%AF%95-12.png?imageView2/1/w/750/h/350" alt="出图测试-12" title="出图测试 stable diffusion"></p>
+<blockquote>
+<p>第四步：发送tag到文生图，调整正向和反写提示词，然后开跑吧：</p>
+<p>大家可以看到图片左侧是我的显卡转速和软件后台的跑图进度，这个转速控制是我第一版，随着使用过程的迭代，我发现线性的转速控制不太适合这个场景，所以我改成了类似抛物线的样子，这个大家可以按照自己的喜欢和习惯调整。</p>
+</blockquote>
+<p><img src="https://files.sid2656.space/blogs/tech/AI/2500SD/%E5%87%BA%E5%9B%BE%E6%B5%8B%E8%AF%95-3.png?imageView2/1/w/750/h/400" alt="出图测试-2" title="出图测试 stable diffusion"></p>
+<blockquote>
+<p>第五步：直接出图：</p>
+</blockquote>
+<p><img src="https://files.sid2656.space/blogs/tech/AI/2500SD/%E5%87%BA%E5%9B%BE%E6%B5%8B%E8%AF%95-4.png?imageView2/1/w/750/h/750" alt="出图测试-2" title="出图测试 stable diffusion"></p>
+<blockquote>
+<p>最终我选择的是这个：</p>
+</blockquote>
+<p><img src="https://files.sid2656.space/blogs/tech/AI/2500SD/%E5%87%BA%E5%9B%BE%E6%B5%8B%E8%AF%95-5.png?imageView2/1/w/750/h/1100" alt="出图测试-2" title="出图测试 stable diffusion"></p>
+<blockquote>
+<p>至此，2500R完成了能正常适配stable Diffusion的显卡出图机器配置，且通过本地stable Diffusion的环境搭建，完成了最基本的图片风格转换功能。</p>
+</blockquote>
+<blockquote>
+<p>都看到这里了，留个赞支持一下呗！（送花）</p>
+</blockquote>
+<h2 id="三：世界模拟器"><a href="#三：世界模拟器" class="headerlink" title="三：世界模拟器"></a>三：世界模拟器</h2><blockquote>
+<p>这部分就是闲扯淡了哈！</p>
+<p>过年的时候openai放出的sora，效果真的是极度的惊艳。我在刷抖音的时候，被李一舟贴脸开大，打懵逼了，差点掏钱去买课，后来抑制住了冲动，自己去查了一些资料和内容，发现并不是那么回事儿。</p>
+<p>openAI对sora的定义是世界模拟器，而不是AI视频创作的视频大模型。</p>
+<p>我个人对世界模拟器的理解是，首先肯定要理解当前的物理定律，甚至是可以在既定的规则下创造新世界的物理定律，那才能称得上是世界模拟器，因为你叫模拟器，那么模拟内容的原始规则肯定是要吃透的。</p>
+<p>而仔细去看sora放出来的视频，可以看出一些细节处理的并不好，ta呈现的镜头语言确实很棒，但是主体外的其他物体的渲染稍有奇怪，一个好端端的人会直接穿透地面。</p>
+<p>至少从放出的视频，可以判断出sora并不理解物理世界中的3维的概念，那么更别提物理定律在3维世界的应用了。目前看sora只是二维世界的色彩和镜头语言，或者说是二维图像中的渲染处理的更自然而已。所以，惊艳是有的，但是要是上升到世界模拟器，我个人觉得还不够。</p>
+<p>但是话说回来，从最开始的威尔史密斯吃意大利面，到现在的视频运镜，效果呈现，AI进步的是真的快啊。按照这个速度，我觉得世界模拟器应该不会特别遥远了，有生之年，我们这一代应该都会成为“头号玩家”。</p>
+</blockquote>
+<p><img src="https://files.sid2656.space/blogs/tech/AI/2500SD/%E5%87%BA%E5%9B%BE%E6%B5%8B%E8%AF%95-6.png?imageView2/1/w/750/h/450" alt="出图测试-6" title="出图测试 stable diffusion"></p>
+<blockquote>
+<p>PS：如果大家对stable Diffusion的使用，或者一些玩法感兴趣（controlnet、comfyui），24年我可以抽时间整理一些相关的教程和使用文档。</p>
+<p>最后贴一下，本文的诞生参考来源&amp;实操过程的依赖博文：</p>
+</blockquote>
+<h2 id="附录："><a href="#附录：" class="headerlink" title="附录："></a>附录：</h2><blockquote>
+<p>本文诞生依赖的参考链接：<br>【<a target="_blank" rel="noopener" href="https://www.bilibili.com/read/cv21784261/">特斯拉P40显卡改装EVGA 1080ti FTW3散热器</a>】<br>【<a target="_blank" rel="noopener" href="https://jalammar.github.io/illustrated-stable-diffusion/">The Illustrated Stable Diffusion</a>】<br>【<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/634646929">Stable Diffusion｜图解稳定扩散原理</a>】<br>【<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/652560126">Stable Diffusion 文生图技术原理</a>】<br>【<a target="_blank" rel="noopener" href="https://blog.51cto.com/u_15777557/6773893">AI绘图Stable Diffusion 的工作原理</a>】<br>【<a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?__biz=MzI1MjQ2OTQ3Ng==&mid=2247617834&idx=1&sn=2b8f0f56b8b5b25e5ba1240e5705a6a8&chksm=e9e004a1de978db79be4b5d01829959efb839852f818fabc14e5020c0f26b132e5f044c3bf8f&scene=27">stable diffusion原理解读通俗易懂，史诗级万字爆肝长文！</a>】<br>【<a target="_blank" rel="noopener" href="https://medium.com/@steinsfu/stable-diffusion-clearly-explained-ed008044e07e">同样很棒的SD解释</a>】<br>【<a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=1CIpzeNxIhU">简单易懂的 Diffusion Model 解释</a>】<br>【<a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=dVjMiJsuR5o">各种微调模型方法对比</a>】<br>【<a target="_blank" rel="noopener" href="https://huke88.com/article/8085.html">Stable-Diffusion小知识：什么是VAE模型？</a>】<br>【<a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2112.10752.pdf">Latent Diffusion论文</a>】<br>【<a target="_blank" rel="noopener" href="https://lilianweng.github.io/posts/2021-07-11-diffusion-models/">Diffusion Models详细公式</a>】<br>【<a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2102.09672.pdf">Scheduler对比图来自论文</a>】<br>【<a target="_blank" rel="noopener" href="https://towardsdatascience.com/vae-variational-autoencoders-how-to-employ-neural-networks-to-generate-new-images-bdeb216ed2c0">VAE结构图出处</a>】<br>【<a target="_blank" rel="noopener" href="https://cdn.openai.com/papers/dall-e-2.pdf">柯基图来自DALLE2论文</a>】<br>【<a target="_blank" rel="noopener" href="https://github.com/openai/CLIP">CLIP模型的介绍</a>】<br>【<a target="_blank" rel="noopener" href="https://github.com/mlfoundations/open_clip">OpenCLIP</a>】<br>【<a target="_blank" rel="noopener" href="https://textual-inversion.github.io/">Textual Inversion</a>】<br>【<a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2106.09685.pdf">LoRA论文</a>】<br>【<a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2208.12242.pdf">Dreambooth 论文</a>】<br>【<a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2302.05543.pdf">ControlNet 论文</a>】<br>【<a target="_blank" rel="noopener" href="https://arxiv.org/abs/2112.10741">GLIDE论文</a>】<br>【<a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2207.1259">CLASSIFIER-FREE DIFFUSION GUIDANCE论文</a>】</p>
+</blockquote>
+ 
+      <!-- reward -->
+      
+      <div id="reword-out">
+        <div id="reward-btn">
+          打赏
+        </div>
+      </div>
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <div class="declare">
+      <ul class="post-copyright">
+        <li>
+          <i class="ri-copyright-line"></i>
+          <strong>版权声明： </strong>
+          
+          本博客所有文章除特别声明外，著作权归作者所有。转载请注明出处！
+          
+        </li>
+      </ul>
+    </div>
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/AI/" rel="tag">AI</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%B0%8B%E7%94%9F%E6%89%8B%E6%AE%B5/" rel="tag">谋生手段</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+  <nav class="article-nav">
+    
+      <a href="/2024/03/27/tech/AI/AI%E8%AE%BE%E8%AE%A1%E5%A4%A7%E8%B5%9B%E6%80%BB%E7%BB%93/" class="article-nav-link">
+        <strong class="article-nav-caption">上一篇</strong>
+        <div class="article-nav-title">
+          
+            AI设计大赛总结
+          
+        </div>
+      </a>
+    
+    
+      <a href="/2023/11/20/blogs/travel/domestic/%E4%B8%BD%E6%B1%9F%EF%BC%9A%E7%8E%89%E9%BE%99%E9%9B%AA%E5%B1%B1%E7%9A%84%E4%BA%91%E6%B5%B7/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">丽江：玉龙雪山的云海</div>
+      </a>
+    
+  </nav>
+
+  
+   
+     
+</article>
+
+</section>
+      <footer class="footer">
+  <div class="outer">
+    <ul>
+      <li>
+        Copyrights &copy;
+        2011-2025
+        <i class="ri-heart-fill heart_icon"></i> 阿良
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+        
+        <span>
+  <span><i class="ri-user-3-fill"></i>访问人数:<span id="busuanzi_value_site_uv"></span></span>
+  <span class="division">|</span>
+  <span><i class="ri-eye-fill"></i>浏览次数:<span id="busuanzi_value_page_pv"></span></span>
+</span>
+        
+      </li>
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      <li>
+        <!-- cnzz统计 -->
+        
+      </li>
+    </ul>
+  </div>
+</footer>    
+    </main>
+    <div class="float_btns">
+      <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+
+<div class="todark" id="todark">
+  <i class="ri-moon-line"></i>
+</div>
+
+    </div>
+    <aside class="sidebar on">
+      <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/images/ayer-side.svg" alt="阳小良"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">归档</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories/">分类</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags/">标签</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories/%E5%8E%9F%E8%91%97/">原著</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories/%E4%BA%94%E5%91%B3%E6%9D%82%E9%99%88/%E5%A4%A9%E6%B6%AF%E6%B5%B7%E8%A7%92/">旅行</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories/%E8%B0%8B%E7%94%9F%E6%89%8B%E6%AE%B5/">技术</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories/%E6%8A%95%E8%B5%84%E8%87%AA%E5%B7%B1/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/">读书</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" target="_blank" rel="noopener" href="https://hi.huitu.com/1145549/">摄影</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" target="_blank" rel="noopener" href="https://space.bilibili.com/3546831053129882/channel/seriesdetail?sid=4562367&ctype=0">画廊</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/friends">友链</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/2011/02/14/about">关于我</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="搜索">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+    </aside>
+    <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
+  <div class="reward-box">
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/alipay.jpg">
+      <span class="reward-type">支付宝</span>
+    </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/wechat.jpg">
+      <span class="reward-type">微信</span>
+    </div>
+    
+  </div>
+</div>
+    
+<script src="/js/jquery-3.6.0.min.js"></script>
+ 
+<script src="/js/lazyload.min.js"></script>
+
+<!-- Tocbot -->
+ 
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  tocbot.init({
+    tocSelector: ".tocbot",
+    contentSelector: ".article-entry",
+    headingSelector: "h1, h2, h3, h4, h5, h6",
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    scrollContainer: "main",
+    positionFixedSelector: ".tocbot",
+    positionFixedClass: "is-position-fixed",
+    fixedSidebarOffset: "auto",
+  });
+</script>
+
+<script src="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.js"></script>
+<link
+  rel="stylesheet"
+  href="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.css"
+/>
+<script src="https://cdn.staticfile.org/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js"></script>
+
+<script src="/dist/main.js"></script>
+
+<!-- ImageViewer -->
+ <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/default-skin/default-skin.min.css">
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.js"></script>
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe-ui-default.min.js"></script>
+
+<script>
+    function viewer_init() {
+        let pswpElement = document.querySelectorAll('.pswp')[0];
+        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
+
+        $imgArr.forEach(($em, i) => {
+            $em.onclick = () => {
+                // slider展开状态
+                // todo: 这样不好，后面改成状态
+                if (document.querySelector('.left-col.show')) return
+                let items = []
+                $imgArr.forEach(($em2, i2) => {
+                    let img = $em2.getAttribute('data-idx', i2)
+                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
+                    let title = $em2.getAttribute('alt')
+                    // 获得原图尺寸
+                    const image = new Image()
+                    image.src = src
+                    items.push({
+                        src: src,
+                        w: image.width || $em2.width,
+                        h: image.height || $em2.height,
+                        title: title
+                    })
+                })
+                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
+                    index: parseInt(i)
+                });
+                gallery.init()
+            }
+        })
+    }
+    viewer_init()
+</script> 
+<!-- MathJax -->
+
+<!-- Katex -->
+
+<!-- busuanzi  -->
+ 
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+ 
+<!-- ClickLove -->
+
+<!-- ClickBoom1 -->
+
+<!-- ClickBoom2 -->
+
+<!-- CodeCopy -->
+
+<!-- CanvasBackground -->
+
+<script>
+  if (window.mermaid) {
+    mermaid.initialize({ theme: "forest" });
+  }
+</script>
+
+
+    
+    
+
+  </div>
+</body>
+
+</html>

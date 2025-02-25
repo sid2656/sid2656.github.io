@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+
+
+<html lang="zh-CN,en,default">
+  
+
+    <head>
+      <meta charset="utf-8" />
+       
+      <meta name="keywords" content="阳小良,个人博客,程序猿,插画师,技术博客,人生感悟" />
+       
+      <meta name="description" content="不想做插画师的程序猿，不是好厨师" />
+      
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1"
+      />
+      <title>零基础-搭建个人博客8-Cloudflare免费解析域名到githubPages |  阳小良</title>
+  <meta name="generator" content="hexo-theme-ayer">
+      
+      <link rel="shortcut icon" href="/favicon.ico" />
+       
+<link rel="stylesheet" href="/dist/main.css">
+
+      
+<link rel="stylesheet" href="/css/fonts/remixicon.css">
+
+      
+<link rel="stylesheet" href="/css/custom.css">
+ 
+      <script src="https://cdn.staticfile.org/pace/1.2.4/pace.min.js"></script>
+       
+ 
+
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-bulma@5.0.1/bulma.min.css"
+      />
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.js"></script>
+
+      <!-- mermaid -->
+      
+      <style>
+        .swal2-styled.swal2-confirm {
+          font-size: 1.6rem;
+        }
+      </style>
+    </head>
+  </html>
+</html>
+
+
+<body>
+  <div id="app">
+    
+      
+    <main class="content on">
+      <section class="outer">
+  <article
+  id="post-tech/createBlogs/零基础-搭建个人博客8-Cloudflare免费解析域名到githubPages"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  零基础-搭建个人博客8-Cloudflare免费解析域名到githubPages
+</h1>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2025/01/20/tech/createBlogs/%E9%9B%B6%E5%9F%BA%E7%A1%80-%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A28-Cloudflare%E5%85%8D%E8%B4%B9%E8%A7%A3%E6%9E%90%E5%9F%9F%E5%90%8D%E5%88%B0githubPages/" class="article-date">
+  <time datetime="2025-01-20T15:13:14.000Z" itemprop="datePublished">2025-01-20</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E8%B0%8B%E7%94%9F%E6%89%8B%E6%AE%B5/">谋生手段</a> / <a class="article-category-link" href="/categories/%E8%B0%8B%E7%94%9F%E6%89%8B%E6%AE%B5/%E9%9B%B6%E5%9F%BA%E7%A1%80/">零基础</a> / <a class="article-category-link" href="/categories/%E8%B0%8B%E7%94%9F%E6%89%8B%E6%AE%B5/%E9%9B%B6%E5%9F%BA%E7%A1%80/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">搭建个人博客</a>
+  </div>
+  
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> 字数统计:</span>
+            <span class="post-count">2k</span>
+        </span>
+    </span>
+
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> 阅读时长≈</span>
+            <span class="post-count">7 分钟</span>
+        </span>
+    </span>
+</div>
+ 
+    </div>
+      
+    <div class="tocbot"></div>
+
+
+
+
+  
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h2 id="本篇目的"><a href="#本篇目的" class="headerlink" title="本篇目的"></a>本篇目的</h2><blockquote>
+<p>由于存在很多的不可抗力因素，导致我们部署在海外github上面的服务pages是无法通过国内进行访问的，但是绝大多数的国内用户建立博客的目的都是给身边或者志同道合的人一个认识自己的路径，所以受众基本上就是国内用户。本文的目的就是为了解决上述问题而产生的。</p>
+</blockquote>
+<h2 id="不可抗力："><a href="#不可抗力：" class="headerlink" title="不可抗力："></a>不可抗力：</h2><h3 id="1-不可抗力的本质："><a href="#1-不可抗力的本质：" class="headerlink" title="1.不可抗力的本质："></a>1.不可抗力的本质：</h3><blockquote>
+<p>我们先来了解一下我们在浏览器输入域名，桥下回车后发生了什么：</p>
+<p><img src="https://files.sid2656.space/blogs/tech/createBlogs/dnsWeb.png" alt="个人博客" title="dns 解析域名"></p>
+<p>用户在浏览器输入想访问的域名后，浏览器会根据这个域名在域名服务商配置的dns解析服务器地址去寻找域名配置的规则，并根据规则对应的实际内容，去访问真是的服务器提供的web服务。</p>
+<p>因为我们的博客是利用了DNS解析，而如果您使用的国内的DNS解析，在完成这一步之后，还会经过一层国家级的防火墙GFW，其会将需要被隔绝的网络设置不可访问的返回内容。</p>
+<p>这样，我们便因为这个不可抗力的原因导致我们无法访问自己的博客。</p>
+</blockquote>
+<h3 id="2-可选的方案："><a href="#2-可选的方案：" class="headerlink" title="2.可选的方案："></a>2.可选的方案：</h3><blockquote>
+<p>理论上在没有被限制的情况下，我们是可以通过github的项目域名进行博客的访问：</p>
+<blockquote>
+<p>https:&#x2F;&#x2F;{你的用户名}.github.io</p>
+</blockquote>
+<p>但是因为存在部分不可抗力的原因，导致我们无法直接通过github的域名进行博客的访问；</p>
+<p>此时，我们就只能想办法通过一定的规则手段配置，使得个人的博客网站可以被正常访问。这里我罗列两条方案；</p>
+<blockquote>
+<p>方案一：</p>
+<p>申请自己的域名，并在云厂商购买一台服务器，比如在阿里云购买一天最低配服务器，并申请公网IP和固定带宽；</p>
+<p>这样，您便可以通过阿里云服务器进行自己域名的解析和重定向；一般是需要在您在自己国内的服务器上面安装Nginx或者其他服务代理转发的后台服务。</p>
+<p>另外，由于您使用的是国内服务器，您的域名需要解析到您服务器的公网ip，根据ICP备案的要求，您的域名还需要经历云厂商的服务器进行IP的绑定，做备案后才能投入使用。</p>
+</blockquote>
+<p>理论上来说方案一是可行的，但是因为个人原因，我没有进行尝试，有尝试的小伙伴，可以将结果反馈一下。</p>
+<p>这个方案的目的是国外的域名改为自己的域名，并通过正常的备案流程进行访问，理论上来说只要不提供反对内容应该是不会要问题的。</p>
+<blockquote>
+<p>方案二：</p>
+<p>使用海外的域名解析网站，比如：Cloudflare；</p>
+<p>我们可以将自己的域名的DNS解析服务器修改为cloudflare提供的服务器，其提供的解析域名会根据重定向后的规则，找到需要访问的真是IP地址，<br>这样在我们访问域名时，便不会因为重定向的限制和不可抗因素被重定向后的域名给截断请求。</p>
+<p>cloudflare还会根据您实际访问ip的地址分配就近的CDN进行内容的缓存，无形中加快了您域名跨区域访问的速度。当然这种CDN服务在国内是需要收费的，但是cloudflare是可以提供免费支持的。</p>
+</blockquote>
+<p>方案二的目的是直接跳过国内的DNS，直接到国外可用的DNS去解析内容，然后直接返回数据内容，这样返回的内容并不会被GFW拦截。</p>
+<p>我们可以看到不同方案的对比，理论上来说方案一的访问速度回被方案二更快一些，毕竟站点在国内，但是方案二通过国内CDN和免费解析等手段基本上也能达到我们预期的诉求。</p>
+<p>综上所述，我按照我自己的实际使用场景，选择了方案二进行域名的解析。</p>
+</blockquote>
+<h3 id="3-Cloudflare具体实操："><a href="#3-Cloudflare具体实操：" class="headerlink" title="3.Cloudflare具体实操："></a>3.Cloudflare具体实操：</h3><h4 id="Cloudflare"><a href="#Cloudflare" class="headerlink" title="Cloudflare"></a>Cloudflare</h4><blockquote>
+<blockquote>
+<p>Cloudflare 是一间总部位于旧金山的美国跨国 IT 企业，以向客户提供基于反向代理的内容分发网络（Content Delivery Network, CDN）及分布式域名解析服务（Distributed Domain Name Server）为主要业务。利用Cloudflare全球Anycast网络，Cloudflare可以帮助受保护站点抵御 DDOS 等网络攻击，确保该网站长期在线，同时提升网站的性能、加载速度以改善访客体验。 截至2020年1月，Cloudflare拥有200多个位于全球各地的数据中心</p>
+</blockquote>
+<p>总的来说Cloudflare是一家提供CDN和DNS服务的公司，但是他是基于反向代理来进行的内容分发，也就是说网站域名在其dns解析后是一台反向代理的服务器，而不是真实的服务器，这样其通过代理服务器访问真是ip后将结果返回，变可以实现隐藏服务器真是ip的作用了。</p>
+<p><img src="https://files.sid2656.space/blogs/tech/createBlogs/ProxyWebServer.png" alt="个人博客" title="github domain"></p>
+</blockquote>
+<h4 id="CDN：内容分发网络"><a href="#CDN：内容分发网络" class="headerlink" title="CDN：内容分发网络"></a>CDN：内容分发网络</h4><blockquote>
+<blockquote>
+<p>内容分发网络或内容分发网络(CDN)是由代理服务器及其数据中心组成的地理分布式网络。目标是通过相对于最终用户在空间上分布服务来提供高可用性和性能。CDNs出现于20世纪90年代末，是缓解互联网性能瓶颈的一种手段。</p>
+</blockquote>
+<p>简单来说，就是CDN是一个大型的网络缓存设备，这样我们在访问域名对应的真实服务器提供的服务是，CDN服务商会从客户就近的CDN服务器直接返回网络数据内容，而不是真实的每次都去远程的服务器真是IP获取内容，减少了网络的链接和跳转，加快了用户的访问速度。</p>
+<p><img src="https://files.sid2656.space/blogs/tech/createBlogs/NCDN_-_CDN.png" alt="个人博客" title="CDN ncdn"></p>
+<p>本身来说CDN是一个提升用户体验的服务，基本上这种服务都是需要额外收费的，包括国内各大厂商提供的也都是有偿服务。Cloudflare公司提供了一些免费的额度，但是这些额度理论上来说足够个人博客使用了。</p>
+</blockquote>
+<h4 id="注册Cloudflare"><a href="#注册Cloudflare" class="headerlink" title="注册Cloudflare"></a>注册Cloudflare</h4><blockquote>
+<p>打开网络：<a target="_blank" rel="noopener" href="https://www.cloudflare.com/">https://www.cloudflare.com/</a> 进行注册。</p>
+<p>注册完成后可以点击websites菜单，填写您注册的域名。</p>
+<p><img src="https://files.sid2656.space/blogs/tech/createBlogs/website.jpg" alt="个人博客" title="Cloudflare 设置 websites"></p>
+<p>这里我们填写自注册的域名后选择默认的模式：</p>
+<p><img src="https://files.sid2656.space/blogs/tech/createBlogs/website1.jpg" alt="个人博客" title="Cloudflare 设置 websites"></p>
+<p>至于plan计划，我们选择免费版本的：</p>
+<p><img src="https://files.sid2656.space/blogs/tech/createBlogs/website2.jpg" alt="个人博客" title="Cloudflare 设置 websites"></p>
+<p>接下来就到了我们要进行DNS解析的处理了，这里我们按照图下展示所做，将我们的域名通过CNAME的类型方式直接跳转到github的二级域名。</p>
+<p><img src="https://files.sid2656.space/blogs/tech/createBlogs/website3.jpg" alt="个人博客" title="Cloudflare 设置 websites"></p>
+<p>并且我们需要到买到域名的域名厂商进行域名的DNS解析处理：</p>
+<p>以我个人为例，我使用的阿里云服务，所以按照提示从Cloudflare网站的DNS中的records菜单，找到了他们提供的DNS解析网站的Nameservers服务，并将其配置到域名厂商的管理配置中；</p>
+<p><img src="https://files.sid2656.space/blogs/tech/createBlogs/website6.jpg" alt="个人博客" title="Cloudflare 设置 websites"></p>
+<p>这里我们可以免费开启https服务，顺便说一句，如果是国内的话，需要额外申请—_—!<br><img src="https://files.sid2656.space/blogs/tech/createBlogs/website4.jpg" alt="个人博客" title="Cloudflare 设置 websites"></p>
+<p>理论上来说，按照上面的配置我们的网站便可以通过浏览器在国内直接访问了，但是我这里预到了一个问题，就是重定向次数过多导致网站无法打开。</p>
+<p>这是因为Cloudflare本身https和http设置会导致网站回源处理时反复在这两个协议直接横条，导致解析处理重定向次数太多，这时候我们需要设置CDN的会员方式固定位HTTPS的方式，即在SSL中选择Full(strict)，配置如图：<br><img src="https://files.sid2656.space/blogs/tech/createBlogs/website5.jpg" alt="个人博客" title="Cloudflare 设置 websites"></p>
+<p>至此，即便在国内访问域名，也可以正常展示啦！！</p>
+<p><img src="https://files.sid2656.space/blogs/tech/createBlogs/bloghome.jpg" alt="个人博客" title="github domain"></p>
+</blockquote>
+ 
+      <!-- reward -->
+      
+      <div id="reword-out">
+        <div id="reward-btn">
+          打赏
+        </div>
+      </div>
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <div class="declare">
+      <ul class="post-copyright">
+        <li>
+          <i class="ri-copyright-line"></i>
+          <strong>版权声明： </strong>
+          
+          本博客所有文章除特别声明外，著作权归作者所有。转载请注明出处！
+          
+        </li>
+      </ul>
+    </div>
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%B0%8B%E7%94%9F%E6%89%8B%E6%AE%B5/" rel="tag">谋生手段</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%9B%B6%E5%9F%BA%E7%A1%80/" rel="tag">零基础</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+  <nav class="article-nav">
+    
+      <a href="/2025/01/21/tech/createBlogs/%E9%9B%B6%E5%9F%BA%E7%A1%80-%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A29-%E8%AF%84%E8%AE%BA%E6%8F%92%E4%BB%B6/" class="article-nav-link">
+        <strong class="article-nav-caption">上一篇</strong>
+        <div class="article-nav-title">
+          
+            零基础-搭建个人博客9-评论插件
+          
+        </div>
+      </a>
+    
+    
+      <a href="/2025/01/19/tech/createBlogs/%E9%9B%B6%E5%9F%BA%E7%A1%80-%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A27-%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">零基础-搭建个人博客7-自动部署</div>
+      </a>
+    
+  </nav>
+
+  
+   
+     
+</article>
+
+</section>
+      <footer class="footer">
+  <div class="outer">
+    <ul>
+      <li>
+        Copyrights &copy;
+        2011-2025
+        <i class="ri-heart-fill heart_icon"></i> 阿良
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+        
+        <span>
+  <span><i class="ri-user-3-fill"></i>访问人数:<span id="busuanzi_value_site_uv"></span></span>
+  <span class="division">|</span>
+  <span><i class="ri-eye-fill"></i>浏览次数:<span id="busuanzi_value_page_pv"></span></span>
+</span>
+        
+      </li>
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      <li>
+        <!-- cnzz统计 -->
+        
+      </li>
+    </ul>
+  </div>
+</footer>    
+    </main>
+    <div class="float_btns">
+      <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+
+<div class="todark" id="todark">
+  <i class="ri-moon-line"></i>
+</div>
+
+    </div>
+    <aside class="sidebar on">
+      <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/images/ayer-side.svg" alt="阳小良"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">归档</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories/">分类</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags/">标签</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories/%E5%8E%9F%E8%91%97/">原著</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories/%E4%BA%94%E5%91%B3%E6%9D%82%E9%99%88/%E5%A4%A9%E6%B6%AF%E6%B5%B7%E8%A7%92/">旅行</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories/%E8%B0%8B%E7%94%9F%E6%89%8B%E6%AE%B5/">技术</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories/%E6%8A%95%E8%B5%84%E8%87%AA%E5%B7%B1/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/">读书</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" target="_blank" rel="noopener" href="https://hi.huitu.com/1145549/">摄影</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" target="_blank" rel="noopener" href="https://space.bilibili.com/3546831053129882/channel/seriesdetail?sid=4562367&ctype=0">画廊</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/friends">友链</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/2011/02/14/about">关于我</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="搜索">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+    </aside>
+    <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
+  <div class="reward-box">
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/alipay.jpg">
+      <span class="reward-type">支付宝</span>
+    </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/wechat.jpg">
+      <span class="reward-type">微信</span>
+    </div>
+    
+  </div>
+</div>
+    
+<script src="/js/jquery-3.6.0.min.js"></script>
+ 
+<script src="/js/lazyload.min.js"></script>
+
+<!-- Tocbot -->
+ 
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  tocbot.init({
+    tocSelector: ".tocbot",
+    contentSelector: ".article-entry",
+    headingSelector: "h1, h2, h3, h4, h5, h6",
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    scrollContainer: "main",
+    positionFixedSelector: ".tocbot",
+    positionFixedClass: "is-position-fixed",
+    fixedSidebarOffset: "auto",
+  });
+</script>
+
+<script src="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.js"></script>
+<link
+  rel="stylesheet"
+  href="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.css"
+/>
+<script src="https://cdn.staticfile.org/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js"></script>
+
+<script src="/dist/main.js"></script>
+
+<!-- ImageViewer -->
+ <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/default-skin/default-skin.min.css">
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.js"></script>
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe-ui-default.min.js"></script>
+
+<script>
+    function viewer_init() {
+        let pswpElement = document.querySelectorAll('.pswp')[0];
+        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
+
+        $imgArr.forEach(($em, i) => {
+            $em.onclick = () => {
+                // slider展开状态
+                // todo: 这样不好，后面改成状态
+                if (document.querySelector('.left-col.show')) return
+                let items = []
+                $imgArr.forEach(($em2, i2) => {
+                    let img = $em2.getAttribute('data-idx', i2)
+                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
+                    let title = $em2.getAttribute('alt')
+                    // 获得原图尺寸
+                    const image = new Image()
+                    image.src = src
+                    items.push({
+                        src: src,
+                        w: image.width || $em2.width,
+                        h: image.height || $em2.height,
+                        title: title
+                    })
+                })
+                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
+                    index: parseInt(i)
+                });
+                gallery.init()
+            }
+        })
+    }
+    viewer_init()
+</script> 
+<!-- MathJax -->
+
+<!-- Katex -->
+
+<!-- busuanzi  -->
+ 
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+ 
+<!-- ClickLove -->
+
+<!-- ClickBoom1 -->
+
+<!-- ClickBoom2 -->
+
+<!-- CodeCopy -->
+
+<!-- CanvasBackground -->
+
+<script>
+  if (window.mermaid) {
+    mermaid.initialize({ theme: "forest" });
+  }
+</script>
+
+
+    
+    
+
+  </div>
+</body>
+
+</html>

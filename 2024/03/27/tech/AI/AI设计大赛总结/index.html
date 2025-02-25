@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+
+
+<html lang="zh-CN,en,default">
+  
+
+    <head>
+      <meta charset="utf-8" />
+       
+      <meta name="keywords" content="阳小良,个人博客,程序猿,插画师,技术博客,人生感悟" />
+       
+      <meta name="description" content="不想做插画师的程序猿，不是好厨师" />
+      
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1"
+      />
+      <title>AI设计大赛总结 |  阳小良</title>
+  <meta name="generator" content="hexo-theme-ayer">
+      
+      <link rel="shortcut icon" href="/favicon.ico" />
+       
+<link rel="stylesheet" href="/dist/main.css">
+
+      
+<link rel="stylesheet" href="/css/fonts/remixicon.css">
+
+      
+<link rel="stylesheet" href="/css/custom.css">
+ 
+      <script src="https://cdn.staticfile.org/pace/1.2.4/pace.min.js"></script>
+       
+ 
+
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-bulma@5.0.1/bulma.min.css"
+      />
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.js"></script>
+
+      <!-- mermaid -->
+      
+      <style>
+        .swal2-styled.swal2-confirm {
+          font-size: 1.6rem;
+        }
+      </style>
+    </head>
+  </html>
+</html>
+
+
+<body>
+  <div id="app">
+    
+      
+    <main class="content on">
+      <section class="outer">
+  <article
+  id="post-tech/AI/AI设计大赛总结"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  AI设计大赛总结
+</h1>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2024/03/27/tech/AI/AI%E8%AE%BE%E8%AE%A1%E5%A4%A7%E8%B5%9B%E6%80%BB%E7%BB%93/" class="article-date">
+  <time datetime="2024-03-27T13:11:57.000Z" itemprop="datePublished">2024-03-27</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E8%B0%8B%E7%94%9F%E6%89%8B%E6%AE%B5/">谋生手段</a> / <a class="article-category-link" href="/categories/%E8%B0%8B%E7%94%9F%E6%89%8B%E6%AE%B5/AI/">AI</a> / <a class="article-category-link" href="/categories/%E8%B0%8B%E7%94%9F%E6%89%8B%E6%AE%B5/AI/%E5%BA%94%E7%94%A8/">应用</a>
+  </div>
+  
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> 字数统计:</span>
+            <span class="post-count">4.3k</span>
+        </span>
+    </span>
+
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> 阅读时长≈</span>
+            <span class="post-count">14 分钟</span>
+        </span>
+    </span>
+</div>
+ 
+    </div>
+      
+    <div class="tocbot"></div>
+
+
+
+
+  
+    <div class="article-entry" itemprop="articleBody">
+       
+  <blockquote>
+<p>这是一篇以时间和绘画学习过程为串联维度的年度总结，串联了一年的事项，没有做一些结构性的规划，偏流水，所以可以按照日记的思路去看，主要是记录我在这一年在ai绘图这方面的学习和核心事件节点过程。</p>
+<blockquote>
+<p>ps：本文与个人的另一篇《一步步带你用2500块预算显卡改装玩转Stable Diffusion绘图》存在部分重叠，写两篇的原因是角度不同：</p>
+<p>上一篇是原理+实操；本篇是学习+实践过程。</p>
+</blockquote>
+</blockquote>
+<h1 id="AI初识"><a href="#AI初识" class="headerlink" title="AI初识"></a>AI初识</h1><h2 id="内网的GPT编程"><a href="#内网的GPT编程" class="headerlink" title="内网的GPT编程"></a>内网的GPT编程</h2><blockquote>
+<p>OpenAI于22年11月发布ChatGPT，点燃了人工智能之火，也让大家开始意识到，人工智能真的上升到人工“智能”而不是人工“智障”。随之而来的是各种火遍全网的角色扮演和大模型的培训韭菜课程。</p>
+<p>个人不是AI学习的第一批人员，当时被公司内网的一篇文章：问元从面试官的视角，和ChatGPT进行了一场有深度的技术面试《关于我面试了ChatGPT一下午》给惊艳到了。在问元关键字拼错的情况下，能识别原本的意图，这技术敏感性令人叹服。</p>
+<p>后面我开始去公司内网找AI相关的文章，看看是否有我感兴趣，或者能参与的玩法项目。直到我看了另一个特别感兴趣的文章：清都利用AI绘图+原神这两个大热点，B站半个月涨粉2W《亲身经历从0开始涨粉1W+2日2W….》，我个人平时也会玩抖音和B站，知道涨粉的难度。</p>
+</blockquote>
+<h2 id="图像生成-个人兴趣"><a href="#图像生成-个人兴趣" class="headerlink" title="图像生成&amp;个人兴趣"></a>图像生成&amp;个人兴趣</h2><blockquote>
+<p>我个人是特别喜欢绘画，一直存在的一个小理想，就是在能养活自己的前提下，做一个自由插画师。贴几张我自己下班时间临摹的电脑绘画：</p>
+</blockquote>
+<p><img src="https://files.sid2656.space/blogs/tech/AI/AIDraw/%E4%B8%AA%E4%BA%BA%E5%85%B4%E8%B6%A3.jpeg?imageView2/1/w/800/h/800" alt="个人兴趣" title="个人兴趣 AI 绘画"></p>
+<blockquote>
+<p>因为本身是技术出身，所以对新东西接受度相对好一些，我本身并不排斥AI绘画，但是网上有很多大佬当时都在抵制AI绘画。本着打不过就加入的原则，我开始去了解AIGC中关于生图的相关内容和技术，内网+外网找了很多帖子，了解相关的软件。基本上罗列的就三个主要AI绘画工具：</p>
+</blockquote>
+<h3 id="Midjourney："><a href="#Midjourney：" class="headerlink" title="Midjourney："></a>Midjourney：</h3><ul>
+<li>优点：<blockquote>
+<p>效果炸裂，上手容易，模型质量高，多种风格可选支持，自动化程度很高，丰富的绘图功能模块。</p>
+</blockquote>
+</li>
+<li>缺点：<blockquote>
+<p>不是开源的，依赖程度高，插件相对较少，扩展性弱，会员制需要不断缴费，需要科学上网才能正常使用，且账号有屏蔽风险。</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="Stable-Diffusion："><a href="#Stable-Diffusion：" class="headerlink" title="Stable Diffusion："></a>Stable Diffusion：</h3><ul>
+<li>优点：<blockquote>
+<p>开源项目，可生成高质量图片(基于不同的checkpoint)，生成的过程可控，有极其丰富的插件。定制化功能较完善。</p>
+</blockquote>
+</li>
+<li>缺点：<blockquote>
+<p>对本机资源配置要求较高，需要一定的经验上手有一定难度，相同promot的选择对不同的模型产生的效果完全不同。</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="其他类型："><a href="#其他类型：" class="headerlink" title="其他类型："></a>其他类型：</h3><blockquote>
+<p>各大小厂扎堆推出的图像生成类产品，基本上都是围绕上面两个项目进行的升级或者定制化改造。已经产品化的用户使用方式，基本上也是参照上面两个产品进行的模仿。</p>
+</blockquote>
+<h3 id="最终选择："><a href="#最终选择：" class="headerlink" title="最终选择："></a>最终选择：</h3><blockquote>
+<p>最终对比整合各种优缺点，以及自身的情况和学习的沉淀积累的成长可能性，我选择了跳进stable diffusion的坑。</p>
+</blockquote>
+<blockquote>
+<p>按照我个人以往的学习流程：</p>
+<ul>
+<li>先粗略看一下软件的基本原理</li>
+<li>通过实操项目进行进一步的学习沉淀</li>
+<li>再反过来根据功能实操，深度了解原理的具体应用场景和软件设计的思路</li>
+</ul>
+</blockquote>
+<blockquote>
+<p>废话不多说，开干吧，从是实际操作中不断学习！</p>
+</blockquote>
+<h2 id="环境搭建"><a href="#环境搭建" class="headerlink" title="环境搭建"></a>环境搭建</h2><blockquote>
+<p>这部分内外网资料非常多，我就不详细罗列了。因为需要科学上网，所以过程还是有一点坎坷的。</p>
+<p>核心总结就三步：</p>
+<ul>
+<li>1.安装python环境</li>
+<li>2.下载stable diffusion核心代码库</li>
+<li>3.下载软件相关的依赖</li>
+</ul>
+</blockquote>
+<h1 id="AI再识"><a href="#AI再识" class="headerlink" title="AI再识"></a>AI再识</h1><h2 id="本地尝鲜"><a href="#本地尝鲜" class="headerlink" title="本地尝鲜"></a>本地尝鲜</h2><blockquote>
+<p>根据内网和自己去搜索相关的资料，确定了最终想要学习和研究的方向：AI绘画；</p>
+<p>并确定了基本软件：stable diffusion。</p>
+<p>吐槽一下国内网络，原本简单的软件安装，因为不得不科学上网，导致原本一天就能搞定的环境硬生生花费了一周多的时间才弄完。基本上3月份利用下班时间连着搞了一周到晚上后半夜才将各种常用的插件和需要的三方库都下载到了本地，然后就是去C站找各种风格的lora，玩了大概一个月的时间。</p>
+<p>测试了几个风格，包括赛博少女，绘画风格等。贴图：</p>
+</blockquote>
+<p><img src="https://files.sid2656.space/blogs/tech/AI/AIDraw/%E5%9B%BE%E5%BD%A2%E7%94%9F%E6%88%90.jpeg?imageView2/1/w/800/h/800" alt="图形生成" title="图形生成 AI 绘画"></p>
+<blockquote>
+<p>然后开始尝试普惠周围的人，根据个人的喜好，做了几款风格头像：</p>
+</blockquote>
+<p><img src="https://files.sid2656.space/blogs/tech/AI/AIDraw/%E9%A3%8E%E6%A0%BC%E8%B0%83%E8%AF%95.jpeg?imageView2/1/w/800/h/800" alt="风格调试" title="风格调试 AI 绘画"></p>
+<blockquote>
+<p>在朋友圈宣传了一个月，做了一批头像。感觉整体上有一些流程固化了，没有其他新的突破。</p>
+</blockquote>
+<p><img src="https://files.sid2656.space/blogs/tech/AI/AIDraw/%E6%9C%8B%E5%8F%8B%E5%9C%88.jpeg?imageView2/1/w/800/h/800" alt="朋友圈" title="朋友圈 AI 绘画"></p>
+<blockquote>
+<p>然后就又停止不前了。基本上软件就停在电脑里面吃灰了，我也就把下班时间用在了其他的地方：带娃、手绘、玩梦幻西游。</p>
+</blockquote>
+<h2 id="参与比赛"><a href="#参与比赛" class="headerlink" title="参与比赛"></a>参与比赛</h2><h3 id="终极技绘奖"><a href="#终极技绘奖" class="headerlink" title="终极技绘奖"></a>终极技绘奖</h3><blockquote>
+<p>直到10月份休假回来，发现文娱搞了1024程序员的节日活动：ai绘图，而且终极大奖是华为最新的<font color="red">meta60</font>(听说是运营加价购买的)。</p>
+<p>那时候正好手机也快到服役的年限了，王者荣耀都带不动，赶在截止日期的前一天，我还是没有经得起meta60的诱惑，打开了我尘封几个月的stable diffusion。</p>
+<p>下班就马上往家跑，路上整理思路，想围绕文娱的业务线和1024这个主题去思考整个ai绘图。晚上七点多到家，跟媳妇请了假，晚上不跟孩子玩，自己在客厅开始把路上的思路落地，重新去学习图生图的字体设计玩法，设计图像的内容，当天熬夜干到凌晨4点，设计了5个视角去叙述我想象中的文娱未来和1024的主题。依照自己的审美和爱人的意见每个视角选择了1张图作为终稿。</p>
+<p>上午到公司第一件事就是打开活动页，上传了这组概念图，因为活动要求排名是有点赞数量的参考，很多之前的作品交稿时间比较久，自然浏览的人比较多，所以想把点赞在最后一天点上去，就只能刷脸拉人头了，这里再次致谢帮我点赞的同学们。</p>
+<p>给大家贴一下我这组图的最终定稿样子和设计理念吧：</p>
+</blockquote>
+<p><img src="https://files.sid2656.space/blogs/tech/AI/AIDraw/%E5%8F%82%E8%B5%9B.jpeg?imageView2/1/w/800/h/600" alt="参赛" title="参赛 AI 绘画"></p>
+<blockquote>
+<p>这是一组概念图：</p>
+<ul>
+<li>1024：一座由“极”客打造的名叫《1024》的未来都市，他的地标性建筑是一座外形酷似1024的高空桥，城内充斥着“极”客思想的不同区域<blockquote>
+<ul>
+<li>1：文娱在城中有着属于自己的一席之地，他包揽了各种创新和变化和“极”客们的追求</li>
+<li>0：他已在现实基础上将虚拟和二次元完美融合，打破次元壁，创造新“变”化，形成了完整闭环</li>
+<li>2：观影方式已“变”，城中有多种悬浮球，观众可以在其内体会影视内部真实的五感(视、听、味、嗅、触)</li>
+<li>4：演出的参与方式也有重大改“变”，通过可穿戴设备在任何地点，任何时间，完全的投入到演出现场，在打造氛围五感的同时，可以打破三维空间的局限，来到第四维时间维度上，回味历史的演出</li>
+</ul>
+</blockquote>
+最终的结果也是相当幸运，在文娱程序员节的这次活动中，我获得了终极技绘奖。meta60到手！</li>
+</ul>
+</blockquote>
+<p><img src="https://files.sid2656.space/blogs/tech/AI/AIDraw/%E8%8E%B7%E5%A5%962.jpg?imageView2/1/w/600/h/300" alt="获奖2" title="获奖2 AI 绘画"></p>
+<blockquote>
+<p>获得这次奖项，个人还是比较开心的。1024是程序员自己的浪漫；文娱举办的这次AI结合的活动本身也很浪漫的。整个活动的核心元素极、变，未来属性在里面的话，就比较科幻。个人也期望文娱的发展，像meta 60 一样，遥遥领先。</p>
+<p>就我个人来说确实特别感谢文娱组织的这次活动，不仅仅是因为我得了终极技绘奖，也不是因为得了meta60，而是因为这个活动，让我有了新的发现和目标。在截止交稿前的那天凌晨，我边设计边思考边动手，那个过程中我发现学习还是要有目的性，否则就会想之前一样尝鲜之后就落灰了。</p>
+</blockquote>
+<h3 id="集团外活动"><a href="#集团外活动" class="headerlink" title="集团外活动"></a>集团外活动</h3><blockquote>
+<p>接下来我开始新一轮的打怪升级之旅，因为文娱内得了终极技绘奖，让我个人对自己的认知有了一定的误解，我以为我的水平真的可以在AI绘画领域考前了，所以我就想着是否在集团外也有一些AI相关的活动，那些活动我是否也可以参加，一样可以拿奖呢？</p>
+<p>然后我去各个网站搜集有关ai比赛的活动。白天上班，晚上基本上七点多到家，跟娃玩一会，她九点十点睡了之后，我就开始搞ai的比赛。基本上从23年的11月份开始持续到24年的2月份每天晚上都在十二点以后睡觉，某些时间临近交稿的情况，会把时间拉伸到后半夜2点多。这个过程前期是真的有些痛苦，感觉精神状态都不太好了，所以过年期间修整了好长时间。</p>
+<p>下面罗列了所有我参加的活动：</p>
+</blockquote>
+<p><img src="https://files.sid2656.space/blogs/tech/AI/AIDraw/%E5%85%AC%E5%BC%80%E8%B5%9B%E4%BA%8B.png?imageView2/1/w/800/h/365" alt="公开赛事" title="公开赛事 AI 绘画"></p>
+<blockquote>
+<p>这里面有AI设计的，有AI绘画的，还有文创设计的(真的是不知天高地厚，太膨胀了，居然还敢碰文创！！！)。我将收集到的比赛活动整理了一个表格，包括报名截止和交稿截止，并且标记了相关的奖项，以及活动的状态。</p>
+<ul>
+<li>红色的是获奖的，个人获得的单项活动最高的奖金是3000R</li>
+<li>黄色的是获奖的，单获奖后因为参赛人员范围不符合要求被取消奖项的</li>
+<li>绿色的是未通知最终结果的</li>
+<li>灰色的是参与了，但是最终结果不符合预期的（后面的是否参与列，在后来我就没有按照实际参与状态变更内容，这个列表里面的实际上都参与了，除了表格里面的大赛，我还选择性屏蔽了一倍数量的大赛）<br>下面是部分参赛的作品示例：</li>
+</ul>
+</blockquote>
+<p><img src="https://files.sid2656.space/blogs/tech/AI/AIDraw/%E8%B5%9B%E4%BA%8B%E4%BD%9C%E5%93%81.jpeg?imageView2/1/w/800/h/800" alt="赛事作品" title="赛事作品 AI 绘画"></p>
+<h2 id="搭建个人AI学习机"><a href="#搭建个人AI学习机" class="headerlink" title="搭建个人AI学习机"></a>搭建个人AI学习机</h2><blockquote>
+<p>在这个过程中，我发现好多的比赛主办方是对最终提交的图有大小的限制，因为可能要最终绘制成海报。然后我自己本身的显卡3060ti-8G的只能跑一些比较小的图，超过1024像素后再放大就可能直接在跑图的过程中崩坏，所以换显卡至关重要！而一台电脑中的几个占比资金比重搞的组件中显卡算得上是数一数二的了。当时买3060ti还花了我5000大洋，我是真的肉疼啊。</p>
+<p>去网上找了一下崩图的主要原因和解决办法，一顿查下来确定结论：基本上就是显存太小！需要换一个更高配置的显卡。换言之就是对个人可支配的金额有一定的要求，这对一个成家的男人来说，还是有一定压力的。好一点的显卡基本上就大几千块，如果显存想大到可以跑AI出大图的要求，基本上是至少要16G显存空间。这种显卡可能就要上万了！</p>
+<p>所以我本着把抠门贯彻到底的原则，尝试了曲线救国的思路，想尝试通过改装Tesla P40显卡来进行AI绘图。因为有了meta60这个活动奖品的加持，自己就比较容易申请。我自己申请到了3000R块大洋的AI学习启动资金，本着将抠门进行到底的策略，我开始了沉浸式逛咸鱼之旅，最终根据显卡和主板以及硬盘显示器等组件的要求，加上自己人肉的反复对比，最终组建了一台可以运行AI绘画软件的台式机，总计成本控制在2500R，并完美的搭建了一套本地的stable diffusion，想知道具体配置和改造过程的同学，可以看我的另一篇：《一步步带你用2500块预算显卡改装玩转Stable Diffusion绘图》</p>
+</blockquote>
+<h2 id="持续进化-图像到视频"><a href="#持续进化-图像到视频" class="headerlink" title="持续进化-&gt;图像到视频"></a>持续进化-&gt;图像到视频</h2><blockquote>
+<p>对于至死是少年的取向为异性的男同胞来说，18岁的小姐姐永远是生命中那一抹无法轻易抹去的浓墨重彩。所以在学习AI绘图的过程中，我还在想应该如何将那些爱跳舞的小姐姐转换成我个人喜好的二次元的样子永远停留在我的学习目录里。</p>
+<p>我开始尝试stable diffusion的各种视频转换（风格转换）插件：</p>
+<ul>
+<li>controlnet-m2m：</li>
+<li>Mov2mov：</li>
+<li>Temporal Kit + EbSynth：（会参考前后帧进行图像生成绘制）<br>这几个的核心处理逻辑基本上是相似的，都是将原视频进行分隔出每一帧，然后对每一帧通过stable diffusion进行转换，当然由于AI的特性转换的风格是多样的，可以添加lora进行一定的控制，但是每张依然的独立的，这样就会产生一个问题，画面的连贯性是个非常大的问题，跳帧特别严重。</li>
+<li></li>
+</ul>
+<p>口说无凭，我给大家贴个小视频，大家看看：（嘘！偷摸看就好，别外传！因为实在是没眼看！）</p>
+</blockquote>
+<iframe height=380 width=400 src='https://player.youku.com/embed/XNjQ2Mjg0NjM2MA=='></iframe>
+
+<blockquote>
+<p>其实网上有很多大佬用一样的工具依然可以做出比较丝滑的视频，我去了解了一下，主要就是两个方式和途径：</p>
+<ul>
+<li>1.反复调整绘图转换的参数，将变量控制到最低，在保留风格的同时保留视频原始的服饰和背景。</li>
+<li>2.因为是抽帧作图，所以可以将跳帧的部分重新生图转换，这个过程就极其痛苦。所以我就是做了一下基本的尝试，没有再去深入研究。<br>上面几个插件基本上都是视频风格转换的，在23年底我在刷抖音的时候发现了另一个视频生成的方式，效果真的是比较惊艳。comfyUI，他是基于stable diffusion的一个全新的UI，有自己的插件，可以基于工作流的方式生成比较流畅的视频。同时对我的AI绘画风格也有比较好的提效作用。他的主要方式是通过工作流的方式可以组件自己的工作模板，比如我想要某个风格的图像转换，可以完全自己定义一套工作流，从关键标签的提取，到模型的选择，都可以固定下来，某个人要风格头像，我只需要更换原始图片，就可以直接跑任务流，完全不需要其他的动作，正向提示词都可以跟进tag插件从原图中提取，在额外添加自己的模型触发词即可。</li>
+</ul>
+<p>下面贴两个我这头通过comfyUI工作流(网上找到的工作流模板，也可以自己创建新的)生成的视频。这个模板中有依赖的新插件，可以通过设置关键帧的方式生成相对流畅的视频。</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th align="center">首次尝试，简单设置关键帧</th>
+<th align="center">修改关键帧和对应的模板</th>
+</tr>
+<tr>
+<td align="center"><iframe height=300 width=350 src='https://player.youku.com/embed/XNjQ1NTM5ODY0NA=='></iframe></td>
+<td align="center"><iframe height=300 width=350 src='https://player.youku.com/embed/XNjQ2Mjg1MjM0NA=='></iframe></td>
+</tr>
+</thead>
+</table>
+
+<blockquote>
+<p>具体的模板：</p>
+</blockquote>
+<p><img src="https://files.sid2656.space/blogs/tech/AI/AIDraw/%E5%B7%A5%E4%BD%9C%E6%B5%81.png?imageView2/1/w/600/h/350" alt="工作流" title="工作流 AI 绘画"></p>
+<h1 id="我的AI未来"><a href="#我的AI未来" class="headerlink" title="我的AI未来"></a>我的AI未来</h1><blockquote>
+<p>对于我个人的AI使用和探索，除了会持续关注图像生成部分，也需要再深度思考一下后续在工具和能力逐步完善的过程中，对我个人有哪些方向可以去探索尝试的。</p>
+<p>比如各种短视频平台？或者创建自己的绘画社群？甚至是出一些自己的软件使用的心得或者教程？又或者有其他更多的可能性？我不知道，也不能确定，但是有一点可以确定，就是持续的去了解和学习，丰富和武装自己，磨好手里的刀，终有一天要去上阵杀敌的时候，那把磨了很久的刀定会排上用场。</p>
+</blockquote>
+ 
+      <!-- reward -->
+      
+      <div id="reword-out">
+        <div id="reward-btn">
+          打赏
+        </div>
+      </div>
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <div class="declare">
+      <ul class="post-copyright">
+        <li>
+          <i class="ri-copyright-line"></i>
+          <strong>版权声明： </strong>
+          
+          本博客所有文章除特别声明外，著作权归作者所有。转载请注明出处！
+          
+        </li>
+      </ul>
+    </div>
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/AI/" rel="tag">AI</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%B0%8B%E7%94%9F%E6%89%8B%E6%AE%B5/" rel="tag">谋生手段</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+  <nav class="article-nav">
+    
+      <a href="/2024/05/10/blogs/life/experience/%E5%8C%97%E4%BA%AC%EF%BC%9A%E9%98%BF%E9%87%8C%E5%AE%B6%E5%B1%9E%E6%97%A5/" class="article-nav-link">
+        <strong class="article-nav-caption">上一篇</strong>
+        <div class="article-nav-title">
+          
+            北京：阿里家属日
+          
+        </div>
+      </a>
+    
+    
+      <a href="/2024/03/10/tech/AI/2500%E5%9D%97%E5%B8%A6%E4%BD%A0%E7%8E%A9%E8%BD%ACStable%20Diffusion/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">2500块带你玩转Stable Diffusion</div>
+      </a>
+    
+  </nav>
+
+  
+   
+     
+</article>
+
+</section>
+      <footer class="footer">
+  <div class="outer">
+    <ul>
+      <li>
+        Copyrights &copy;
+        2011-2025
+        <i class="ri-heart-fill heart_icon"></i> 阿良
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+        
+        <span>
+  <span><i class="ri-user-3-fill"></i>访问人数:<span id="busuanzi_value_site_uv"></span></span>
+  <span class="division">|</span>
+  <span><i class="ri-eye-fill"></i>浏览次数:<span id="busuanzi_value_page_pv"></span></span>
+</span>
+        
+      </li>
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      <li>
+        <!-- cnzz统计 -->
+        
+      </li>
+    </ul>
+  </div>
+</footer>    
+    </main>
+    <div class="float_btns">
+      <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+
+<div class="todark" id="todark">
+  <i class="ri-moon-line"></i>
+</div>
+
+    </div>
+    <aside class="sidebar on">
+      <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/images/ayer-side.svg" alt="阳小良"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">归档</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories/">分类</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags/">标签</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories/%E5%8E%9F%E8%91%97/">原著</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories/%E4%BA%94%E5%91%B3%E6%9D%82%E9%99%88/%E5%A4%A9%E6%B6%AF%E6%B5%B7%E8%A7%92/">旅行</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories/%E8%B0%8B%E7%94%9F%E6%89%8B%E6%AE%B5/">技术</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories/%E6%8A%95%E8%B5%84%E8%87%AA%E5%B7%B1/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/">读书</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" target="_blank" rel="noopener" href="https://hi.huitu.com/1145549/">摄影</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" target="_blank" rel="noopener" href="https://space.bilibili.com/3546831053129882/channel/seriesdetail?sid=4562367&ctype=0">画廊</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/friends">友链</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/2011/02/14/about">关于我</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="搜索">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+    </aside>
+    <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
+  <div class="reward-box">
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/alipay.jpg">
+      <span class="reward-type">支付宝</span>
+    </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/wechat.jpg">
+      <span class="reward-type">微信</span>
+    </div>
+    
+  </div>
+</div>
+    
+<script src="/js/jquery-3.6.0.min.js"></script>
+ 
+<script src="/js/lazyload.min.js"></script>
+
+<!-- Tocbot -->
+ 
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  tocbot.init({
+    tocSelector: ".tocbot",
+    contentSelector: ".article-entry",
+    headingSelector: "h1, h2, h3, h4, h5, h6",
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    scrollContainer: "main",
+    positionFixedSelector: ".tocbot",
+    positionFixedClass: "is-position-fixed",
+    fixedSidebarOffset: "auto",
+  });
+</script>
+
+<script src="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.js"></script>
+<link
+  rel="stylesheet"
+  href="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.css"
+/>
+<script src="https://cdn.staticfile.org/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js"></script>
+
+<script src="/dist/main.js"></script>
+
+<!-- ImageViewer -->
+ <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/default-skin/default-skin.min.css">
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.js"></script>
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe-ui-default.min.js"></script>
+
+<script>
+    function viewer_init() {
+        let pswpElement = document.querySelectorAll('.pswp')[0];
+        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
+
+        $imgArr.forEach(($em, i) => {
+            $em.onclick = () => {
+                // slider展开状态
+                // todo: 这样不好，后面改成状态
+                if (document.querySelector('.left-col.show')) return
+                let items = []
+                $imgArr.forEach(($em2, i2) => {
+                    let img = $em2.getAttribute('data-idx', i2)
+                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
+                    let title = $em2.getAttribute('alt')
+                    // 获得原图尺寸
+                    const image = new Image()
+                    image.src = src
+                    items.push({
+                        src: src,
+                        w: image.width || $em2.width,
+                        h: image.height || $em2.height,
+                        title: title
+                    })
+                })
+                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
+                    index: parseInt(i)
+                });
+                gallery.init()
+            }
+        })
+    }
+    viewer_init()
+</script> 
+<!-- MathJax -->
+
+<!-- Katex -->
+
+<!-- busuanzi  -->
+ 
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+ 
+<!-- ClickLove -->
+
+<!-- ClickBoom1 -->
+
+<!-- ClickBoom2 -->
+
+<!-- CodeCopy -->
+
+<!-- CanvasBackground -->
+
+<script>
+  if (window.mermaid) {
+    mermaid.initialize({ theme: "forest" });
+  }
+</script>
+
+
+    
+    
+
+  </div>
+</body>
+
+</html>

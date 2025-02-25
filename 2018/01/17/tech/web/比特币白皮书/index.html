@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+
+
+<html lang="zh-CN,en,default">
+  
+
+    <head>
+      <meta charset="utf-8" />
+       
+      <meta name="keywords" content="阳小良,个人博客,程序猿,插画师,技术博客,人生感悟" />
+       
+      <meta name="description" content="不想做插画师的程序猿，不是好厨师" />
+      
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1"
+      />
+      <title>比特币白皮书：一种点对点的电子现金系统 |  阳小良</title>
+  <meta name="generator" content="hexo-theme-ayer">
+      
+      <link rel="shortcut icon" href="/favicon.ico" />
+       
+<link rel="stylesheet" href="/dist/main.css">
+
+      
+<link rel="stylesheet" href="/css/fonts/remixicon.css">
+
+      
+<link rel="stylesheet" href="/css/custom.css">
+ 
+      <script src="https://cdn.staticfile.org/pace/1.2.4/pace.min.js"></script>
+       
+ 
+
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-bulma@5.0.1/bulma.min.css"
+      />
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.js"></script>
+
+      <!-- mermaid -->
+      
+      <style>
+        .swal2-styled.swal2-confirm {
+          font-size: 1.6rem;
+        }
+      </style>
+    </head>
+  </html>
+</html>
+
+
+<body>
+  <div id="app">
+    
+      
+    <main class="content on">
+      <section class="outer">
+  <article
+  id="post-tech/web/比特币白皮书"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  比特币白皮书：一种点对点的电子现金系统
+</h1>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2018/01/17/tech/web/%E6%AF%94%E7%89%B9%E5%B8%81%E7%99%BD%E7%9A%AE%E4%B9%A6/" class="article-date">
+  <time datetime="2018-01-17T02:55:37.000Z" itemprop="datePublished">2018-01-17</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E5%A5%BD%E6%96%87%E6%8E%A8%E8%8D%90/">好文推荐</a> / <a class="article-category-link" href="/categories/%E5%A5%BD%E6%96%87%E6%8E%A8%E8%8D%90/%E6%8A%80%E6%9C%AF/">技术</a>
+  </div>
+  
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> 字数统计:</span>
+            <span class="post-count">6.9k</span>
+        </span>
+    </span>
+
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> 阅读时长≈</span>
+            <span class="post-count">24 分钟</span>
+        </span>
+    </span>
+</div>
+ 
+    </div>
+      
+
+
+
+  
+    <div class="article-entry" itemprop="articleBody">
+       
+  <blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+<p>原文作者：中本聪（Satoshi Nakamoto）&gt;</p>
+<blockquote>
+<p> 作者邮箱：<a href="mailto:&#83;&#97;&#x74;&#x6f;&#x73;&#104;&#x69;&#x6e;&#64;&#103;&#x6d;&#x78;&#x2e;&#x63;&#111;&#109;">Satoshin@gmx.com</a></p>
+<p> 执行翻译：8btc.com  巴比特 QQagent</p>
+<p> [摘要]：本文提出了一种完全通过点对点技术实现的电子现金系统，它使得在线支付能够直接由一方发起并支付给另外一方，中间不需要通过任何的金融机构。虽然数字签名（Digital signatures）部分解决了这个问题，但是如果仍然需要第三方的支持才能防止双重支付（double-spending）的话，那么这种系统也就失去了存在的价值。我们(we)在此提出一种解决方案，使现金系统在点对点的环境下运行，并防止双重支付问题。该网络通过随机散列（hashing）对全部交易加上时间戳（timestamps），将它们合并入一个不断延伸的基于随机散列的工作量证明（proof-of-work）的链条作为交易记录，除非重新完成全部的工作量证明，形成的交易记录将不可更改。最长的链条不仅将作为被观察到的事件序列（sequence）的证明，而且被看做是来自CPU计算能力最大的池（pool）。只要大多数的CPU计算能力都没有打算合作起来对全网进行攻击，那么诚实的节点将会生成最长的、超过攻击者的链条。这个系统本身需要的基础设施非常少。信息尽最大努力在全网传播即可，节点(nodes)可以随时离开和重新加入网络，并将最长的工作量证明链条作为在该节点离线期间发生的交易的证明。</p>
+</blockquote>
+<ol>
+<li>简介&gt;<blockquote>
+<p> 互联网上的贸易，几乎都需要借助金融机构作为可资信赖的第三方来处理电子支付信息。虽然这类系统在绝大多数情况下都运作良好，但是这类系统仍然内生性地受制于“基于信用的模式”(trust based model)的弱点。我们无法实现完全不可逆的交易，因为金融机构总是不可避免地会出面协调争端。而金融中介的存在，也会增加交易的成本，并且限制了实际可行的最小交易规模，也限制了日常的小额支付交易。并且潜在的损失还在于，很多商品和服务本身是无法退货的，如果缺乏不可逆的支付手段，互联网的贸易就大大受限。因为有潜在的退款的可能，就需要交易双方拥有信任。而商家也必须提防自己的客户，因此会向客户索取完全不必要的个人信息。而实际的商业行为中，一定比例的欺诈性客户也被认为是不可避免的，相关损失视作销售费用处理。而在使用物理现金的情况下，这些销售费用和支付问题上的不确定性却是可以避免的，因为此时没有第三方信用中介的存在。</p>
+<p>所以，我们非常需要这样一种电子支付系统，它基于密码学原理而不基于信用，使得任何达成一致的双方，能够直接进行支付，从而不需要第三方中介的参与。杜绝回滚(reverse)支付交易的可能，这就可以保护特定的卖家免于欺诈；而对于想要保护买家的人来说，在此环境下设立通常的第三方担保机制也可谓轻松加愉快。在这篇论文中，我们(we)将提出一种通过点对点分布式的时间戳服务器来生成依照时间前后排列并加以记录的电子交易证明，从而解决双重支付问题。只要诚实的节点所控制的计算能力的总和，大于有合作关系的(cooperating)攻击者的计算能力的总和，该系统就是安全的。</p>
+</blockquote>
+</li>
+<li>交易(Transactions)&gt;<blockquote>
+<p> 我们定义，一枚电子货币（an electronic coin）是这样的一串数字签名：每一位所有者通过对前一次交易和下一位拥有者的公钥(Public key) 签署一个随机散列的数字签名，并将这个签名附加在这枚电子货币的末尾，电子货币就发送给了下一位所有者。而收款人通过对签名进行检验，就能够验证该链条的所有者。</p>
+</blockquote>
+</li>
+</ol>
+<p><img class="size-full wp-image-5619 aligncenter" alt="1" src="http://7fvhfe.com1.z0.glb.clouddn.com/wp-content/uploads/2013/11/11.png" width="577" height="385" style="box-sizing: border-box; border: 0px; vertical-align: middle; display: block; margin-left: auto; margin-right: auto;"/>&gt;</p>
+<blockquote>
+<p> 该过程的问题在于，收款人将难以检验，之前的某位所有者，是否对这枚电子货币进行了双重支付。通常的解决方案，就是引入信得过的第三方权威，或者类似于造币厂(mint)的机构，来对每一笔交易进行检验，以防止双重支付。在每一笔交易结束后，这枚电子货币就要被造币厂回收，而造币厂将发行一枚新的电子货币；而只有造币厂直接发行的电子货币，才算作有效，这样就能够防止双重支付。可是该解决方案的问题在于，整个货币系统的命运完全依赖于运作造币厂的公司，因为每一笔交易都要经过该造币厂的确认，而该造币厂就好比是一家银行。</p>
+<p>我们需要收款人有某种方法，能够确保之前的所有者没有对更早发生的交易实施签名。从逻辑上看，为了达到目的，实际上我们需要关注的只是于本交易之前发生的交易，而不需要关注这笔交易发生之后是否会有双重支付的尝试。为了确保某一次交易是不存在的，那么唯一的方法就是获悉之前发生过的所有交易。在造币厂模型里面，造币厂获悉所有的交易，并且决定了交易完成的先后顺序。如果想要在电子系统中排除第三方中介机构，那么交易信息就应当被公开宣布（publicly announced）[1] ，我们需要整个系统内的所有参与者，都有唯一公认的历史交易序列。收款人需要确保在交易期间绝大多数的节点都认同该交易是首次出现。</p>
+<ol start="3">
+<li>时间戳服务器(Timestamp server)&gt;<br> 本解决方案首先提出一个“时间戳服务器”。时间戳服务器通过对以区块(block)形式存在的一组数据实施随机散列而加上时间戳，并将该随机散列进行广播，就像在新闻或世界性新闻组网络（Usenet）的发帖一样[2][3][4][5] 。显然，该时间戳能够证实特定数据必然于某特定时间是的确存在的，因为只有在该时刻存在了才能获取相应的随机散列值。每个时间戳应当将前一个时间戳纳入其随机散列值中，每一个随后的时间戳都对之前的一个时间戳进行增强(reinforcing)，这样就形成了一个链条（Chain）。</li>
+</ol>
+ <img class="size-full wp-image-5620 aligncenter" alt="2" src="http://7fvhfe.com1.z0.glb.clouddn.com/wp-content/uploads/2013/11/21.png" width="562" height="192" style="box-sizing: border-box; border: 0px; vertical-align: middle; display: block; margin-left: auto; margin-right: auto;"/><ol start="4">
+<li>工作量证明（Proof-of-Work）&gt;<br> 为了在点对点的基础上构建一组分散化的时间戳服务器，仅仅像报纸或世界性新闻网络组一样工作是不够的，我们还需要一个类似于亚当•柏克（Adam Back）提出的哈希现金（Hashcash）[6] 。在进行随机散列运算时，工作量证明机制引入了对某一个特定值的扫描工作，比方说SHA-256下，随机散列值以一个或多个0开始。那么随着0的数目的上升, 找到这个解所需要的工作量将呈指数增长，而对结果进行检验则仅需要一次随机散列运算。</li>
+</ol>
+<p> 我们在区块中补增一个随机数(Nonce)，这个随机数要使得该给定区块的随机散列值出现了所需的那么多个0。我们通过反复尝试来找到这个随机数，直到找到为止，这样我们就构建了一个工作量证明机制。只要该CPU耗费的工作量能够满足该工作量证明机制，那么除非重新完成相当的工作量，该区块的信息就不可更改。由于之后的区块是链接在该区块之后的，所以想要更改该区块中的信息，就还需要重新完成之后所有区块的全部工作量。</p>
+ <img class="size-full wp-image-5621 aligncenter" alt="3" src="http://7fvhfe.com1.z0.glb.clouddn.com/wp-content/uploads/2013/11/31.png" width="566" height="177" style="box-sizing: border-box; border: 0px; vertical-align: middle; display: block; margin-left: auto; margin-right: auto;"/>
+
+<p> 同时，该工作量证明机制还解决了在集体投票表决时，谁是大多数的问题。如果决定大多数的方式是基于IP地址的，一IP地址一票，那么如果有人拥有分配大量IP地址的权力，则该机制就被破坏了。而工作量证明机制的本质则是一CPU一票。“大多数”的决定表达为最长的链，因为最长的链包含了最大的工作量。如果大多数的CPU为诚实的节点控制，那么诚实的链条将以最快的速度延长，并超越其他的竞争链条。如果想要对业已出现的区块进行修改，攻击者必须重新完成该区块的工作量外加该区块之后所有区块的工作量，并最终赶上和超越诚实节点的工作量。我们将在后文证明，设想一个较慢的攻击者试图赶上随后的区块，那么其成功概率将呈指数化递减。</p>
+<p>另一个问题是，硬件的运算速度在高速增长，而节点参与网络的程度则会有所起伏。为了解决这个问题，工作量证明的难度(the proof-of-work difficulty)将采用移动平均目标的方法来确定，即令难度指向令每小时生成区块的速度为某一个预定的平均数。如果区块生成的速度过快，那么难度就会提高。</p>
+<ol start="5">
+<li>网络&gt;<br> 运行该网络的步骤如下：</li>
+</ol>
+<ol>
+<li><p>新的交易向全网进行广播；</p>
+</li>
+<li><p>每一个节点都将收到的交易信息纳入一个区块中；</p>
+</li>
+<li><p>每个节点都尝试在自己的区块中找到一个具有足够难度的工作量证明；</p>
+</li>
+<li><p>当一个节点找到了一个工作量证明，它就向全网进行广播；</p>
+</li>
+<li><p>当且仅当包含在该区块中的所有交易都是有效的且之前未存在过的，其他节点才认同该区块的有效性；</p>
+</li>
+<li><p>其他节点表示他们接受该区块，而表示接受的方法，则是在跟随该区块的末尾，制造新的区块以延长该链条，而将被接受区块的随机散列值视为先于新区快的随机散列值。</p>
+</li>
+</ol>
+<p> 节点始终都将最长的链条视为正确的链条，并持续工作和延长它。如果有两个节点同时广播不同版本的新区块，那么其他节点在接收到该区块的时间上将存在先后差别。当此情形，他们将在率先收到的区块基础上进行工作，但也会保留另外一个链条，���防后者变成最长的链条。该僵局（tie）的打破要等到下一个工作量证明被发现，而其中的一条链条被证实为是较长的一条，那么在另一条分支链条上工作的节点将转换阵营，开始在较长的链条上工作。</p>
+<p>所谓“新的交易要广播”，实际上不需要抵达全部的节点。只要交易信息能够抵达足够多的节点，那么他们将很快被整合进一个区块中。而区块的广播对被丢弃的信息是具有容错能力的。如果一个节点没有收到某特定区块，那么该节点将会发现自己缺失了某个区块，也就可以提出自己下载该区块的请求。</p>
+<ol start="6">
+<li>激励&gt;<br> 我们约定如此：每个区块的第一笔交易进行特殊化处理，该交易产生一枚由该区块创造者拥有的新的电子货币。这样就增加了节点支持该网络的激励，并在没有中央集权机构发行货币的情况下，提供了一种将电子货币分配到流通领域的一种方法。这种将一定数量新货币持续增添到货币系统中的方法，非常类似于耗费资源去挖掘金矿并将黄金注入到流通领域。此时，CPU的时间和电力消耗就是消耗的资源。</li>
+</ol>
+<p>另外一个激励的来源则是交易费（transaction fees）。如果某笔交易的输出值小于输入值，那么差额就是交易费，该交易费将被增加到该区块的激励中。只要既定数量的电子货币已经进入流通，那么激励机制就可以逐渐转换为完全依靠交易费，那么本货币系统就能够免于通货膨胀。</p>
+<p>激励系统也有助于鼓励节点保持诚实。如果有一个贪婪的攻击者能够调集比所有诚实节点加起来还要多的CPU计算力，那么他就面临一个选择：要么将其用于诚实工作产生新的电子货币，或者将其用于进行二次支付攻击。那么他就会发现，按照规则行事、诚实工作是更有利可图的。因为该等规则使得他能够拥有更多的电子货币，而不是破坏这个系统使得其自身财富的有效性受损。</p>
+<ol start="7">
+<li>回收硬盘空间&gt;<br> 如果最近的交易已经被纳入了足够多的区块之中，那么就可以丢弃该交易之前的数据，以回收硬盘空间。为了同时确保不损害区块的随机散列值，交易信息被随机散列时，被构建成一种Merkle树（Merkle tree）[7] 的形态，使得只有根(root)被纳入了区块的随机散列值。通过将该树（tree）的分支拔除（stubbing）的方法，老区块就能被压缩。而内部的随机散列值是不必保存的。</li>
+</ol>
+ <img class="size-full wp-image-5622 aligncenter" alt="4" src="http://7fvhfe.com1.z0.glb.clouddn.com/wp-content/uploads/2013/11/41.png" width="756" height="443" style="box-sizing: border-box; border: 0px; vertical-align: middle; display: block; margin-left: auto; margin-right: auto;"/>
+
+<p> 不含交易信息的区块头（Block header）大小仅有80字节。如果我们设定区块生成的速率为每10分钟一个，那么每一年产生的数据位4.2MB。（80 bytes * 6 * 24 * 365 &#x3D; 4.2MB）。2008年，PC系统通常的内存容量为2GB，按照摩尔定律的预言，即使将全部的区块头存储于内存之中都不是问题。</p>
+<ol start="8">
+<li>简化的支付确认（Simplified Payment Verification）&gt;<br> 在不运行完整网络节点的情况下，也能够对支付进行检验。一个用户需要保留最长的工作量证明链条的区块头的拷贝，它可以不断向网络发起询问，直到它确信自己拥有最长的链条，并能够通过merkle的分支通向它被加上时间戳并纳入区块的那次交易。节点想要自行检验该交易的有效性原本是不可能的，但通过追溯到链条的某个位置，它就能看到某个节点曾经接受过它，并且于其后追加的区块也进一步证明全网曾经接受了它。</li>
+</ol>
+ <img class="size-full wp-image-5623 aligncenter" alt="5" src="http://7fvhfe.com1.z0.glb.clouddn.com/wp-content/uploads/2013/11/5.png" width="771" height="315" style="box-sizing: border-box; border: 0px; vertical-align: middle; display: block; margin-left: auto; margin-right: auto;"/>
+
+<p> 当此情形，只要诚实的节点控制了网络，检验机制就是可靠的。但是，当全网被一个计算力占优的攻击者攻击时，将变得较为脆弱。因为网络节点能够自行确认交易的有效性，只要攻击者能够持续地保持计算力优势，简化的机制会被攻击者焊接的（fabricated）交易欺骗。那么一个可行的策略就是，只要他们发现了一个无效的区块，就立刻发出警报，收到警报的用户将立刻开始下载被警告有问题的区块或交易的完整信息，以便对信息的不一致进行判定。对于日常会发生大量收付的商业机构，可能仍会希望运行他们自己的完整节点，以保持较大的独立完全性和检验的快速性。</p>
+ <img class="size-full wp-image-5626 aligncenter" alt="7" src="http://7fvhfe.com1.z0.glb.clouddn.com/wp-content/uploads/2013/11/7.png" width="327" height="272" style="box-sizing: border-box; border: 0px; vertical-align: middle; display: block; margin-left: auto; margin-right: auto;"/><ol start="9">
+<li>价值的组合与分割（Combining and Splitting Value）&gt;<br> 虽然可以单个单个地对电子货币进行处理，但是对于每一枚电子货币单独发起一次交易将是一种笨拙的办法。为了使得价值易于组合与分割，交易被设计为可以纳入多个输入和输出。一般而言是某次价值较大的前次交易构成的单一输入，或者由某几个价值较小的前次交易共同构成的并行输入，但是输出最多只有两个：一个用于支付，另一个用于找零（如有）。</li>
+</ol>
+<p>需要指出的是，当一笔交易依赖于之前的多笔交易时，这些交易又各自依赖于多笔交易，但这并不存在任何问题。因为这个工作机制并不需要展开检验之前发生的所有交易历史。</p>
+<ol start="10">
+<li>隐私（Privacy）&gt;</li>
+</ol>
+ <img class="size-full wp-image-5624 aligncenter" alt="6" src="http://7fvhfe.com1.z0.glb.clouddn.com/wp-content/uploads/2013/11/6.png" width="708" height="238" style="box-sizing: border-box; border: 0px; vertical-align: middle; display: block; margin-left: auto; margin-right: auto;"/>
+
+<p> 传统的造币厂模型为交易的参与者提供了一定程度的隐私保护，因为试图向可信任的第三方索取交易信息是严格受限的。但是如果将交易信息向全网进行广播，就意味着这样的方法失效了。但是隐私依然可以得到保护：将公钥保持为匿名。公众得知的信息仅仅是有某个人将一定数量的货币发所给了另外一个人，但是难以将该交易同特定的人联系在一起，也就是说，公众难以确信，这些人究竟是谁。这同股票交易所发布的信息是类似的，股票交易发生的时间、交易量是记录在案且可供查询的，但是交易双方的身份信息却不予透露。</p>
+<p>作为额外的预防措施，使用者可以让每次交易都生成一个新的地址，以确保这些交易不被追溯到一个共同的所有者。但是由于并行输入的存在，一定程度上的追溯还是不可避免的，因为并行输入表明这些货币都属于同一个所有者。此时的风险在于，如果某个人的某一个公钥被确认属于他，那么就可以追溯出此人的其它很多交易。</p>
+<ol start="11">
+<li>计算&gt;<br> 设想如下场景：一个攻击者试图比诚实节点产生链条更快地制造替代性区块链。即便它达到了这一目的，但是整个系统也并非就此完全受制于攻击者的独断意志了，比方说凭空创造价值，或者掠夺本不属于攻击者的货币。这是因为节点将不会接受无效的交易，而诚实的节点永远不会接受一个包含了无效信息的区块。一个攻击者能做的，最多是更改他自己的交易信息，并试图拿回他刚刚付给别人的钱。</li>
+</ol>
+<p>诚实链条和攻击者链条之间的竞赛，可以用二叉树随机漫步（Binomial Random Walk)来描述。成功事件定义为诚实链条延长了一个区块，使其领先性+1，而失败事件则是攻击者的链条被延长了一个区块，使得差距-1。</p>
+<p>攻击者成功填补某一既定差距的可能性，可以近似地看做赌徒破产问题（Gambler’s Ruin problem）。假定一个赌徒拥有无限的透支信用，然后开始进行潜在次数为无穷的赌博，试图填补上自己的亏空。那么我们可以计算他填补上亏空的概率，也就是该攻击者赶上诚实链条，如下所示[8] ：</p>
+ <img class="size-full wp-image-5614 aligncenter" alt="pq" src="http://7fvhfe.com1.z0.glb.clouddn.com/wp-content/uploads/2013/11/pq.png" width="396" height="239" style="box-sizing: border-box; border: 0px; vertical-align: middle; display: block; margin-left: auto; margin-right: auto;"/>
+
+<p> 假定p&gt;q，那么攻击成功的概率就因为区块数的增长而呈现指数化下降。由于概率是攻击者的敌人，如果他不能幸运且快速地获得成功，那么他获得成功的机会随着时间的流逝就变得愈发渺茫。那么我们考虑一个收款人需要等待多长时间，才能足够确信付款人已经难以更改交易了。我们假设付款人是一个支付攻击者，希望让收款人在一段时间内相信他已经付过款了，然后立即将支付的款项重新支付给自己。虽然收款人届时会发现这一点，但为时已晚。</p>
+<p>收款人生成了新的一对密钥组合，然后只预留一个较短的时间将公钥发送给付款人。这将可以防止以下情况：付款人预先准备好一个区块链然后持续地对此区块进行运算，直到运气让他的区块链超越了诚实链条，方才立即执行支付。当此情形，只要交易一旦发出，攻击者就开始秘密地准备一条包含了该交易替代版本的平行链条。</p>
+<p>然后收款人将等待交易出现在首个区块中，然后在等到z个区块链接其后。此时，他仍然不能确切知道攻击者已经进展了多少个区块，但是假设诚实区块��耗费平均预期时间以产生���个区块，那么攻击者的潜在进展就是一个泊松分布，分布的期望值为：</p>
+ <img class="size-full wp-image-5613 aligncenter" alt="image022" src="http://7fvhfe.com1.z0.glb.clouddn.com/wp-content/uploads/2013/11/image022.png" width="53" height="35" style="box-sizing: border-box; border: 0px; vertical-align: middle; display: block; margin-left: auto; margin-right: auto;"/>
+
+<p> 当此情形，为了计算攻击者追赶上的概率，我们将攻击者取得进展区块数量的泊松分布的概率密度，乘以在该数量下攻击者依然能够追赶上的概率。</p>
+ <img class="size-full wp-image-5615 aligncenter" alt="pq2" src="http://7fvhfe.com1.z0.glb.clouddn.com/wp-content/uploads/2013/11/pq2.png" width="284" height="112" style="box-sizing: border-box; border: 0px; vertical-align: middle; display: block; margin-left: auto; margin-right: auto;"/>
+
+<p> 化为如下形式，避免对无限数列求和：</p>
+ <img class="size-full wp-image-5616 aligncenter" alt="pq3" src="http://7fvhfe.com1.z0.glb.clouddn.com/wp-content/uploads/2013/11/pq3.png" width="284" height="94" style="box-sizing: border-box; border: 0px; vertical-align: middle; display: block; margin-left: auto; margin-right: auto;"/>
+
+<p> 写为如下C语言代码：</p>
+<p> #include double AttackerSuccessProbability(double q, int z)</p>
+<p>{</p>
+<p>double p &#x3D; 1.0 - q;</p>
+<p>double lambda &#x3D; z * (q &#x2F; p);</p>
+<p>double sum &#x3D; 1.0;</p>
+<p>int i, k;</p>
+<p>for (k &#x3D; 0; k &lt;&#x3D; z; k++)</p>
+<p>{</p>
+<p>double poisson &#x3D; exp(-lambda);</p>
+<p>for (i &#x3D; 1; i &lt;&#x3D; k; i++)</p>
+<p>poisson *&#x3D; lambda &#x2F; i;</p>
+<p>sum -&#x3D; poisson * (1 - pow(q &#x2F; p, z - k));</p>
+<p>}</p>
+<p>return sum;</p>
+<p>}</p>
+<p>对其进行运算，我们可以得到如下的概率结果，发现概率对z值呈指数下降。</p>
+<p> 当q&#x3D;0.1时</p>
+<p>z&#x3D;0 P&#x3D;1.0000000</p>
+<p>z&#x3D;1 P&#x3D;0.2045873</p>
+<p>z&#x3D;2 P&#x3D;0.0509779</p>
+<p>z&#x3D;3 P&#x3D;0.0131722</p>
+<p>z&#x3D;4 P&#x3D;0.0034552</p>
+<p>z&#x3D;5 P&#x3D;0.0009137</p>
+<p>z&#x3D;6 P&#x3D;0.0002428</p>
+<p>z&#x3D;7 P&#x3D;0.0000647</p>
+<p>z&#x3D;8 P&#x3D;0.0000173</p>
+<p>z&#x3D;9 P&#x3D;0.0000046</p>
+<p>z&#x3D;10 P&#x3D;0.0000012</p>
+<p> 当q&#x3D;0.3时</p>
+<p>z&#x3D;0 P&#x3D;1.0000000</p>
+<p>z&#x3D;5 P&#x3D;0.1773523</p>
+<p>z&#x3D;10 P&#x3D;0.0416605</p>
+<p>z&#x3D;15 P&#x3D;0.0101008</p>
+<p>z&#x3D;20 P&#x3D;0.0024804</p>
+<p>z&#x3D;25 P&#x3D;0.0006132</p>
+<p>z&#x3D;30 P&#x3D;0.0001522</p>
+<p>z&#x3D;35 P&#x3D;0.0000379</p>
+<p>z&#x3D;40 P&#x3D;0.0000095</p>
+<p>z&#x3D;45 P&#x3D;0.0000024</p>
+<p>z&#x3D;50 P&#x3D;0.0000006</p>
+<p> 求解令P&lt;0.1%的z值：</p>
+<p> 为使P&lt;0.001，则</p>
+<p>q&#x3D;0.10 z&#x3D;5</p>
+<p>q&#x3D;0.15 z&#x3D;8</p>
+<p>q&#x3D;0.20 z&#x3D;11</p>
+<p>q&#x3D;0.25 z&#x3D;15</p>
+<p>q&#x3D;0.30 z&#x3D;24</p>
+<p>q&#x3D;0.35 z&#x3D;41</p>
+<p>q&#x3D;0.40 z&#x3D;89</p>
+<p>q&#x3D;0.45 z&#x3D;340<br>12.结论&gt;<br> 我们在此提出了一种不需要信用中介的电子支付系统。我们首先讨论了通常的电子货币的电子签名原理，虽然这种系统为所有权提供了强有力的控制，但是不足以防止双重支付。为了解决这个问题，我们提出了一种采用工作量证明机制的点对点网络来记录交易的公开信息，只要诚实的节点能够控制绝大多数的CPU计算能力，就能使得攻击者事实上难以改变交易记录。该网络的强健之处在于它结构上的简洁性。节点之间的工作大部分是彼此独立的，只需要很少的协同。每个节点都不需要明确自己的身份，由于交易信息的流动路径并无任何要求，所以只需要尽其最大努力传播即可。节点可以随时离开网络，而想重新加入网络也非常容易，因为只需要补充接收离开期间的工作量证明链条即可。节点通过自己的CPU计算力进行投票，表决他们对有效区块的确认，他们不断延长有效的区块链来表达自己的确认，并拒绝在无效的区块之后延长区块以表示拒绝。本框架包含了一个P2P电子货币系统所需要的全部规则和激励措施。</p>
+<p> 注释    (↵ returns to text)</p>
+<p> W Dai（戴伟）,a scheme for a group of untraceable digital pseudonyms to pay each other with money and to enforce contracts amongst themselves without outside help（一种能够借助电子假名在群体内部相互支付并迫使个体遵守规则且不需要外界协助的电子现金机制）, “B-money”, <a target="_blank" rel="noopener" href="http://www.weidai.com/bmoney.txt">http://www.weidai.com/bmoney.txt</a>, 1998↵</p>
+<p> H. Massias, X.S. Avila, and J.-J. Quisquater, “Design of a secure timestamping service with minimal trust requirements,”（在最小化信任的基础上设计一种时间戳服务器） In 20th Symposium on Information Theory in the Benelux, May 1999.↵</p>
+<p> S. Haber, W.S. Stornetta, “How to time-stamp a digital document,” （怎样为电子文件添加时间戳）In Journal of Cryptology, vol 3, No.2, pages 99-111, 1991.↵</p>
+<p> D. Bayer, S. Haber, W.S. Stornetta, “Improving the efficiency and reliability of digital time-stamping,”（提升电子时间戳的效率和可靠性） In Sequences II: Methods in Communication, Security and Computer Science, pages 329-334, 1993.↵</p>
+<p> S. Haber, W.S. Stornetta, “Secure names for bit-strings,”（比特字串的安全命名） In Proceedings of the 4th ACM Conference on Computer and Communications Security, pages 28-35, April 1997. on Computer and Communications Security, pages 28-35, April 1997.↵</p>
+<p> A. Back, “Hashcash – a denial of service counter-measure,”（哈希现金——拒绝服务式攻击的克制方法）<a target="_blank" rel="noopener" href="http://www.hashcash.org/papers/hashcash.pdf">http://www.hashcash.org/papers/hashcash.pdf</a>, 2002.↵</p>
+<p> R.C. Merkle, “Protocols for public key cryptosystems,” （公钥密码系统的协议）In Proc. 1980 Symposium on Security and Privacy, IEEE Computer Society, pages 122-133, April 1980.</p>
+<p>S. Haber, W.S. Stornetta, “Secure names for bit-strings,”（比特字串安全命名） In Proceedings of the 4th ACM Conference on Computer and Communications Security, pages 28-35, April 1997. on Computer and Communications Security, pages 28-35, April 1997.</p>
+<p>H. Massias, X.S. Avila, and J.-J. Quisquater, “Design of a secure timestamping service with minimal trust requirements,”（在最小化信任的条件下设计一种时间戳服务器） In 20th Symposium on Information Theory in the Benelux, May 1999.↵</p>
+<p> W. Feller, “An introduction to probability theory and its applications,” （概率学理论与应用导论）1957↵</p>
+</blockquote>
+ 
+      <!-- reward -->
+      
+      <div id="reword-out">
+        <div id="reward-btn">
+          打赏
+        </div>
+      </div>
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <div class="declare">
+      <ul class="post-copyright">
+        <li>
+          <i class="ri-copyright-line"></i>
+          <strong>版权声明： </strong>
+          
+          本博客所有文章除特别声明外，著作权归作者所有。转载请注明出处！
+          
+        </li>
+      </ul>
+    </div>
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%99%BD%E7%9A%AE%E4%B9%A6/" rel="tag">白皮书</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%B0%8B%E7%94%9F%E6%89%8B%E6%AE%B5/" rel="tag">谋生手段</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+  <nav class="article-nav">
+    
+      <a href="/2018/01/18/tech/AI/tensorFlow/01.TensorFlow%E4%BB%8B%E7%BB%8D/" class="article-nav-link">
+        <strong class="article-nav-caption">上一篇</strong>
+        <div class="article-nav-title">
+          
+            01.TensorFlow介绍
+          
+        </div>
+      </a>
+    
+    
+      <a href="/2017/08/19/blogs/travel/domestic/%E7%A7%A6%E7%9A%87%E5%B2%9B%EF%BC%9A%E7%9F%AD%E6%9A%82%E7%9A%84%E4%BC%91%E6%81%AF/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">秦皇岛：短暂的休息</div>
+      </a>
+    
+  </nav>
+
+  
+   
+     
+</article>
+
+</section>
+      <footer class="footer">
+  <div class="outer">
+    <ul>
+      <li>
+        Copyrights &copy;
+        2011-2025
+        <i class="ri-heart-fill heart_icon"></i> 阿良
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+        
+        <span>
+  <span><i class="ri-user-3-fill"></i>访问人数:<span id="busuanzi_value_site_uv"></span></span>
+  <span class="division">|</span>
+  <span><i class="ri-eye-fill"></i>浏览次数:<span id="busuanzi_value_page_pv"></span></span>
+</span>
+        
+      </li>
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      <li>
+        <!-- cnzz统计 -->
+        
+      </li>
+    </ul>
+  </div>
+</footer>    
+    </main>
+    <div class="float_btns">
+      <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+
+<div class="todark" id="todark">
+  <i class="ri-moon-line"></i>
+</div>
+
+    </div>
+    <aside class="sidebar on">
+      <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/images/ayer-side.svg" alt="阳小良"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">归档</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories/">分类</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags/">标签</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories/%E5%8E%9F%E8%91%97/">原著</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories/%E4%BA%94%E5%91%B3%E6%9D%82%E9%99%88/%E5%A4%A9%E6%B6%AF%E6%B5%B7%E8%A7%92/">旅行</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories/%E8%B0%8B%E7%94%9F%E6%89%8B%E6%AE%B5/">技术</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories/%E6%8A%95%E8%B5%84%E8%87%AA%E5%B7%B1/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/">读书</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" target="_blank" rel="noopener" href="https://hi.huitu.com/1145549/">摄影</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" target="_blank" rel="noopener" href="https://space.bilibili.com/3546831053129882/channel/seriesdetail?sid=4562367&ctype=0">画廊</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/friends">友链</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/2011/02/14/about">关于我</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="搜索">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+    </aside>
+    <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
+  <div class="reward-box">
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/alipay.jpg">
+      <span class="reward-type">支付宝</span>
+    </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/wechat.jpg">
+      <span class="reward-type">微信</span>
+    </div>
+    
+  </div>
+</div>
+    
+<script src="/js/jquery-3.6.0.min.js"></script>
+ 
+<script src="/js/lazyload.min.js"></script>
+
+<!-- Tocbot -->
+ 
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  tocbot.init({
+    tocSelector: ".tocbot",
+    contentSelector: ".article-entry",
+    headingSelector: "h1, h2, h3, h4, h5, h6",
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    scrollContainer: "main",
+    positionFixedSelector: ".tocbot",
+    positionFixedClass: "is-position-fixed",
+    fixedSidebarOffset: "auto",
+  });
+</script>
+
+<script src="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.js"></script>
+<link
+  rel="stylesheet"
+  href="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.css"
+/>
+<script src="https://cdn.staticfile.org/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js"></script>
+
+<script src="/dist/main.js"></script>
+
+<!-- ImageViewer -->
+ <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/default-skin/default-skin.min.css">
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.js"></script>
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe-ui-default.min.js"></script>
+
+<script>
+    function viewer_init() {
+        let pswpElement = document.querySelectorAll('.pswp')[0];
+        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
+
+        $imgArr.forEach(($em, i) => {
+            $em.onclick = () => {
+                // slider展开状态
+                // todo: 这样不好，后面改成状态
+                if (document.querySelector('.left-col.show')) return
+                let items = []
+                $imgArr.forEach(($em2, i2) => {
+                    let img = $em2.getAttribute('data-idx', i2)
+                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
+                    let title = $em2.getAttribute('alt')
+                    // 获得原图尺寸
+                    const image = new Image()
+                    image.src = src
+                    items.push({
+                        src: src,
+                        w: image.width || $em2.width,
+                        h: image.height || $em2.height,
+                        title: title
+                    })
+                })
+                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
+                    index: parseInt(i)
+                });
+                gallery.init()
+            }
+        })
+    }
+    viewer_init()
+</script> 
+<!-- MathJax -->
+
+<!-- Katex -->
+
+<!-- busuanzi  -->
+ 
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+ 
+<!-- ClickLove -->
+
+<!-- ClickBoom1 -->
+
+<!-- ClickBoom2 -->
+
+<!-- CodeCopy -->
+
+<!-- CanvasBackground -->
+
+<script>
+  if (window.mermaid) {
+    mermaid.initialize({ theme: "forest" });
+  }
+</script>
+
+
+    
+    
+
+  </div>
+</body>
+
+</html>

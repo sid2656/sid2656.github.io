@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+
+
+<html lang="zh-CN,en,default">
+  
+
+    <head>
+      <meta charset="utf-8" />
+       
+      <meta name="keywords" content="阳小良,个人博客,程序猿,插画师,技术博客,人生感悟" />
+       
+      <meta name="description" content="不想做插画师的程序猿，不是好厨师" />
+      
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1"
+      />
+      <title>如何成为优秀架构师 |  阳小良</title>
+  <meta name="generator" content="hexo-theme-ayer">
+      
+      <link rel="shortcut icon" href="/favicon.ico" />
+       
+<link rel="stylesheet" href="/dist/main.css">
+
+      
+<link rel="stylesheet" href="/css/fonts/remixicon.css">
+
+      
+<link rel="stylesheet" href="/css/custom.css">
+ 
+      <script src="https://cdn.staticfile.org/pace/1.2.4/pace.min.js"></script>
+       
+ 
+
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-bulma@5.0.1/bulma.min.css"
+      />
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.js"></script>
+
+      <!-- mermaid -->
+      
+      <style>
+        .swal2-styled.swal2-confirm {
+          font-size: 1.6rem;
+        }
+      </style>
+    </head>
+  </html>
+</html>
+
+
+<body>
+  <div id="app">
+    
+      
+    <main class="content on">
+      <section class="outer">
+  <article
+  id="post-tech/web/如何成为优秀架构师"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  如何成为优秀架构师
+</h1>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2021/06/01/tech/web/%E5%A6%82%E4%BD%95%E6%88%90%E4%B8%BA%E4%BC%98%E7%A7%80%E6%9E%B6%E6%9E%84%E5%B8%88/" class="article-date">
+  <time datetime="2021-06-01T03:29:00.000Z" itemprop="datePublished">2021-06-01</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E8%B0%8B%E7%94%9F%E6%89%8B%E6%AE%B5/">谋生手段</a> / <a class="article-category-link" href="/categories/%E8%B0%8B%E7%94%9F%E6%89%8B%E6%AE%B5/%E6%B2%89%E6%B7%80%E8%AE%B0%E5%BD%95/">沉淀记录</a>
+  </div>
+  
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> 字数统计:</span>
+            <span class="post-count">2k</span>
+        </span>
+    </span>
+
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> 阅读时长≈</span>
+            <span class="post-count">6 分钟</span>
+        </span>
+    </span>
+</div>
+ 
+    </div>
+      
+    <div class="tocbot"></div>
+
+
+
+
+  
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h1 id="背景："><a href="#背景：" class="headerlink" title="背景："></a>背景：</h1><blockquote>
+<p>QCon 是由极客邦科技旗下 InfoQ 中国主办的综合性技术盛会，每年在伦敦、北京、纽约、圣保罗、上海、旧金山召开。自2007年3月份开始举办以来，已经有超万名有多年从业经验的技术人员参加过QCon大会。QCon 内容源于实践并面向社区，演讲嘉宾依据热点话题，面向5年以上工作经验的技术团队负责人、架构师、工程总监、开发人员分享技术创新和实践。</p>
+<p>2021年5月20-31日，在北京国际会议中心举行。</p>
+<p>本文记录了车好多CTO郭东白博士所带来的《如何成为优秀架构师》</p>
+<p>如何成为一名优秀的架构师 郭东白</p>
+<p>郭东白云计算和电商领域专家，有5年百亿美金量级的互联网公司CTO的经验。在软件研发管理上，郭东白有14年建设和管理全球研发中心和交付大型软件的经验。对跨大洲、高可用、高流量和高度复杂的服务端软件架构和研发有深入研究。在电商领域，郭东白领导设计了多个行业的全球跨国家、多市场、多语言、多币种、实时个性化、每秒超万笔订单量的多机房异地多活电商平台。在工业标准领域，郭东白过去分别为甲骨文、微软、亚马逊设计制定了医疗，信息化，和视频领域的工业标准战略，并且在多个国际标准组织代表这些公司制定了相关标准</p>
+</blockquote>
+<p><img src="https://files.sid2656.space/blogs/tech/web/architect/%E5%A6%82%E4%BD%95%E6%88%90%E4%B8%BA%E4%B8%80%E5%90%8D%E4%BC%98%E7%A7%80%E7%9A%84%E6%9E%B6%E6%9E%84%E5%B8%88-1.png?imageView2/1/w/800/h/300" alt="如何成为一名优秀的架构师-1" title="如何成为一名优秀的架构师-1 架构师"></p>
+<blockquote>
+</blockquote>
+<h1 id="什么是架构师？"><a href="#什么是架构师？" class="headerlink" title="什么是架构师？"></a>什么是架构师？</h1><h2 id="架构师Architect"><a href="#架构师Architect" class="headerlink" title="架构师Architect"></a>架构师Architect</h2><blockquote>
+<ul>
+<li>“a person engaged in the design of certain large constructions.” dictionary.com</li>
+<li>“a person who designs and guides a plan or undertaking” Merriam-Webster</li>
+</ul>
+</blockquote>
+<h2 id="软件架构："><a href="#软件架构：" class="headerlink" title="软件架构："></a>软件架构：</h2><blockquote>
+<p>“Software application architecture is the process of defining a structured solution that meets all of the technical and operational requirements, while optimizing common quality attributes such as performance, security, and manageability. It involves a series of decisions based on a wide range of factors and each of these decisions can have considerable impact on the quality, performance, maintainability, and overall success of the application.”MSDN</p>
+</blockquote>
+<h2 id="架构师的两种职业路径"><a href="#架构师的两种职业路径" class="headerlink" title="架构师的两种职业路径"></a>架构师的两种职业路径</h2><blockquote>
+<p>全职架构师 安东尼奥·高迪</p>
+<ul>
+<li>异构组织的需要</li>
+<li>长期战略优先</li>
+<li>竞争带来目标不确定性</li>
+<li>逆康威定律– 面临冲突</li>
+<li>出方案，别人实施</li>
+</ul>
+<p>兼职架构师 列奥纳多·达·芬奇</p>
+<ul>
+<li>还内部技术债的需要</li>
+<li>业务机会优先</li>
+<li>面对内部积累的复杂性</li>
+<li>顺康威定律– 机会驱动</li>
+<li>自行解决问题</li>
+</ul>
+</blockquote>
+<h2 id="正确的架构决策"><a href="#正确的架构决策" class="headerlink" title="正确的架构决策"></a>正确的架构决策</h2><blockquote>
+</blockquote>
+<p><img src="https://files.sid2656.space/blogs/tech/web/architect/%E5%A6%82%E4%BD%95%E6%88%90%E4%B8%BA%E4%B8%80%E5%90%8D%E4%BC%98%E7%A7%80%E7%9A%84%E6%9E%B6%E6%9E%84%E5%B8%88-2.png?imageView2/1/w/800/h/250" alt="如何成为一名优秀的架构师-2" title="如何成为一名优秀的架构师-2 架构师"></p>
+<blockquote>
+<ul>
+<li>架构师总是必要吗？<blockquote>
+<ul>
+<li>不一定。小的软件研发机构不一定需要全职架构师。因为架构和设计能力是个基本的软件研发者的能力，每个研发或多或少都具备。</li>
+<li>全职架构师只有在足够激烈的竞争环境下， 复杂的组织中， 长期视角和顶层设计缺乏， 团队合作低效的情况下才创造足够大的价值。</li>
+</ul>
+</blockquote>
+</li>
+<li><font color="red">对任何一家公司， 架构设计永远是必要的</font></li>
+</ul>
+</blockquote>
+<h2 id="架构师要满足那些条件-目标正确"><a href="#架构师要满足那些条件-目标正确" class="headerlink" title="架构师要满足那些条件: 目标正确"></a>架构师要满足那些条件: 目标正确</h2><blockquote>
+<ul>
+<li>软件架构能力– 对软件架构做出正确设计和决策的能力</li>
+<li>满足限制条件下：时间、人力成本、质量要求、组织结构</li>
+<li>最大化某种价值：社会价值、商业价值、员工价值、X-ibility、代码寿命</li>
+</ul>
+<p><font color="red">不论是刚入门的兼职架构师还是资深的全职架构师， 最常见的架构失误就是对限制条件和目标价值产生理解偏差</font></p>
+</blockquote>
+<h2 id="从能力视角看架构师的价值"><a href="#从能力视角看架构师的价值" class="headerlink" title="从能力视角看架构师的价值"></a>从能力视角看架构师的价值</h2><blockquote>
+<ul>
+<li>兼职架构师：保障复杂环境下团队的高质量交付<blockquote>
+<ul>
+<li>研发能力: 编程交付，业务建模， 数据模型</li>
+<li>沟通交流: 文档总结，规范标准，人员培训</li>
+<li>项目交付: 团队协同，项目规划， 风险控制</li>
+<li>横向问题: 成本， 质量， 安全, *bility</li>
+</ul>
+</blockquote>
+</li>
+<li>全职架构师： 为组织带来更好的外部适应性<blockquote>
+<ul>
+<li>技术衔接: 前后端， 业务&#x2F;数据， 开源&#x2F;自建</li>
+<li>长期思考: 可扩展性， 可维护性， 技术壁垒</li>
+<li>技术视野: 领域拓展， 规模跨度， 前瞻布局</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+</blockquote>
+<h1 id="从架构师到优秀的架构师"><a href="#从架构师到优秀的架构师" class="headerlink" title="从架构师到优秀的架构师"></a>从架构师到优秀的架构师</h1><blockquote>
+</blockquote>
+<p><img src="https://files.sid2656.space/blogs/tech/web/architect/%E5%A6%82%E4%BD%95%E6%88%90%E4%B8%BA%E4%B8%80%E5%90%8D%E4%BC%98%E7%A7%80%E7%9A%84%E6%9E%B6%E6%9E%84%E5%B8%88-3.png?imageView2/1/w/800/h/250" alt="如何成为一名优秀的架构师-3" title="如何成为一名优秀的架构师-3 架构师"></p>
+<h2 id="成为一个优秀架构师的充分条件是什么？"><a href="#成为一个优秀架构师的充分条件是什么？" class="headerlink" title="成为一个优秀架构师的充分条件是什么？"></a>成为一个优秀架构师的充分条件是什么？</h2><blockquote>
+<ul>
+<li>一个优秀的架构师要为一个组织创造出好的设计<blockquote>
+<ul>
+<li>一个好的设计必须有更持久的外部适应性（i.e. 技术实现对未来需求和外部环境变化的适应性）</li>
+<li>一个好的设计是一个发现和创造过程， 不是靠记忆和知识。</li>
+<li>架构师要有途径保障他的设计的高质量交付。</li>
+</ul>
+</blockquote>
+</li>
+<li>架构设计的外部适应性</li>
+</ul>
+</blockquote>
+<p><img src="https://files.sid2656.space/blogs/tech/web/architect/%E5%A6%82%E4%BD%95%E6%88%90%E4%B8%BA%E4%B8%80%E5%90%8D%E4%BC%98%E7%A7%80%E7%9A%84%E6%9E%B6%E6%9E%84%E5%B8%88-4.png?imageView2/1/w/800/h/200" alt="如何成为一名优秀的架构师-4" title="如何成为一名优秀的架构师-4 架构师"></p>
+<h2 id="架构师成长之术"><a href="#架构师成长之术" class="headerlink" title="架构师成长之术"></a>架构师成长之术</h2><blockquote>
+<ul>
+<li>深度还是广度</li>
+</ul>
+</blockquote>
+<p><img src="https://files.sid2656.space/blogs/tech/web/architect/%E5%A6%82%E4%BD%95%E6%88%90%E4%B8%BA%E4%B8%80%E5%90%8D%E4%BC%98%E7%A7%80%E7%9A%84%E6%9E%B6%E6%9E%84%E5%B8%88-5.png?imageView2/1/w/800/h/200" alt="如何成为一名优秀的架构师-5" title="如何成为一名优秀的架构师-5 架构师"></p>
+<blockquote>
+<ul>
+<li>架构师的思考能力</li>
+</ul>
+</blockquote>
+<p><img src="https://files.sid2656.space/blogs/tech/web/architect/%E5%A6%82%E4%BD%95%E6%88%90%E4%B8%BA%E4%B8%80%E5%90%8D%E4%BC%98%E7%A7%80%E7%9A%84%E6%9E%B6%E6%9E%84%E5%B8%88-6.png?imageView2/1/w/800/h/200" alt="如何成为一名优秀的架构师-6" title="如何成为一名优秀的架构师-6 架构师"></p>
+<blockquote>
+<blockquote>
+<ul>
+<li>架构师的价值创造来自于独立, 理性的, 有深度的思考。</li>
+<li>从技术视角看业务， 从业务中发现技术机会。通过复盘发现思考漏洞， 提升思考质量。</li>
+<li>深度思考能力的提升<blockquote>
+<ul>
+<li>架构师：独立思考(理性思维: 求真)<blockquote>
+<ul>
+<li>普遍怀疑（包括自己）、</li>
+<li>基于洞察和推理、</li>
+<li>尊重事实和规律、</li>
+<li>挑战常规， 鼓励创新、</li>
+<li>领袖：发现真理，引领变革</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+</blockquote>
+<ul>
+<li>创造点与选择</li>
+</ul>
+</blockquote>
+<p><img src="https://files.sid2656.space/blogs/tech/web/architect/%E5%A6%82%E4%BD%95%E6%88%90%E4%B8%BA%E4%B8%80%E5%90%8D%E4%BC%98%E7%A7%80%E7%9A%84%E6%9E%B6%E6%9E%84%E5%B8%88-7.png?imageView2/1/w/800/h/250" alt="如何成为一名优秀的架构师-7" title="如何成为一名优秀的架构师-7 架构师"></p>
+<blockquote>
+<ul>
+<li>架构师的成长路径</li>
+</ul>
+</blockquote>
+<p><img src="https://files.sid2656.space/blogs/tech/web/architect/%E5%A6%82%E4%BD%95%E6%88%90%E4%B8%BA%E4%B8%80%E5%90%8D%E4%BC%98%E7%A7%80%E7%9A%84%E6%9E%B6%E6%9E%84%E5%B8%88-8.png?imageView2/1/w/800/h/220" alt="如何成为一名优秀的架构师-8" title="如何成为一名优秀的架构师-8 架构师"></p>
+<blockquote>
+<blockquote>
+<ul>
+<li>去大公司还是小公司？<blockquote>
+<ul>
+<li>我想在大公司里求广度</li>
+<li>也想在小公司里求深度</li>
+<li>我要在大公司里快速成长</li>
+<li>或者在小公司里高度稳定</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li>建议和思考：<blockquote>
+<ul>
+<li>架构师的思考深度和实战经验远远比学历和知识更重要， 建议在研究机构或大公司里尽快练出深度之后到小公司里赌命求广度！</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+</blockquote>
+<ul>
+<li>什么样的土壤适合架构师成长？<blockquote>
+<ul>
+<li>不是任何环境都适于架构师的成长， 架构师需要：（对创新和探索的）信任, 授权, 时间和资源</li>
+<li>更需要一个包容和求真的企业文化：对错误的容忍；一个基于理性思考，实证和互相尊重的思想碰撞环境</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+</blockquote>
+<p><font color="red">你上一次做了对一个公司或者团队的命运有影响的决策是什么时候？</font></p>
+<h2 id="架构师成长之道–-个人观点"><a href="#架构师成长之道–-个人观点" class="headerlink" title="架构师成长之道– 个人观点"></a>架构师成长之道– 个人观点</h2><blockquote>
+<p>一个优秀的架构师应该具备的品质</p>
+<ul>
+<li>有眼光：有深度的业务理解，看到好的机会</li>
+<li>擅思考：有足够的技术视野， 找到正确的技术和组织设计</li>
+<li>有良知：为人正直，以企业长期利益优先</li>
+<li>有勇气：有勇气面临冲突，坚持引导组织做正确的事情</li>
+</ul>
+</blockquote>
+<h1 id="总结：优秀架构师的正确打开方式"><a href="#总结：优秀架构师的正确打开方式" class="headerlink" title="总结：优秀架构师的正确打开方式"></a>总结：优秀架构师的正确打开方式</h1><blockquote>
+<p>始于理性思考，成于科学实践</p>
+<ul>
+<li>架构师的成长<blockquote>
+<ul>
+<li>架构师的价值创造来自于独立, 理性的, 有深度的思考。</li>
+<li>一个好的架构是被发现的, 靠的高质量的洞察和对真理的持续逼近。</li>
+<li>架构师要基于良知为组织持续做出正确判断。</li>
+<li>长期感召力来自于良知和成功经验所带来的信心和勇气</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+</blockquote>
+<p><img src="https://files.sid2656.space/blogs/tech/web/architect/%E5%A6%82%E4%BD%95%E6%88%90%E4%B8%BA%E4%B8%80%E5%90%8D%E4%BC%98%E7%A7%80%E7%9A%84%E6%9E%B6%E6%9E%84%E5%B8%88-9.png?imageView2/1/w/800/h/250" alt="如何成为一名优秀的架构师-9" title="如何成为一名优秀的架构师-9 架构师"></p>
+<h1 id="小结："><a href="#小结：" class="headerlink" title="小结："></a>小结：</h1><blockquote>
+<p>架构师是一个需要德才兼备的职业；架构师也可以分为兼职架构师和全职架构师；了解了想成为架构师的基本路径和方向，以及可以实施的方法；知道了成为架构师的充分必要条件；包括架构师的基础能力需要具备哪些条件；以及应该如何成长；</p>
+</blockquote>
+<p><font color="red">作为架构师千万不要怕出错，要敢于试错</font></p>
+<blockquote>
+<p>资料参考来源：</p>
+<p>QCON(含PPT)：<a target="_blank" rel="noopener" href="https://qcon.infoq.cn/2021/beijing/presentation/3445">https://qcon.infoq.cn/2021/beijing/presentation/3445</a></p>
+</blockquote>
+ 
+      <!-- reward -->
+      
+      <div id="reword-out">
+        <div id="reward-btn">
+          打赏
+        </div>
+      </div>
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <div class="declare">
+      <ul class="post-copyright">
+        <li>
+          <i class="ri-copyright-line"></i>
+          <strong>版权声明： </strong>
+          
+          本博客所有文章除特别声明外，著作权归作者所有。转载请注明出处！
+          
+        </li>
+      </ul>
+    </div>
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%9E%B6%E6%9E%84/" rel="tag">架构</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%B0%8B%E7%94%9F%E6%89%8B%E6%AE%B5/" rel="tag">谋生手段</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+  <nav class="article-nav">
+    
+      <a href="/2023/03/10/original/feather/%E7%AC%AC01%E7%AB%A0%EF%BC%9A%E6%B3%B0%E5%B1%B1%E5%8E%8B%E9%A1%B6/" class="article-nav-link">
+        <strong class="article-nav-caption">上一篇</strong>
+        <div class="article-nav-title">
+          
+            第01章：泰山压顶
+          
+        </div>
+      </a>
+    
+    
+      <a href="/2021/06/01/tech/tools/git/%E5%88%86%E6%94%AF%E6%93%8D%E4%BD%9C/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">git常用分支操作</div>
+      </a>
+    
+  </nav>
+
+  
+   
+     
+</article>
+
+</section>
+      <footer class="footer">
+  <div class="outer">
+    <ul>
+      <li>
+        Copyrights &copy;
+        2011-2025
+        <i class="ri-heart-fill heart_icon"></i> 阿良
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+        
+        <span>
+  <span><i class="ri-user-3-fill"></i>访问人数:<span id="busuanzi_value_site_uv"></span></span>
+  <span class="division">|</span>
+  <span><i class="ri-eye-fill"></i>浏览次数:<span id="busuanzi_value_page_pv"></span></span>
+</span>
+        
+      </li>
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      <li>
+        <!-- cnzz统计 -->
+        
+      </li>
+    </ul>
+  </div>
+</footer>    
+    </main>
+    <div class="float_btns">
+      <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+
+<div class="todark" id="todark">
+  <i class="ri-moon-line"></i>
+</div>
+
+    </div>
+    <aside class="sidebar on">
+      <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/images/ayer-side.svg" alt="阳小良"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">归档</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories/">分类</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags/">标签</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories/%E5%8E%9F%E8%91%97/">原著</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories/%E4%BA%94%E5%91%B3%E6%9D%82%E9%99%88/%E5%A4%A9%E6%B6%AF%E6%B5%B7%E8%A7%92/">旅行</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories/%E8%B0%8B%E7%94%9F%E6%89%8B%E6%AE%B5/">技术</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories/%E6%8A%95%E8%B5%84%E8%87%AA%E5%B7%B1/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/">读书</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" target="_blank" rel="noopener" href="https://hi.huitu.com/1145549/">摄影</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" target="_blank" rel="noopener" href="https://space.bilibili.com/3546831053129882/channel/seriesdetail?sid=4562367&ctype=0">画廊</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/friends">友链</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/2011/02/14/about">关于我</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="搜索">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+    </aside>
+    <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
+  <div class="reward-box">
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/alipay.jpg">
+      <span class="reward-type">支付宝</span>
+    </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/wechat.jpg">
+      <span class="reward-type">微信</span>
+    </div>
+    
+  </div>
+</div>
+    
+<script src="/js/jquery-3.6.0.min.js"></script>
+ 
+<script src="/js/lazyload.min.js"></script>
+
+<!-- Tocbot -->
+ 
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  tocbot.init({
+    tocSelector: ".tocbot",
+    contentSelector: ".article-entry",
+    headingSelector: "h1, h2, h3, h4, h5, h6",
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    scrollContainer: "main",
+    positionFixedSelector: ".tocbot",
+    positionFixedClass: "is-position-fixed",
+    fixedSidebarOffset: "auto",
+  });
+</script>
+
+<script src="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.js"></script>
+<link
+  rel="stylesheet"
+  href="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.css"
+/>
+<script src="https://cdn.staticfile.org/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js"></script>
+
+<script src="/dist/main.js"></script>
+
+<!-- ImageViewer -->
+ <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/default-skin/default-skin.min.css">
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.js"></script>
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe-ui-default.min.js"></script>
+
+<script>
+    function viewer_init() {
+        let pswpElement = document.querySelectorAll('.pswp')[0];
+        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
+
+        $imgArr.forEach(($em, i) => {
+            $em.onclick = () => {
+                // slider展开状态
+                // todo: 这样不好，后面改成状态
+                if (document.querySelector('.left-col.show')) return
+                let items = []
+                $imgArr.forEach(($em2, i2) => {
+                    let img = $em2.getAttribute('data-idx', i2)
+                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
+                    let title = $em2.getAttribute('alt')
+                    // 获得原图尺寸
+                    const image = new Image()
+                    image.src = src
+                    items.push({
+                        src: src,
+                        w: image.width || $em2.width,
+                        h: image.height || $em2.height,
+                        title: title
+                    })
+                })
+                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
+                    index: parseInt(i)
+                });
+                gallery.init()
+            }
+        })
+    }
+    viewer_init()
+</script> 
+<!-- MathJax -->
+
+<!-- Katex -->
+
+<!-- busuanzi  -->
+ 
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+ 
+<!-- ClickLove -->
+
+<!-- ClickBoom1 -->
+
+<!-- ClickBoom2 -->
+
+<!-- CodeCopy -->
+
+<!-- CanvasBackground -->
+
+<script>
+  if (window.mermaid) {
+    mermaid.initialize({ theme: "forest" });
+  }
+</script>
+
+
+    
+    
+
+  </div>
+</body>
+
+</html>
