@@ -15,7 +15,7 @@
         name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1"
       />
-      <title>零基础-搭建个人博客2-基础环境 |  阳小良</title>
+      <title>工具沉淀 |  阳小良</title>
   <meta name="generator" content="hexo-theme-ayer">
       
       <link rel="shortcut icon" href="/favicon.ico" />
@@ -56,179 +56,68 @@
       
     <main class="content on">
       <section class="outer">
-  <article
-  id="post-tech/createBlogs/零基础-搭建个人博客2-基础环境"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  零基础-搭建个人博客2-基础环境
-</h1>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2025/01/14/tech/createBlogs/%E9%9B%B6%E5%9F%BA%E7%A1%80-%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A22-%E5%9F%BA%E7%A1%80%E7%8E%AF%E5%A2%83/" class="article-date">
-  <time datetime="2025-01-14T15:13:14.000Z" itemprop="datePublished">2025-01-14</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E8%B0%8B%E7%94%9F%E6%89%8B%E6%AE%B5/">谋生手段</a> / <a class="article-category-link" href="/categories/%E8%B0%8B%E7%94%9F%E6%89%8B%E6%AE%B5/%E9%9B%B6%E5%9F%BA%E7%A1%80/">零基础</a> / <a class="article-category-link" href="/categories/%E8%B0%8B%E7%94%9F%E6%89%8B%E6%AE%B5/%E9%9B%B6%E5%9F%BA%E7%A1%80/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">搭建个人博客</a>
-  </div>
   
-<div class="word_count">
-    <span class="post-time">
-        <span class="post-meta-item-icon">
-            <i class="ri-quill-pen-line"></i>
-            <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">607</span>
-        </span>
-    </span>
-
-    <span class="post-time">
-        &nbsp; | &nbsp;
-        <span class="post-meta-item-icon">
-            <i class="ri-book-open-line"></i>
-            <span class="post-meta-item-text"> 阅读时长≈</span>
-            <span class="post-count">2 分钟</span>
-        </span>
-    </span>
-</div>
- 
-    </div>
-      
-    <div class="tocbot"></div>
-
-
-
-
-  
-    <div class="article-entry" itemprop="articleBody">
-       
-  <h2 id="本篇目的"><a href="#本篇目的" class="headerlink" title="本篇目的"></a>本篇目的</h2><blockquote>
-<p>在通过本篇可以完成博客基础环境的搭建，并能正常在本地运行属于自己的博客基础模板样式。</p>
-</blockquote>
-<h2 id="基础环境："><a href="#基础环境：" class="headerlink" title="基础环境："></a>基础环境：</h2><h3 id="1-安装nodejs："><a href="#1-安装nodejs：" class="headerlink" title="1.安装nodejs："></a>1.安装nodejs：</h3><blockquote>
-<p><a target="_blank" rel="noopener" href="https://nodejs.org/zh-cn">https://nodejs.org/zh-cn</a></p>
-<p>点击上述网站，选择适合自己系统的nodejs安装包，一路默认安装配置。<br>安装完成后在终端执行如下命令：</p>
-<blockquote>
-<p>npm -v </p>
-</blockquote>
-<p>能正常展示版本号，即表明nodejs安装成功；</p>
-</blockquote>
-<h3 id="2-配置nodejs地址仓库："><a href="#2-配置nodejs地址仓库：" class="headerlink" title="2.配置nodejs地址仓库："></a>2.配置nodejs地址仓库：</h3><blockquote>
-<p>阿里云：npm config set registry <a target="_blank" rel="noopener" href="http://registry.npmmirror.com/">http://registry.npmmirror.com</a></p>
-<p>原始仓库：npm config set registry <a target="_blank" rel="noopener" href="http://registry.npmjs.org/">http://registry.npmjs.org</a></p>
-<p>由于海外地址和资源的限制等问题，导致默认的原始仓库无法链接时；<br>可以使用国内阿里云的仓库。具体配置方法，在终端或者bash窗口中输入：</p>
-<blockquote>
-<p>npm config set registry <a target="_blank" rel="noopener" href="http://registry.npmmirror.com/">http://registry.npmmirror.com</a></p>
-</blockquote>
-</blockquote>
-<h3 id="3-安装git："><a href="#3-安装git：" class="headerlink" title="3.安装git："></a>3.安装git：</h3><blockquote>
-<p><a target="_blank" rel="noopener" href="https://git-scm.com/">https://git-scm.com/</a></p>
-<p>点击上述网站，选择适合自己系统的nodejs安装包，一路默认安装配置。<br>安装完成后在终端执行如下命令：</p>
-<blockquote>
-<p>git -v</p>
-</blockquote>
-<p>能正常展示版本号，即表明git安装成功；</p>
-</blockquote>
-<h3 id="4-安装Hexo："><a href="#4-安装Hexo：" class="headerlink" title="4.安装Hexo："></a>4.安装Hexo：</h3><blockquote>
-<p>打开终端或者bash窗口执行：</p>
-<blockquote>
-<p>sudo npm install hexo-cli -g</p>
-</blockquote>
-<p>安装完成后在终端执行如下命令：</p>
-<blockquote>
-<p>hexo -v</p>
-</blockquote>
-<p>能正常展示版本号，即表明hexo安装成功；</p>
-</blockquote>
-<h3 id="5-初始化blog文件夹："><a href="#5-初始化blog文件夹：" class="headerlink" title="5.初始化blog文件夹："></a>5.初始化blog文件夹：</h3><blockquote>
-<p>打开终端或者bash窗口，进入到计划您防止代码的文件夹。</p>
-<p>然后，执行如下命令进行博客系统的初始化：</p>
-<blockquote>
-<p>hexo init test(这个可以自定义) </p>
-</blockquote>
-<p>test 为创建的目录，你可以自己定义(您的名字或者昵称都可以)</p>
-<p>这样便可以直接启动初始化的博客，启动后控制台输出相关信息，我们发现存在问题：</p>
-<p><img src="http://imgs.sid2656.space/createBlogs/inittest.png" alt="个人博客" title="初始化 hexo"></p>
-<p>根据提示，我们做出如下调整后，再次启动；<br><img src="https://files.sid2656.space/tech/createBlogs/install.png" alt="个人博客" title="install hexo"></p>
-</blockquote>
-<h3 id="6-初次访问系统："><a href="#6-初次访问系统：" class="headerlink" title="6.初次访问系统："></a>6.初次访问系统：</h3><blockquote>
-<p>通过步骤5我们已经完成了博客的初始化工作；</p>
-<p>接下来我们通过终端或者bash窗口进入到刚刚创建的test目录中，后续我们称这里为根目录，接下来启动hexo服务：</p>
-<blockquote>
-<p>hexo s</p>
-</blockquote>
-<p>我们看到本次启动成功，并提示了博客的访问路径：<br><img src="https://files.sid2656.space/tech/createBlogs/s-test.png" alt="个人博客" title="启动 hexo"></p>
-<p>我们将 <a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000/</a> 复制粘贴到浏览器，敲下回车<br>最终展示效果如下：<br><img src="https://files.sid2656.space/tech/createBlogs/hello.png" alt="个人博客" title="启动 hexo"></p>
-<p>至此，我们的博客初始化环境工作全部完成！</p>
-</blockquote>
- 
-      <!-- reward -->
-      
-      <div id="reword-out">
-        <div id="reward-btn">
-          打赏
-        </div>
-      </div>
-      
-    </div>
+  <ul class="ads">
     
-
-    <!-- copyright -->
-    
-    <div class="declare">
-      <ul class="post-copyright">
         <li>
-          <i class="ri-copyright-line"></i>
-          <strong>版权声明： </strong>
-          
-          本博客所有文章除特别声明外，著作权归作者所有。转载请注明出处！
-          
+            <a target="_blank" rel="noopener" href="https://curl.qcloud.com/kvO7hb43">
+                <img src="https://pic.imgdb.cn/item/62174b452ab3f51d912a5ccc.jpg" width="300" alt="广告招商中……">
+            </a>
         </li>
-      </ul>
-    </div>
     
-    <footer class="article-footer">
+</ul>
+  
+  
+  <article class="articles">
+    
+    
+    <h1 class="page-type-title">工具沉淀</h1>
+    
+    
+  
+  
+  
+  
+  
+  
+  <div class="archives-wrap">
+    <div class="archive-year-wrap">
+      <a href="/archives/2021" class="archive-year">2021</a>
+    </div>
+    <div class="archives">
+      
+      <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      <a href="/2021/06/01/tech/tools/git/%E5%88%86%E6%94%AF%E6%93%8D%E4%BD%9C/" class="archive-article-date">
+  <time datetime="2021-06-01T03:29:00.000Z" itemprop="datePublished">06/01</time>
+</a>
        
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%B0%8B%E7%94%9F%E6%89%8B%E6%AE%B5/" rel="tag">谋生手段</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%9B%B6%E5%9F%BA%E7%A1%80/" rel="tag">零基础</a></li></ul>
+<h2 itemprop="name">
+  <a class="archive-article-title" href="/2021/06/01/tech/tools/git/%E5%88%86%E6%94%AF%E6%93%8D%E4%BD%9C/"
+    >git常用分支操作</a> 
+</h2>
+ 
 
-    </footer>
+    </header>
+    
+      
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E8%B0%8B%E7%94%9F%E6%89%8B%E6%AE%B5/">谋生手段</a> / <a class="article-category-link" href="/categories/%E8%B0%8B%E7%94%9F%E6%89%8B%E6%AE%B5/%E9%9B%B6%E5%9F%BA%E7%A1%80/">零基础</a> / <a class="article-category-link" href="/categories/%E8%B0%8B%E7%94%9F%E6%89%8B%E6%AE%B5/%E9%9B%B6%E5%9F%BA%E7%A1%80/%E5%B7%A5%E5%85%B7%E6%B2%89%E6%B7%80/">工具沉淀</a>
   </div>
 
-   
-  <nav class="article-nav">
-    
-      <a href="/2025/01/15/tech/createBlogs/%E9%9B%B6%E5%9F%BA%E7%A1%80-%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A23-%E5%8D%9A%E5%AE%A2%E7%8E%AF%E5%A2%83/" class="article-nav-link">
-        <strong class="article-nav-caption">上一篇</strong>
-        <div class="article-nav-title">
-          
-            零基础-搭建个人博客3-博客环境
-          
-        </div>
-      </a>
     
     
-      <a href="/2025/01/13/tech/createBlogs/%E9%9B%B6%E5%9F%BA%E7%A1%80-%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A21-%E6%96%B9%E6%A1%88%E9%80%89%E6%8B%A9/" class="article-nav-link">
-        <strong class="article-nav-caption">下一篇</strong>
-        <div class="article-nav-title">零基础-搭建个人博客1-方案选择</div>
-      </a>
-    
-  </nav>
+  </div>
+</article>
+      
+      
+    </div>
+  </div>
+  
+  
 
   
-   
-     
-</article>
-
 </section>
       <footer class="footer">
   <div class="outer">
@@ -387,22 +276,6 @@
 <script src="/js/lazyload.min.js"></script>
 
 <!-- Tocbot -->
- 
-<script src="/js/tocbot.min.js"></script>
-
-<script>
-  tocbot.init({
-    tocSelector: ".tocbot",
-    contentSelector: ".article-entry",
-    headingSelector: "h1, h2, h3, h4, h5, h6",
-    hasInnerContainers: true,
-    scrollSmooth: true,
-    scrollContainer: "main",
-    positionFixedSelector: ".tocbot",
-    positionFixedClass: "is-position-fixed",
-    fixedSidebarOffset: "auto",
-  });
-</script>
 
 <script src="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.js"></script>
 <link

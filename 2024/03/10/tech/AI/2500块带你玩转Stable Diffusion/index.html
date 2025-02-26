@@ -127,9 +127,9 @@
 </tr>
 </thead>
 <tbody><tr>
-<td><img src="https://files.sid2656.space/blogs/tech/AI/2500SD/临摹的电脑绘画-1.png?imageView2/1/w/200/h/200"/></td>
-<td><img src="https://files.sid2656.space/blogs/tech/AI/2500SD/临摹的电脑绘画-2.png?imageView2/1/w/200/h/200"/></td>
-<td><img src="https://files.sid2656.space/blogs/tech/AI/2500SD/临摹的电脑绘画-3.png?imageView2/1/w/200/h/200"/></td>
+<td><img src="https://files.sid2656.space/AI/2500SD/临摹的电脑绘画-1.png?imageView2/1/w/200/h/200"/></td>
+<td><img src="https://files.sid2656.space/AI/2500SD/临摹的电脑绘画-2.png?imageView2/1/w/200/h/200"/></td>
+<td><img src="https://files.sid2656.space/AI/2500SD/临摹的电脑绘画-3.png?imageView2/1/w/200/h/200"/></td>
 </tr>
 </tbody></table>
 <blockquote>
@@ -194,11 +194,11 @@
 </li>
 </ul>
 </blockquote>
-<p><img src="https://files.sid2656.space/blogs/tech/AI/2500SD/%E7%94%9F%E6%88%90%E6%A8%A1%E5%9E%8B.png?imageView2/1/w/850/h/550" alt="生成模型" title="生成模型 stable diffusion"></p>
+<p><img src="https://files.sid2656.space/AI/2500SD/%E7%94%9F%E6%88%90%E6%A8%A1%E5%9E%8B.png?imageView2/1/w/850/h/550" alt="生成模型" title="生成模型 stable diffusion"></p>
 <blockquote>
 <p>当前DALL-E, Midjourney, Stable Diffusion图片生成的核心都是Diffusion Model(扩散模型)，它就是通过不停去除噪音期望获得好结果的生成模型。</p>
 </blockquote>
-<h4 id="stable-diffusion工作机制："><a href="#stable-diffusion工作机制：" class="headerlink" title="stable diffusion工作机制："></a>stable diffusion工作机制：</h4><p><img src="https://files.sid2656.space/blogs/tech/AI/2500SD/%E5%B7%A5%E4%BD%9C%E6%9C%BA%E5%88%B6.png?imageView2/1/w/850/h/300" alt="工作机制" title="工作机制 stable diffusion"></p>
+<h4 id="stable-diffusion工作机制："><a href="#stable-diffusion工作机制：" class="headerlink" title="stable diffusion工作机制："></a>stable diffusion工作机制：</h4><p><img src="https://files.sid2656.space/AI/2500SD/%E5%B7%A5%E4%BD%9C%E6%9C%BA%E5%88%B6.png?imageView2/1/w/850/h/300" alt="工作机制" title="工作机制 stable diffusion"></p>
 <h5 id="核心步骤："><a href="#核心步骤：" class="headerlink" title="核心步骤："></a>核心步骤：</h5><blockquote>
 <p>stable diffusion的工作机制，主要可以拆分为三个步骤：</p>
 <ul>
@@ -223,31 +223,31 @@
 <h6 id="CLIP："><a href="#CLIP：" class="headerlink" title="CLIP："></a>CLIP：</h6><blockquote>
 <p>CLIP不是完全的理解语义，只是想个方法把文字和图像对应起来。<br>他的训练过程，如图：</p>
 </blockquote>
-<p><img src="https://files.sid2656.space/blogs/tech/AI/2500SD/CLIP-1.png" alt="CLIP-1" title="CLIP-1 stable diffusion"><br><img src="https://files.sid2656.space/blogs/tech/AI/2500SD/CLIP-2.png" alt="CLIP-2" title="CLIP-2 stable diffusion"></p>
+<p><img src="https://files.sid2656.space/AI/2500SD/CLIP-1.png" alt="CLIP-1" title="CLIP-1 stable diffusion"><br><img src="https://files.sid2656.space/AI/2500SD/CLIP-2.png" alt="CLIP-2" title="CLIP-2 stable diffusion"></p>
 <blockquote>
 <p>感兴趣的可以直接看openai的相关文章：<a target="_blank" rel="noopener" href="https://openai.com/research/clip">https://openai.com/research/clip</a></p>
 <p>最终的实现：就是把文字和图片放到一个矩阵空间里，用来解决文本到图片的映射和相似性交集，方便通过文本找到对应图像的分布。</p>
 </blockquote>
-<p><img src="https://files.sid2656.space/blogs/tech/AI/2500SD/CLIP-3.png" alt="CLIP-3" title="CLIP-3 stable diffusion"><br><img src="https://files.sid2656.space/blogs/tech/AI/2500SD/CLIP-4.png" alt="CLIP-4" title="CLIP-4 stable diffusion"></p>
+<p><img src="https://files.sid2656.space/AI/2500SD/CLIP-3.png" alt="CLIP-3" title="CLIP-3 stable diffusion"><br><img src="https://files.sid2656.space/AI/2500SD/CLIP-4.png" alt="CLIP-4" title="CLIP-4 stable diffusion"></p>
 <blockquote>
 <p>这样第一步，解决了图像语义理解转换的问题。</p>
 <p>基于U-Net的Diffusion过程：</p>
 <p>这一过程是基于Diffusion Model的思路实现DDPM（Denoising Diffusion Probabilistic Models，去噪扩散概率模型）。</p>
 <p>通过对数据不断加噪成为真实噪声，和从真实噪声不断去噪还原成原始数据的过程中，学习到去噪的过程，进而就能对真实噪声进行随机采样，还原（生成）成各式各样的数据了。</p>
 </blockquote>
-<p><img src="https://files.sid2656.space/blogs/tech/AI/2500SD/CLIP-5.png?imageView2/1/w/750/h/150" alt="正向加噪过程" title="CLIP-5 stable diffusion"></p>
-<p><img src="https://files.sid2656.space/blogs/tech/AI/2500SD/CLIP-6.png?imageView2/1/w/750/h/150" alt="逆向降噪过程" title="CLIP-6 stable diffusion"></p>
+<p><img src="https://files.sid2656.space/AI/2500SD/CLIP-5.png?imageView2/1/w/750/h/150" alt="正向加噪过程" title="CLIP-5 stable diffusion"></p>
+<p><img src="https://files.sid2656.space/AI/2500SD/CLIP-6.png?imageView2/1/w/750/h/150" alt="逆向降噪过程" title="CLIP-6 stable diffusion"></p>
 <blockquote>
 <p>整个过程的每一步骤都的需要经历反复的测试训练，让模型清晰每一步的过程和流程。为了减小空间的使用量，这里stable Diffusion使用了里了一个潜空间（latent space）的技术，可以简单的理解为，其在原有的像素图像的大小下，将其不断压缩降维至指定大小，保留基本特性，然后在此大小下进行相关的计算处理，会大大缩减整体的计算量级，最后再将计算好的数据通过解码器进行到像素空间的转换。<br>还原图片的过程：</p>
 </blockquote>
-<p><img src="https://files.sid2656.space/blogs/tech/AI/2500SD/CLIP-7.png?imageView2/1/w/750/h/350" alt="CLIP-7" title="CLIP-7 stable diffusion"></p>
+<p><img src="https://files.sid2656.space/AI/2500SD/CLIP-7.png?imageView2/1/w/750/h/350" alt="CLIP-7" title="CLIP-7 stable diffusion"></p>
 <blockquote>
 <blockquote>
 <p>1）输入原图（覆盖了step&#x3D;50的noise）和step&#x3D;50，用U-Net预测图片的noise，这里每个step都共用相同的U-Net</p>
 <p>2）噪声很多时，U-Net无法预测精准的图片细节，只能预测很模型的图片大概轮廓</p>
 </blockquote>
 </blockquote>
-<p><img src="https://files.sid2656.space/blogs/tech/AI/2500SD/CLIP-8.png?imageView2/1/w/750/h/450" alt="CLIP-8" title="CLIP-8 stable diffusion"></p>
+<p><img src="https://files.sid2656.space/AI/2500SD/CLIP-8.png?imageView2/1/w/750/h/450" alt="CLIP-8" title="CLIP-8 stable diffusion"></p>
 <blockquote>
 <blockquote>
 <p>3）这样不断重复预测，直到得到原图。</p>
@@ -269,14 +269,14 @@
 </tr>
 </thead>
 <tbody><tr>
-<td><img src="https://files.sid2656.space/blogs/tech/AI/2500SD/VAE-1.png?imageView2/1/w/350/h/600"/></td>
-<td><img src="https://files.sid2656.space/blogs/tech/AI/2500SD/VAE-2.png?imageView2/1/w/350/h/600"/></td>
+<td><img src="https://files.sid2656.space/AI/2500SD/VAE-1.png?imageView2/1/w/350/h/600"/></td>
+<td><img src="https://files.sid2656.space/AI/2500SD/VAE-2.png?imageView2/1/w/350/h/600"/></td>
 </tr>
 </tbody></table>
 <h5 id="整体架构："><a href="#整体架构：" class="headerlink" title="整体架构："></a>整体架构：</h5><blockquote>
 <p>最后我们总结收尾一下，根据上面提到的工作机制以及核心步骤，再来看一下stable Diffusion整体架构设计图：</p>
 </blockquote>
-<p><img src="https://files.sid2656.space/blogs/tech/AI/2500SD/%E6%95%B4%E4%BD%93%E6%9E%B6%E6%9E%84.png?imageView2/1/w/750/h/500" alt="整体架构" title="整体架构 stable diffusion"></p>
+<p><img src="https://files.sid2656.space/AI/2500SD/%E6%95%B4%E4%BD%93%E6%9E%B6%E6%9E%84.png?imageView2/1/w/750/h/500" alt="整体架构" title="整体架构 stable diffusion"></p>
 <blockquote>
 <p>为了加快图像生成过程，Stable Diffusion 并不是在像素图像本身上运行扩散过程，而是在图像的压缩版本上运行。该论文称其为“Departure to Latent Space”。</p>
 <p>这种压缩（以及后来的解压缩&#x2F;绘画）是通过自动编码器完成的。自动编码器将图像压缩到潜空间（Latents），然后使用解码器凭借这些压缩后的数据重建。</p>
@@ -297,7 +297,7 @@
 <p>最核心的成本：显卡！而且是大内存的显卡。</p>
 <p>大家可以看一下网络上普通台式机的内存在8G以上的显卡成本是多少。我自己的台式机是3060TI，12G的显卡，21年中当时的价格是5000R，买的时候跟割肉一样，现在价格没有那么高了，但依然是一笔不小的成本，而且我在实际使用的过程中发现12G的显存根本不够用，如果想参加一些对公众举办的一些AI大赛(如果能拿到名次，基本上获奖一次整机的成本就回来了。PS：我的已经回本了)，对图的质量是有一定要求的，12G的显卡在图片放大的过程中，很容易崩掉。所以优选的显存容量是16G，24G甚至更高。</p>
 </blockquote>
-<p><img src="https://files.sid2656.space/blogs/tech/AI/2500SD/%E6%98%BE%E5%8D%A1.png?imageView2/1/w/750/h/200" alt="显卡" title="显卡 stable diffusion"></p>
+<p><img src="https://files.sid2656.space/AI/2500SD/%E6%98%BE%E5%8D%A1.png?imageView2/1/w/750/h/200" alt="显卡" title="显卡 stable diffusion"></p>
 <blockquote>
 <p>如果想AI绘图玩得更好肯定是需要升级显存的，但是我家里现有的机器配置的显卡其实已经完全满足我的日常游戏、绘画、视频剪辑的诉求了。再投入7、8千的成本去升级一个显卡感觉特别不划算，所以我开始在网上找相关的文章，看看是否有大神有经验或者建议。</p>
 <p>首先是找到目标显卡：</p>
@@ -305,7 +305,7 @@
 <p>唯二的要求：</p>
 <ul>
 <li>1.现存足够大</li>
-<li>2.成本在2000以内<br>多番查找看到N卡有专门针对高端制图的系列显卡：Tesla<br><img src="https://files.sid2656.space/blogs/tech/AI/2500SD/Tesla.png" alt="Tesla" title="Tesla stable diffusion"></li>
+<li>2.成本在2000以内<br>多番查找看到N卡有专门针对高端制图的系列显卡：Tesla<br><img src="https://files.sid2656.space/AI/2500SD/Tesla.png" alt="Tesla" title="Tesla stable diffusion"></li>
 </ul>
 </blockquote>
 </blockquote>
@@ -472,18 +472,18 @@
 <p>延长线：显卡风扇小4pin延长线、机箱小4pin延长线</p>
 <p>二分线：显卡小4p转机箱小4p一分二、显卡风扇小4p一分二</p>
 </blockquote>
-<p><img src="https://files.sid2656.space/blogs/tech/AI/2500SD/%E5%B7%A5%E5%85%B7%E5%87%86%E5%A4%87.png?imageView2/1/w/350/h/350" alt="工具准备" title="工具准备 stable diffusion"></p>
+<p><img src="https://files.sid2656.space/AI/2500SD/%E5%B7%A5%E5%85%B7%E5%87%86%E5%A4%87.png?imageView2/1/w/350/h/350" alt="工具准备" title="工具准备 stable diffusion"></p>
 <h5 id="二：改装过程："><a href="#二：改装过程：" class="headerlink" title="二：改装过程："></a>二：改装过程：</h5><blockquote>
 <ul>
 <li>第一步：</li>
 </ul>
 <p>把我们的显卡所有螺丝卸下来，协助过程中尽量保持对角螺丝操作，减少对核心的挤压。</p>
 </blockquote>
-<p><img src="https://files.sid2656.space/blogs/tech/AI/2500SD/%E6%94%B9%E8%A3%85%E8%BF%87%E7%A8%8B-1.png?imageView2/1/w/750/h/450" alt="左为ftw3显卡散热器，中间为p40显卡主板，右为p40显卡散热器" title="改装过程 stable diffusion"></p>
+<p><img src="https://files.sid2656.space/AI/2500SD/%E6%94%B9%E8%A3%85%E8%BF%87%E7%A8%8B-1.png?imageView2/1/w/750/h/450" alt="左为ftw3显卡散热器，中间为p40显卡主板，右为p40显卡散热器" title="改装过程 stable diffusion"></p>
 <blockquote>
 <p>然后需要给显卡散热器的硅脂垫都贴上薄薄的铝箔，避免硅脂垫在改装过程中受到损坏或者沾染杂物，铝箔周围也可以再贴点普通胶带封住缝隙。铝箔不需要特别厚的，一般超市有卖，我是直接拿的家里厨房的烧烤用的锡纸。</p>
 </blockquote>
-<p><img src="https://files.sid2656.space/blogs/tech/AI/2500SD/%E6%94%B9%E8%A3%85%E8%BF%87%E7%A8%8B-2.png?imageView2/1/w/750/h/450" alt="改装过程-2" title="改装过程 stable diffusion"></p>
+<p><img src="https://files.sid2656.space/AI/2500SD/%E6%94%B9%E8%A3%85%E8%BF%87%E7%A8%8B-2.png?imageView2/1/w/750/h/450" alt="改装过程-2" title="改装过程 stable diffusion"></p>
 <blockquote>
 <p>当然你也可以直接将硅脂垫都揭下来贴在p40显卡上，不然改装过程中会很容易沾染锉刀改造时留下的金属碎屑，这样硅脂垫就废了。</p>
 </blockquote>
@@ -503,33 +503,33 @@
 </tr>
 </thead>
 <tbody><tr>
-<td><img src="https://files.sid2656.space/blogs/tech/AI/2500SD/改装过程-3.png?imageView2/1/w/350/h/450"/></td>
-<td><img src="https://files.sid2656.space/blogs/tech/AI/2500SD/改装过程-4.png?imageView2/1/w/350/h/450"/></td>
+<td><img src="https://files.sid2656.space/AI/2500SD/改装过程-3.png?imageView2/1/w/350/h/450"/></td>
+<td><img src="https://files.sid2656.space/AI/2500SD/改装过程-4.png?imageView2/1/w/350/h/450"/></td>
 </tr>
 </tbody></table>
-<p><img src="https://files.sid2656.space/blogs/tech/AI/2500SD/%E6%94%B9%E8%A3%85%E8%BF%87%E7%A8%8B-5.png?imageView2/1/w/750/h/350" alt="改装过程-5" title="改装过程 stable diffusion"></p>
+<p><img src="https://files.sid2656.space/AI/2500SD/%E6%94%B9%E8%A3%85%E8%BF%87%E7%A8%8B-5.png?imageView2/1/w/750/h/350" alt="改装过程-5" title="改装过程 stable diffusion"></p>
 <blockquote>
 <ul>
 <li>第三步：</li>
 </ul>
 <p>接下来需要用钢锯条和三棱锉刀对中框尾部进行开孔，用锉刀扩孔方便很多，开成下图这样。红圈框出的位置需要用锉刀锉得和下面铜管一样平，这个地方下面有元器件，注意别锉到铜管。蓝圈框出的那个螺丝柱直接用锉刀锉平，不要有凸起。</p>
 </blockquote>
-<p><img src="https://files.sid2656.space/blogs/tech/AI/2500SD/%E6%94%B9%E8%A3%85%E8%BF%87%E7%A8%8B-6.png?imageView2/1/w/750/h/450" alt="此处使用钢锯条及锉刀对散热器中框进行开孔" title="改装过程 stable diffusion"></p>
+<p><img src="https://files.sid2656.space/AI/2500SD/%E6%94%B9%E8%A3%85%E8%BF%87%E7%A8%8B-6.png?imageView2/1/w/750/h/450" alt="此处使用钢锯条及锉刀对散热器中框进行开孔" title="改装过程 stable diffusion"></p>
 <blockquote>
 <p>散热器中框铜板旁边那个螺丝柱需要用锉刀锉得和周围铜板一样平，也可以直接使用斜口钳一点点把它剪掉，然后贴上黄色高温胶带做防漏电保护。</p>
 </blockquote>
-<p><img src="https://files.sid2656.space/blogs/tech/AI/2500SD/%E6%94%B9%E8%A3%85%E8%BF%87%E7%A8%8B-77.png?imageView2/1/w/750/h/450" alt="将这个螺丝柱锉平并贴上高温胶带" title="改装过程 stable diffusion"></p>
+<p><img src="https://files.sid2656.space/AI/2500SD/%E6%94%B9%E8%A3%85%E8%BF%87%E7%A8%8B-77.png?imageView2/1/w/750/h/450" alt="将这个螺丝柱锉平并贴上高温胶带" title="改装过程 stable diffusion"></p>
 <blockquote>
 <ul>
 <li>第四步：</li>
 </ul>
 <p>中框显存和电感这里需要开个槽，这里下面有个小电感会顶着，可以用斜口钳一点点剪开个孔后，然后上锉刀修平。蓝色这里开个槽：</p>
 </blockquote>
-<p><img src="https://files.sid2656.space/blogs/tech/AI/2500SD/%E6%94%B9%E8%A3%85%E8%BF%87%E7%A8%8B-7.png?imageView2/1/w/750/h/450" alt="改装过程-7" title="改装过程 stable diffusion"></p>
+<p><img src="https://files.sid2656.space/AI/2500SD/%E6%94%B9%E8%A3%85%E8%BF%87%E7%A8%8B-7.png?imageView2/1/w/750/h/450" alt="改装过程-7" title="改装过程 stable diffusion"></p>
 <blockquote>
 <p>接下来是改装散热器的背板，ftw3散热器下半块背板是不能直接装上的，同样需要使用锉刀改造。</p>
 </blockquote>
-<p><img src="https://files.sid2656.space/blogs/tech/AI/2500SD/%E6%94%B9%E8%A3%85%E8%BF%87%E7%A8%8B-8.png?imageView2/1/w/750/h/450" alt="改装过程-8" title="改装过程 stable diffusion"></p>
+<p><img src="https://files.sid2656.space/AI/2500SD/%E6%94%B9%E8%A3%85%E8%BF%87%E7%A8%8B-8.png?imageView2/1/w/750/h/450" alt="改装过程-8" title="改装过程 stable diffusion"></p>
 <blockquote>
 <p>如图将蓝圈位置使用锉刀锉平，这里是p40背面小芯片的位置，ftw3虽然也有给这个芯片散热的设计，但是正好偏了一点。</p>
 </blockquote>
@@ -539,13 +539,13 @@
 </ul>
 <p>给这些电容和芯片都贴好硅脂垫，因为ftw3散热器比p40显卡宽，其实可以把盖不住p40板子的那一部分硅脂垫切下来用的。</p>
 </blockquote>
-<p><img src="https://files.sid2656.space/blogs/tech/AI/2500SD/%E6%94%B9%E8%A3%85%E8%BF%87%E7%A8%8B-9.png?imageView2/1/w/750/h/450" alt="给贴上硅脂垫" title="改装过程 stable diffusion"></p>
+<p><img src="https://files.sid2656.space/AI/2500SD/%E6%94%B9%E8%A3%85%E8%BF%87%E7%A8%8B-9.png?imageView2/1/w/750/h/450" alt="给贴上硅脂垫" title="改装过程 stable diffusion"></p>
 <blockquote>
 <p>先将p40的双8pin转单8pin电源线从开出的槽里插到p40显卡上，然后将ftw3的散热器对好位置放到p40主板上，记得提前撕掉用作保护的铝箔，撕的时候慢点，别把硅脂垫也扯下来。</p>
 </blockquote>
-<p><img src="https://files.sid2656.space/blogs/tech/AI/2500SD/%E6%94%B9%E8%A3%85%E8%BF%87%E7%A8%8B-10.png?imageView2/1/w/750/h/450" alt="插上p40显卡原装供电线后再盖好中框" title="改装过程 stable diffusion"></p>
+<p><img src="https://files.sid2656.space/AI/2500SD/%E6%94%B9%E8%A3%85%E8%BF%87%E7%A8%8B-10.png?imageView2/1/w/750/h/450" alt="插上p40显卡原装供电线后再盖好中框" title="改装过程 stable diffusion"></p>
 <blockquote>
-<p>接着再将上半部分背板的螺丝装上就行，硅脂垫和螺丝孔位都是能对上的，一定使用和散热器配套的螺丝，除了那4颗弹簧螺丝，其余原来p40的螺丝是不能装上的。<br><img src="https://files.sid2656.space/blogs/tech/AI/2500SD/%E6%94%B9%E8%A3%85%E8%BF%87%E7%A8%8B-11.png?imageView2/1/w/750/h/450" alt="安装散热器的上半块显卡背板" title="改装过程 stable diffusion"></p>
+<p>接着再将上半部分背板的螺丝装上就行，硅脂垫和螺丝孔位都是能对上的，一定使用和散热器配套的螺丝，除了那4颗弹簧螺丝，其余原来p40的螺丝是不能装上的。<br><img src="https://files.sid2656.space/AI/2500SD/%E6%94%B9%E8%A3%85%E8%BF%87%E7%A8%8B-11.png?imageView2/1/w/750/h/450" alt="安装散热器的上半块显卡背板" title="改装过程 stable diffusion"></p>
 </blockquote>
 <blockquote>
 <ul>
@@ -561,11 +561,11 @@
 </tr>
 </thead>
 <tbody><tr>
-<td><img src="https://files.sid2656.space/blogs/tech/AI/2500SD/改装过程-12.png?imageView2/1/w/350/h/220"/></td>
-<td><img src="https://files.sid2656.space/blogs/tech/AI/2500SD/改装过程-13.png?imageView2/1/w/350/h/220"/></td>
+<td><img src="https://files.sid2656.space/AI/2500SD/改装过程-12.png?imageView2/1/w/350/h/220"/></td>
+<td><img src="https://files.sid2656.space/AI/2500SD/改装过程-13.png?imageView2/1/w/350/h/220"/></td>
 </tr>
 </tbody></table>
-<p><img src="https://files.sid2656.space/blogs/tech/AI/2500SD/%E6%94%B9%E8%A3%85%E8%BF%87%E7%A8%8B-14.png?imageView2/1/w/700/h/450" alt="改装过程-14" title="改装过程 stable diffusion"></p>
+<p><img src="https://files.sid2656.space/AI/2500SD/%E6%94%B9%E8%A3%85%E8%BF%87%E7%A8%8B-14.png?imageView2/1/w/700/h/450" alt="改装过程-14" title="改装过程 stable diffusion"></p>
 <blockquote>
 <ul>
 <li>第七步：</li>
@@ -583,21 +583,21 @@
 </tr>
 </thead>
 <tbody><tr>
-<td><img src="https://files.sid2656.space/blogs/tech/AI/2500SD/改装过程-15.png?imageView2/1/w/350/h/450"/></td>
-<td><img src="https://files.sid2656.space/blogs/tech/AI/2500SD/改装过程-16.png?imageView2/1/w/350/h/450"/></td>
+<td><img src="https://files.sid2656.space/AI/2500SD/改装过程-15.png?imageView2/1/w/350/h/450"/></td>
+<td><img src="https://files.sid2656.space/AI/2500SD/改装过程-16.png?imageView2/1/w/350/h/450"/></td>
 </tr>
 </tbody></table>
 <blockquote>
 <p>p40显卡供电线接口高出来这一小块需要用斜口钳剪掉或用刀削平，避免顶着散热鳍片。</p>
 </blockquote>
-<p><img src="https://files.sid2656.space/blogs/tech/AI/2500SD/%E6%94%B9%E8%A3%85%E8%BF%87%E7%A8%8B-17.png?imageView2/1/w/350/h/450" alt="改装过程-17" title="改装过程 stable diffusion"></p>
+<p><img src="https://files.sid2656.space/AI/2500SD/%E6%94%B9%E8%A3%85%E8%BF%87%E7%A8%8B-17.png?imageView2/1/w/350/h/450" alt="改装过程-17" title="改装过程 stable diffusion"></p>
 <blockquote>
 <ul>
 <li>第八步：</li>
 </ul>
 <p>接着给显卡gp102核心上涂上硅脂，我直接上的利民tfx硅脂，接着将散热器对好位置扣上中框。翻到背面再把弹簧螺丝拧上，一定要对角拧螺丝！！！避免压坏晶片。</p>
 </blockquote>
-<p><img src="https://files.sid2656.space/blogs/tech/AI/2500SD/%E6%94%B9%E8%A3%85%E8%BF%87%E7%A8%8B-18.png?imageView2/1/w/350/h/450" alt="改装过程-18" title="改装过程 stable diffusion"></p>
+<p><img src="https://files.sid2656.space/AI/2500SD/%E6%94%B9%E8%A3%85%E8%BF%87%E7%A8%8B-18.png?imageView2/1/w/350/h/450" alt="改装过程-18" title="改装过程 stable diffusion"></p>
 <blockquote>
 <p>最后装回显卡的风扇框就行了，到此散热器就算是成功装上去了😁。</p>
 <ul>
@@ -605,15 +605,15 @@
 </ul>
 <p>将购买的风扇外接线按照我这个方式固定就可以，这是我试过最合适也最方便的安装方式，大部分走线都在显卡内部，这样比较美观，也不会对显卡外面的空间有太大的挤占</p>
 </blockquote>
-<p><img src="https://files.sid2656.space/blogs/tech/AI/2500SD/%E6%94%B9%E8%A3%85%E8%BF%87%E7%A8%8B-19.png?imageView2/1/w/750/h/450" alt="改装过程-19" title="改装过程 stable diffusion"></p>
+<p><img src="https://files.sid2656.space/AI/2500SD/%E6%94%B9%E8%A3%85%E8%BF%87%E7%A8%8B-19.png?imageView2/1/w/750/h/450" alt="改装过程-19" title="改装过程 stable diffusion"></p>
 <blockquote>
 <p>到这里风扇线的改装基本完成，因为我自己的机器上显卡的位置和后面风险控制接口相对较远，所以我上面的清单列表里面额外多了小4p的延长线。<br>如果有强迫症，可以把显卡的风扇延长线再整理一下，现在太懒散了。比如这样：</p>
 </blockquote>
-<p><img src="https://files.sid2656.space/blogs/tech/AI/2500SD/%E6%94%B9%E8%A3%85%E8%BF%87%E7%A8%8B-20.png?imageView2/1/w/750/h/450" alt="改装过程-20" title="改装过程 stable diffusion"></p>
+<p><img src="https://files.sid2656.space/AI/2500SD/%E6%94%B9%E8%A3%85%E8%BF%87%E7%A8%8B-20.png?imageView2/1/w/750/h/450" alt="改装过程-20" title="改装过程 stable diffusion"></p>
 <blockquote>
 <p>下面的图是我自己的显卡安装完成后的上机测试风扇的图：</p>
 </blockquote>
-<p><img src="https://files.sid2656.space/blogs/tech/AI/2500SD/%E6%94%B9%E8%A3%85%E8%BF%87%E7%A8%8B-21.png?imageView2/1/w/350/h/450" alt="改装过程-21" title="改装过程 stable diffusion"></p>
+<p><img src="https://files.sid2656.space/AI/2500SD/%E6%94%B9%E8%A3%85%E8%BF%87%E7%A8%8B-21.png?imageView2/1/w/350/h/450" alt="改装过程-21" title="改装过程 stable diffusion"></p>
 <h5 id="三：驱动安装："><a href="#三：驱动安装：" class="headerlink" title="三：驱动安装："></a>三：驱动安装：</h5><blockquote>
 <p>P40显卡由于是计算卡，所以显卡驱动跟其他的桌面版驱动不一样。</p>
 <p>这里因为我的亮机卡是A卡，所以不需要安装其他N卡的驱动后，再卸载，再重新安装，再看要保留哪个驱动，我这里直接使用的是显卡渠道是551.61版本的桌面+Tesla的驱动，版本号我贴一下：</p>
@@ -622,11 +622,11 @@
 <blockquote>
 <p>最终安装完显卡的效果，可以直接看N卡的驱动命令：P40正常可以看到，计算模式TCC，后面测试stable diffusion也完全没有问题。</p>
 </blockquote>
-<p><img src="https://files.sid2656.space/blogs/tech/AI/2500SD/%E9%A9%B1%E5%8A%A8%E5%AE%89%E8%A3%85-1.png?imageView2/1/w/750/h/400" alt="驱动安装-1" title="驱动安装 stable diffusion"></p>
+<p><img src="https://files.sid2656.space/AI/2500SD/%E9%A9%B1%E5%8A%A8%E5%AE%89%E8%A3%85-1.png?imageView2/1/w/750/h/400" alt="驱动安装-1" title="驱动安装 stable diffusion"></p>
 <blockquote>
 <p>可以查看设备管理器，驱动，显卡都正常展示：</p>
 </blockquote>
-<p><img src="https://files.sid2656.space/blogs/tech/AI/2500SD/%E9%A9%B1%E5%8A%A8%E5%AE%89%E8%A3%85-2.png?imageView2/1/w/750/h/400" alt="驱动安装-2" title="驱动安装 stable diffusion"></p>
+<p><img src="https://files.sid2656.space/AI/2500SD/%E9%A9%B1%E5%8A%A8%E5%AE%89%E8%A3%85-2.png?imageView2/1/w/750/h/400" alt="驱动安装-2" title="驱动安装 stable diffusion"></p>
 <h5 id="四：开启WDDM模式："><a href="#四：开启WDDM模式：" class="headerlink" title="四：开启WDDM模式："></a>四：开启WDDM模式：</h5><blockquote>
 <ul>
 <li>注册表调整：<br>有很多小伙伴入这款P40显卡不是为了做stable diffusion或者其他的计算量相关的内容，而是看中了显存，想做一些大型游戏或者图片的渲染工作。</li>
@@ -672,37 +672,37 @@
 <p>具体的软件使用教程，网上有很多，可以参考你的情况，选择你喜欢的方式进行控制。</p>
 <p>我这里是直接用温度监控一项，没有做特别复杂的逻辑，CPU的风扇和P40的风扇全部是通过FanControl进行管控。我如果不用FanControl进行管控，P40的风扇转速会默认直接打到60%；</p>
 </blockquote>
-<p><img src="https://files.sid2656.space/blogs/tech/AI/2500SD/%E6%B8%A9%E5%BA%A6%E6%8E%A7%E5%88%B6-1.png?imageView2/1/w/850/h/400" alt="温度控制-1" title="温度控制 stable diffusion"></p>
+<p><img src="https://files.sid2656.space/AI/2500SD/%E6%B8%A9%E5%BA%A6%E6%8E%A7%E5%88%B6-1.png?imageView2/1/w/850/h/400" alt="温度控制-1" title="温度控制 stable diffusion"></p>
 <blockquote>
 <p>开启转速控制软件后，在不使用P40进行跑图的前提下，风扇转速默认是我设置的最低10%；基本上没有什么噪音，实际效果可参考上面发的视频文件。</p>
 </blockquote>
-<p><img src="https://files.sid2656.space/blogs/tech/AI/2500SD/%E6%B8%A9%E5%BA%A6%E6%8E%A7%E5%88%B6-2.png?imageView2/1/w/850/h/400" alt="温度控制-2" title="温度控制 stable diffusion"></p>
+<p><img src="https://files.sid2656.space/AI/2500SD/%E6%B8%A9%E5%BA%A6%E6%8E%A7%E5%88%B6-2.png?imageView2/1/w/850/h/400" alt="温度控制-2" title="温度控制 stable diffusion"></p>
 <h3 id="出图测试："><a href="#出图测试：" class="headerlink" title="出图测试："></a>出图测试：</h3><blockquote>
 <p>这里我就不再详细去介绍stable diffusion的软件本地化部署，以及相关使用插件的安装，相信大家都有自己是诉求和玩软件的初心，其他的困难用这个初心去解决吧。嘿嘿😋！</p>
 <p>第一步：网络搜索美女图片，我选中了这个：</p>
 </blockquote>
-<p><img src="https://files.sid2656.space/blogs/tech/AI/2500SD/%E5%87%BA%E5%9B%BE%E6%B5%8B%E8%AF%95-1.png?imageView2/1/w/750/h/600" alt="出图测试-2" title="出图测试 stable diffusion"></p>
+<p><img src="https://files.sid2656.space/AI/2500SD/%E5%87%BA%E5%9B%BE%E6%B5%8B%E8%AF%95-1.png?imageView2/1/w/750/h/600" alt="出图测试-2" title="出图测试 stable diffusion"></p>
 <blockquote>
 <p>第二步：图片导入到stable diffusion，提取文件关键词（懒得自己写）：</p>
 </blockquote>
-<p><img src="https://files.sid2656.space/blogs/tech/AI/2500SD/%E5%87%BA%E5%9B%BE%E6%B5%8B%E8%AF%95-2.png?imageView2/1/w/750/h/400" alt="出图测试-2" title="出图测试 stable diffusion"></p>
+<p><img src="https://files.sid2656.space/AI/2500SD/%E5%87%BA%E5%9B%BE%E6%B5%8B%E8%AF%95-2.png?imageView2/1/w/750/h/400" alt="出图测试-2" title="出图测试 stable diffusion"></p>
 <blockquote>
 <p>第三步：选中你喜欢的checkpoint和lora：</p>
 </blockquote>
-<p><img src="https://files.sid2656.space/blogs/tech/AI/2500SD/%E5%87%BA%E5%9B%BE%E6%B5%8B%E8%AF%95-12.png?imageView2/1/w/750/h/350" alt="出图测试-12" title="出图测试 stable diffusion"></p>
+<p><img src="https://files.sid2656.space/AI/2500SD/%E5%87%BA%E5%9B%BE%E6%B5%8B%E8%AF%95-12.png?imageView2/1/w/750/h/350" alt="出图测试-12" title="出图测试 stable diffusion"></p>
 <blockquote>
 <p>第四步：发送tag到文生图，调整正向和反写提示词，然后开跑吧：</p>
 <p>大家可以看到图片左侧是我的显卡转速和软件后台的跑图进度，这个转速控制是我第一版，随着使用过程的迭代，我发现线性的转速控制不太适合这个场景，所以我改成了类似抛物线的样子，这个大家可以按照自己的喜欢和习惯调整。</p>
 </blockquote>
-<p><img src="https://files.sid2656.space/blogs/tech/AI/2500SD/%E5%87%BA%E5%9B%BE%E6%B5%8B%E8%AF%95-3.png?imageView2/1/w/750/h/400" alt="出图测试-2" title="出图测试 stable diffusion"></p>
+<p><img src="https://files.sid2656.space/AI/2500SD/%E5%87%BA%E5%9B%BE%E6%B5%8B%E8%AF%95-3.png?imageView2/1/w/750/h/400" alt="出图测试-2" title="出图测试 stable diffusion"></p>
 <blockquote>
 <p>第五步：直接出图：</p>
 </blockquote>
-<p><img src="https://files.sid2656.space/blogs/tech/AI/2500SD/%E5%87%BA%E5%9B%BE%E6%B5%8B%E8%AF%95-4.png?imageView2/1/w/750/h/750" alt="出图测试-2" title="出图测试 stable diffusion"></p>
+<p><img src="https://files.sid2656.space/AI/2500SD/%E5%87%BA%E5%9B%BE%E6%B5%8B%E8%AF%95-4.png?imageView2/1/w/750/h/750" alt="出图测试-2" title="出图测试 stable diffusion"></p>
 <blockquote>
 <p>最终我选择的是这个：</p>
 </blockquote>
-<p><img src="https://files.sid2656.space/blogs/tech/AI/2500SD/%E5%87%BA%E5%9B%BE%E6%B5%8B%E8%AF%95-5.png?imageView2/1/w/750/h/1100" alt="出图测试-2" title="出图测试 stable diffusion"></p>
+<p><img src="https://files.sid2656.space/AI/2500SD/%E5%87%BA%E5%9B%BE%E6%B5%8B%E8%AF%95-5.png?imageView2/1/w/750/h/1100" alt="出图测试-2" title="出图测试 stable diffusion"></p>
 <blockquote>
 <p>至此，2500R完成了能正常适配stable Diffusion的显卡出图机器配置，且通过本地stable Diffusion的环境搭建，完成了最基本的图片风格转换功能。</p>
 </blockquote>
@@ -718,7 +718,7 @@
 <p>至少从放出的视频，可以判断出sora并不理解物理世界中的3维的概念，那么更别提物理定律在3维世界的应用了。目前看sora只是二维世界的色彩和镜头语言，或者说是二维图像中的渲染处理的更自然而已。所以，惊艳是有的，但是要是上升到世界模拟器，我个人觉得还不够。</p>
 <p>但是话说回来，从最开始的威尔史密斯吃意大利面，到现在的视频运镜，效果呈现，AI进步的是真的快啊。按照这个速度，我觉得世界模拟器应该不会特别遥远了，有生之年，我们这一代应该都会成为“头号玩家”。</p>
 </blockquote>
-<p><img src="https://files.sid2656.space/blogs/tech/AI/2500SD/%E5%87%BA%E5%9B%BE%E6%B5%8B%E8%AF%95-6.png?imageView2/1/w/750/h/450" alt="出图测试-6" title="出图测试 stable diffusion"></p>
+<p><img src="https://files.sid2656.space/AI/2500SD/%E5%87%BA%E5%9B%BE%E6%B5%8B%E8%AF%95-6.png?imageView2/1/w/750/h/450" alt="出图测试-6" title="出图测试 stable diffusion"></p>
 <blockquote>
 <p>PS：如果大家对stable Diffusion的使用，或者一些玩法感兴趣（controlnet、comfyui），24年我可以抽时间整理一些相关的教程和使用文档。</p>
 <p>最后贴一下，本文的诞生参考来源&amp;实操过程的依赖博文：</p>

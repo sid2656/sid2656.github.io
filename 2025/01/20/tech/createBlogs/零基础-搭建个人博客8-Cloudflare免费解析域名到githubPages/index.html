@@ -117,7 +117,7 @@
 </blockquote>
 <h2 id="不可抗力："><a href="#不可抗力：" class="headerlink" title="不可抗力："></a>不可抗力：</h2><h3 id="1-不可抗力的本质："><a href="#1-不可抗力的本质：" class="headerlink" title="1.不可抗力的本质："></a>1.不可抗力的本质：</h3><blockquote>
 <p>我们先来了解一下我们在浏览器输入域名，桥下回车后发生了什么：</p>
-<p><img src="https://files.sid2656.space/blogs/tech/createBlogs/dnsWeb.png" alt="个人博客" title="dns 解析域名"></p>
+<p><img src="https://files.sid2656.space/tech/createBlogs/dnsWeb.png" alt="个人博客" title="dns 解析域名"></p>
 <p>用户在浏览器输入想访问的域名后，浏览器会根据这个域名在域名服务商配置的dns解析服务器地址去寻找域名配置的规则，并根据规则对应的实际内容，去访问真是的服务器提供的web服务。</p>
 <p>因为我们的博客是利用了DNS解析，而如果您使用的国内的DNS解析，在完成这一步之后，还会经过一层国家级的防火墙GFW，其会将需要被隔绝的网络设置不可访问的返回内容。</p>
 <p>这样，我们便因为这个不可抗力的原因导致我们无法访问自己的博客。</p>
@@ -152,34 +152,34 @@
 <p>Cloudflare 是一间总部位于旧金山的美国跨国 IT 企业，以向客户提供基于反向代理的内容分发网络（Content Delivery Network, CDN）及分布式域名解析服务（Distributed Domain Name Server）为主要业务。利用Cloudflare全球Anycast网络，Cloudflare可以帮助受保护站点抵御 DDOS 等网络攻击，确保该网站长期在线，同时提升网站的性能、加载速度以改善访客体验。 截至2020年1月，Cloudflare拥有200多个位于全球各地的数据中心</p>
 </blockquote>
 <p>总的来说Cloudflare是一家提供CDN和DNS服务的公司，但是他是基于反向代理来进行的内容分发，也就是说网站域名在其dns解析后是一台反向代理的服务器，而不是真实的服务器，这样其通过代理服务器访问真是ip后将结果返回，变可以实现隐藏服务器真是ip的作用了。</p>
-<p><img src="https://files.sid2656.space/blogs/tech/createBlogs/ProxyWebServer.png" alt="个人博客" title="github domain"></p>
+<p><img src="https://files.sid2656.space/tech/createBlogs/ProxyWebServer.png" alt="个人博客" title="github domain"></p>
 </blockquote>
 <h4 id="CDN：内容分发网络"><a href="#CDN：内容分发网络" class="headerlink" title="CDN：内容分发网络"></a>CDN：内容分发网络</h4><blockquote>
 <blockquote>
 <p>内容分发网络或内容分发网络(CDN)是由代理服务器及其数据中心组成的地理分布式网络。目标是通过相对于最终用户在空间上分布服务来提供高可用性和性能。CDNs出现于20世纪90年代末，是缓解互联网性能瓶颈的一种手段。</p>
 </blockquote>
 <p>简单来说，就是CDN是一个大型的网络缓存设备，这样我们在访问域名对应的真实服务器提供的服务是，CDN服务商会从客户就近的CDN服务器直接返回网络数据内容，而不是真实的每次都去远程的服务器真是IP获取内容，减少了网络的链接和跳转，加快了用户的访问速度。</p>
-<p><img src="https://files.sid2656.space/blogs/tech/createBlogs/NCDN_-_CDN.png" alt="个人博客" title="CDN ncdn"></p>
+<p><img src="https://files.sid2656.space/tech/createBlogs/NCDN_-_CDN.png" alt="个人博客" title="CDN ncdn"></p>
 <p>本身来说CDN是一个提升用户体验的服务，基本上这种服务都是需要额外收费的，包括国内各大厂商提供的也都是有偿服务。Cloudflare公司提供了一些免费的额度，但是这些额度理论上来说足够个人博客使用了。</p>
 </blockquote>
 <h4 id="注册Cloudflare"><a href="#注册Cloudflare" class="headerlink" title="注册Cloudflare"></a>注册Cloudflare</h4><blockquote>
 <p>打开网络：<a target="_blank" rel="noopener" href="https://www.cloudflare.com/">https://www.cloudflare.com/</a> 进行注册。</p>
 <p>注册完成后可以点击websites菜单，填写您注册的域名。</p>
-<p><img src="https://files.sid2656.space/blogs/tech/createBlogs/website.png" alt="个人博客" title="Cloudflare 设置 websites"></p>
+<p><img src="https://files.sid2656.space/tech/createBlogs/website.png" alt="个人博客" title="Cloudflare 设置 websites"></p>
 <p>这里我们填写自注册的域名后选择默认的模式：</p>
-<p><img src="https://files.sid2656.space/blogs/tech/createBlogs/website1.png" alt="个人博客" title="Cloudflare 设置 websites"></p>
+<p><img src="https://files.sid2656.space/tech/createBlogs/website1.png" alt="个人博客" title="Cloudflare 设置 websites"></p>
 <p>至于plan计划，我们选择免费版本的：</p>
-<p><img src="https://files.sid2656.space/blogs/tech/createBlogs/website2.png" alt="个人博客" title="Cloudflare 设置 websites"></p>
+<p><img src="https://files.sid2656.space/tech/createBlogs/website2.png" alt="个人博客" title="Cloudflare 设置 websites"></p>
 <p>接下来就到了我们要进行DNS解析的处理了，这里我们按照图下展示所做，将我们的域名通过CNAME的类型方式直接跳转到github的二级域名。</p>
-<p><img src="https://files.sid2656.space/blogs/tech/createBlogs/website3.png" alt="个人博客" title="Cloudflare 设置 websites"></p>
+<p><img src="https://files.sid2656.space/tech/createBlogs/website3.png" alt="个人博客" title="Cloudflare 设置 websites"></p>
 <p>并且我们需要到买到域名的域名厂商进行域名的DNS解析处理：</p>
 <p>以我个人为例，我使用的阿里云服务，所以按照提示从Cloudflare网站的DNS中的records菜单，找到了他们提供的DNS解析网站的Nameservers服务，并将其配置到域名厂商的管理配置中；</p>
-<p><img src="https://files.sid2656.space/blogs/tech/createBlogs/website6.png" alt="个人博客" title="Cloudflare 设置 websites"></p>
-<p>这里我们可以免费开启https服务，顺便说一句，如果是国内的话，需要额外申请—_—!<br><img src="https://files.sid2656.space/blogs/tech/createBlogs/website4.png" alt="个人博客" title="Cloudflare 设置 websites"></p>
+<p><img src="https://files.sid2656.space/tech/createBlogs/website6.png" alt="个人博客" title="Cloudflare 设置 websites"></p>
+<p>这里我们可以免费开启https服务，顺便说一句，如果是国内的话，需要额外申请—_—!<br><img src="https://files.sid2656.space/tech/createBlogs/website4.png" alt="个人博客" title="Cloudflare 设置 websites"></p>
 <p>理论上来说，按照上面的配置我们的网站便可以通过浏览器在国内直接访问了，但是我这里预到了一个问题，就是重定向次数过多导致网站无法打开。</p>
-<p>这是因为Cloudflare本身https和http设置会导致网站回源处理时反复在这两个协议直接横条，导致解析处理重定向次数太多，这时候我们需要设置CDN的会员方式固定位HTTPS的方式，即在SSL中选择Full(strict)，配置如图：<br><img src="https://files.sid2656.space/blogs/tech/createBlogs/website5.png" alt="个人博客" title="Cloudflare 设置 websites"></p>
+<p>这是因为Cloudflare本身https和http设置会导致网站回源处理时反复在这两个协议直接横条，导致解析处理重定向次数太多，这时候我们需要设置CDN的会员方式固定位HTTPS的方式，即在SSL中选择Full(strict)，配置如图：<br><img src="https://files.sid2656.space/tech/createBlogs/website5.png" alt="个人博客" title="Cloudflare 设置 websites"></p>
 <p>至此，即便在国内访问域名，也可以正常展示啦！！</p>
-<p><img src="https://files.sid2656.space/blogs/tech/createBlogs/bloghome.png" alt="个人博客" title="github domain"></p>
+<p><img src="https://files.sid2656.space/tech/createBlogs/bloghome.png" alt="个人博客" title="github domain"></p>
 </blockquote>
  
       <!-- reward -->
