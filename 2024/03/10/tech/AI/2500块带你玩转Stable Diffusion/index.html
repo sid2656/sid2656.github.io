@@ -127,9 +127,9 @@
 </tr>
 </thead>
 <tbody><tr>
-<td><img src="https://files.sid2656.space/blogs/tech/AI/2500SD/临摹的电脑绘画-1.jpeg?imageView2/1/w/200/h/200"/></td>
-<td><img src="https://files.sid2656.space/blogs/tech/AI/2500SD/临摹的电脑绘画-2.jpeg?imageView2/1/w/200/h/200"/></td>
-<td><img src="https://files.sid2656.space/blogs/tech/AI/2500SD/临摹的电脑绘画-3.jpeg?imageView2/1/w/200/h/200"/></td>
+<td><img src="https://files.sid2656.space/blogs/tech/AI/2500SD/临摹的电脑绘画-1.png?imageView2/1/w/200/h/200"/></td>
+<td><img src="https://files.sid2656.space/blogs/tech/AI/2500SD/临摹的电脑绘画-2.png?imageView2/1/w/200/h/200"/></td>
+<td><img src="https://files.sid2656.space/blogs/tech/AI/2500SD/临摹的电脑绘画-3.png?imageView2/1/w/200/h/200"/></td>
 </tr>
 </tbody></table>
 <blockquote>
@@ -240,14 +240,14 @@
 <blockquote>
 <p>整个过程的每一步骤都的需要经历反复的测试训练，让模型清晰每一步的过程和流程。为了减小空间的使用量，这里stable Diffusion使用了里了一个潜空间（latent space）的技术，可以简单的理解为，其在原有的像素图像的大小下，将其不断压缩降维至指定大小，保留基本特性，然后在此大小下进行相关的计算处理，会大大缩减整体的计算量级，最后再将计算好的数据通过解码器进行到像素空间的转换。<br>还原图片的过程：</p>
 </blockquote>
-<p><img src="https://files.sid2656.space/blogs/tech/AI/2500SD/CLIP-7.webp?imageView2/1/w/750/h/350" alt="CLIP-7" title="CLIP-7 stable diffusion"></p>
+<p><img src="https://files.sid2656.space/blogs/tech/AI/2500SD/CLIP-7.png?imageView2/1/w/750/h/350" alt="CLIP-7" title="CLIP-7 stable diffusion"></p>
 <blockquote>
 <blockquote>
 <p>1）输入原图（覆盖了step&#x3D;50的noise）和step&#x3D;50，用U-Net预测图片的noise，这里每个step都共用相同的U-Net</p>
 <p>2）噪声很多时，U-Net无法预测精准的图片细节，只能预测很模型的图片大概轮廓</p>
 </blockquote>
 </blockquote>
-<p><img src="https://files.sid2656.space/blogs/tech/AI/2500SD/CLIP-8.webp?imageView2/1/w/750/h/450" alt="CLIP-8" title="CLIP-8 stable diffusion"></p>
+<p><img src="https://files.sid2656.space/blogs/tech/AI/2500SD/CLIP-8.png?imageView2/1/w/750/h/450" alt="CLIP-8" title="CLIP-8 stable diffusion"></p>
 <blockquote>
 <blockquote>
 <p>3）这样不断重复预测，直到得到原图。</p>

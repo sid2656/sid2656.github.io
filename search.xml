@@ -166,21 +166,21 @@
 <h4 id="注册Cloudflare"><a href="#注册Cloudflare" class="headerlink" title="注册Cloudflare"></a>注册Cloudflare</h4><blockquote>
 <p>打开网络：<a href="https://www.cloudflare.com/">https://www.cloudflare.com/</a> 进行注册。</p>
 <p>注册完成后可以点击websites菜单，填写您注册的域名。</p>
-<p><img src="https://files.sid2656.space/blogs/tech/createBlogs/website.jpg" alt="个人博客" title="Cloudflare 设置 websites"></p>
+<p><img src="https://files.sid2656.space/blogs/tech/createBlogs/website.png" alt="个人博客" title="Cloudflare 设置 websites"></p>
 <p>这里我们填写自注册的域名后选择默认的模式：</p>
-<p><img src="https://files.sid2656.space/blogs/tech/createBlogs/website1.jpg" alt="个人博客" title="Cloudflare 设置 websites"></p>
+<p><img src="https://files.sid2656.space/blogs/tech/createBlogs/website1.png" alt="个人博客" title="Cloudflare 设置 websites"></p>
 <p>至于plan计划，我们选择免费版本的：</p>
-<p><img src="https://files.sid2656.space/blogs/tech/createBlogs/website2.jpg" alt="个人博客" title="Cloudflare 设置 websites"></p>
+<p><img src="https://files.sid2656.space/blogs/tech/createBlogs/website2.png" alt="个人博客" title="Cloudflare 设置 websites"></p>
 <p>接下来就到了我们要进行DNS解析的处理了，这里我们按照图下展示所做，将我们的域名通过CNAME的类型方式直接跳转到github的二级域名。</p>
-<p><img src="https://files.sid2656.space/blogs/tech/createBlogs/website3.jpg" alt="个人博客" title="Cloudflare 设置 websites"></p>
+<p><img src="https://files.sid2656.space/blogs/tech/createBlogs/website3.png" alt="个人博客" title="Cloudflare 设置 websites"></p>
 <p>并且我们需要到买到域名的域名厂商进行域名的DNS解析处理：</p>
 <p>以我个人为例，我使用的阿里云服务，所以按照提示从Cloudflare网站的DNS中的records菜单，找到了他们提供的DNS解析网站的Nameservers服务，并将其配置到域名厂商的管理配置中；</p>
-<p><img src="https://files.sid2656.space/blogs/tech/createBlogs/website6.jpg" alt="个人博客" title="Cloudflare 设置 websites"></p>
-<p>这里我们可以免费开启https服务，顺便说一句，如果是国内的话，需要额外申请—_—!<br><img src="https://files.sid2656.space/blogs/tech/createBlogs/website4.jpg" alt="个人博客" title="Cloudflare 设置 websites"></p>
+<p><img src="https://files.sid2656.space/blogs/tech/createBlogs/website6.png" alt="个人博客" title="Cloudflare 设置 websites"></p>
+<p>这里我们可以免费开启https服务，顺便说一句，如果是国内的话，需要额外申请—_—!<br><img src="https://files.sid2656.space/blogs/tech/createBlogs/website4.png" alt="个人博客" title="Cloudflare 设置 websites"></p>
 <p>理论上来说，按照上面的配置我们的网站便可以通过浏览器在国内直接访问了，但是我这里预到了一个问题，就是重定向次数过多导致网站无法打开。</p>
-<p>这是因为Cloudflare本身https和http设置会导致网站回源处理时反复在这两个协议直接横条，导致解析处理重定向次数太多，这时候我们需要设置CDN的会员方式固定位HTTPS的方式，即在SSL中选择Full(strict)，配置如图：<br><img src="https://files.sid2656.space/blogs/tech/createBlogs/website5.jpg" alt="个人博客" title="Cloudflare 设置 websites"></p>
+<p>这是因为Cloudflare本身https和http设置会导致网站回源处理时反复在这两个协议直接横条，导致解析处理重定向次数太多，这时候我们需要设置CDN的会员方式固定位HTTPS的方式，即在SSL中选择Full(strict)，配置如图：<br><img src="https://files.sid2656.space/blogs/tech/createBlogs/website5.png" alt="个人博客" title="Cloudflare 设置 websites"></p>
 <p>至此，即便在国内访问域名，也可以正常展示啦！！</p>
-<p><img src="https://files.sid2656.space/blogs/tech/createBlogs/bloghome.jpg" alt="个人博客" title="github domain"></p>
+<p><img src="https://files.sid2656.space/blogs/tech/createBlogs/bloghome.png" alt="个人博客" title="github domain"></p>
 </blockquote>
 ]]></content>
       <categories>
@@ -211,7 +211,7 @@
 </blockquote>
 <p>具体的关联代码如下：git clone <a href="https://github.com/user/xxxx.git">https://github.com/user/xxxx.git</a> localDir</p>
 <p>我们可以看一下hexo项目本身会产生变动的几个文件夹：</p>
-<p><img src="http://imgs.sid2656.space/createBlogs/hexoDir.jpg" alt="hexo项目目录" title="hexo项目目录 hexo"></p>
+<p><img src="http://imgs.sid2656.space/createBlogs/hexoDir.png" alt="hexo项目目录" title="hexo项目目录 hexo"></p>
 <p>source：这个是你写文章的源码目录，后续的所有文章都在这里添加；</p>
 <p>public：这个是服务启动后生成的静态页面&amp;资源文件的目录；这个也就是后续需要部署到github的pages服务中的全部文件；</p>
 <p>themes：这个是hexo你依赖的主题模板，这个可以在hexo社区中找你自己喜欢的模板；</p>
@@ -240,9 +240,9 @@
 </ol>
 </blockquote>
 <p>具体的操作效果如下：</p>
-<p><img src="http://imgs.sid2656.space/createBlogs/git-push.jpg" alt="hexo项目目录" title="hexo项目目录 hexo"></p>
+<p><img src="http://imgs.sid2656.space/createBlogs/git-push.png" alt="hexo项目目录" title="hexo项目目录 hexo"></p>
 <p>选中三个文件夹，一起进行git提交：</p>
-<p><img src="http://imgs.sid2656.space/createBlogs/git-push2.jpg" alt="hexo项目目录" title="hexo项目目录 hexo"></p>
+<p><img src="http://imgs.sid2656.space/createBlogs/git-push2.png" alt="hexo项目目录" title="hexo项目目录 hexo"></p>
 <p>这里我们选择commit and push；</p>
 <p>PS：public中有生成的文件需要进行add操作！</p>
 <p>至此，多仓库的关联和一键提交，也完成啦！</p>
@@ -523,12 +523,12 @@
 </blockquote>
 <h3 id="3-仓库的pages服务设置："><a href="#3-仓库的pages服务设置：" class="headerlink" title="3.仓库的pages服务设置："></a>3.仓库的pages服务设置：</h3><blockquote>
 <p>在github网站打开你的仓库页面，并点击setting的页签</p>
-<p><img src="https://files.sid2656.space/blogs/tech/createBlogs/gitpages.jpg" alt="个人博客" title="github pages"></p>
+<p><img src="https://files.sid2656.space/blogs/tech/createBlogs/gitpages.png" alt="个人博客" title="github pages"></p>
 <p>在setting页签下面找到pages服务，再沿着右侧的提示，找到分支，选定默认分支master；然后点击保存处理。</p>
 <p>设置后会提示如下的信息，您可以自定义域名，或者使用默认的域名。这里我们先使用github提供的域名。</p>
-<p><img src="https://files.sid2656.space/blogs/tech/createBlogs/domain.jpg" alt="个人博客" title="github domain"></p>
+<p><img src="https://files.sid2656.space/blogs/tech/createBlogs/domain.png" alt="个人博客" title="github domain"></p>
 <p>在完成步骤2种的代码提交后10分钟，我们访问步骤3种，给到我们的域名看看效果：</p>
-<p><img src="https://files.sid2656.space/blogs/tech/createBlogs/bloghome.jpg" alt="个人博客" title="github domain"></p>
+<p><img src="https://files.sid2656.space/blogs/tech/createBlogs/bloghome.png" alt="个人博客" title="github domain"></p>
 <p>至此，我们的博客基础配置全部完成！</p>
 </blockquote>
 <h3 id="4-自定义域名（备案）："><a href="#4-自定义域名（备案）：" class="headerlink" title="4.自定义域名（备案）："></a>4.自定义域名（备案）：</h3><blockquote>
@@ -575,7 +575,7 @@
 <p>通过挑选好的自定义的模板来完成自己博客的本地化运行，并理解hexo的相关配置信息和文件结构；为后续的博客精进化之路打下一定的基础。</p>
 </blockquote>
 <h2 id="博客环境："><a href="#博客环境：" class="headerlink" title="博客环境："></a>博客环境：</h2><h3 id="1-初始hexo文件目录："><a href="#1-初始hexo文件目录：" class="headerlink" title="1.初始hexo文件目录："></a>1.初始hexo文件目录：</h3><blockquote>
-<p><img src="http://imgs.sid2656.space/createBlogs/hexoDir.jpg" alt="个人博客" title="初始化 hexo"></p>
+<p><img src="http://imgs.sid2656.space/createBlogs/hexoDir.png" alt="个人博客" title="初始化 hexo"></p>
 <p>node_modules：是你初始化博客需要的一些基础依赖的三方模块。这里不需要你关注和改动；</p>
 <p>scaffolds：应该是hexo的模板类文件；这里也不需要你关注和改动；</p>
 <p>source：这个是你写文章的源码目录，后续的所有文章都在这里添加；</p>
@@ -601,7 +601,7 @@
 <h3 id="3-设置博客的基础配置："><a href="#3-设置博客的基础配置：" class="headerlink" title="3.设置博客的基础配置："></a>3.设置博客的基础配置：</h3><blockquote>
 <p>在终端或者bash窗口中，进入到你的博客系统文件夹；就是1中图片展示的文件目录；</p>
 <p>打开基础配置文件：_config.yml（这里是系统配置）</p>
-<p><img src="http://imgs.sid2656.space/createBlogs/base_config.jpg" alt="个人博客" title="启动 ayer"></p>
+<p><img src="http://imgs.sid2656.space/createBlogs/base_config.png" alt="个人博客" title="启动 ayer"></p>
 </blockquote>
 <details>
 <summary>展开详情——修改如下配置：</summary>
@@ -617,7 +617,7 @@
 <blockquote>
 <p>hexo s</p>
 </blockquote>
-<p><img src="http://imgs.sid2656.space/createBlogs/hexo-s.jpg" alt="个人博客" title="启动 ayer"></p>
+<p><img src="http://imgs.sid2656.space/createBlogs/hexo-s.png" alt="个人博客" title="启动 ayer"></p>
 <p>能提示ayer主题，并打印出：<a href="http://localhost:4000/">http://localhost:4000</a> ，即表明hexo模板安装成功；</p>
 </blockquote>
 <h3 id="4-访问基础模板网页："><a href="#4-访问基础模板网页：" class="headerlink" title="4.访问基础模板网页："></a>4.访问基础模板网页：</h3><blockquote>
@@ -632,7 +632,7 @@
 <blockquote>
 <p>hexo new page categories</p>
 </blockquote>
-<p><img src="http://imgs.sid2656.space/createBlogs/cate.jpg" alt="个人博客" title="启动 ayer"></p>
+<p><img src="http://imgs.sid2656.space/createBlogs/cate.png" alt="个人博客" title="启动 ayer"></p>
 <p>接下来我们打开categories文件夹下面的index.md，并修改其文件内容如下：</p>
 </blockquote>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: 分类列表</span><br><span class="line">type: categories</span><br><span class="line">layout: &quot;categories&quot;</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
@@ -662,13 +662,13 @@
 <p>这个每个人按照你自己的博客诉求进行调整即可。</p>
 </blockquote>
 <h4 id="6-2日志内容填写："><a href="#6-2日志内容填写：" class="headerlink" title="6.2日志内容填写："></a>6.2日志内容填写：</h4><blockquote>
-<p>接下来我们就可以按照自己的意愿去分类填写自己的个人博客内容了；<br><img src="https://files.sid2656.space/blogs/tech/createBlogs/post.jpg" alt="个人博客" title="install hexo"></p>
+<p>接下来我们就可以按照自己的意愿去分类填写自己的个人博客内容了；<br><img src="https://files.sid2656.space/blogs/tech/createBlogs/post.png" alt="个人博客" title="install hexo"></p>
 <p>如上图所示，你创建的md文档只有都放在_post文件夹中，这里可以安装自己的喜好设置不同的文件件，方便文章的管理和区分</p>
 <p>我们在_post下新建md文件，并设置好上面我们提到抬头分类，比如本章的抬头分类我设置如下：</p>
 </blockquote>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: 零基础-搭建个人博客3-博客环境</span><br><span class="line">date: 2015-01-14 23:13:14</span><br><span class="line">tags:</span><br><span class="line">  - 谋生手段</span><br><span class="line">  - hexo</span><br><span class="line">  - 零基础</span><br><span class="line">categories:</span><br><span class="line">  - 谋生手段</span><br><span class="line">  - [零基础,搭建个人博客]</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
 <blockquote>
-<p>其中[零基础,搭建个人博客]；这个表示的是二级分类；<br>展示效果如下：<br><img src="https://files.sid2656.space/blogs/tech/createBlogs/cate-2.jpg" alt="个人博客" title="启动 hexo"></p>
+<p>其中[零基础,搭建个人博客]；这个表示的是二级分类；<br>展示效果如下：<br><img src="https://files.sid2656.space/blogs/tech/createBlogs/cate-2.png" alt="个人博客" title="启动 hexo"></p>
 </blockquote>
 ]]></content>
       <categories>
@@ -731,8 +731,8 @@
 </blockquote>
 <p>test 为创建的目录，你可以自己定义(您的名字或者昵称都可以)</p>
 <p>这样便可以直接启动初始化的博客，启动后控制台输出相关信息，我们发现存在问题：</p>
-<p><img src="http://imgs.sid2656.space/createBlogs/inittest.jpg" alt="个人博客" title="初始化 hexo"></p>
-<p>根据提示，我们做出如下调整后，再次启动；<br><img src="https://files.sid2656.space/blogs/tech/createBlogs/install.jpg" alt="个人博客" title="install hexo"></p>
+<p><img src="http://imgs.sid2656.space/createBlogs/inittest.png" alt="个人博客" title="初始化 hexo"></p>
+<p>根据提示，我们做出如下调整后，再次启动；<br><img src="https://files.sid2656.space/blogs/tech/createBlogs/install.png" alt="个人博客" title="install hexo"></p>
 </blockquote>
 <h3 id="6-初次访问系统："><a href="#6-初次访问系统：" class="headerlink" title="6.初次访问系统："></a>6.初次访问系统：</h3><blockquote>
 <p>通过步骤5我们已经完成了博客的初始化工作；</p>
@@ -740,8 +740,8 @@
 <blockquote>
 <p>hexo s</p>
 </blockquote>
-<p>我们看到本次启动成功，并提示了博客的访问路径：<br><img src="https://files.sid2656.space/blogs/tech/createBlogs/s-test.jpg" alt="个人博客" title="启动 hexo"></p>
-<p>我们将 <a href="http://localhost:4000/">http://localhost:4000/</a> 复制粘贴到浏览器，敲下回车<br>最终展示效果如下：<br><img src="https://files.sid2656.space/blogs/tech/createBlogs/hello.jpg" alt="个人博客" title="启动 hexo"></p>
+<p>我们看到本次启动成功，并提示了博客的访问路径：<br><img src="https://files.sid2656.space/blogs/tech/createBlogs/s-test.png" alt="个人博客" title="启动 hexo"></p>
+<p>我们将 <a href="http://localhost:4000/">http://localhost:4000/</a> 复制粘贴到浏览器，敲下回车<br>最终展示效果如下：<br><img src="https://files.sid2656.space/blogs/tech/createBlogs/hello.png" alt="个人博客" title="启动 hexo"></p>
 <p>至此，我们的博客初始化环境工作全部完成！</p>
 </blockquote>
 ]]></content>
@@ -955,7 +955,7 @@
 <h2 id="图像生成-个人兴趣"><a href="#图像生成-个人兴趣" class="headerlink" title="图像生成&amp;个人兴趣"></a>图像生成&amp;个人兴趣</h2><blockquote>
 <p>我个人是特别喜欢绘画，一直存在的一个小理想，就是在能养活自己的前提下，做一个自由插画师。贴几张我自己下班时间临摹的电脑绘画：</p>
 </blockquote>
-<p><img src="https://files.sid2656.space/blogs/tech/AI/AIDraw/%E4%B8%AA%E4%BA%BA%E5%85%B4%E8%B6%A3.jpeg?imageView2/1/w/800/h/800" alt="个人兴趣" title="个人兴趣 AI 绘画"></p>
+<p><img src="https://files.sid2656.space/blogs/tech/AI/AIDraw/%E4%B8%AA%E4%BA%BA%E5%85%B4%E8%B6%A3.png?imageView2/1/w/800/h/800" alt="个人兴趣" title="个人兴趣 AI 绘画"></p>
 <blockquote>
 <p>因为本身是技术出身，所以对新东西接受度相对好一些，我本身并不排斥AI绘画，但是网上有很多大佬当时都在抵制AI绘画。本着打不过就加入的原则，我开始去了解AIGC中关于生图的相关内容和技术，内网+外网找了很多帖子，了解相关的软件。基本上罗列的就三个主要AI绘画工具：</p>
 </blockquote>
@@ -1011,15 +1011,15 @@
 <p>吐槽一下国内网络，原本简单的软件安装，因为不得不科学上网，导致原本一天就能搞定的环境硬生生花费了一周多的时间才弄完。基本上3月份利用下班时间连着搞了一周到晚上后半夜才将各种常用的插件和需要的三方库都下载到了本地，然后就是去C站找各种风格的lora，玩了大概一个月的时间。</p>
 <p>测试了几个风格，包括赛博少女，绘画风格等。贴图：</p>
 </blockquote>
-<p><img src="https://files.sid2656.space/blogs/tech/AI/AIDraw/%E5%9B%BE%E5%BD%A2%E7%94%9F%E6%88%90.jpeg?imageView2/1/w/800/h/800" alt="图形生成" title="图形生成 AI 绘画"></p>
+<p><img src="https://files.sid2656.space/blogs/tech/AI/AIDraw/%E5%9B%BE%E5%BD%A2%E7%94%9F%E6%88%90.png?imageView2/1/w/800/h/800" alt="图形生成" title="图形生成 AI 绘画"></p>
 <blockquote>
 <p>然后开始尝试普惠周围的人，根据个人的喜好，做了几款风格头像：</p>
 </blockquote>
-<p><img src="https://files.sid2656.space/blogs/tech/AI/AIDraw/%E9%A3%8E%E6%A0%BC%E8%B0%83%E8%AF%95.jpeg?imageView2/1/w/800/h/800" alt="风格调试" title="风格调试 AI 绘画"></p>
+<p><img src="https://files.sid2656.space/blogs/tech/AI/AIDraw/%E9%A3%8E%E6%A0%BC%E8%B0%83%E8%AF%95.png?imageView2/1/w/800/h/800" alt="风格调试" title="风格调试 AI 绘画"></p>
 <blockquote>
 <p>在朋友圈宣传了一个月，做了一批头像。感觉整体上有一些流程固化了，没有其他新的突破。</p>
 </blockquote>
-<p><img src="https://files.sid2656.space/blogs/tech/AI/AIDraw/%E6%9C%8B%E5%8F%8B%E5%9C%88.jpeg?imageView2/1/w/800/h/800" alt="朋友圈" title="朋友圈 AI 绘画"></p>
+<p><img src="https://files.sid2656.space/blogs/tech/AI/AIDraw/%E6%9C%8B%E5%8F%8B%E5%9C%88.png?imageView2/1/w/800/h/800" alt="朋友圈" title="朋友圈 AI 绘画"></p>
 <blockquote>
 <p>然后就又停止不前了。基本上软件就停在电脑里面吃灰了，我也就把下班时间用在了其他的地方：带娃、手绘、玩梦幻西游。</p>
 </blockquote>
@@ -1030,7 +1030,7 @@
 <p>上午到公司第一件事就是打开活动页，上传了这组概念图，因为活动要求排名是有点赞数量的参考，很多之前的作品交稿时间比较久，自然浏览的人比较多，所以想把点赞在最后一天点上去，就只能刷脸拉人头了，这里再次致谢帮我点赞的同学们。</p>
 <p>给大家贴一下我这组图的最终定稿样子和设计理念吧：</p>
 </blockquote>
-<p><img src="https://files.sid2656.space/blogs/tech/AI/AIDraw/%E5%8F%82%E8%B5%9B.jpeg?imageView2/1/w/800/h/600" alt="参赛" title="参赛 AI 绘画"></p>
+<p><img src="https://files.sid2656.space/blogs/tech/AI/AIDraw/%E5%8F%82%E8%B5%9B.png?imageView2/1/w/800/h/600" alt="参赛" title="参赛 AI 绘画"></p>
 <blockquote>
 <p>这是一组概念图：</p>
 <ul>
@@ -1045,7 +1045,7 @@
 最终的结果也是相当幸运，在文娱程序员节的这次活动中，我获得了终极技绘奖。meta60到手！</li>
 </ul>
 </blockquote>
-<p><img src="https://files.sid2656.space/blogs/tech/AI/AIDraw/%E8%8E%B7%E5%A5%962.jpg?imageView2/1/w/600/h/300" alt="获奖2" title="获奖2 AI 绘画"></p>
+<p><img src="https://files.sid2656.space/blogs/tech/AI/AIDraw/%E8%8E%B7%E5%A5%962.png?imageView2/1/w/600/h/300" alt="获奖2" title="获奖2 AI 绘画"></p>
 <blockquote>
 <p>获得这次奖项，个人还是比较开心的。1024是程序员自己的浪漫；文娱举办的这次AI结合的活动本身也很浪漫的。整个活动的核心元素极、变，未来属性在里面的话，就比较科幻。个人也期望文娱的发展，像meta 60 一样，遥遥领先。</p>
 <p>就我个人来说确实特别感谢文娱组织的这次活动，不仅仅是因为我得了终极技绘奖，也不是因为得了meta60，而是因为这个活动，让我有了新的发现和目标。在截止交稿前的那天凌晨，我边设计边思考边动手，那个过程中我发现学习还是要有目的性，否则就会想之前一样尝鲜之后就落灰了。</p>
@@ -1065,7 +1065,7 @@
 <li>灰色的是参与了，但是最终结果不符合预期的（后面的是否参与列，在后来我就没有按照实际参与状态变更内容，这个列表里面的实际上都参与了，除了表格里面的大赛，我还选择性屏蔽了一倍数量的大赛）<br>下面是部分参赛的作品示例：</li>
 </ul>
 </blockquote>
-<p><img src="https://files.sid2656.space/blogs/tech/AI/AIDraw/%E8%B5%9B%E4%BA%8B%E4%BD%9C%E5%93%81.jpeg?imageView2/1/w/800/h/800" alt="赛事作品" title="赛事作品 AI 绘画"></p>
+<p><img src="https://files.sid2656.space/blogs/tech/AI/AIDraw/%E8%B5%9B%E4%BA%8B%E4%BD%9C%E5%93%81.png?imageView2/1/w/800/h/800" alt="赛事作品" title="赛事作品 AI 绘画"></p>
 <h2 id="搭建个人AI学习机"><a href="#搭建个人AI学习机" class="headerlink" title="搭建个人AI学习机"></a>搭建个人AI学习机</h2><blockquote>
 <p>在这个过程中，我发现好多的比赛主办方是对最终提交的图有大小的限制，因为可能要最终绘制成海报。然后我自己本身的显卡3060ti-8G的只能跑一些比较小的图，超过1024像素后再放大就可能直接在跑图的过程中崩坏，所以换显卡至关重要！而一台电脑中的几个占比资金比重搞的组件中显卡算得上是数一数二的了。当时买3060ti还花了我5000大洋，我是真的肉疼啊。</p>
 <p>去网上找了一下崩图的主要原因和解决办法，一顿查下来确定结论：基本上就是显存太小！需要换一个更高配置的显卡。换言之就是对个人可支配的金额有一定的要求，这对一个成家的男人来说，还是有一定压力的。好一点的显卡基本上就大几千块，如果显存想大到可以跑AI出大图的要求，基本上是至少要16G显存空间。这种显卡可能就要上万了！</p>
@@ -1142,9 +1142,9 @@
 </tr>
 </thead>
 <tbody><tr>
-<td><img src="https://files.sid2656.space/blogs/tech/AI/2500SD/临摹的电脑绘画-1.jpeg?imageView2/1/w/200/h/200"/></td>
-<td><img src="https://files.sid2656.space/blogs/tech/AI/2500SD/临摹的电脑绘画-2.jpeg?imageView2/1/w/200/h/200"/></td>
-<td><img src="https://files.sid2656.space/blogs/tech/AI/2500SD/临摹的电脑绘画-3.jpeg?imageView2/1/w/200/h/200"/></td>
+<td><img src="https://files.sid2656.space/blogs/tech/AI/2500SD/临摹的电脑绘画-1.png?imageView2/1/w/200/h/200"/></td>
+<td><img src="https://files.sid2656.space/blogs/tech/AI/2500SD/临摹的电脑绘画-2.png?imageView2/1/w/200/h/200"/></td>
+<td><img src="https://files.sid2656.space/blogs/tech/AI/2500SD/临摹的电脑绘画-3.png?imageView2/1/w/200/h/200"/></td>
 </tr>
 </tbody></table>
 <blockquote>
@@ -1255,14 +1255,14 @@
 <blockquote>
 <p>整个过程的每一步骤都的需要经历反复的测试训练，让模型清晰每一步的过程和流程。为了减小空间的使用量，这里stable Diffusion使用了里了一个潜空间（latent space）的技术，可以简单的理解为，其在原有的像素图像的大小下，将其不断压缩降维至指定大小，保留基本特性，然后在此大小下进行相关的计算处理，会大大缩减整体的计算量级，最后再将计算好的数据通过解码器进行到像素空间的转换。<br>还原图片的过程：</p>
 </blockquote>
-<p><img src="https://files.sid2656.space/blogs/tech/AI/2500SD/CLIP-7.webp?imageView2/1/w/750/h/350" alt="CLIP-7" title="CLIP-7 stable diffusion"></p>
+<p><img src="https://files.sid2656.space/blogs/tech/AI/2500SD/CLIP-7.png?imageView2/1/w/750/h/350" alt="CLIP-7" title="CLIP-7 stable diffusion"></p>
 <blockquote>
 <blockquote>
 <p>1）输入原图（覆盖了step&#x3D;50的noise）和step&#x3D;50，用U-Net预测图片的noise，这里每个step都共用相同的U-Net</p>
 <p>2）噪声很多时，U-Net无法预测精准的图片细节，只能预测很模型的图片大概轮廓</p>
 </blockquote>
 </blockquote>
-<p><img src="https://files.sid2656.space/blogs/tech/AI/2500SD/CLIP-8.webp?imageView2/1/w/750/h/450" alt="CLIP-8" title="CLIP-8 stable diffusion"></p>
+<p><img src="https://files.sid2656.space/blogs/tech/AI/2500SD/CLIP-8.png?imageView2/1/w/750/h/450" alt="CLIP-8" title="CLIP-8 stable diffusion"></p>
 <blockquote>
 <blockquote>
 <p>3）这样不断重复预测，直到得到原图。</p>
@@ -2247,7 +2247,7 @@
     <content><![CDATA[<blockquote>
 <p>深入理解 CPU 和异构计算芯片 GPU&#x2F;F10PGA&#x2F;ASIC&gt;<br> 王玉伟，腾讯TEG架构平台部平台开发中心基础研发组，组长为专家工程师Austingao，专注于为数据中心提供高效的异构加速云解决方案。目前，FPGA已在腾讯海量图片处理以及检测领域已规模上线。</p>
 <p> 随着互联网用户的快速增长，数据体量的急剧膨胀，数据中心对计算的需求也在迅猛上涨。诸如深度学习在线预测、直播中的视频转码、图片压缩解压缩以及HTTPS加密等各类应用对计算的需求已远远超出了传统CPU处理器的能力所及。摩尔定律失效的今天，关注“新“成员（GPU\FPGA\ASIC）为数据中心带来的体系架构变革，为业务配上一台动力十足的发动机。<br>1 异构计算：WHY&gt;<br> 明明CPU用的好好的，为什么我们要考虑异构计算芯片呢？</p>
- <img src="https://blog-10039692.file.myqcloud.com/1490095835396_4245_1490095835708.jpg" style="border: 0px; box-sizing: content-box; list-style: inherit; max-width: 100%; height: auto; background-color: rgb(255, 255, 255); box-shadow: rgb(204, 204, 204) 0px 0px 1px; margin: 0px; cursor: zoom-in;"/>
+ <img src="https://blog-10039692.file.myqcloud.com/1490095835396_4245_1490095835708.png" style="border: 0px; box-sizing: content-box; list-style: inherit; max-width: 100%; height: auto; background-color: rgb(255, 255, 255); box-shadow: rgb(204, 204, 204) 0px 0px 1px; margin: 0px; cursor: zoom-in;"/>
 
 
 
@@ -2255,12 +2255,12 @@
 <p> 历史上，受益于半导体技术的持续演进，计算机体系结构的吞吐量和系统性能不断提高，处理器的性能每18个月就能翻倍（众所周知的“摩尔定律”），使得处理器的性能可以满足应用软件的需求。但是，近几年半导体技术改进达到了物理极限，电路越来越复杂，每一个设计的开发成本高达数百万美元，数十亿美元才能形成新产品投产能力。2016年3月24日，英特尔宣布正式停用“Tick-Tock”处理器研发模式，未来研发周期将从两年周期向三年期转变。至此，摩尔定律对英特尔几近失效。</p>
 <p> 一方面处理器性能再无法按照摩尔定律进行增长，另一方面数据增长对计算性能要求超过了按“摩尔定律”增长的速度。处理器本身无法满足高性能计算(HPC：High Performance Compute)应用软件的性能需求，导致需求和性能之间出现了缺口(参见图1)。</p>
 <p> 一种解决方法是通过硬件加速，采用专用协处理器的异构计算方式来提升处理性能。</p>
- <img src="https://blog-10039692.file.myqcloud.com/1490095875980_7527_1490095876225.jpg" style="border: 0px; box-sizing: content-box; list-style: inherit; max-width: 100%; height: auto; background-color: rgb(255, 255, 255); box-shadow: rgb(204, 204, 204) 0px 0px 1px; margin: 0px; cursor: zoom-in;"/>
+ <img src="https://blog-10039692.file.myqcloud.com/1490095875980_7527_1490095876225.png" style="border: 0px; box-sizing: content-box; list-style: inherit; max-width: 100%; height: auto; background-color: rgb(255, 255, 255); box-shadow: rgb(204, 204, 204) 0px 0px 1px; margin: 0px; cursor: zoom-in;"/>
 
 
 
 <p> 图1：计算需求和计算能力的缺口发展形式<br>2 异构计算：STANDARDS&gt;<br> 通常我们在为业务提供解决方案的时候，部署平台会有四种选择 CPU、GPU、FPGA、ASIC。那有什么标准来评判计算平台的优劣呢？</p>
- <img src="https://blog-10039692.file.myqcloud.com/1490095899853_3079_1490095900489.jpg" style="border: 0px; box-sizing: content-box; list-style: inherit; max-width: 100%; height: auto; background-color: rgb(255, 255, 255); box-shadow: rgb(204, 204, 204) 0px 0px 1px; margin: 0px; cursor: zoom-in;"/>
+ <img src="https://blog-10039692.file.myqcloud.com/1490095899853_3079_1490095900489.png" style="border: 0px; box-sizing: content-box; list-style: inherit; max-width: 100%; height: auto; background-color: rgb(255, 255, 255); box-shadow: rgb(204, 204, 204) 0px 0px 1px; margin: 0px; cursor: zoom-in;"/>
 
 
 
@@ -2273,7 +2273,7 @@
 <p> 价格因素在 HPC 市场上显得越来越重要。十几年前，某些应用软件对性能的需求超出了单个处理器能力范围，这促使人们采用专用体系结构，例如密集并行处理( MPP )和对称多处理( SMP )等。然而，这类系统要求使用定制处理器单元和专用数据通路，开发和编程都非常昂贵。</p>
 <p> 现在的 HPC 市场抛弃了如此昂贵的方法，而是采用性价比更高的集群计算方法。集群计算采用商用标准体系结构，例如 Intel 和 AMD；采用工业标准互联，例如万兆以太网和 InfiniBand ；采用标准程序语言，例如运行在低成本Linux操作系统上的 C 语言等。当今的协处理器设计必须能够平滑集成到商用集群计算环境中，其成本和在集群中加入另一个节点大致相当。</p>
 <p> 了解了基本的评判标准之后，我们以当今最火的深度学习为例，从芯片架构、计算性能、功耗、开发难度几个方面来对几种不同的芯片进行分析对比。<br>3.2 芯片计算性能&gt;<br> 深度学习的学名又叫深层神经网络（Deep Neural Networks），是从人工神经网络（Artificial Neural Networks）模型发展而来。我们以深度学习作为切入点来分析各个芯片的性能。图3是神经网络的基本结构，模型中每一层的大量计算是上一层的输出结果和其对应的权重值这两个矩阵的乘法运算。</p>
- <img src="https://blog-10039692.file.myqcloud.com/1490096341317_347_1490096341390.jpg" style="border: 0px; box-sizing: content-box; list-style: inherit; max-width: 100%; height: auto; background-color: rgb(255, 255, 255); box-shadow: rgb(204, 204, 204) 0px 0px 1px; margin: 0px; cursor: zoom-in;"/>
+ <img src="https://blog-10039692.file.myqcloud.com/1490096341317_347_1490096341390.png" style="border: 0px; box-sizing: content-box; list-style: inherit; max-width: 100%; height: auto; background-color: rgb(255, 255, 255); box-shadow: rgb(204, 204, 204) 0px 0px 1px; margin: 0px; cursor: zoom-in;"/>
 
 
 
@@ -2285,20 +2285,20 @@
 <p> 带着这三个问题，我们进行硬件芯片的计算能力对比。<br>3.2.1 CPU计算能力分析&gt;<br> 这里 CPU 计算能力用 Intel 的 Haswell 架构进行分析，Haswell架构上计算单元有2个FMA(fused multiply-add)，每个FMA可以对256bit数据在一个时钟周期中做一次乘运算和一次加运算，所以对应32bit单精度浮点计算能力为：(256bit&#x2F;32bit) 2(FMA) 2(乘和加) &#x3D; 32 SP FLOPs&#x2F;cycle，即每个时钟周期可以做32个单精度浮点计算。</p>
 <p> CPU峰值浮点计算性能 &#x3D; CPU核数 CPU频率 每周期执行的浮点操作数。已Intel的CPU型号E5-2620V3来计算峰值计算能力为 &#x3D; 6(CPU核数) 2.4GHz(CPU频率) 32 SP FLOPs&#x2F;cycle &#x3D; 460.8 GFLOPs&#x2F;s 即每秒460G峰值浮点计算能力。</p>
 <p> CPU芯片结构是否可以充分发挥浮点计算能力？CPU的指令执行过程是：取指令 -&gt;指令译码 -&gt;指令执行，只有在指令执行的时候，计算单元才发挥作用，这样取指令和指令译码的两段时间，计算单元是不在工作的，如图4所示。</p>
- <img src="https://blog-10039692.file.myqcloud.com/1490096407411_1648_1490096407526.jpg" style="border: 0px; box-sizing: content-box; list-style: inherit; max-width: 100%; height: auto; background-color: rgb(255, 255, 255); box-shadow: rgb(204, 204, 204) 0px 0px 1px; margin: 0px; cursor: zoom-in;"/>
+ <img src="https://blog-10039692.file.myqcloud.com/1490096407411_1648_1490096407526.png" style="border: 0px; box-sizing: content-box; list-style: inherit; max-width: 100%; height: auto; background-color: rgb(255, 255, 255); box-shadow: rgb(204, 204, 204) 0px 0px 1px; margin: 0px; cursor: zoom-in;"/>
 
 <p> 图4：CPU指令执行流程</p>
 <p> CPU为了提高指令执行的效率，在当前指令执行过程的时候，预先读取后面几条指令，使得指令流水处理，提高指令执行效率，如图5所示。指令预先读取并流水执行的前提是指令之间不具有相关性，不能一个指令的如何执行需要等到前面一个指令执行完的结果才可以获知。</p>
- <img src="https://blog-10039692.file.myqcloud.com/1490096428865_2864_1490096428944.jpg" style="border: 0px; box-sizing: content-box; list-style: inherit; max-width: 100%; height: auto; background-color: rgb(255, 255, 255); box-shadow: rgb(204, 204, 204) 0px 0px 1px; margin: 0px; cursor: zoom-in;"/>
+ <img src="https://blog-10039692.file.myqcloud.com/1490096428865_2864_1490096428944.png" style="border: 0px; box-sizing: content-box; list-style: inherit; max-width: 100%; height: auto; background-color: rgb(255, 255, 255); box-shadow: rgb(204, 204, 204) 0px 0px 1px; margin: 0px; cursor: zoom-in;"/>
 
 <p> 图5：CPU指令流水执行</p>
 <p> CPU作为通用处理器，兼顾计算和控制，70%晶体管用来构建Cache 还有一部分控制单元，用来处理复杂逻辑和提高指令的执行效率，如图6所示，所以导致计算通用性强，可以处理计算复杂度高，但计算性能一般。</p>
- <img src="https://blog-10039692.file.myqcloud.com/1490096452233_7119_1490096452325.jpg" style="border: 0px; box-sizing: content-box; list-style: inherit; max-width: 100%; height: auto; background-color: rgb(255, 255, 255); box-shadow: rgb(204, 204, 204) 0px 0px 1px; margin: 0px; cursor: zoom-in;"/>
+ <img src="https://blog-10039692.file.myqcloud.com/1490096452233_7119_1490096452325.png" style="border: 0px; box-sizing: content-box; list-style: inherit; max-width: 100%; height: auto; background-color: rgb(255, 255, 255); box-shadow: rgb(204, 204, 204) 0px 0px 1px; margin: 0px; cursor: zoom-in;"/>
 
 <p> 图6：CPU结构</p>
 <p> 通过CPU计算性能分析，直接提高计算性能方向为：增加CPU核数、提高CPU频率、修改CPU架构增加计算单元FMA(fused multiply-add)个数。这3个方向中，直接增加CPU核数对于���算能力提升最高，但是带来芯片功耗和价格的增加，因为每个物理核中只有30%的晶体管是计算单元。提高CPU频率，提升的空间有限，而且CPU频率太高会导致芯片出现功耗过大和过热的问题，因此英特尔等芯片制造商目前走多核化的路线，即限制单个微处理器的主频，通过集成多个处理器内核来提高处理性能。修改CPU架构增加计算单元FMA个数，目前英特尔按照“Tick-Tock”二年一个周期进行CPU架构调整，从2016年开始放缓至三年，更新迭代周期较长。<br>3.2.2 GPU计算能力分析&gt;<br> GPU主要擅长做类似图像处理的并行计算，所谓的“粗粒度并行（coarse-grain parallelism）”。图形处理计算的特征表现为高密度的计算而计算需要的数据之间较少存在相关性，GPU 提供大量的计算单元（多达几千个计算单元）和大量的高速内存，可以同时对很多像素进行并行处理。</p>
 <p> 图7是GPU的设计结构。GPU的设计出发点在于GPU更适用于计算强度高、多并行的计算。因此，GPU把晶体管更多用于计算单元，而不像CPU用于数据Cache和流程控制器。这样的设计是因为并行计算时每个数据单元执行相同程序，不需要繁琐的流程控制而更需要高计算能力，因此也不需要大的cache容量。</p>
- <img src="https://blog-10039692.file.myqcloud.com/1490096487237_497_1490096487394.jpg" style="border: 0px; box-sizing: content-box; list-style: inherit; max-width: 100%; height: auto; background-color: rgb(255, 255, 255); box-shadow: rgb(204, 204, 204) 0px 0px 1px; margin: 0px; cursor: zoom-in;"/>
+ <img src="https://blog-10039692.file.myqcloud.com/1490096487237_497_1490096487394.png" style="border: 0px; box-sizing: content-box; list-style: inherit; max-width: 100%; height: auto; background-color: rgb(255, 255, 255); box-shadow: rgb(204, 204, 204) 0px 0px 1px; margin: 0px; cursor: zoom-in;"/>
 
 <p> 图7：GPU结构</p>
 <p> GPU中一个逻辑控制单元对应多个计算单元，同时要想计算单元充分并行起来，逻辑控制必然不会太复杂，太复杂的逻辑控制无法发挥计算单元的并行度，例如过多的if…else if…else if… 分支计算就无法提高计算单元的并行度，所以在GPU中逻辑控制单元也就不需要能够快速处理复杂控制。</p>
@@ -2306,7 +2306,7 @@
 <p> GPU芯片结构是否可以充分发挥浮点计算能力？GPU同CPU一样也是指令执行过程：取指令 -&gt;指令译码 -&gt;指令执行，只有在指令执行的时候，计算单元才发挥作用。GPU的逻辑控制单元相比CPU简单，所以要想做到指令流水处理，提高指令执行效率，必然要求处理的算法本身复杂度低，处理的数据之间相互独立，所以算法本身的串行处理会导致GPU浮点计算能力的显著降低。<br>3.2.3 FPGA计算能力分析&gt;<br> FPGA作为一种高性能、低功耗的可编程芯片，可以根据客户定制来做针对性的算法设计。所以在处理海量数据的时候，FPGA 相比于CPU 和GPU，优势在于：FPGA计算效率更高，FPGA更接近IO。</p>
 <p> FPGA不采用指令和软件，是软硬件合一的器件。对FPGA进行编程要使用硬件描述语言，硬件描述语言描述的逻辑可以直接被编译为晶体管电路的组合。所以FPGA实际上直接用晶体管电路实现用户的算法，没有通过指令系统的翻译。</p>
 <p> FPGA的英文缩写名翻译过来，全称是现场可编程逻辑门阵列，这个名称已经揭示了FPGA的功能，它就是一堆逻辑门电路的组合，可以编程，还可以重复编程。图8展示了可编程FPGA的内部原理图。</p>
- <img src="https://blog-10039692.file.myqcloud.com/1490096528718_3049_1490096528816.jpg" style="border: 0px; box-sizing: content-box; list-style: inherit; max-width: 100%; height: auto; background-color: rgb(255, 255, 255); box-shadow: rgb(204, 204, 204) 0px 0px 1px; margin: 0px; cursor: zoom-in;"/>
+ <img src="https://blog-10039692.file.myqcloud.com/1490096528718_3049_1490096528816.png" style="border: 0px; box-sizing: content-box; list-style: inherit; max-width: 100%; height: auto; background-color: rgb(255, 255, 255); box-shadow: rgb(204, 204, 204) 0px 0px 1px; margin: 0px; cursor: zoom-in;"/>
 
 <p> 图8：FPGA内部结构图</p>
 <p> 这里FPGA计算能力用Xilinx的V7-690T进行分析，V7-690T包含3600个DSP(Digital Signal Processing)，DSP就是FPGA的计算单元。每个DSP可以在每个时钟周期可以做2个单精度浮点计算(乘和加)。FPGA峰值浮点计算性能 &#x3D; DSP个数 FPGA频率 每周期执行的浮点操作数。V7-690T运行频率已250MHz来计算，V7-690T峰值浮点计算性能 &#x3D; 3600(DSP个数) 250MHz 2(乘和加)&#x3D;1.8T FLOPs&#x2F;s即每秒1.8T峰值浮点计算能力。</p>
@@ -2315,22 +2315,22 @@
 <p> 比较 FPGA 和 ASIC 就像比较乐高积木和模型。举例来说，如果你发现最近星球大战里面 Yoda 大师很火，想要做一个 Yoda 大师的玩具卖，你要怎么办呢？</p>
 <p> 有两种办法，一种是用乐高积木搭，还有一种是找工厂开模定制。用乐高积木搭的话，只要设计完玩具外形后去买一套乐高积木即可。而找工厂开模的话在设计完玩具外形外你还需要做很多事情，比如玩具的材质是否会散发气味，玩具在高温下是否会融化等等，所以用乐高积木来做玩具需要的前期工作比起找工厂开模制作来说要少得多，从设计完成到能够上市所需要的时间用乐高也要快很多。</p>
 <p> FPGA 和 ASIC 也是一样，使用 FPGA 只要写完 Verilog 代码就可以用 FPGA 厂商提供的工具实现硬件加速器了，而要设计 ASIC 则还需要做很多验证和物理设计 (ESD，Package 等等)，需要更多的时间。如果要针对特殊场合（如军事和工业等对于可靠性要求很高的应用），ASIC 则需要更多时间进行特别设计以满足需求，但是用 FPGA 的话可以直接买军工级的高稳定性 FPGA 完全不影响开发时间。但是，虽然设计时间比较短，但是乐高积木做出来的玩具比起工厂定制的玩具要粗糙（性能差）一些（下图），毕竟工厂开模是量身定制。</p>
- <img src="https://blog-10039692.file.myqcloud.com/1490096565164_7713_1490096565682.jpg" style="border: 0px; box-sizing: content-box; list-style: inherit; max-width: 100%; height: auto; background-color: rgb(255, 255, 255); box-shadow: rgb(204, 204, 204) 0px 0px 1px; margin: 0px; cursor: zoom-in;"/>
+ <img src="https://blog-10039692.file.myqcloud.com/1490096565164_7713_1490096565682.png" style="border: 0px; box-sizing: content-box; list-style: inherit; max-width: 100%; height: auto; background-color: rgb(255, 255, 255); box-shadow: rgb(204, 204, 204) 0px 0px 1px; margin: 0px; cursor: zoom-in;"/>
 
 <p> 另外，如果出货量大的话，工厂大规模生产玩具的成本会比用乐高积木做便宜许多。FPGA 和 ASIC 也是如此，在同一时间点上用最好的工艺实现的 ASIC 的加速器的速度会比用同样工艺 FPGA 做的加速器速度快 5-10 倍，而且一旦量产后 ASIC 的成本会远远低于 FPGA 方案。</p>
 <p> FPGA 上市速度快, ASIC 上市速度慢，需要大量时间开发，而且一次性成本（光刻掩模制作成本）远高于 FPGA，但是性能高于 FPGA 且量产后平均成本低于 FPGA。目标市场方面，FPGA 成本较高，所以适合对价格不是很敏感的地方，比如企业应用，军事和工业电子等等（在这些领域可重配置真的需要）。而 ASIC 由于低成本则适合消费电子类应用，而且在消费电子中可配置是否是一个伪需求还有待商榷。</p>
 <p> 我们看到的市场现状也是如此：使用 FPGA 做深度学习加速的多是企业用户，百度、微软、IBM 等公司都有专门做 FPGA 的团队为服务器加速，而做 FPGA 方案的初创公司 Teradeep 的目标市场也是服务器。而 ASIC 则主要瞄准消费电子，如 Movidius。由于移动终端属于消费电子领域，所以未来使用的方案应当是以 ASIC 为主。</p>
- <img src="https://blog-10039692.file.myqcloud.com/1490096622741_1882_1490096623056.jpg" style="border: 0px; box-sizing: content-box; list-style: inherit; max-width: 100%; height: auto; background-color: rgb(255, 255, 255); box-shadow: rgb(204, 204, 204) 0px 0px 1px; margin: 0px; cursor: zoom-in;"/><p>3.3平台性能和功耗比较&gt;<br> 由于不同的芯片生产工艺，对芯片的功耗和性能都有影响，这里用相同工艺或者接近工艺下进行对比，ASIC芯片还没有商用的芯片出现，Google的TPU也只是自己使用没有对外提供信息，这里ASIC芯片用在学术论文发表的《DianNao: A Small-Footprint High-Throughput Accelerator for Ubiquitous Machine-Learning》作为代表。</p>
- <img src="https://blog-10039692.file.myqcloud.com/1490096645529_1723_1490096645738.jpg" style="border: 0px; box-sizing: content-box; list-style: inherit; max-width: 100%; height: auto; background-color: rgb(255, 255, 255); box-shadow: rgb(204, 204, 204) 0px 0px 1px; margin: 0px; cursor: zoom-in;"/>
+ <img src="https://blog-10039692.file.myqcloud.com/1490096622741_1882_1490096623056.png" style="border: 0px; box-sizing: content-box; list-style: inherit; max-width: 100%; height: auto; background-color: rgb(255, 255, 255); box-shadow: rgb(204, 204, 204) 0px 0px 1px; margin: 0px; cursor: zoom-in;"/><p>3.3平台性能和功耗比较&gt;<br> 由于不同的芯片生产工艺，对芯片的功耗和性能都有影响，这里用相同工艺或者接近工艺下进行对比，ASIC芯片还没有商用的芯片出现，Google的TPU也只是自己使用没有对外提供信息，这里ASIC芯片用在学术论文发表的《DianNao: A Small-Footprint High-Throughput Accelerator for Ubiquitous Machine-Learning》作为代表。</p>
+ <img src="https://blog-10039692.file.myqcloud.com/1490096645529_1723_1490096645738.png" style="border: 0px; box-sizing: content-box; list-style: inherit; max-width: 100%; height: auto; background-color: rgb(255, 255, 255); box-shadow: rgb(204, 204, 204) 0px 0px 1px; margin: 0px; cursor: zoom-in;"/>
 
 <p> 从上面的对比来看，能耗比方面：ASIC &gt; FPGA &gt; GPU &gt; CPU，产生这样结果的根本原因：对于计算密集型算法，数据的搬移和运算效率越高的能耗比就越高。ASIC和FPGA都是更接近底层IO，所以计算效率高和数据搬移高，但是FPGA有冗余晶体管和连线，运行频率低，所以没有ASIC能耗比高。GPU和CPU都是属于通用处理器，都需要进行取指令、指令译码、指令执行的过程，通过这种方式屏蔽了底层IO的处理，使得软硬件解耦，但带来数据的搬移和运算无法达到更高效率，所以没有ASIC、FPGA能耗比高。GPU和CPU之间的能耗比的差距，主要在于CPU中晶体管有大部分用在cache和控制逻辑单元，所以CPU相比GPU来说，对于计算密集同时计算复杂度低的算法，有冗余的晶体管无法发挥作用，能耗比上CPU低于GPU。<br>4 总结与展望&gt;<br> 处理器芯片各自长期发展的过程中，形成了一些使用和市场上鲜明的特点。CPU&amp;GPU领域存在大量的开源软件和应用软件，任何新的技术首先会用CPU实现算法，因此CPU编程的资源丰富而且容易获得，开发成本低而开发周期。FPGA的实现采用Verilog&#x2F;VHDL等底层硬件描述语言实现，需要开发者对FPGA的芯片特性有较为深入的了解，但其高并行性的特性往往可以使业务性能得到量级的提升；同时FPGA是动态可重配的，当在数据中心部署之后，可以根据业务形态来配置不同的逻辑实现不同的硬件加速功能；举例来讲，当前服务器上的FPGA板卡部署的是图片压缩逻辑，服务于QQ业务；而此时广告实时预估需要扩容获得更多的FPGA计算资源，通过简单的FPGA重配流程，FPGA板卡即可以变身成“新”硬件来服务广告实时预估，非常适合批量部署。ASIC芯片可以获得最优的性能，即面积利用率高、速度快、功耗低；但是AISC开发风险极大，需要有足够大的市场来保证成本价格，而且从研发到市场的时间周期很长，不适合例如深度学习CNN等算法正在快速迭代的领域。</p>
 <p> 讲了这么多，当遇到业务瓶颈的需要异构计算芯片的时候，你是否能够根据业务特性和芯片特性选择出合适的芯片呢？</p>
 <p> 分析完各类芯片特性，接下来，重点来了！</p>
- <img src="https://blog-10039692.file.myqcloud.com/1490096674493_2305_1490096674682.jpg" style="border: 0px; box-sizing: content-box; list-style: inherit; max-width: 100%; height: auto; background-color: rgb(255, 255, 255); box-shadow: rgb(204, 204, 204) 0px 0px 1px; margin: 0px; cursor: zoom-in;"/>
+ <img src="https://blog-10039692.file.myqcloud.com/1490096674493_2305_1490096674682.png" style="border: 0px; box-sizing: content-box; list-style: inherit; max-width: 100%; height: auto; background-color: rgb(255, 255, 255); box-shadow: rgb(204, 204, 204) 0px 0px 1px; margin: 0px; cursor: zoom-in;"/>
 
 <p> 当今的FPGA有很大的性能潜力，支持深度可变的流水线结构，提供大量的并行计算资源，一个时钟周期内就可以完成非常复杂的功能。FPGA的可编程能力保证了这种器件能够满足应用软件的特殊需求，不存在设计定制协处理器的成本或者延迟问题。FPGA是重新可编程的，它可以在一个芯片中为多种应用提供非常灵活的定制协处理功能。拥有了FPGA，业务就拥有无限可能。同样的半导体技术，既能把处理器的性能发挥到极限，也能使FPGA从简单的胶合逻辑控制器，发展到性能很高的可编程架构。FPGA完全能够满足HPC市场的“4P”需求。</p>
 <p> FPGA的内置存储器也有很大的性能优势。例如，片内存储器意味着协处理器逻辑的存储器访问带宽不会受到器件I&#x2F;O引脚数量的限制。而且，存储器和运算逻辑紧密结合，不再需要采用外部高速存储器缓冲。这样，也避免了大功耗的缓冲访问和一致性问题。使用内部存储器还意味着协处理器不需要其他的I&#x2F;O引脚来提高其可访问存储器容量，从而简化了设计。</p>
-<p> 很多人由于FPGA的开发难度大以及开发周期较长而对其持有怀疑态度，好消息是HLS以及OpenCL语言越来越完善，很多应用直接使用这两种高级语言就可以取得较大性能提升。<br>业界成功案例&gt;<br> <img src="https://blog-10039692.file.myqcloud.com/1490096731905_6538_1490096732319.jpg" style="border: 0px; box-sizing: content-box; list-style: inherit; max-width: 100%; height: auto; background-color: rgb(255, 255, 255); box-shadow: rgb(204, 204, 204) 0px 0px 1px; margin: 0px; cursor: zoom-in;"/></p>
+<p> 很多人由于FPGA的开发难度大以及开发周期较长而对其持有怀疑态度，好消息是HLS以及OpenCL语言越来越完善，很多应用直接使用这两种高级语言就可以取得较大性能提升。<br>业界成功案例&gt;<br> <img src="https://blog-10039692.file.myqcloud.com/1490096731905_6538_1490096732319.png" style="border: 0px; box-sizing: content-box; list-style: inherit; max-width: 100%; height: auto; background-color: rgb(255, 255, 255); box-shadow: rgb(204, 204, 204) 0px 0px 1px; margin: 0px; cursor: zoom-in;"/></p>
 <p> 为了更好地满足对计算性能的要求，全球的很多大型IT企业都在FPGA的加速硬件上进行了布局和实践。</p>
 <p> Intel:</p>
 <p> Intel决定以167亿美元收购FPGA生产商Altera。Intel预计到2020年，30%以上的服务器CPU芯片将配备一个FPGA协处理器。</p>
@@ -2338,7 +2338,7 @@
 <p> IBM和Xilinx联合宣布开展一项多年战略协作，在IBM POWER系统上运用Xilinx FPGA加速工作负载处理技术，以打造更高性能、更高能效的数据中心应用。</p>
 <p> 微软：</p>
 <p> 早在2014年，Microsoft就将Altera FPGA运用在其Bing搜索的业务中，使Bing的搜索处理量提升了一倍，搜索时间缩短了29%。2015年，微软进一步将FPGA运用于深度学习领域。2016年，微软体系结构顶级会议Micro上发表的《A Cloud-Scale Acceleration Architecture》显示了其在数据中心体系架构上的勃勃野心。现在，进入微软数据中心的每一个服务器上均带有一块FPGA板卡，其基本的架构如下：</p>
- <img src="https://blog-10039692.file.myqcloud.com/1490096767417_3170_1490096767770.jpg" style="border: 0px; box-sizing: content-box; list-style: inherit; max-width: 100%; height: auto; background-color: rgb(255, 255, 255); box-shadow: rgb(204, 204, 204) 0px 0px 1px; margin: 0px; cursor: zoom-in;"/>
+ <img src="https://blog-10039692.file.myqcloud.com/1490096767417_3170_1490096767770.png" style="border: 0px; box-sizing: content-box; list-style: inherit; max-width: 100%; height: auto; background-color: rgb(255, 255, 255); box-shadow: rgb(204, 204, 204) 0px 0px 1px; margin: 0px; cursor: zoom-in;"/>
 
 <p> 论文中涉及到的应用场景包括：</p>
 <p> 1.网络加速（例如网络数据包加解密）</p>
@@ -2412,7 +2412,7 @@
     <content><![CDATA[<blockquote>
 <blockquote>
 </blockquote>
- <img src="https://static.leiphone.com/uploads/new/article/740_740/201511/5642febc29406.jpg?imageMogr2/format/jpg/quality/90" style="font-weight: bold; font-family: microsoft yahei; font-size: 18pt; color: rgb(63, 63, 63);"/>
+ <img src="https://static.leiphone.com/uploads/new/article/740_740/201511/5642febc29406.png?imageMogr2/format/jpg/quality/90" style="font-weight: bold; font-family: microsoft yahei; font-size: 18pt; color: rgb(63, 63, 63);"/>
 
 <p> TensorFlow资源</p>
 <p> TensorFlow源码：</p>
@@ -2434,7 +2434,7 @@
 <p> 但是人类学习似乎不需要这么复杂，我们只要给几张猫的照片给人看，他就能学习到什么是猫。人似乎能自动“学习”出feature来，你给他看了几张猫的照片，然后问猫有什么特征，他可能会隐隐预约地告诉你猫有什么特征，甚至是猫特有的特征，这些特征豹子或者老虎没有。</p>
 <p> 深度学习为什么最近这么火，其中一个重要的原因就是不需要（太多）提取feature。</p>
 <p> 从机器学习的使用者来说，我们以前做的大部分事情是feature engineering，然后调一些参数，一般是为了防止过拟合。而有了深度学习之后，如果我们不需要实现一个CNN或者LSTM，那么我们似乎什么也不用干。（机器让工人失业，机器学习让搞机器学习的人失业！人工智能最终的目的是让人类失业？）</p>
- <img src="https://static.leiphone.com/uploads/new/article/740_740/201511/5642fff4f0f25.jpg?imageMogr2/format/jpg/quality/90" style="border: medium none; max-width: 100%; height: auto;"/>
+ <img src="https://static.leiphone.com/uploads/new/article/740_740/201511/5642fff4f0f25.png?imageMogr2/format/jpg/quality/90" style="border: medium none; max-width: 100%; height: auto;"/>
 
 <p> 但是深度学习也不是万能的，至少现在的一个问题是它需要更强的计算能力才能训练出一个比较好的模型。它还不能像人类那样通过很少的训练样本就能学习很好的效果。</p>
 <p> 其实神经网络提出好几十年了，为什么最近才火呢？其中一个原因就是之前它的效果并不比非深度学习算法好，比如SVM。</p>
@@ -2861,16 +2861,16 @@
 <p> 记得那是一道给领导写书信的英文题，让我们用英文描述清楚想要表达的意思。</p>
 <p> 可以毫不夸张的说，我英文高中三年除了高考，没及格过。所以，那道题，我就直接用汉语写的：“由于本人英语不是很好，四级通过也实属侥幸，所以英语题真的心有余力不足。但是，如果贵公司工作环境真的需要英文来交流，我相信我也有能力在以后的工作中加强自己的英语口语，顺利完成工作任务交付的。还请贵公司给我一个展示自己的机会。”</p>
 <p> 具体可能不是这么写的，但是大体的意思就是这样，当时面试官说我是唯一一个用汉语回答这道题的。而且，我其他题答得都还不错。所以，最后就签了三方。</p>
- <img src="http://img02.taobaocdn.com/imgextra/i2/606022462/TB2eWn0bXXXXXaCXpXXXXXXXXXX-606022462.jpg_310x310.jpg">
+ <img src="http://img02.taobaocdn.com/imgextra/i2/606022462/TB2eWn0bXXXXXaCXpXXXXXXXXXX-606022462.png_310x310.png">
 
 <p> 第一年，挺苦的。</p>
 <p> 基本上每天晚上9点下班，加班到11点也是正常的。记得还通过两次宿。</p>
 <p> 不过公司对我们还算是体贴的，早上没有考勤时间，只要上午到就行，加班餐什么的也都正常有。</p>
 <p> 而且还提供员工宿舍，虽然环境不是很好，但是房租很便宜。那时候能根本找不到300元一个月的房子了，虽然是床位，但是都是公司同一时期来的同事。所以，安全上面还是有保障的。</p>
 <p> 那时候的娱乐项目就是桌球和乒乓</p>
- <img src="http://img02.taobaocdn.com/imgextra/i2/606022462/TB2GljYbXXXXXbqXpXXXXXXXXXX-606022462.jpg_310x310.jpg">
+ <img src="http://img02.taobaocdn.com/imgextra/i2/606022462/TB2GljYbXXXXXbqXpXXXXXXXXXX-606022462.png_310x310.png">
 
- <img src="http://img04.taobaocdn.com/imgextra/i4/606022462/TB20gH0bXXXXXXRXpXXXXXXXXXX-606022462.jpg_310x310.jpg">
+ <img src="http://img04.taobaocdn.com/imgextra/i4/606022462/TB20gH0bXXXXXXRXpXXXXXXXXXX-606022462.png_310x310.png">
 
 
 
@@ -2883,7 +2883,7 @@
 <p> 在甲方待了半年多的时间，期间过了春节，过了元旦。本以为公司挺好的，但是最后才发现，原来公司早就把我们遗忘了，年终聚餐和年会的时候，都没有叫上我们三个。三个人一瞬间，就觉得孤零零的。</p>
 <p> 二期结束的时候，甲方这头想把我们三个留下，明明不想在北京待了，想会山东老家了，我又觉得自己第一个项目，虽然说二期完了，但是还有好多功能没有完善��好多技术没有真正学扎实。所以，最后决定留下来继续维护这个项目。等项目稳定了，再做之后的打算。</p>
 <p> 所以，最后还是走了，记得那天，天气很好，风很干净。</p>
- <img src="http://img01.taobaocdn.com/imgextra/i1/606022462/TB2XY_0bXXXXXaAXpXXXXXXXXXX-606022462.jpg_620x10000.jpg"></blockquote>
+ <img src="http://img01.taobaocdn.com/imgextra/i1/606022462/TB2XY_0bXXXXXaAXpXXXXXXXXXX-606022462.png_620x10000.png"></blockquote>
 ]]></content>
       <categories>
         <category>五味杂陈</category>
@@ -2939,7 +2939,7 @@
 <p> 第十三章：</p>
 <p> 啤酒与免费的午餐</p>
 <p> 人们有时甘愿牺牲消费快感来提升自己在别人心中的形象(不跟其他人点同样的酒，来凸显自己的品味)</p>
- <img src="http://img03.taobaocdn.com/imgextra/i3/606022462/TB2H.pkaVXXXXaiXpXXXXXXXXXX-606022462.jpg"></blockquote>
+ <img src="http://img03.taobaocdn.com/imgextra/i3/606022462/TB2H.pkaVXXXXaiXpXXXXXXXXXX-606022462.png"></blockquote>
 ]]></content>
       <categories>
         <category>投资自己</category>
@@ -3141,7 +3141,7 @@
 <p> 去哪定机票，携程订酒店。本以为又是一次顺利并且愉快的旅行，结果，我错了。。。。</p>
 <p> 早起的虫儿被鸟吃。早上转地铁坐车错了线，本领号可以直接到东直门，我非要做了十号线转机场线。</p>
 <p> 然后我手贱点了一下航旅纵横的延误猜猜猜，结果bingo！</p>
- <img src="https://img.alicdn.com/imgextra/i4/606022462/TB2sOeApXXXXXaOXpXXXXXXXXXX-606022462.jpg">
+ <img src="https://img.alicdn.com/imgextra/i4/606022462/TB2sOeApXXXXXaOXpXXXXXXXXXX-606022462.png">
 
 
 
@@ -3151,20 +3151,20 @@
 <p> 开始广播说，有一班航班取消了，我但是还暗暗窃喜，还好我的航班没有取消，否则我的住宿费和回来的机票都报废了。结果就在我暗暗窃喜的时候，摆渡车来了，</p>
 <p> 5分钟后，车停下来了，结果被告知：机器故障，暂时飞不了，得等休息，机场提供早餐，然后，就只能在机场看视频，老罗的锥子发布会。等了大概四个小时，航班才起飞。到厦门的时候已经下午了，到鼓浪屿的时候已经是晚上了。</p>
 <p> 做大巴到鼓浪屿码头的时候，天还没黑，所以我就去码头对面的台湾小吃街转了转，东西看着都十分诱人。</p>
-<p> <img src="https://img.alicdn.com/imgextra/i1/606022462/TB2SQN.pXXXXXasXFXXXXXXXXXX-606022462.jpg_310x310.jpg"><img src="https://img.alicdn.com/imgextra/i1/606022462/TB2HmWRpXXXXXbJXXXXXXXXXXXX-606022462.jpg_310x310.jpg" style="font-size: 10pt;"></p>
-<p> <img src="https://img.alicdn.com/imgextra/i3/606022462/TB2O0qZpXXXXXa2XXXXXXXXXXXX-606022462.jpg_310x310.jpg"><img src="https://img.alicdn.com/imgextra/i3/606022462/TB2yLaHpXXXXXXuXpXXXXXXXXXX-606022462.jpg_310x310.jpg" style="font-size: 10pt;"></p>
-<p> <img src="https://img.alicdn.com/imgextra/i4/606022462/TB2t_5WpXXXXXaPXXXXXXXXXXXX-606022462.jpg_310x310.jpg"><img src="https://img.alicdn.com/imgextra/i2/606022462/TB2u3SgpXXXXXX3XFXXXXXXXXXX-606022462.jpg_310x310.jpg" style="font-size: 10pt;"></p>
+<p> <img src="https://img.alicdn.com/imgextra/i1/606022462/TB2SQN.pXXXXXasXFXXXXXXXXXX-606022462.png_310x310.png"><img src="https://img.alicdn.com/imgextra/i1/606022462/TB2HmWRpXXXXXbJXXXXXXXXXXXX-606022462.png_310x310.png" style="font-size: 10pt;"></p>
+<p> <img src="https://img.alicdn.com/imgextra/i3/606022462/TB2O0qZpXXXXXa2XXXXXXXXXXXX-606022462.png_310x310.png"><img src="https://img.alicdn.com/imgextra/i3/606022462/TB2yLaHpXXXXXXuXpXXXXXXXXXX-606022462.png_310x310.png" style="font-size: 10pt;"></p>
+<p> <img src="https://img.alicdn.com/imgextra/i4/606022462/TB2t_5WpXXXXXaPXXXXXXXXXXXX-606022462.png_310x310.png"><img src="https://img.alicdn.com/imgextra/i2/606022462/TB2u3SgpXXXXXX3XFXXXXXXXXXX-606022462.png_310x310.png" style="font-size: 10pt;"></p>
 <p> 由于有点累，也没什么食欲，所以什么都没买。直接去码头坐船去岛上了。</p>
-<p> <img src="https://img.alicdn.com/imgextra/i1/606022462/TB27qiQpXXXXXb8XXXXXXXXXXXX-606022462.jpg_310x310.jpg"><img src="https://img.alicdn.com/imgextra/i3/606022462/TB2ZLuVpXXXXXa3XXXXXXXXXXXX-606022462.jpg_310x310.jpg" style="font-size: 10pt;"></p>
- <img src="https://img.alicdn.com/imgextra/i4/606022462/TB2bnO1pXXXXXaCXXXXXXXXXXXX-606022462.jpg_310x310.jpg">
+<p> <img src="https://img.alicdn.com/imgextra/i1/606022462/TB27qiQpXXXXXb8XXXXXXXXXXXX-606022462.png_310x310.png"><img src="https://img.alicdn.com/imgextra/i3/606022462/TB2ZLuVpXXXXXa3XXXXXXXXXXXX-606022462.png_310x310.png" style="font-size: 10pt;"></p>
+ <img src="https://img.alicdn.com/imgextra/i4/606022462/TB2bnO1pXXXXXaCXXXXXXXXXXXX-606022462.png_310x310.png">
 
 
 
 
 
-<p> <img src="https://img.alicdn.com/imgextra/i3/606022462/TB2.3e1pXXXXXaKXXXXXXXXXXXX-606022462.jpg_310x310.jpg"><img src="https://img.alicdn.com/imgextra/i2/606022462/TB2HK9YpXXXXXbdXXXXXXXXXXXX-606022462.jpg_310x310.jpg" style="font-size: 10pt;"></p>
+<p> <img src="https://img.alicdn.com/imgextra/i3/606022462/TB2.3e1pXXXXXaKXXXXXXXXXXXX-606022462.png_310x310.png"><img src="https://img.alicdn.com/imgextra/i2/606022462/TB2HK9YpXXXXXbdXXXXXXXXXXXX-606022462.png_310x310.png" style="font-size: 10pt;"></p>
 <p> 这里的夜景还是很棒的，海风在吹，路边的酒吧在唱张三的歌，我骑行时候的单曲循环。</p>
- <img src="https://img.alicdn.com/imgextra/i2/606022462/TB2Qr9DpXXXXXX3XpXXXXXXXXXX-606022462.jpg_620x10000.jpg">
+ <img src="https://img.alicdn.com/imgextra/i2/606022462/TB2Qr9DpXXXXXX3XpXXXXXXXXXX-606022462.png_620x10000.png">
 
 
 
@@ -3179,38 +3179,38 @@
 <p> 进岛上的第一件事，找到预定的酒店(到了才知道，就是民宿，装修的跟酒店一样的风格616两晚，其实挺贵的)</p>
 <p> ps：我好不喜欢南方的巷子，错综复杂，很难找。</p>
 <p> 找了大概半个���小时，给房东打了两三个电话才找到；估计那半个小时，足够我从岛的东边走到西边了。</p>
-<p> <img src="https://img.alicdn.com/imgextra/i2/606022462/TB2HhGRpXXXXXb1XXXXXXXXXXXX-606022462.jpg_310x310.jpg"><img src="https://img.alicdn.com/imgextra/i4/606022462/TB2kqWApXXXXXaRXpXXXXXXXXXX-606022462.jpg_310x310.jpg" style="font-size: 10pt;"></p>
+<p> <img src="https://img.alicdn.com/imgextra/i2/606022462/TB2HhGRpXXXXXb1XXXXXXXXXXXX-606022462.png_310x310.png"><img src="https://img.alicdn.com/imgextra/i4/606022462/TB2kqWApXXXXXaRXpXXXXXXXXXX-606022462.png_310x310.png" style="font-size: 10pt;"></p>
 <p> 不过，房间还可以吧，就是有点贵。</p>
 <p> 接下来，拿起相机，逛逛街吧。本来还可以跟群里的夏天偶遇的，结果没遇到，哈哈。</p>
 <p> 在小胡同的一个转角，找到了前同事推荐的马拉桑奶茶店，我点了最爱的草莓鲜榨汁，喝起来，冰冰凉，心飞扬。真的超级赞。可能也是更当时的心情有关吧。嘿嘿。</p>
 <p> 奶茶店的对面是广场舞大妈，果然，哪里都有组织。</p>
 <p> 由于天气有点凉，所以随便逛了逛，就回去了。回去的路上，有一家画室素描很棒，在海边还遇到了一只流浪猫。</p>
-<p> <img src="https://img.alicdn.com/imgextra/i4/606022462/TB2et9fpXXXXXX4XFXXXXXXXXXX-606022462.jpg_310x310.jpg"><img src="https://img.alicdn.com/imgextra/i1/606022462/TB2BM5jpXXXXXXhXFXXXXXXXXXX-606022462.jpg_310x310.jpg" style="font-size: 10pt;"></p>
+<p> <img src="https://img.alicdn.com/imgextra/i4/606022462/TB2et9fpXXXXXX4XFXXXXXXXXXX-606022462.png_310x310.png"><img src="https://img.alicdn.com/imgextra/i1/606022462/TB2BM5jpXXXXXXhXFXXXXXXXXXX-606022462.png_310x310.png" style="font-size: 10pt;"></p>
 <p> 那猫感觉很可怜，我走到他身边，蹲在那里，他自己就跑过来，蹲在我身边，取暖，海边的风有些大。一只流浪猫和一只单身狗。</p>
 <p> 我在那里待了半个小时，后来实在是太冷了，我就拍起屁股回去了。他也躲到石墩后面避风去了。</p>
 <p> 到住宿的地方后，看了一会蚁人(盗版的)，然后就睡觉去了。这是第一天。</p>
- <img src="https://img.alicdn.com/imgextra/i2/606022462/TB2aY9TpXXXXXbaXXXXXXXXXXXX-606022462.jpg_620x10000.jpg">
+ <img src="https://img.alicdn.com/imgextra/i2/606022462/TB2aY9TpXXXXXbaXXXXXXXXXXXX-606022462.png_620x10000.png">
 
 <p> 第二天，为了去看群里夏天他们参加的马拉松，早早就起来，坐第一班游船回去。值得一说的是，鼓浪屿的船票是一票两用，去和回。</p>
 <p> 在第一班穿上，遇到了夏天和另外两个参加马拉松比赛的。</p>
-<p> <img src="https://img.alicdn.com/imgextra/i4/606022462/TB2SjuspXXXXXbWXpXXXXXXXXXX-606022462.jpg_310x310.jpg"><img src="https://img.alicdn.com/imgextra/i3/606022462/TB2T8OOpXXXXXcXXXXXXXXXXXXX-606022462.jpg_310x310.jpg" style="font-size: 10pt;"></p>
+<p> <img src="https://img.alicdn.com/imgextra/i4/606022462/TB2SjuspXXXXXbWXpXXXXXXXXXX-606022462.png_310x310.png"><img src="https://img.alicdn.com/imgextra/i3/606022462/TB2T8OOpXXXXXcXXXXXXXXXXXXX-606022462.png_310x310.png" style="font-size: 10pt;"></p>
 <p> 然后，我就在自己今天的行程里面增加了马拉松的选项。</p>
 <p> 由于非参赛队员，不可以入场，而由于马拉松比赛，部分公路进行了封路，行人也不允许进入，到处都是警卫。</p>
 <p> 那我就只好坐车去终点-五通灯塔公园了</p>
- <img src="https://img.alicdn.com/imgextra/i1/606022462/TB2lEG6pXXXXXXLXXXXXXXXXXXX-606022462.jpg_310x310.jpg">
+ <img src="https://img.alicdn.com/imgextra/i1/606022462/TB2lEG6pXXXXXXLXXXXXXXXXXXX-606022462.png_310x310.png">
 
 
 
 
 
 <p> 这是厦门的mini公交，超级小</p>
-<p> <img src="https://img.alicdn.com/imgextra/i1/606022462/TB2uAKypXXXXXa.XpXXXXXXXXXX-606022462.jpg_310x310.jpg"><img src="https://img.alicdn.com/imgextra/i2/606022462/TB2wUy5pXXXXXX4XXXXXXXXXXXX-606022462.jpg_310x310.jpg" style="font-size: 10pt;"><img src="https://img.alicdn.com/imgextra/i3/606022462/TB2U_enpXXXXXavXpXXXXXXXXXX-606022462.jpg_310x310.jpg" style="font-size: 10pt;"></p>
+<p> <img src="https://img.alicdn.com/imgextra/i1/606022462/TB2uAKypXXXXXa.XpXXXXXXXXXX-606022462.png_310x310.png"><img src="https://img.alicdn.com/imgextra/i2/606022462/TB2wUy5pXXXXXX4XXXXXXXXXXXX-606022462.png_310x310.png" style="font-size: 10pt;"><img src="https://img.alicdn.com/imgextra/i3/606022462/TB2U_enpXXXXXavXpXXXXXXXXXX-606022462.png_310x310.png" style="font-size: 10pt;"></p>
 <p> 在终点，等了两个小时左右，就有黑人冲线了。牛逼</p>
-<p> <img src="https://img.alicdn.com/imgextra/i3/606022462/TB2v3m_pXXXXXXdXXXXXXXXXXXX-606022462.jpg_310x310.jpg"><img src="https://img.alicdn.com/imgextra/i2/606022462/TB2hIOOpXXXXXbdXXXXXXXXXXXX-606022462.jpg_310x310.jpg" style="font-size: 10pt;"></p>
-<p> <img src="https://img.alicdn.com/imgextra/i3/606022462/TB2ItOIpXXXXXXyXpXXXXXXXXXX-606022462.jpg_310x310.jpg"><img src="https://img.alicdn.com/imgextra/i3/606022462/TB2SmKVpXXXXXbsXXXXXXXXXXXX-606022462.jpg_310x310.jpg" style="font-size: 10pt;"></p>
+<p> <img src="https://img.alicdn.com/imgextra/i3/606022462/TB2v3m_pXXXXXXdXXXXXXXXXXXX-606022462.png_310x310.png"><img src="https://img.alicdn.com/imgextra/i2/606022462/TB2hIOOpXXXXXbdXXXXXXXXXXXX-606022462.png_310x310.png" style="font-size: 10pt;"></p>
+<p> <img src="https://img.alicdn.com/imgextra/i3/606022462/TB2ItOIpXXXXXXyXpXXXXXXXXXX-606022462.png_310x310.png"><img src="https://img.alicdn.com/imgextra/i3/606022462/TB2SmKVpXXXXXbsXXXXXXXXXXXX-606022462.png_310x310.png" style="font-size: 10pt;"></p>
 <p> 前面冲线的几个基本都是黑人。</p>
 <p> 等到有人冲线，我就开始往回走了，因为还要去逛中山路，还要去吃小吃。</p>
- <img src="https://img.alicdn.com/imgextra/i1/606022462/TB23Fy9pXXXXXXBXXXXXXXXXXXX-606022462.jpg_620x10000.jpg">
+ <img src="https://img.alicdn.com/imgextra/i1/606022462/TB23Fy9pXXXXXXBXXXXXXXXXXXX-606022462.png_620x10000.png">
 
 
 
@@ -3218,29 +3218,29 @@
 
 <p> 让你们看看这些不放弃的人的背影，是不是动力爆棚！</p>
 <p> 接下来直接坐车去了厦大，看看他们说的芙蓉隧道，贴几张厦门大学的图给大家</p>
-<p> <img src="https://img.alicdn.com/imgextra/i2/606022462/TB2FTODpXXXXXX5XpXXXXXXXXXX-606022462.jpg_310x310.jpg"><img src="https://img.alicdn.com/imgextra/i4/606022462/TB2kAWepXXXXXX8XFXXXXXXXXXX-606022462.jpg_310x310.jpg" style="font-size: 10pt;"></p>
-<p> <img src="https://img.alicdn.com/imgextra/i4/606022462/TB224mLpXXXXXc4XXXXXXXXXXXX-606022462.jpg_310x310.jpg"><img src="https://img.alicdn.com/imgextra/i3/606022462/TB24lCNpXXXXXcGXXXXXXXXXXXX-606022462.jpg_310x310.jpg" style="font-size: 10pt;"><img src="https://img.alicdn.com/imgextra/i4/606022462/TB21cegpXXXXXX2XFXXXXXXXXXX-606022462.jpg_310x310.jpg" style="font-size: 10pt;"></p>
-<p> <img src="https://img.alicdn.com/imgextra/i2/606022462/TB25jq1pXXXXXaJXXXXXXXXXXXX-606022462.jpg_310x310.jpg"><img src="https://img.alicdn.com/imgextra/i3/606022462/TB2oZW3pXXXXXX7XXXXXXXXXXXX-606022462.jpg_310x310.jpg" style="font-size: 10pt;"></p>
-<p> <img src="https://img.alicdn.com/imgextra/i2/606022462/TB2rAqrpXXXXXclXpXXXXXXXXXX-606022462.jpg_310x310.jpg"><img src="https://img.alicdn.com/imgextra/i2/606022462/TB20KW_pXXXXXXbXXXXXXXXXXXX-606022462.jpg_310x310.jpg" style="font-size: 10pt;"></p>
+<p> <img src="https://img.alicdn.com/imgextra/i2/606022462/TB2FTODpXXXXXX5XpXXXXXXXXXX-606022462.png_310x310.png"><img src="https://img.alicdn.com/imgextra/i4/606022462/TB2kAWepXXXXXX8XFXXXXXXXXXX-606022462.png_310x310.png" style="font-size: 10pt;"></p>
+<p> <img src="https://img.alicdn.com/imgextra/i4/606022462/TB224mLpXXXXXc4XXXXXXXXXXXX-606022462.png_310x310.png"><img src="https://img.alicdn.com/imgextra/i3/606022462/TB24lCNpXXXXXcGXXXXXXXXXXXX-606022462.png_310x310.png" style="font-size: 10pt;"><img src="https://img.alicdn.com/imgextra/i4/606022462/TB21cegpXXXXXX2XFXXXXXXXXXX-606022462.png_310x310.png" style="font-size: 10pt;"></p>
+<p> <img src="https://img.alicdn.com/imgextra/i2/606022462/TB25jq1pXXXXXaJXXXXXXXXXXXX-606022462.png_310x310.png"><img src="https://img.alicdn.com/imgextra/i3/606022462/TB2oZW3pXXXXXX7XXXXXXXXXXXX-606022462.png_310x310.png" style="font-size: 10pt;"></p>
+<p> <img src="https://img.alicdn.com/imgextra/i2/606022462/TB2rAqrpXXXXXclXpXXXXXXXXXX-606022462.png_310x310.png"><img src="https://img.alicdn.com/imgextra/i2/606022462/TB20KW_pXXXXXXbXXXXXXXXXXXX-606022462.png_310x310.png" style="font-size: 10pt;"></p>
 <p> 然后，就赶紧往回滚，因为要下雨了，而且我还很饿……</p>
 <p> 推荐几个不得不推荐的好吃的，嘿嘿</p>
 <p> 1.豪香里脊</p>
-<p> <img src="https://img.alicdn.com/imgextra/i2/606022462/TB28XG1pXXXXXaMXXXXXXXXXXXX-606022462.jpg_310x310.jpg"><img src="https://img.alicdn.com/imgextra/i3/606022462/TB25dW8pXXXXXXAXXXXXXXXXXXX-606022462.jpg_310x310.jpg" style="font-size: 10pt;"></p>
- <img src="https://img.alicdn.com/imgextra/i4/606022462/TB2d_a6pXXXXXXTXXXXXXXXXXXX-606022462.jpg_310x310.jpg">
+<p> <img src="https://img.alicdn.com/imgextra/i2/606022462/TB28XG1pXXXXXaMXXXXXXXXXXXX-606022462.png_310x310.png"><img src="https://img.alicdn.com/imgextra/i3/606022462/TB25dW8pXXXXXXAXXXXXXXXXXXX-606022462.png_310x310.png" style="font-size: 10pt;"></p>
+ <img src="https://img.alicdn.com/imgextra/i4/606022462/TB2d_a6pXXXXXXTXXXXXXXXXXXX-606022462.png_310x310.png">
 
 
 
 
 
 <p> 2.沙茶肉串</p>
- <img src="https://img.alicdn.com/imgextra/i1/606022462/TB2DNeRpXXXXXcaXXXXXXXXXXXX-606022462.jpg_310x310.jpg">
+ <img src="https://img.alicdn.com/imgextra/i1/606022462/TB2DNeRpXXXXXcaXXXXXXXXXXXX-606022462.png_310x310.png">
 
 
 
 
 
 <p> 3.黄则和的花生汤</p>
- <img src="https://img.alicdn.com/imgextra/i1/606022462/TB2B_qDpXXXXXaXXpXXXXXXXXXX-606022462.jpg_310x310.jpg">
+ <img src="https://img.alicdn.com/imgextra/i1/606022462/TB2B_qDpXXXXXaXXpXXXXXXXXXX-606022462.png_310x310.png">
 
 
 
@@ -3248,14 +3248,14 @@
 
 <p> 这三个一点要尝尝啊，他们不在台湾小吃街，在中山路那头。</p>
 <p> 其他的，台湾小吃街的，一般般吧</p>
-<p> <img src="https://img.alicdn.com/imgextra/i3/606022462/TB25ZSnpXXXXXcHXpXXXXXXXXXX-606022462.jpg_310x310.jpg"><img src="https://img.alicdn.com/imgextra/i3/606022462/TB2.l1ZpXXXXXa3XXXXXXXXXXXX-606022462.jpg_310x310.jpg" style="font-size: 10pt;"></p>
+<p> <img src="https://img.alicdn.com/imgextra/i3/606022462/TB25ZSnpXXXXXcHXpXXXXXXXXXX-606022462.png_310x310.png"><img src="https://img.alicdn.com/imgextra/i3/606022462/TB2.l1ZpXXXXXa3XXXXXXXXXXXX-606022462.png_310x310.png" style="font-size: 10pt;"></p>
 <p> 晚上逛岛，各种小吃</p>
-<p> <img src="https://img.alicdn.com/imgextra/i3/606022462/TB22ryQpXXXXXciXXXXXXXXXXXX-606022462.jpg_310x310.jpg"><img src="https://img.alicdn.com/imgextra/i2/606022462/TB2LhaDpXXXXXXHXpXXXXXXXXXX-606022462.jpg_310x310.jpg" style="font-size: 10pt;"></p>
+<p> <img src="https://img.alicdn.com/imgextra/i3/606022462/TB22ryQpXXXXXciXXXXXXXXXXXX-606022462.png_310x310.png"><img src="https://img.alicdn.com/imgextra/i2/606022462/TB2LhaDpXXXXXXHXpXXXXXXXXXX-606022462.png_310x310.png" style="font-size: 10pt;"></p>
 <p> 那个螃蟹我忘记拍了，不好吃，还是肉串最实在</p>
-<p> <img src="https://img.alicdn.com/imgextra/i3/606022462/TB2ASWspXXXXXbUXpXXXXXXXXXX-606022462.jpg_310x310.jpg"><img src="https://img.alicdn.com/imgextra/i2/606022462/TB2gS9xpXXXXXbeXpXXXXXXXXXX-606022462.jpg_310x310.jpg" style="font-size: 10pt;"></p>
+<p> <img src="https://img.alicdn.com/imgextra/i3/606022462/TB2ASWspXXXXXbUXpXXXXXXXXXX-606022462.png_310x310.png"><img src="https://img.alicdn.com/imgextra/i2/606022462/TB2gS9xpXXXXXbeXpXXXXXXXXXX-606022462.png_310x310.png" style="font-size: 10pt;"></p>
 <p> 然后，回去收拾收拾，第二天，就滚回去啦</p>
 <p> ps：再也不想定联航了</p>
- <img src="https://img.alicdn.com/imgextra/i2/606022462/TB21AGxpXXXXXaCXpXXXXXXXXXX-606022462.jpg_620x10000.jpg">
+ <img src="https://img.alicdn.com/imgextra/i2/606022462/TB21AGxpXXXXXaCXpXXXXXXXXXX-606022462.png_620x10000.png">
 
 </blockquote>
 ]]></content>
@@ -3272,26 +3272,26 @@
     <url>/2015/10/04/blogs/travel/domestic/186/5%E5%9D%97%E9%92%B1%EF%BC%9A%E6%B3%B0%E5%B1%B1/</url>
     <content><![CDATA[<blockquote>
 <p>我就是作死！为什么要来泰山，就为了那5块钱背景是取景自泰山！&gt;<br> 我定了3号去的票，5号回的。</p>
- <img src="https://img.alicdn.com/imgextra/i2/606022462/TB2BdwAfVXXXXarXpXXXXXXXXXX-606022462.jpg_310x310.jpg">
+ <img src="https://img.alicdn.com/imgextra/i2/606022462/TB2BdwAfVXXXXarXpXXXXXXXXXX-606022462.png_310x310.png">
 
 
 
 
 
 <p> 刚开始的时候我还没觉得累，其实直到山顶上的时候我都不觉得累。只是待了那个晚上，让我很崩溃。</p>
- <img src="https://img.alicdn.com/imgextra/i3/606022462/TB2pWgHfVXXXXchXXXXXXXXXXXX-606022462.jpg_310x310.jpg">
+ <img src="https://img.alicdn.com/imgextra/i3/606022462/TB2pWgHfVXXXXchXXXXXXXXXXXX-606022462.png_310x310.png">
 
 
 
 
 
 <p> 我发现泰山没有什么可以拍的，景色也不好看，可能因为那天雾霾比较重吧。反正体验不是很好啊。</p>
-<p> <img src="https://img.alicdn.com/imgextra/i2/606022462/TB2uS.KfVXXXXbOXXXXXXXXXXXX-606022462.jpg_310x310.jpg"><img src="https://img.alicdn.com/imgextra/i1/606022462/TB2VB3OfVXXXXaSXXXXXXXXXXXX-606022462.jpg_310x310.jpg" style="font-size: 10pt;"></p>
+<p> <img src="https://img.alicdn.com/imgextra/i2/606022462/TB2uS.KfVXXXXbOXXXXXXXXXXXX-606022462.png_310x310.png"><img src="https://img.alicdn.com/imgextra/i1/606022462/TB2VB3OfVXXXXaSXXXXXXXXXXXX-606022462.png_310x310.png" style="font-size: 10pt;"></p>
 <p> 在山下的时候有人问买票的，多久能爬到山顶，买票的说，不坐缆车6-8小时。我个人觉得还好。结果我5个小时就到山顶了，估计是因为我自己一个人，不用照顾别人，我看好的老人和孩子都来爬，而且上山的时候真的没觉得有太多的人。</p>
 <p> 我是下午两点开始爬的。</p>
-<p> <img src="https://img.alicdn.com/imgextra/i2/606022462/TB2XN.GfVXXXXcLXXXXXXXXXXXX-606022462.jpg_310x310.jpg"><img src="https://img.alicdn.com/imgextra/i3/606022462/TB2N.oGfVXXXXcPXXXXXXXXXXXX-606022462.jpg_310x310.jpg" style="font-size: 10pt;"><img src="https://img.alicdn.com/imgextra/i1/606022462/TB2xOMOfVXXXXaUXXXXXXXXXXXX-606022462.jpg_310x310.jpg" style="font-size: 10pt;"></p>
+<p> <img src="https://img.alicdn.com/imgextra/i2/606022462/TB2XN.GfVXXXXcLXXXXXXXXXXXX-606022462.png_310x310.png"><img src="https://img.alicdn.com/imgextra/i3/606022462/TB2N.oGfVXXXXcPXXXXXXXXXXXX-606022462.png_310x310.png" style="font-size: 10pt;"><img src="https://img.alicdn.com/imgextra/i1/606022462/TB2xOMOfVXXXXaUXXXXXXXXXXXX-606022462.png_310x310.png" style="font-size: 10pt;"></p>
 <p> 晚上七点到的山顶，那时候发现，卧槽！不带帐篷这个决定太错误了。因为山顶风很大，而且有些冷。我把棉衣和冲锋衣换上了，还是觉得冷。</p>
- <img src="https://img.alicdn.com/imgextra/i4/606022462/TB2Y4cAfVXXXXaeXpXXXXXXXXXX-606022462.jpg_620x10000.jpg">
+ <img src="https://img.alicdn.com/imgextra/i4/606022462/TB2Y4cAfVXXXXaeXpXXXXXXXXXX-606022462.png_620x10000.png">
 
 
 
@@ -3301,17 +3301,17 @@
 <p> 为了找最好的观日出的地点，我选了瞻鲁台看日出，这时候我已经忘记了最初来这里的目的，我是来看5块钱背景的啊！！！不是来看日出的啊！！！！</p>
 <p> 估计是路上来的时候被这帮人给影响了，都在说日出日出，5个小时上山路上的人，外加在山顶的露营的人。</p>
 <p> 结果，我他妈还是俗套的认为，老子是来看日出的，结果就在瞻鲁台冻了8个小时。蛋都快冻裂了……</p>
-<p> <img src="https://img.alicdn.com/imgextra/i1/606022462/TB2yZwWfVXXXXXmXXXXXXXXXXXX-606022462.jpg_310x310.jpg"><img src="https://img.alicdn.com/imgextra/i2/606022462/TB24O3wfVXXXXaUXpXXXXXXXXXX-606022462.jpg_310x310.jpg" style="font-size: 10pt;"></p>
+<p> <img src="https://img.alicdn.com/imgextra/i1/606022462/TB2yZwWfVXXXXXmXXXXXXXXXXXX-606022462.png_310x310.png"><img src="https://img.alicdn.com/imgextra/i2/606022462/TB24O3wfVXXXXaUXpXXXXXXXXXX-606022462.png_310x310.png" style="font-size: 10pt;"></p>
 <p> 结果等到的日出是这样的。</p>
 <p> 其实忘记来拍5元钱背景还有一个原因，因为上山的时候已经天黑，下山的时候，人又非常多，只能跟着人群一点点往下走，往上走的路都被警卫拦着。</p>
 <p> 可能你不相信，认为人多是借口，人能多到哪里去？那么我上图让你看看，下山的人是有多可怕。</p>
-<p> <img src="https://img.alicdn.com/imgextra/i3/606022462/TB2_d7IfVXXXXcwXXXXXXXXXXXX-606022462.jpg_310x310.jpg"><img src="https://img.alicdn.com/imgextra/i1/606022462/TB2zIIHfVXXXXcEXXXXXXXXXXXX-606022462.jpg_310x310.jpg" style="font-size: 10pt;"><img src="https://img.alicdn.com/imgextra/i2/606022462/TB2ursGfVXXXXcZXXXXXXXXXXXX-606022462.jpg_310x310.jpg" style="font-size: 10pt;"></p>
+<p> <img src="https://img.alicdn.com/imgextra/i3/606022462/TB2_d7IfVXXXXcwXXXXXXXXXXXX-606022462.png_310x310.png"><img src="https://img.alicdn.com/imgextra/i1/606022462/TB2zIIHfVXXXXcEXXXXXXXXXXXX-606022462.png_310x310.png" style="font-size: 10pt;"><img src="https://img.alicdn.com/imgextra/i2/606022462/TB2ursGfVXXXXcZXXXXXXXXXXXX-606022462.png_310x310.png" style="font-size: 10pt;"></p>
 <p> 哈哈，这回知道了吧，就是这么可怕。</p>
 <p> 我就在想，这些傻逼，都他妈赶在这时候来看鸡毛日出，然后我就骂自己，你不他妈也是来看日出的么？结果一下子想起来了，老子是来看5块钱背景的啊！！！不是来看日出的啊！！！！</p>
 <p> 因为一夜没睡好，而且逆行太危险。所以想想算了，都下到十八盘了，就别上去了。</p>
 <p> 结果下山也差不多用了5个小时，一是一晚上没睡好太累，二是下山人太多。</p>
 <p> 后来中午的时候，在高铁站附近找了个住宿的，30一晚，没有独卫，就一张床。到了后，倒头就睡啊，一直睡到六点去吃晚饭，吃完饭又找了个网吧，冲了20的会员，直接玩到了后半夜两点多。才滚回去收拾行李的。其实也没啥收拾的，哈哈。</p>
- <img src="https://img.alicdn.com/imgextra/i4/606022462/TB2WiAMfVXXXXaMXXXXXXXXXXXX-606022462.jpg_310x310.jpg">
+ <img src="https://img.alicdn.com/imgextra/i4/606022462/TB2WiAMfVXXXXaMXXXXXXXXXXXX-606022462.png_310x310.png">
 
 
 
@@ -3332,33 +3332,33 @@
     <title>186元钱--三峡</title>
     <url>/2015/08/05/blogs/travel/domestic/186/10%E5%9D%97%E9%92%B1%EF%BC%9A%E9%95%BF%E6%B1%9F%E4%B8%89%E5%B3%A1/</url>
     <content><![CDATA[<blockquote>
-<p>今天的行程是逛古镇，游三峡我们先是做大巴大长寿古镇，有大概一个小时的自由活动时间。&gt;<br> <img src="https://img.alicdn.com/imgextra/i1/606022462/TB2ndcsfVXXXXboXpXXXXXXXXXX-606022462.jpg_310x310.jpg"><img src="https://img.alicdn.com/imgextra/i3/606022462/TB2vjctfVXXXXa3XpXXXXXXXXXX-606022462.jpg_310x310.jpg" style="font-size: 10pt;"></p>
+<p>今天的行程是逛古镇，游三峡我们先是做大巴大长寿古镇，有大概一个小时的自由活动时间。&gt;<br> <img src="https://img.alicdn.com/imgextra/i1/606022462/TB2ndcsfVXXXXboXpXXXXXXXXXX-606022462.png_310x310.png"><img src="https://img.alicdn.com/imgextra/i3/606022462/TB2vjctfVXXXXa3XpXXXXXXXXXX-606022462.png_310x310.png" style="font-size: 10pt;"></p>
 <p> 我就看了看地图，找了个衙门，长寿古镇好像还没有开放完成，有好多面店是关着门的。</p>
-<p> <img src="https://img.alicdn.com/imgextra/i4/606022462/TB2hEUCfVXXXXcPXXXXXXXXXXXX-606022462.jpg_310x310.jpg"><img src="https://img.alicdn.com/imgextra/i3/606022462/TB2nwwQfVXXXXXNXXXXXXXXXXXX-606022462.jpg_310x310.jpg" style="font-size: 10pt;"></p>
+<p> <img src="https://img.alicdn.com/imgextra/i4/606022462/TB2hEUCfVXXXXcPXXXXXXXXXXXX-606022462.png_310x310.png"><img src="https://img.alicdn.com/imgextra/i3/606022462/TB2nwwQfVXXXXXNXXXXXXXXXXXX-606022462.png_310x310.png" style="font-size: 10pt;"></p>
 <p> 进衙门的时候，想在里面上个厕所，扫地大妈还要让我去外面上，估计是因为她负责卫生，不想打扫。反正我没管，直接在衙门里面找的卫生间</p>
-<p> <img src="https://img.alicdn.com/imgextra/i1/606022462/TB209ctfVXXXXaxXpXXXXXXXXXX-606022462.jpg_310x310.jpg"><img src="https://img.alicdn.com/imgextra/i2/606022462/TB2wkgzfVXXXXXEXpXXXXXXXXXX-606022462.jpg_310x310.jpg" style="font-size: 10pt;"><img src="https://img.alicdn.com/imgextra/i3/606022462/TB2aeUzfVXXXXXtXpXXXXXXXXXX-606022462.jpg_310x310.jpg" style="font-size: 10pt;"></p>
+<p> <img src="https://img.alicdn.com/imgextra/i1/606022462/TB209ctfVXXXXaxXpXXXXXXXXXX-606022462.png_310x310.png"><img src="https://img.alicdn.com/imgextra/i2/606022462/TB2wkgzfVXXXXXEXpXXXXXXXXXX-606022462.png_310x310.png" style="font-size: 10pt;"><img src="https://img.alicdn.com/imgextra/i3/606022462/TB2aeUzfVXXXXXtXpXXXXXXXXXX-606022462.png_310x310.png" style="font-size: 10pt;"></p>
 <p> 这个衙门听说也是后来翻修的，就是为了吸引游客，因为长寿古镇这块，就这么一条街，而且确实没啥吸引人的地方。</p>
-<p> <img src="https://img.alicdn.com/imgextra/i4/606022462/TB23gkufVXXXXaKXpXXXXXXXXXX-606022462.jpg_310x310.jpg"><img src="https://img.alicdn.com/imgextra/i2/606022462/TB2YCAGfVXXXXbTXXXXXXXXXXXX-606022462.jpg_310x310.jpg" style="font-size: 10pt;"></p>
+<p> <img src="https://img.alicdn.com/imgextra/i4/606022462/TB23gkufVXXXXaKXpXXXXXXXXXX-606022462.png_310x310.png"><img src="https://img.alicdn.com/imgextra/i2/606022462/TB2YCAGfVXXXXbTXXXXXXXXXXXX-606022462.png_310x310.png" style="font-size: 10pt;"></p>
 <p> 后来，我自己乱逛，跟着地图走，到发现了衙门后面的一个小公园，还是不错的。</p>
-<p> <img src="https://img.alicdn.com/imgextra/i4/606022462/TB2jwUFfVXXXXb9XXXXXXXXXXXX-606022462.jpg_310x310.jpg"><img src="https://img.alicdn.com/imgextra/i3/606022462/TB2XkUAfVXXXXcGXXXXXXXXXXXX-606022462.jpg_310x310.jpg" style="font-size: 10pt;"><img src="https://img.alicdn.com/imgextra/i4/606022462/TB2pMAofVXXXXchXpXXXXXXXXXX-606022462.jpg_310x310.jpg" style="font-size: 10pt;"></p>
-<p> <img src="https://img.alicdn.com/imgextra/i3/606022462/TB2y_ESfVXXXXXoXXXXXXXXXXXX-606022462.jpg_310x310.jpg"><img src="https://img.alicdn.com/imgextra/i4/606022462/TB2D2gxfVXXXXX0XpXXXXXXXXXX-606022462.jpg_310x310.jpg" style="font-size: 10pt;"></p>
+<p> <img src="https://img.alicdn.com/imgextra/i4/606022462/TB2jwUFfVXXXXb9XXXXXXXXXXXX-606022462.png_310x310.png"><img src="https://img.alicdn.com/imgextra/i3/606022462/TB2XkUAfVXXXXcGXXXXXXXXXXXX-606022462.png_310x310.png" style="font-size: 10pt;"><img src="https://img.alicdn.com/imgextra/i4/606022462/TB2pMAofVXXXXchXpXXXXXXXXXX-606022462.png_310x310.png" style="font-size: 10pt;"></p>
+<p> <img src="https://img.alicdn.com/imgextra/i3/606022462/TB2y_ESfVXXXXXoXXXXXXXXXXXX-606022462.png_310x310.png"><img src="https://img.alicdn.com/imgextra/i4/606022462/TB2D2gxfVXXXXX0XpXXXXXXXXXX-606022462.png_310x310.png" style="font-size: 10pt;"></p>
 <p> 不过这里面的店面，一家没有开门。都是关着的。不知道是因为游客少，还是没有开发完成。</p>
 <p> 之后吃了午饭，直接大巴去白帝城。</p>
-<p> <img src="https://img.alicdn.com/imgextra/i3/606022462/TB2EBIGfVXXXXb1XXXXXXXXXXXX-606022462.jpg_310x310.jpg"><img src="https://img.alicdn.com/imgextra/i1/606022462/TB2CjslfVXXXXcvXpXXXXXXXXXX-606022462.jpg_310x310.jpg" style="font-size: 10pt;"></p>
+<p> <img src="https://img.alicdn.com/imgextra/i3/606022462/TB2EBIGfVXXXXb1XXXXXXXXXXXX-606022462.png_310x310.png"><img src="https://img.alicdn.com/imgextra/i1/606022462/TB2CjslfVXXXXcvXpXXXXXXXXXX-606022462.png_310x310.png" style="font-size: 10pt;"></p>
 <p> 听导游说，本来没有三峡大坝的时候，确实是个城池，当年公孙述自封白帝，建了这么个城池，后来被刘备所用，而且由于高三峡大坝导致水位升高，淹没了半个城池，所以现��看上去就是一个小寺庙的样子，本来是很大的，还有岸边通过去的路，但是现在水位升高都没了，这个长廊还是后建的，里面都是三峡的美景和各界领导来视察的照片。</p>
 <p> 还有好多文人雅士做了上百���的诗词来形容三峡。</p>
 <p> 最著名的就是李白的《早发白帝城》，当身临其境的时候，真的是忍不住会吟诵的。</p>
-<p> <img src="https://img.alicdn.com/imgextra/i2/606022462/TB2h6URfVXXXXXrXXXXXXXXXXXX-606022462.jpg_310x310.jpg"><img src="https://img.alicdn.com/imgextra/i4/606022462/TB2OK3ufVXXXXa5XpXXXXXXXXXX-606022462.jpg_310x310.jpg" style="font-size: 10pt;"></p>
+<p> <img src="https://img.alicdn.com/imgextra/i2/606022462/TB2h6URfVXXXXXrXXXXXXXXXXXX-606022462.png_310x310.png"><img src="https://img.alicdn.com/imgextra/i4/606022462/TB2OK3ufVXXXXa5XpXXXXXXXXXX-606022462.png_310x310.png" style="font-size: 10pt;"></p>
 <p> 其实这次来看三峡主要是看夔门，就是十块钱后面的背景，但是到这里发现其实是航拍的，跟十块钱后面完全不同。</p>
 <p> 不过也算了个心愿嘛。夔门后面的，左侧山峰，很像个蛤蟆，导游说，男士还是应该跟他合个影的，象征着招财，还有癞蛤蟆吃到天鹅肉这种说法。</p>
- <img src="https://img.alicdn.com/imgextra/i1/606022462/TB23MwNfVXXXXaoXXXXXXXXXXXX-606022462.jpg_310x310.jpg">
+ <img src="https://img.alicdn.com/imgextra/i1/606022462/TB23MwNfVXXXXaoXXXXXXXXXXXX-606022462.png_310x310.png">
 
 
 
 
 
 <p> 所以，我就合个影嘛，嘿嘿</p>
- <img src="https://img.alicdn.com/imgextra/i1/606022462/TB2FXcLfVXXXXa6XXXXXXXXXXXX-606022462.jpg_620x10000.jpg">
+ <img src="https://img.alicdn.com/imgextra/i1/606022462/TB2FXcLfVXXXXa6XXXXXXXXXXXX-606022462.png_620x10000.png">
 
 
 
@@ -3366,29 +3366,29 @@
 
 <p> 三国里面还有个有名的典故白帝托孤，就是发生在这里。个人觉得，诸葛亮太妇人之仁，就不该辅佐。</p>
 <p> 但是导游却说，刘备那么说，也只是在试探诸葛亮，如果诸葛亮有取而代之的想法，可能会就地正法的。</p>
-<p> <img src="https://img.alicdn.com/imgextra/i1/606022462/TB2fRowfVXXXXX2XpXXXXXXXXXX-606022462.jpg_310x310.jpg"><img src="https://img.alicdn.com/imgextra/i1/606022462/TB2x27CfVXXXXc2XXXXXXXXXXXX-606022462.jpg_310x310.jpg" style="font-size: 10pt;"><img src="https://img.alicdn.com/imgextra/i2/606022462/TB2JT.GfVXXXXbmXXXXXXXXXXXX-606022462.jpg_310x310.jpg" style="font-size: 10pt;"></p>
+<p> <img src="https://img.alicdn.com/imgextra/i1/606022462/TB2fRowfVXXXXX2XpXXXXXXXXXX-606022462.png_310x310.png"><img src="https://img.alicdn.com/imgextra/i1/606022462/TB2x27CfVXXXXc2XXXXXXXXXXXX-606022462.png_310x310.png" style="font-size: 10pt;"><img src="https://img.alicdn.com/imgextra/i2/606022462/TB2JT.GfVXXXXbmXXXXXXXXXXXX-606022462.png_310x310.png" style="font-size: 10pt;"></p>
 <p> 之后又去看了各种堂，还有文物，导游还讲了悬棺，不得不佩服古人的奇思妙想的能力，为了防止盗墓，什么都能想得出来。</p>
 <p> 逛完白帝城后，就是下午直接去巫山码头上船啦，不过船好破，而且冷风不太好用。吃的晚餐也没有中午的好。而且，就这么个三楼顶层，还是收费才能上来的。否则就只能在屋里闷热着</p>
-<p> <img src="https://img.alicdn.com/imgextra/i4/606022462/TB22vgtfVXXXXbaXpXXXXXXXXXX-606022462.jpg_310x310.jpg"><img src="https://img.alicdn.com/imgextra/i2/606022462/TB2knorfVXXXXbAXpXXXXXXXXXX-606022462.jpg_310x310.jpg" style="font-size: 10pt;"></p>
+<p> <img src="https://img.alicdn.com/imgextra/i4/606022462/TB22vgtfVXXXXbaXpXXXXXXXXXX-606022462.png_310x310.png"><img src="https://img.alicdn.com/imgextra/i2/606022462/TB2knorfVXXXXbAXpXXXXXXXXXX-606022462.png_310x310.png" style="font-size: 10pt;"></p>
 <p> 我们在巫山县的码头，等了好久才开船，好像是半夜十二点多才开船吧，估计是为了避税。</p>
- <img src="https://img.alicdn.com/imgextra/i4/606022462/TB2MoEofVXXXXbUXpXXXXXXXXXX-606022462.jpg_620x10000.jpg">
+ <img src="https://img.alicdn.com/imgextra/i4/606022462/TB2MoEofVXXXXbUXpXXXXXXXXXX-606022462.png_620x10000.png">
 
 
 
 
 
 <p> 第二天一早，跟着去了传说的女神溪，也不知道是个什么地方，反正是有个故事，好像也是由仙女洗澡来的。船上的导游都能歌善舞的，那个女生说导游是他们的兼职，冬天的时候他们也会去山上采药材。还有那个叫什么茶的，说是有润喉的作用。反正我是没买。</p>
-<p> <img src="https://img.alicdn.com/imgextra/i3/606022462/TB24kEqfVXXXXayXpXXXXXXXXXX-606022462.jpg_310x310.jpg"><img src="https://img.alicdn.com/imgextra/i2/606022462/TB2xEskfVXXXXcpXpXXXXXXXXXX-606022462.jpg_310x310.jpg" style="font-size: 10pt;"></p>
-<p> <img src="https://img.alicdn.com/imgextra/i1/606022462/TB2RRMJfVXXXXbbXXXXXXXXXXXX-606022462.jpg_310x310.jpg"><img src="https://img.alicdn.com/imgextra/i4/606022462/TB2TVEwfVXXXXacXpXXXXXXXXXX-606022462.jpg_310x310.jpg" style="font-size: 10pt;"></p>
+<p> <img src="https://img.alicdn.com/imgextra/i3/606022462/TB24kEqfVXXXXayXpXXXXXXXXXX-606022462.png_310x310.png"><img src="https://img.alicdn.com/imgextra/i2/606022462/TB2xEskfVXXXXcpXpXXXXXXXXXX-606022462.png_310x310.png" style="font-size: 10pt;"></p>
+<p> <img src="https://img.alicdn.com/imgextra/i1/606022462/TB2RRMJfVXXXXbbXXXXXXXXXXXX-606022462.png_310x310.png"><img src="https://img.alicdn.com/imgextra/i4/606022462/TB2TVEwfVXXXXacXpXXXXXXXXXX-606022462.png_310x310.png" style="font-size: 10pt;"></p>
 <p> 逛了一圈后，就是直接回船上，去屈原故里和三峡大坝。南方的雨，来的快，去的也快。</p>
-<p> <img src="https://img.alicdn.com/imgextra/i4/606022462/TB2o1EHfVXXXXbZXXXXXXXXXXXX-606022462.jpg_310x310.jpg"><img src="https://img.alicdn.com/imgextra/i1/606022462/TB2oPwIfVXXXXbAXXXXXXXXXXXX-606022462.jpg_310x310.jpg" style="font-size: 10pt;"></p>
+<p> <img src="https://img.alicdn.com/imgextra/i4/606022462/TB2o1EHfVXXXXbZXXXXXXXXXXXX-606022462.png_310x310.png"><img src="https://img.alicdn.com/imgextra/i1/606022462/TB2oPwIfVXXXXbAXXXXXXXXXXXX-606022462.png_310x310.png" style="font-size: 10pt;"></p>
 <p> 在逛屈原故里的时候，导游说，得做观光车，因为路太远，下午还得去三峡。所以为了节省时间，大家都得买观光车票。结果可想而知，就他们1分钟不到的车程。。。。。。</p>
-<p> <img src="https://img.alicdn.com/imgextra/i2/606022462/TB2.33wfVXXXXapXpXXXXXXXXXX-606022462.jpg_310x310.jpg"><img src="https://img.alicdn.com/imgextra/i3/606022462/TB2Gz7xfVXXXXXSXpXXXXXXXXXX-606022462.jpg_310x310.jpg" style="font-size: 10pt;"></p>
-<p> <img src="https://img.alicdn.com/imgextra/i3/606022462/TB2WeUwfVXXXXafXpXXXXXXXXXX-606022462.jpg_310x310.jpg"><img src="https://img.alicdn.com/imgextra/i3/606022462/TB2lW.rfVXXXXbuXpXXXXXXXXXX-606022462.jpg_310x310.jpg" style="font-size: 10pt;"></p>
+<p> <img src="https://img.alicdn.com/imgextra/i2/606022462/TB2.33wfVXXXXapXpXXXXXXXXXX-606022462.png_310x310.png"><img src="https://img.alicdn.com/imgextra/i3/606022462/TB2Gz7xfVXXXXXSXpXXXXXXXXXX-606022462.png_310x310.png" style="font-size: 10pt;"></p>
+<p> <img src="https://img.alicdn.com/imgextra/i3/606022462/TB2WeUwfVXXXXafXpXXXXXXXXXX-606022462.png_310x310.png"><img src="https://img.alicdn.com/imgextra/i3/606022462/TB2lW.rfVXXXXbuXpXXXXXXXXXX-606022462.png_310x310.png" style="font-size: 10pt;"></p>
 <p> 我发现，这些城市的旅游观光都是一些古迹和看一些历史。</p>
-<p> <img src="https://img.alicdn.com/imgextra/i4/606022462/TB2wOkQfVXXXXXMXXXXXXXXXXXX-606022462.jpg_310x310.jpg"><img src="https://img.alicdn.com/imgextra/i3/606022462/TB2C7UHfVXXXXbMXXXXXXXXXXXX-606022462.jpg_310x310.jpg" style="font-size: 10pt;"><img src="https://img.alicdn.com/imgextra/i3/606022462/TB24xALfVXXXXaGXXXXXXXXXXXX-606022462.jpg_310x310.jpg" style="font-size: 10pt;"></p>
+<p> <img src="https://img.alicdn.com/imgextra/i4/606022462/TB2wOkQfVXXXXXMXXXXXXXXXXXX-606022462.png_310x310.png"><img src="https://img.alicdn.com/imgextra/i3/606022462/TB2C7UHfVXXXXbMXXXXXXXXXXXX-606022462.png_310x310.png" style="font-size: 10pt;"><img src="https://img.alicdn.com/imgextra/i3/606022462/TB24xALfVXXXXaGXXXXXXXXXXXX-606022462.png_310x310.png" style="font-size: 10pt;"></p>
 <p> 最后一个行程是三峡大坝。这个确实非常震撼。以及导游说的总投资近5000个亿，每年发电量世界第一。</p>
- <img src="https://img.alicdn.com/imgextra/i4/606022462/TB2UZwPfVXXXXX7XXXXXXXXXXXX-606022462.jpg_620x10000.jpg">
+ <img src="https://img.alicdn.com/imgextra/i4/606022462/TB2UZwPfVXXXXX7XXXXXXXXXXXX-606022462.png_620x10000.png">
 
 
 
@@ -3398,10 +3398,10 @@
 <p> 导游说路上好多城市被淹都是三峡蓄水，水位升高弄的，好多城市都从山脚下移到半山腰了。</p>
 <p> 最屌的还是过船的时候，有各种蓄水过船的设施，最快的也要好几个小时，而且都需要提前通告，告诉有船体和重量，方便这头安排过闸门的时间。</p>
 <p> 听说还在建的一个叫电梯的，可以让小船过大坝的时候提速好几个小时。</p>
-<p> <img src="https://img.alicdn.com/imgextra/i3/606022462/TB2Yp7RfVXXXXXKXXXXXXXXXXXX-606022462.jpg_310x310.jpg"><img src="https://img.alicdn.com/imgextra/i1/606022462/TB26MQIfVXXXXbeXXXXXXXXXXXX-606022462.jpg_310x310.jpg" style="font-size: 10pt;"></p>
+<p> <img src="https://img.alicdn.com/imgextra/i3/606022462/TB2Yp7RfVXXXXXKXXXXXXXXXXXX-606022462.png_310x310.png"><img src="https://img.alicdn.com/imgextra/i1/606022462/TB26MQIfVXXXXbeXXXXXXXXXXXX-606022462.png_310x310.png" style="font-size: 10pt;"></p>
 <p> 晚上最终的地点是宜昌，我随便找了个酒店。晚上去旁边宜昌公园逛了逛。发现公园里面居然有点歌系统。真的是点歌系统，好多大妈大爷在那里点红楼梦的主题曲啊，歌颂党和人民的啊。都是些老歌，不过自然也少不了广场舞。</p>
 <p> 晚饭点了饺子，第二天就滚回北京了。</p>
-<p> <img src="https://img.alicdn.com/imgextra/i2/606022462/TB2IZZtfVXXXXa3XpXXXXXXXXXX-606022462.jpg_310x310.jpg"><img src="https://img.alicdn.com/imgextra/i3/606022462/TB2wOEOfVXXXXauXXXXXXXXXXXX-606022462.jpg_310x310.jpg" style="font-size: 10pt;"></p>
+<p> <img src="https://img.alicdn.com/imgextra/i2/606022462/TB2IZZtfVXXXXa3XpXXXXXXXXXX-606022462.png_310x310.png"><img src="https://img.alicdn.com/imgextra/i3/606022462/TB2wOEOfVXXXXauXXXXXXXXXXXX-606022462.png_310x310.png" style="font-size: 10pt;"></p>
 </blockquote>
 ]]></content>
       <categories>
@@ -3416,30 +3416,30 @@
     <title>重庆：这个燥热的夏天</title>
     <url>/2015/08/03/blogs/travel/domestic/%E9%87%8D%E5%BA%86%EF%BC%9A%E8%BF%99%E4%B8%AA%E7%87%A5%E7%83%AD%E7%9A%84%E5%A4%8F%E5%A4%A9/</url>
     <content><![CDATA[<blockquote>
-<p>西安直接坐车到了重庆，在重庆也没玩什么，第一天住的汉庭。在火车站附近，狮子坪地铁附近的。&gt;<br> <img src="https://img.alicdn.com/imgextra/i3/606022462/TB29EoFfVXXXXceXXXXXXXXXXXX-606022462.jpg_310x310.jpg"><br>因为实在是太热了，我也没有出去逛，就在酒店旁边找了个网吧，冲了50块钱的会员，玩了一天的lol&gt;<br> <img src="https://img.alicdn.com/imgextra/i1/606022462/TB2fbQEfVXXXXcmXXXXXXXXXXXX-606022462.jpg_310x310.jpg"></p>
+<p>西安直接坐车到了重庆，在重庆也没玩什么，第一天住的汉庭。在火车站附近，狮子坪地铁附近的。&gt;<br> <img src="https://img.alicdn.com/imgextra/i3/606022462/TB29EoFfVXXXXceXXXXXXXXXXXX-606022462.png_310x310.png"><br>因为实在是太热了，我也没有出去逛，就在酒店旁边找了个网吧，冲了50块钱的会员，玩了一天的lol&gt;<br> <img src="https://img.alicdn.com/imgextra/i1/606022462/TB2fbQEfVXXXXcmXXXXXXXXXXXX-606022462.png_310x310.png"></p>
 <p> 然后定了去夔门的船票。第一次坐船，想想还有点激动。</p>
 <p> 因为船是在第二天的早上出发，码头是朝天门的，所以当天晚上我找了小什字地铁附近的短租房，包租婆是小女生，90后，她爸妈给她买的房子，说之前也去过北京，也飘过，但是还是觉得喜欢家的感觉，就会来了，把自己的房子租出去，房间环境确实很好。上下铺的那种，有家的感觉。可惜当时没有拍照，因为忙着看《欺诈游戏》。</p>
 <p> 我问那个小女生，附近有啥玩的，她说也就洪崖洞和人民广场。不过最好还是等6点多，因为现在太阳太毒了。</p>
 <p> 所以，就等到了6点多才下去的。</p>
-<p> <img src="https://img.alicdn.com/imgextra/i3/606022462/TB2Q.kyfVXXXXXZXpXXXXXXXXXX-606022462.jpg_310x310.jpg"><img src="https://img.alicdn.com/imgextra/i3/606022462/TB2.iUIfVXXXXbKXXXXXXXXXXXX-606022462.jpg_310x310.jpg" style="font-size: 10pt;"><img src="https://img.alicdn.com/imgextra/i4/606022462/TB2lVZmfVXXXXcuXpXXXXXXXXXX-606022462.jpg_310x310.jpg" style="font-size: 10pt;"></p>
+<p> <img src="https://img.alicdn.com/imgextra/i3/606022462/TB2Q.kyfVXXXXXZXpXXXXXXXXXX-606022462.png_310x310.png"><img src="https://img.alicdn.com/imgextra/i3/606022462/TB2.iUIfVXXXXbKXXXXXXXXXXXX-606022462.png_310x310.png" style="font-size: 10pt;"><img src="https://img.alicdn.com/imgextra/i4/606022462/TB2lVZmfVXXXXcuXpXXXXXXXXXX-606022462.png_310x310.png" style="font-size: 10pt;"></p>
 <p> 因为重庆的火锅是最有名的，很想去吃，但是出来之后就完全没有心情了，天气太热了，最好就在人民广场北面的街道旁边点了碗牛肉拉面。</p>
 <p> 后来去了她推荐的洪崖洞，确实夜景很漂亮</p>
-<p> <img src="https://img.alicdn.com/imgextra/i2/606022462/TB2fLcIfVXXXXbxXXXXXXXXXXXX-606022462.jpg_310x310.jpg"><img src="https://img.alicdn.com/imgextra/i3/606022462/TB2Le7BfVXXXXXlXpXXXXXXXXXX-606022462.jpg_310x310.jpg" style="font-size: 10pt;"><img src="https://img.alicdn.com/imgextra/i1/606022462/TB2YeIvfVXXXXazXpXXXXXXXXXX-606022462.jpg_310x310.jpg" style="font-size: 10pt;"></p>
- <img src="https://img.alicdn.com/imgextra/i2/606022462/TB2dY7zfVXXXXXUXpXXXXXXXXXX-606022462.jpg_620x10000.jpg" style="font-size: 13.3333px;">
+<p> <img src="https://img.alicdn.com/imgextra/i2/606022462/TB2fLcIfVXXXXbxXXXXXXXXXXXX-606022462.png_310x310.png"><img src="https://img.alicdn.com/imgextra/i3/606022462/TB2Le7BfVXXXXXlXpXXXXXXXXXX-606022462.png_310x310.png" style="font-size: 10pt;"><img src="https://img.alicdn.com/imgextra/i1/606022462/TB2YeIvfVXXXXazXpXXXXXXXXXX-606022462.png_310x310.png" style="font-size: 10pt;"></p>
+ <img src="https://img.alicdn.com/imgextra/i2/606022462/TB2dY7zfVXXXXXUXpXXXXXXXXXX-606022462.png_620x10000.png" style="font-size: 13.3333px;">
 
 
 
 
 
 <p> 好多人都在洪崖洞那块围着，所以我没下去，现在想想真后悔，应该下去看看灯火的</p>
- <img src="https://img.alicdn.com/imgextra/i1/606022462/TB2UCEOfVXXXXXOXXXXXXXXXXXX-606022462.jpg_620x10000.jpg">
+ <img src="https://img.alicdn.com/imgextra/i1/606022462/TB2UCEOfVXXXXXOXXXXXXXXXXXX-606022462.png_620x10000.png">
 
 
 
 
 
 <p> 对了，当时查攻略上面还说推荐玩一下长江索道。于是，买了往返票，20</p>
-<p> <img src="https://img.alicdn.com/imgextra/i1/606022462/TB2eIgtfVXXXXamXpXXXXXXXXXX-606022462.jpg_310x310.jpg"><img src="https://img.alicdn.com/imgextra/i4/606022462/TB2YhsLfVXXXXaNXXXXXXXXXXXX-606022462.jpg_310x310.jpg" style="font-size: 10pt;"><img src="https://img.alicdn.com/imgextra/i4/606022462/TB2WrINfVXXXXauXXXXXXXXXXXX-606022462.jpg_310x310.jpg" style="font-size: 10pt;"></p>
+<p> <img src="https://img.alicdn.com/imgextra/i1/606022462/TB2eIgtfVXXXXamXpXXXXXXXXXX-606022462.png_310x310.png"><img src="https://img.alicdn.com/imgextra/i4/606022462/TB2YhsLfVXXXXaNXXXXXXXXXXXX-606022462.png_310x310.png" style="font-size: 10pt;"><img src="https://img.alicdn.com/imgextra/i4/606022462/TB2WrINfVXXXXauXXXXXXXXXXXX-606022462.png_310x310.png" style="font-size: 10pt;"></p>
 <p> 结果，并不觉���有什么新鲜感，而且等我回宿舍的时候，那小女生说，要知道你去玩索道，直接给你我的公交卡了，因为刷卡才2块。&#x3D; &#x3D;！</p>
 <p> 她说买票主要是卖给外来的游客的，想想真是坑爹啊。</p>
 <p> 不过玩��玩了，回去买点葡萄，吃完就上床睡觉了，我最爱的葡萄永远这么好吃。</p>
@@ -3457,9 +3457,9 @@
     <title>西安：揭开历史的浮尘</title>
     <url>/2015/08/01/blogs/travel/domestic/%E8%A5%BF%E5%AE%89%EF%BC%9A%E6%8F%AD%E5%BC%80%E5%8E%86%E5%8F%B2%E7%9A%84%E6%B5%AE%E5%B0%98/</url>
     <content><![CDATA[<blockquote>
-<p>这次来西安，完全是计划之外的，本来是打算拉萨之后直接去重庆看夔门的。结果没有直达的火车，所以行程变成了：拉萨-西宁，西宁-西安，西安-重庆。&gt;<br> <img src="https://img.alicdn.com/imgextra/i3/606022462/TB2pFQAfVXXXXXzXpXXXXXXXXXX-606022462.jpg_310x310.jpg"></p>
+<p>这次来西安，完全是计划之外的，本来是打算拉萨之后直接去重庆看夔门的。结果没有直达的火车，所以行程变成了：拉萨-西宁，西宁-西安，西安-重庆。&gt;<br> <img src="https://img.alicdn.com/imgextra/i3/606022462/TB2pFQAfVXXXXXzXpXXXXXXXXXX-606022462.png_310x310.png"></p>
 <p> 好在西安转车有一天的时间空闲，所以我抽空去看了兵马俑。因为口渴，还买了个假的红牛，河南人民就是创造力丰富，我都没看到那个金字。</p>
- <img src="https://img.alicdn.com/imgextra/i3/606022462/TB2kUMMfVXXXXayXXXXXXXXXXXX-606022462.jpg_310x310.jpg">
+ <img src="https://img.alicdn.com/imgextra/i3/606022462/TB2kUMMfVXXXXayXXXXXXXXXXXX-606022462.png_310x310.png">
 
 
 
@@ -3467,21 +3467,21 @@
 
 <p> 朋友说没啥看的，我说也是，没啥看的。但是总是想看看，看过总是比没看好，反正也不贵。</p>
 <p> 路上还有个什么华清池，杨贵妃洗澡的地方。我没兴趣，所以没去，直接去的兵马俑。但是人超级多的，门票课不便宜，而且那天好他妈热。</p>
-<p> <img src="https://img.alicdn.com/imgextra/i2/606022462/TB2PgoGfVXXXXb5XXXXXXXXXXXX-606022462.jpg_310x310.jpg"><img src="https://img.alicdn.com/imgextra/i3/606022462/TB2igQFfVXXXXcdXXXXXXXXXXXX-606022462.jpg_310x310.jpg" style="font-size: 10pt;"></p>
+<p> <img src="https://img.alicdn.com/imgextra/i2/606022462/TB2PgoGfVXXXXb5XXXXXXXXXXXX-606022462.png_310x310.png"><img src="https://img.alicdn.com/imgextra/i3/606022462/TB2igQFfVXXXXcdXXXXXXXXXXXX-606022462.png_310x310.png" style="font-size: 10pt;"></p>
 <p> 可能光说不足以形容他到底有多热，请看照片：</p>
-<p> <img src="https://img.alicdn.com/imgextra/i3/606022462/TB2ArgufVXXXXaVXpXXXXXXXXXX-606022462.jpg_310x310.jpg"><img src="https://img.alicdn.com/imgextra/i3/606022462/TB2dYMpfVXXXXbOXpXXXXXXXXXX-606022462.jpg_310x310.jpg" style="font-size: 10pt;"></p>
+<p> <img src="https://img.alicdn.com/imgextra/i3/606022462/TB2ArgufVXXXXaVXpXXXXXXXXXX-606022462.png_310x310.png"><img src="https://img.alicdn.com/imgextra/i3/606022462/TB2dYMpfVXXXXbOXpXXXXXXXXXX-606022462.png_310x310.png" style="font-size: 10pt;"></p>
 <p> 是的，那是汗水，我没有洗澡，但胜似洗澡。</p>
 <p> 不过兵马俑的坑确实很壮观撒：</p>
-<p> <img src="https://img.alicdn.com/imgextra/i1/606022462/TB2LiQKfVXXXXa2XXXXXXXXXXXX-606022462.jpg_310x310.jpg"><img src="https://img.alicdn.com/imgextra/i4/606022462/TB2NekzfVXXXXXxXpXXXXXXXXXX-606022462.jpg_310x310.jpg" style="font-size: 10pt;"><img src="https://img.alicdn.com/imgextra/i4/606022462/TB2oKwvfVXXXXaDXpXXXXXXXXXX-606022462.jpg_310x310.jpg" style="font-size: 10pt;"></p>
-<p> <img src="https://img.alicdn.com/imgextra/i3/606022462/TB2pe3MfVXXXXaDXXXXXXXXXXXX-606022462.jpg_310x310.jpg"><img src="https://img.alicdn.com/imgextra/i3/606022462/TB2W_.pfVXXXXbEXpXXXXXXXXXX-606022462.jpg_310x310.jpg" style="font-size: 10pt;"></p>
+<p> <img src="https://img.alicdn.com/imgextra/i1/606022462/TB2LiQKfVXXXXa2XXXXXXXXXXXX-606022462.png_310x310.png"><img src="https://img.alicdn.com/imgextra/i4/606022462/TB2NekzfVXXXXXxXpXXXXXXXXXX-606022462.png_310x310.png" style="font-size: 10pt;"><img src="https://img.alicdn.com/imgextra/i4/606022462/TB2oKwvfVXXXXaDXpXXXXXXXXXX-606022462.png_310x310.png" style="font-size: 10pt;"></p>
+<p> <img src="https://img.alicdn.com/imgextra/i3/606022462/TB2pe3MfVXXXXaDXXXXXXXXXXXX-606022462.png_310x310.png"><img src="https://img.alicdn.com/imgextra/i3/606022462/TB2W_.pfVXXXXbEXpXXXXXXXXXX-606022462.png_310x310.png" style="font-size: 10pt;"></p>
 <p> 我每次出游都蹭导游，听别的队的导游讲，然后自己不请导游。哈哈</p>
 <p> 上面这个只是一号坑，占地面积超级大，14260平方米。反正就是超级大。</p>
 <p> 导游说：这里的一块砖值一个亿，今天拿，明天发，后天就被抓。</p>
 <p> 之后是去二号坑那头，还有各个国家的文物。</p>
-<p> <img src="https://img.alicdn.com/imgextra/i2/606022462/TB2bmABfVXXXXc.XXXXXXXXXXXX-606022462.jpg_310x310.jpg"><img src="https://img.alicdn.com/imgextra/i2/606022462/TB202sRfVXXXXXpXXXXXXXXXXXX-606022462.jpg_310x310.jpg"><img src="https://img.alicdn.com/imgextra/i1/606022462/TB2EMZPfVXXXXXYXXXXXXXXXXXX-606022462.jpg_310x310.jpg"></p>
-<p> <img src="https://img.alicdn.com/imgextra/i2/606022462/TB2pcorfVXXXXaHXpXXXXXXXXXX-606022462.jpg_310x310.jpg"><img src="https://img.alicdn.com/imgextra/i2/606022462/TB2AwAwfVXXXXX0XpXXXXXXXXXX-606022462.jpg_310x310.jpg"><img src="https://img.alicdn.com/imgextra/i1/606022462/TB2NdoCfVXXXXcRXXXXXXXXXXXX-606022462.jpg_310x310.jpg"></p>
+<p> <img src="https://img.alicdn.com/imgextra/i2/606022462/TB2bmABfVXXXXc.XXXXXXXXXXXX-606022462.png_310x310.png"><img src="https://img.alicdn.com/imgextra/i2/606022462/TB202sRfVXXXXXpXXXXXXXXXXXX-606022462.png_310x310.png"><img src="https://img.alicdn.com/imgextra/i1/606022462/TB2EMZPfVXXXXXYXXXXXXXXXXXX-606022462.png_310x310.png"></p>
+<p> <img src="https://img.alicdn.com/imgextra/i2/606022462/TB2pcorfVXXXXaHXpXXXXXXXXXX-606022462.png_310x310.png"><img src="https://img.alicdn.com/imgextra/i2/606022462/TB2AwAwfVXXXXX0XpXXXXXXXXXX-606022462.png_310x310.png"><img src="https://img.alicdn.com/imgextra/i1/606022462/TB2NdoCfVXXXXcRXXXXXXXXXXXX-606022462.png_310x310.png"></p>
 <p> 二号坑时候，另一个队的解说是个男的，有点娘，跟他们的队说：千万别跟这个二号坑的背面合影啊，会中邪的！我当时就想，是tm会中暑吧，因为缺是太热了</p>
- <img src="https://img.alicdn.com/imgextra/i1/606022462/TB2PBkBfVXXXXc7XXXXXXXXXXXX-606022462.jpg_310x310.jpg">
+ <img src="https://img.alicdn.com/imgextra/i1/606022462/TB2PBkBfVXXXXc7XXXXXXXXXXXX-606022462.png_310x310.png">
 
 
 
@@ -3489,39 +3489,39 @@
 
 <p> 那个导游开始说之前一个外国人假扮兵马俑的事情。不知道是真实的还是杜撰的。</p>
 <p> 其实整个兵马俑我最喜欢的就是这个大大的竹简，很有感觉</p>
- <img src="https://img.alicdn.com/imgextra/i4/606022462/TB2DisxfVXXXXX_XpXXXXXXXXXX-606022462.jpg_310x310.jpg">
+ <img src="https://img.alicdn.com/imgextra/i4/606022462/TB2DisxfVXXXXX_XpXXXXXXXXXX-606022462.png_310x310.png">
 
 
 
 
 
 <p> 最后看完之后，给这老秦头照了照片，对了，还得说一嘴，成都、西安的霾都很重。</p>
- <img src="https://img.alicdn.com/imgextra/i4/606022462/TB2zukAfVXXXXXkXpXXXXXXXXXX-606022462.jpg_310x310.jpg">
+ <img src="https://img.alicdn.com/imgextra/i4/606022462/TB2zukAfVXXXXXkXpXXXXXXXXXX-606022462.png_310x310.png">
 
 
 
 
 
 <p> 出门后，直奔车站，因为还要去回民街吃泡馍，还要赶火车，火车是西安南站，超级远的。所以，没逗留太久，直接做旅游大巴往回赶。</p>
-<p> <img src="https://img.alicdn.com/imgextra/i2/606022462/TB2tVoFfVXXXXckXXXXXXXXXXXX-606022462.jpg_310x310.jpg"><img src="https://img.alicdn.com/imgextra/i3/606022462/TB2yKIJfVXXXXa6XXXXXXXXXXXX-606022462.jpg_310x310.jpg"></p>
+<p> <img src="https://img.alicdn.com/imgextra/i2/606022462/TB2tVoFfVXXXXckXXXXXXXXXXXX-606022462.png_310x310.png"><img src="https://img.alicdn.com/imgextra/i3/606022462/TB2yKIJfVXXXXa6XXXXXXXXXXXX-606022462.png_310x310.png"></p>
 <p> 我是在西羊市这个里面找的泡馍，还得自己动手撕，心急的话吃着就不爽。比如我，当时撕的太大块，这东西还是得跟朋友一起，边聊天便撕。</p>
-<p> <img src="https://img.alicdn.com/imgextra/i2/606022462/TB2dikBfVXXXXXeXpXXXXXXXXXX-606022462.jpg_310x310.jpg"><img src="https://img.alicdn.com/imgextra/i4/606022462/TB2_73qfVXXXXbJXpXXXXXXXXXX-606022462.jpg_310x310.jpg"></p>
+<p> <img src="https://img.alicdn.com/imgextra/i2/606022462/TB2dikBfVXXXXXeXpXXXXXXXXXX-606022462.png_310x310.png"><img src="https://img.alicdn.com/imgextra/i4/606022462/TB2_73qfVXXXXbJXpXXXXXXXXXX-606022462.png_310x310.png"></p>
 <p> 其实回民街里面有好多小吃的，我这个伪吃货都觉得馋，更别说真正的吃货了，这里绝对是吃货的天堂啊</p>
- <img src="https://img.alicdn.com/imgextra/i3/606022462/TB2ZAUnfVXXXXcbXpXXXXXXXXXX-606022462.jpg_310x310.jpg">
+ <img src="https://img.alicdn.com/imgextra/i3/606022462/TB2ZAUnfVXXXXcbXpXXXXXXXXXX-606022462.png_310x310.png">
 
 
 
 
 
 <p> 西安的地铁票是这个样子的</p>
- <img src="https://img.alicdn.com/imgextra/i2/606022462/TB243IzfVXXXXXwXpXXXXXXXXXX-606022462.jpg_310x310.jpg">
+ <img src="https://img.alicdn.com/imgextra/i2/606022462/TB243IzfVXXXXXwXpXXXXXXXXXX-606022462.png_310x310.png">
 
 
 
 
 
 <p> 之后就到了那个小的可怜的火车站，比我老家的车站还小。而且火车因为大水晚点了好几个小时。</p>
- <img src="https://img.alicdn.com/imgextra/i2/606022462/TB2oWUNfVXXXXayXXXXXXXXXXXX-606022462.jpg_310x310.jpg">
+ <img src="https://img.alicdn.com/imgextra/i2/606022462/TB2oWUNfVXXXXayXXXXXXXXXXXX-606022462.png_310x310.png">
 
 
 
@@ -3546,13 +3546,13 @@
 <p> 但是去年年底的时候，突然就想通了，人活着一辈子，就这么80年，前二十年是父母的，后二十年是子女的，中间二十年是妻子的，留给自己的也就是20-30岁之间的这点时间。不想，也不能再耽搁了，所以，别想那么多了，别去等什么离京了。就现在开始准备吧！</p>
 <p> 于是，15年年初的时候，我就报了健身班，每天跟着上有氧，健身班认识我的人都奇怪，说你一个男生也不胖怎么不去练块啊。跑来练有氧。</p>
 <p> 嘿嘿，因为哥要在今年7月份骑行川藏线啊。</p>
- <img src="http://ww4.sinaimg.cn/mw1024/7fc94725jw1etm7m6z6tjj20hs0hs0u5.jpg">
+ <img src="http://ww4.sinaimg.cn/mw1024/7fc94725jw1etm7m6z6tjj20hs0hs0u5.png">
 
 <p> 世界那么大，我也想看看。我留给领导这句话，卷起铺盖，就走了。15.06.26</p>
 <p> 15.07.03去了成都，有个学长在成都，所以那两天在他那里蹭住。</p>
 <p> 在成都两天，吃了四川的火锅、去逛了宽窄巷子、去逛了方所图书、买了鞋子、买了我第一辆山地车：美利达公爵800、买了必备的药品，药品还是刷的林哥的社保卡。</p>
-<p> <img src="https://img.alicdn.com/imgextra/i2/606022462/TB2T4nmeFXXXXXdXXXXXXXXXXXX-606022462.jpg_310x310.jpg"><img src="https://img.alicdn.com/imgextra/i2/606022462/TB2062jeFXXXXaaXXXXXXXXXXXX-606022462.jpg_310x310.jpg" style="font-size: 10pt;"><img src="https://img.alicdn.com/imgextra/i1/606022462/TB2yqfieFXXXXaIXXXXXXXXXXXX-606022462.jpg_310x310.jpg" style="font-size: 10pt;"></p>
-<p> <img src="https://img.alicdn.com/imgextra/i1/606022462/TB2I5SWeFXXXXbZXpXXXXXXXXXX-606022462.jpg_310x310.jpg"> <img src="https://img.alicdn.com/imgextra/i2/606022462/TB2n_S1eFXXXXaSXpXXXXXXXXXX-606022462.jpg_310x310.jpg" style="font-size: 10pt;"></p>
+<p> <img src="https://img.alicdn.com/imgextra/i2/606022462/TB2T4nmeFXXXXXdXXXXXXXXXXXX-606022462.png_310x310.png"><img src="https://img.alicdn.com/imgextra/i2/606022462/TB2062jeFXXXXaaXXXXXXXXXXXX-606022462.png_310x310.png" style="font-size: 10pt;"><img src="https://img.alicdn.com/imgextra/i1/606022462/TB2yqfieFXXXXaIXXXXXXXXXXXX-606022462.png_310x310.png" style="font-size: 10pt;"></p>
+<p> <img src="https://img.alicdn.com/imgextra/i1/606022462/TB2I5SWeFXXXXbZXpXXXXXXXXXX-606022462.png_310x310.png"> <img src="https://img.alicdn.com/imgextra/i2/606022462/TB2n_S1eFXXXXaSXpXXXXXXXXXX-606022462.png_310x310.png" style="font-size: 10pt;"></p>
 <p> 我们是在网上组的队伍，我在贴吧和其他群里面发帖拉来的，都是准备七月初骑行川藏的，本来我是定在7号出发的，结果跟我一起的四个人在3号的时候都告诉我说临时有事情不能过去了，所以，我就将时间提前到了5号这一队。</p>
 <p> 骑行第零天：</p>
 <p> 然后是15.07.04那天晚上的第一次小队见面。</p>
@@ -3562,16 +3562,16 @@
 <p> 骑行第一天：</p>
 <p> 成都-雅安</p>
 <p> 早上开始集合就比较烦乱，因为前一天定的是他们来找我和王梦雅，结果早上给我们两个打电话说让我们去找他们，出尔反尔，我是最不喜欢的了，而且第一天出发非常晚，因为第一天要走156km，本来是应该早些出发的，但是不但没有早出发，而且连路线都没有规划好。当时很心烦的，只是没有表现出来。</p>
- <img src="https://img.alicdn.com/imgextra/i3/606022462/TB2axS1eFXXXXaUXpXXXXXXXXXX-606022462.jpg_310x310.jpg" style="font-size: 13.3333px;">
+ <img src="https://img.alicdn.com/imgextra/i3/606022462/TB2axS1eFXXXXaUXpXXXXXXXXXX-606022462.png_310x310.png" style="font-size: 13.3333px;">
 
 <p> 第一件烦心事是找路：因为我们都是方林叫过来华阳的，以为她熟悉这头的路，结果也是一问三不知。最后一路走一路问，走了回头路，找那个叫大件路的直通318线的路，找了半天。</p>
 <p> 第二件烦心事是吃饭：没走多久的路，就吵着饿，要吃饭。只能在新津吃午餐。</p>
 <p> 第三件烦心事是太慢：总是走几步歇一歇，走几步歇一歇。结果就是晚上才到了雅安。</p>
- <img src="https://img.alicdn.com/imgextra/i2/606022462/TB2j_naeFXXXXcbXXXXXXXXXXXX-606022462.jpg_310x310.jpg">
+ <img src="https://img.alicdn.com/imgextra/i2/606022462/TB2j_naeFXXXXcbXXXXXXXXXXXX-606022462.png_310x310.png">
 
 <p> 下午的时候，我觉得如果这么走下去可能到不了雅安，所以就跟邓军我们两个带头骑，到了雅安给他们订房间。</p>
 <p> 当天我是第一个到雅安的，当时是晚上八点左右，他们到的时候都已经晚上十点多了，不过他们到的时候我不是太清楚，因为那一天我中暑了，吐了好几次。住在了桃源山庄，遇到了先走的小乾和晓春。不过他们看我们这么晚到，又决定那么晚走，所以第二天他们也没有跟我们一起。记得路上遇到其他队掉队的哥们，给我吃了他的西瓜，然后就我就吐了，还好我自己买了葡萄糖，我就喝了两杯葡萄糖水，因为吃不下去饭，中暑又很严重，又不想掉队，所以只能硬着头皮喝葡萄糖了。最后听王梦雅说，那天周钢用绳子拉着方林骑了好久。。。。。。这只���第一天</p>
- <img src="https://img.alicdn.com/imgextra/i4/606022462/TB2TZa6eFXXXXX.XpXXXXXXXXXX-606022462.jpg_620x10000.jpg">
+ <img src="https://img.alicdn.com/imgextra/i4/606022462/TB2TZa6eFXXXXX.XpXXXXXXXXXX-606022462.png_620x10000.png">
 
 
 
@@ -3580,23 +3580,23 @@
 <p> 骑行第二天：</p>
 <p> 雅安-新沟</p>
 <p> 今天出发还是完了，我们9点多才从雅安出发，不要问我为什么这么晚出发，我也不想。</p>
- <img src="https://img.alicdn.com/imgextra/i3/606022462/TB2iBm3eFXXXXarXpXXXXXXXXXX-606022462.jpg_310x310.jpg">
+ <img src="https://img.alicdn.com/imgextra/i3/606022462/TB2iBm3eFXXXXarXpXXXXXXXXXX-606022462.png_310x310.png">
 
 <p> 其实出发晚还不是最让我崩溃的，最让我崩溃的是出发每一个小时呢，就吵着要吃饭。就说怕前面遇不到能吃的村子。也是在这个时候，我决定要离队了。虽然最后在我的坚持下，没有停下来吃饭，但是出雅安的那段烂路上，也是走5分钟歇两分钟。我觉得特纠结，最后我跟邓军和王梦雅在前面领队，一直领队，估计到吃中午饭的时候，落他们有半个小时的路程吧，因为我们吃完的时候，才有两个队员跟上来，其余的还没有跟上来。</p>
 <p> 雅安到新沟这段路可能是最烂的吧。那天我、邓军和王梦雅我们离队了，我们三个赶夜路到了新沟，因为不想在晚出发，不想再不按照原计划走。所以，到现在都觉得离队是个明智的选择，因为如果队友不但帮不了你，还拖你后退，而且你劝他还不听，那么别去将就他，你不是他妈妈。</p>
- <img src="https://img.alicdn.com/imgextra/i1/606022462/TB28QjaeFXXXXcbXXXXXXXXXXXX-606022462.jpg_310x310.jpg">
+ <img src="https://img.alicdn.com/imgextra/i1/606022462/TB28QjaeFXXXXcbXXXXXXXXXXXX-606022462.png_310x310.png">
 
 <p> 中午路过一个村子的时候还遇到了一个新加坡人，他是从英国出发骑过来的，车子上什么都有，露营的设备，录像的设备。他说他去不了拉萨，因为他没有身份证。只能起到最近的一处高山，然后就返程了。他骑了一年多，当时觉得牛人是有的。</p>
 <p> 新沟我们住的那个小宾馆里面有跳蚤，导致我后几天腿上超级痒。</p>
 <p> 骑行第三天：</p>
 <p> 新沟-泸定</p>
 <p> 十几公里的上坡，那十几公里的上坡骑着，慢慢感觉上坡像平路，平路像下坡。爬的山是二郎山，在爬上山顶之前都是阴雨天，大雾，骑过二郎山就突然放晴了，二郎山的隧道超级爽。对了，在山顶过隧道之前，我等了队友二十分钟，之前不是说晓春她跟别的队走了么，但是我在山顶等他们的时候，发现晓春骑的比我还慢，而且那时候我隧道牌子那里尿尿(捂脸)，晓春骑过去说了一句：咦？阿良？当时我啊，不知道说啥了。</p>
-<p> <img src="https://img.alicdn.com/imgextra/i1/606022462/TB2KXS7eFXXXXXwXpXXXXXXXXXX-606022462.jpg_310x310.jpg"><img src="https://img.alicdn.com/imgextra/i3/606022462/TB2V3HdeFXXXXbNXXXXXXXXXXXX-606022462.jpg_310x310.jpg"></p>
+<p> <img src="https://img.alicdn.com/imgextra/i1/606022462/TB2KXS7eFXXXXXwXpXXXXXXXXXX-606022462.png_310x310.png"><img src="https://img.alicdn.com/imgextra/i3/606022462/TB2V3HdeFXXXXbNXXXXXXXXXXXX-606022462.png_310x310.png"></p>
 <p> 过了隧道，就是30多公里的下坡，而且天气超棒，王梦雅，邓军我们三个在观景台合了影。还在最高点的拐点处签了名，下午一点多就到泸定了，跟小乾回合，中午去住宿对面的饭馆吃的大盘鸡。</p>
-<p> <img src="https://img.alicdn.com/imgextra/i1/606022462/TB2zQjheFXXXXazXXXXXXXXXXXX-606022462.jpg_310x310.jpg"><img src="https://img.alicdn.com/imgextra/i4/606022462/TB2Ryu8eFXXXXXbXpXXXXXXXXXX-606022462.jpg_310x310.jpg"></p>
+<p> <img src="https://img.alicdn.com/imgextra/i1/606022462/TB2zQjheFXXXXazXXXXXXXXXXXX-606022462.png_310x310.png"><img src="https://img.alicdn.com/imgextra/i4/606022462/TB2Ryu8eFXXXXXbXpXXXXXXXXXX-606022462.png_310x310.png"></p>
 <p> 黄晓春跟其他队走了，方林他们晚上的时候才到泸定，把第一天的聚会钱结了，周刚后来上来叫方林，很不高兴的样子。但是，也与我们无关了，因为到现在这个最开始的9人队，彻底分了。我们四个一队，方林周刚他们一队，晓春自己跟别的队走了。</p>
 <p> 太阳快下山的时候，我们还去了传说中的泸定桥，当然没有花钱上去，因为骑着车子过去的，不知道车子放在那里，所以就在广场上面看了一下传说中的泸定桥。早就没什么铁索寒了，都是翻修过的。不过上面人依然很大</p>
- <img src="https://img.alicdn.com/imgextra/i2/606022462/TB2CLbleFXXXXXOXXXXXXXXXXXX-606022462.jpg_310x310.jpg">
+ <img src="https://img.alicdn.com/imgextra/i2/606022462/TB2CLbleFXXXXXOXXXXXXXXXXXX-606022462.png_310x310.png">
 
 
 
@@ -3606,14 +3606,14 @@
 <p> 泸定-康定</p>
 <p> 30多公里的上坡，从泸定出来就开始爬坡，真的是爽歪歪啊。</p>
 <p> 下午两点到了康定，上午爬的时候没有遇到很大的风，下午开始有些逆风，顶风好不爽。这30公里的路，前半部分有缓下坡，也就是说，总体的上升海拔，要高于实际上升海拔。今天是小乾先到，这个山炮骑的很快，总是闭着眼睛蹬车，所以，今天的合照也没有他。</p>
- <img src="https://img.alicdn.com/imgextra/i1/606022462/TB2N.9WeFXXXXbEXpXXXXXXXXXX-606022462.jpg_310x310.jpg">
+ <img src="https://img.alicdn.com/imgextra/i1/606022462/TB2N.9WeFXXXXbEXpXXXXXXXXXX-606022462.png_310x310.png">
 
 <p> 在中午的时候，听说后面上来的骑友说，前两天在天全县，一死两伤，听说是因为下坡的���候没有刹车，冲下了悬崖。一个人直接摔死，两个人失忆了。不知道是不是真的，反正之后的路，我们告诫自己要小心一些。</p>
- <img src="https://img.alicdn.com/imgextra/i4/606022462/TB2_EfceFXXXXbNXXXXXXXXXXXX-606022462.jpg_310x310.jpg">
+ <img src="https://img.alicdn.com/imgextra/i4/606022462/TB2_EfceFXXXXbNXXXXXXXXXXXX-606022462.png_310x310.png">
 
 <p> 下午两点多的时候，就到了康定，这里就彻彻底底感觉到藏族的味道了。老板家的狗吃的都是生肉。这里的人也都是藏族打扮，吃饭的时候，我们就瞎侃，王梦雅说，她有个朋友是少数民族的，一个人砍了好多人，结果因为政府对少数民族有政策，所以没被抓。然后，他们就开始各种说少数民族在内地多么团结。搞得我当时都怕有人真上来砍我们。</p>
 <p> 吃过饭我们之间取邮政找邮戳。路过人民广场的时候，在那桥上真想来首情歌，因为本来就是小镇子。没什么逛的。所以，溜达溜达就之间滚回宿舍洗洗睡了，毕竟第二天，又是一天的路。</p>
- <img src="https://img.alicdn.com/imgextra/i4/606022462/TB2hW9YeFXXXXbLXpXXXXXXXXXX-606022462.jpg_310x310.jpg">
+ <img src="https://img.alicdn.com/imgextra/i4/606022462/TB2hW9YeFXXXXbLXpXXXXXXXXXX-606022462.png_310x310.png">
 
 
 
@@ -3623,18 +3623,18 @@
 <p> 康定-折多塘村</p>
 <p> 今天的原定计划本来是骑到新都桥的。但是最后停在了折多塘村。</p>
 <p> 早上七点出发，那时候就已经开始下雨了，没体验过上山顶雨骑车的可能不知道，到底有多冷。十几公里的上坡，其中还有一公里多的泥路，我们骑了4个小时左右，十一点左右的时候，到了折多塘村，如果按照原计划肯定是要继续骑行到新都桥的，但是王梦雅说冻手冻脚，邓军也是，小乾今天还是在前面领路，所以给他打了电话，告诉他别往前走了，直接在折多塘村住吧，因为太冷了，想烤火。</p>
- <img src="https://img.alicdn.com/imgextra/i3/606022462/TB2rsi1eFXXXXa2XpXXXXXXXXXX-606022462.jpg_620x10000.jpg">
+ <img src="https://img.alicdn.com/imgextra/i3/606022462/TB2rsi1eFXXXXa2XpXXXXXXXXXX-606022462.png_620x10000.png">
 
 <p> 最后，我们定的是那个在康定发名片的藏民家。50元包早晚，晚餐比较好，4菜一汤，牦牛肉，第一次尝牦牛肉，感觉也就那么回事。其实跟牛肉没啥区别。不过，他家的环境还是很好的，很特别。对了，下面这个二货，就是王梦雅。我一直当她是男的，直到邂逅客栈那一天。</p>
- <img src="https://img.alicdn.com/imgextra/i3/606022462/TB2DITfeFXXXXaZXXXXXXXXXXXX-606022462.jpg_620x10000.jpg">
+ <img src="https://img.alicdn.com/imgextra/i3/606022462/TB2DITfeFXXXXaZXXXXXXXXXXXX-606022462.png_620x10000.png">
 
-<p> <img src="https://img.alicdn.com/imgextra/i2/606022462/TB2VbneeFXXXXbyXXXXXXXXXXXX-606022462.jpg_310x310.jpg"><img src="https://img.alicdn.com/imgextra/i2/606022462/TB2Se_neFXXXXXpXXXXXXXXXXXX-606022462.jpg_310x310.jpg"></p>
+<p> <img src="https://img.alicdn.com/imgextra/i2/606022462/TB2VbneeFXXXXbyXXXXXXXXXXXX-606022462.png_310x310.png"><img src="https://img.alicdn.com/imgextra/i2/606022462/TB2Se_neFXXXXXpXXXXXXXXXXXX-606022462.png_310x310.png"></p>
 <p> 对了，我们住的酒店后面还有一个小温泉。我们下午睡醒后，一起绕山过去看了看，泡了泡脚。后来来了几个村里的妇女，把我们赶走了，因为她们要泡，其实温泉随小，但是大家一起泡是足够的，估计是当地的习俗，女性不能跟男性一起泡吧。所以很遗憾，我们只泡了一小会。</p>
-<p> <img src="https://img.alicdn.com/imgextra/i4/606022462/TB27QTheFXXXXaxXXXXXXXXXXXX-606022462.jpg_310x310.jpg"><img src="https://img.alicdn.com/imgextra/i3/606022462/TB20uLceFXXXXb0XXXXXXXXXXXX-606022462.jpg_310x310.jpg"></p>
+<p> <img src="https://img.alicdn.com/imgextra/i4/606022462/TB27QTheFXXXXaxXXXXXXXXXXXX-606022462.png_310x310.png"><img src="https://img.alicdn.com/imgextra/i3/606022462/TB20uLceFXXXXb0XXXXXXXXXXXX-606022462.png_310x310.png"></p>
 <p> 老板家的孩子，很可爱，我给她拍照，她还不让。说妈妈看到了会说她。下午放晴后，老板还把他的马牵来让我们骑。吃过晚饭后，天还没黑老板就把篝火点起来了，说是篝火，其实就是大盆木头，然后老板的孩子领着我们跳舞。藏族的舞蹈，总结起来两个字，甩袖子！</p>
 <p> 最后，大家都不跳了，因为学不好，而且都不怎么放得开。就用老板的音响功放歌曲。大家围着篝火唱歌。</p>
 <p> 到十点多，就各自回宿舍睡觉了，那一觉睡到6点，超级爽。</p>
- <img src="https://img.alicdn.com/imgextra/i3/606022462/TB28eHleFXXXXXVXXXXXXXXXXXX-606022462.jpg_310x310.jpg">
+ <img src="https://img.alicdn.com/imgextra/i3/606022462/TB28eHleFXXXXXVXXXXXXXXXXXX-606022462.png_310x310.png">
 
 
 
@@ -3643,70 +3643,70 @@
 <p> 第六天：</p>
 <p> 折多塘村-新都桥</p>
 <p> 今天从折多塘村到新都桥，上坡20多公里，翻的折多山，在山顶还看到了鹰，上山的路上看到了武装车，邓军说是运送粮食的。在折多山上面第一次拿出了我的旗子，合了个影。跟海拔标志合影的时候还看到了周刚，但是没看到方林他们，估计周刚跟他们也分开走了，反正见面也没打招呼，因为分开的那天，他就没给我们好脸色看。</p>
-<p> <img src="https://img.alicdn.com/imgextra/i1/606022462/TB2KVvdeFXXXXbKXXXXXXXXXXXX-606022462.jpg_310x310.jpg"><img src="https://img.alicdn.com/imgextra/i3/606022462/TB2.Qi4eFXXXXX0XpXXXXXXXXXX-606022462.jpg_310x310.jpg"></p>
+<p> <img src="https://img.alicdn.com/imgextra/i1/606022462/TB2KVvdeFXXXXbKXXXXXXXXXXXX-606022462.png_310x310.png"><img src="https://img.alicdn.com/imgextra/i3/606022462/TB2.Qi4eFXXXXX0XpXXXXXXXXXX-606022462.png_310x310.png"></p>
 <p> 接下来就是10多公里的下坡，路还不错，就是下坡的时候风吹着有些凉。然后是30-40的缓下坡，天气超级好。那缓下坡特别爽。路上很少过车，我们几个就躺在路中间拍照。</p>
-<p> <img src="https://img.alicdn.com/imgextra/i3/606022462/TB2iOa.eFXXXXcEXXXXXXXXXXXX-606022462.jpg_310x310.jpg"><img src="https://img.alicdn.com/imgextra/i1/606022462/TB24i6XeFXXXXcKXXXXXXXXXXXX-606022462.jpg_310x310.jpg"></p>
+<p> <img src="https://img.alicdn.com/imgextra/i3/606022462/TB2iOa.eFXXXXcEXXXXXXXXXXXX-606022462.png_310x310.png"><img src="https://img.alicdn.com/imgextra/i1/606022462/TB24i6XeFXXXXcKXXXXXXXXXXXX-606022462.png_310x310.png"></p>
 <p> 对了，因为路上没有什么小村庄，我们就在路边的一个小摊上面吃的泡面，还有买了四个奶饼子吃，图个新鲜，好酸的，比较有嚼劲，像面筋，但是没啥滋味。反正我们几个都不喜欢吃。下午三点多到的新都桥，发现依然没有网络。</p>
 <p> 找了半天的地方，邓军还要勾引一个叫历史的老师。卧槽！晚上住的地方老板娘长得不错，在藏区很少看到长得不错的姑娘，老板家楼上还有个歌厅，不过好像没有什么人，反正当天我们是住在二楼，车子放在后院的一个小闸门里面。因为今天下山的时候觉得有点冷，所以晚上出来逛的时候，我们都去买了秋衣和秋裤。</p>
 <p> 第七天：</p>
 <p> 新都桥-相克宗村</p>
 <p> 今天的行程是新都桥到相克宗村，早上老板给弄的花卷和奶饼子，没错！就是奶饼子，我们昨天就体验过了，所以今天早上谁都没动。</p>
 <p> 出门之后，基本上就是上坡，一直到��午十二点之前都是上坡。因为雅江的隧道在修，所以我们只能绕的高尔寺山，那块是非常非常烂的路，还好没有下雨，如果下雨就都是泥巴，但是不下雨的坏处是只要一过车，就都是��土。</p>
-<p> <img src="https://img.alicdn.com/imgextra/i2/606022462/TB2MiaYeFXXXXbTXpXXXXXXXXXX-606022462.jpg_310x310.jpg"><img src="https://img.alicdn.com/imgextra/i2/606022462/TB2txe4eFXXXXanXpXXXXXXXXXX-606022462.jpg_310x310.jpg"></p>
+<p> <img src="https://img.alicdn.com/imgextra/i2/606022462/TB2MiaYeFXXXXbTXpXXXXXXXXXX-606022462.png_310x310.png"><img src="https://img.alicdn.com/imgextra/i2/606022462/TB2txe4eFXXXXanXpXXXXXXXXXX-606022462.png_310x310.png"></p>
 <p> 对了，今天最最最不该的就是挺邓军说的抄近路，快到山顶之前有个野路，就是一条小路，在正路旁边，看着推着到山顶好像比在大路上走的近，所以邓军说，看！他们都在前面，肯定好走。于是，我们四个傻逼就走了野路，走那次后，老子再也不他妈走野路了，到山顶的时候估计比走大路慢了半个小时，而且还特别累，有两个地方还有点危险，特别陡。 到山顶的时候，我们都在骂邓军。</p>
 <p> 歇了一会，就下山了，那个路啊，是下过山的最烂的路了，手指都颠疼了。刹车点刹。还是我先到的底，在下面等他们等了20多分钟，听说因为王梦雅上厕所，所以耽误时间了。不过接下来的路真的是超级漂亮，下坡底到雅江的路，是目前为止看过最棒的了。唯一一点遗憾是，我们到雅江的时候是17:06；邮局刚刚关门，所以雅江的邮戳没有盖到。</p>
- <img src="https://img.alicdn.com/imgextra/i1/606022462/TB2YO6jeFXXXXamXXXXXXXXXXXX-606022462.jpg_620x10000.jpg">
+ <img src="https://img.alicdn.com/imgextra/i1/606022462/TB2YO6jeFXXXXamXXXXXXXXXXXX-606022462.png_620x10000.png">
 
 <p> 王梦雅本想在雅江歇着的，但是我们还是都想把路赶回来些，因为之前在折多塘村那天，已经耽误半天的行程了。所以，最后大家都憋着劲蹬了最后17公里的爬山路。那17公里蹬的都快虚脱了，水也没了，不过还是坚持到了，因为如果不坚持，就没有地方睡觉了。结果我们是在晚上九点多的时候到的相克宗村。找的第一家旅店，45包早晚餐。开始要50，后来看我们有要去别家的打算，所以给我们降成了45了。不过她家的饭菜，是真心棒啊。</p>
 <p> 第八天：</p>
 <p> 相克宗村-红龙乡</p>
 <p> 今天的行程是相克宗村到红龙乡，骑的时候就觉得昨天的决定是对的，昨天下午还好把那17公里的上坡给坚持下来了，因为今天出门就是30公里的上坡，那路叫天怒十八弯。蹬了好久，后面开始都没有时间观念了，就是一直蹬。到观景台的时候休息了一会，本想吃个泡面，但是太贵了，煎饼也是，所以什么都没买。</p>
-<p> <img src="https://img.alicdn.com/imgextra/i2/606022462/TB2esy1eFXXXXbhXpXXXXXXXXXX-606022462.jpg_310x310.jpg"><img src="https://img.alicdn.com/imgextra/i3/606022462/TB2uXe9eFXXXXXfXpXXXXXXXXXX-606022462.jpg_310x310.jpg"></p>
+<p> <img src="https://img.alicdn.com/imgextra/i2/606022462/TB2esy1eFXXXXbhXpXXXXXXXXXX-606022462.png_310x310.png"><img src="https://img.alicdn.com/imgextra/i3/606022462/TB2uXe9eFXXXXXfXpXXXXXXXXXX-606022462.png_310x310.png"></p>
 <p> 观景台的时候还跟好几个人合影，因为他们都很佩服我们这种骑车走川藏的人。下午的时候就是平路和小下坡，云端的骑行，路上唯一遇到一个我觉得是最背的哥们，在平路的时候车链子断了。邓军下来帮忙修了一会，也没修上，还把我们队的截链器搞弯了。最后，那哥们没办法，他们队的其他人也没有工具，就只能推到下坡后，再继续了。</p>
- <img src="https://img.alicdn.com/imgextra/i3/606022462/TB2q595eFXXXXXZXpXXXXXXXXXX-606022462.jpg_620x10000.jpg">
+ <img src="https://img.alicdn.com/imgextra/i3/606022462/TB2q595eFXXXXXZXpXXXXXXXXXX-606022462.png_620x10000.png">
 
 <p> 平路骑完后，有一段下坡路，小乾那个傻逼，帽子还掉了。下午五点半到的，也是第一家旅店，50块钱包早晚，但��环境太差，因为他们不想往前走了。到之后没多久就开始下小雨了。依旧没网。</p>
- <img src="https://img.alicdn.com/imgextra/i1/606022462/TB2HBTXeFXXXXaUXXXXXXXXXXXX-606022462.jpg_310x310.jpg">
+ <img src="https://img.alicdn.com/imgextra/i1/606022462/TB2HBTXeFXXXXaUXXXXXXXXXXXX-606022462.png_310x310.png">
 
 <p> 第九天：</p>
 <p> 红龙乡-理塘</p>
 <p> 今天的行程是从红龙乡到理塘，路还是比较好走的，只有10多公里的上坡，剩下都是下坡，下坡路上的时候还遇到了朝圣的。旁边应该不算是草原，但是还是有土拨鼠，我们还下去抓了，但是根本抓不到，因为到处都是土拨鼠的洞，一个连一个，对了，今天我摔车了，不过没大碍。主要原因是，邓军和小乾下坡的时候在前面，我在第三位，王梦雅在最后，结果前面有段路是在修正，这俩傻逼直接刹车暴死，来个急停，我在后面没反应过来，车子直接插到他俩中间，车把跟邓军的车子刮到了，结果直接趴下了，还好只是磕到了膝盖，紫了一小块。</p>
-<p> <img src="https://img.alicdn.com/imgextra/i2/606022462/TB21.q1eFXXXXa6XpXXXXXXXXXX-606022462.jpg_310x310.jpg"><img src="https://img.alicdn.com/imgextra/i4/606022462/TB27BW_eFXXXXcMXXXXXXXXXXXX-606022462.jpg_310x310.jpg" style="font-size: 10pt;"></p>
+<p> <img src="https://img.alicdn.com/imgextra/i2/606022462/TB21.q1eFXXXXa6XpXXXXXXXXXX-606022462.png_310x310.png"><img src="https://img.alicdn.com/imgextra/i4/606022462/TB27BW_eFXXXXcMXXXXXXXXXXXX-606022462.png_310x310.png" style="font-size: 10pt;"></p>
 <p> 晚上住的是攻略上推荐的邂逅客栈，这是第一次住攻略推荐的，55包早晚，但是真的超喜欢这个风格的小宾馆。很有逼格。</p>
 <p> 晚上我们吃的是冒菜，还看了两个电影，之前我一直以为王梦雅是男生，所以上厕所的时候我都没有避讳，有时候就当着他面，直接掏xx尿，今天确定是女生，是因为到邂逅客栈后，她说来大姨妈了，要买姨妈巾。卧槽，当时我就蒙了，出去逛的时候，还买了个手链，10块钱，结果没等到拉萨呢，就断了。对了，今天依然没网</p>
-<p> <img src="https://img.alicdn.com/imgextra/i3/606022462/TB2xWPeeFXXXXbxXXXXXXXXXXXX-606022462.jpg_310x310.jpg"><img src="https://img.alicdn.com/imgextra/i3/606022462/TB2rjS1eFXXXXa3XpXXXXXXXXXX-606022462.jpg_310x310.jpg" style="font-size: 10pt;"></p>
+<p> <img src="https://img.alicdn.com/imgextra/i3/606022462/TB2xWPeeFXXXXbxXXXXXXXXXXXX-606022462.png_310x310.png"><img src="https://img.alicdn.com/imgextra/i3/606022462/TB2rjS1eFXXXXa3XpXXXXXXXXXX-606022462.png_310x310.png" style="font-size: 10pt;"></p>
 <p> 第十天：</p>
 <p> 理塘-德达乡</p>
 <p> 今天行程是理塘到德达乡，本来今天应该赶到西藏界的。但是因为天气的原因，所以临时��路中间休息了。</p>
- <img src="https://img.alicdn.com/imgextra/i4/606022462/TB24OLXeFXXXXcsXXXXXXXXXXXX-606022462.jpg_620x10000.jpg">
+ <img src="https://img.alicdn.com/imgextra/i4/606022462/TB24OLXeFXXXXcsXXXXXXXXXXXX-606022462.png_620x10000.png">
 
 <p> 今天出门的时候还是好天气，出门就是南天门的感觉，周围都是云，路上两边都是大草原，骑到十点多的时候前面的雨开始过来，小乾没有雨衣，所以就在路边的一个蒙古包里面烤火吃东西。不得不说，高原的雨真冷人啊。后来等了一会，雨停了，小乾就在前面骑，把我们三个甩没了。</p>
 <p> 骑到中午也没有发现吃饭的地方。后来就只能硬着头皮爬山，那时候王梦雅邓军和我还不知道小乾在剪子弯山脚下住宿了。那山炮也没有打电话通知我们三个。</p>
-<p> <img src="https://img.alicdn.com/imgextra/i3/606022462/TB2ijKWeFXXXXbTXpXXXXXXXXXX-606022462.jpg_310x310.jpg"><img src="https://img.alicdn.com/imgextra/i4/606022462/TB2.e6ieFXXXXaEXXXXXXXXXXXX-606022462.jpg_310x310.jpg" style="font-size: 10pt;"></p>
+<p> <img src="https://img.alicdn.com/imgextra/i3/606022462/TB2ijKWeFXXXXbTXpXXXXXXXXXX-606022462.png_310x310.png"><img src="https://img.alicdn.com/imgextra/i4/606022462/TB2.e6ieFXXXXaEXXXXXXXXXXXX-606022462.png_310x310.png" style="font-size: 10pt;"></p>
 <p> 我们就想赶紧追上他，然后找地方休息。结果一直骑到剪子弯山顶，雨开始是小的，后来偶尔一阵大的，等我们三个骑到山顶的时候，手指都冻僵了，爱琴海也没有看到，因为雨水太大了。山顶上面有一家帐篷，我们就进去烤火，吃了泡面，等了一个小时，雨小了，小乾也没人影，电话在山上又没信号。所以我们三个没办法，只能继续顶着小雨下山了。</p>
- <img src="https://img.alicdn.com/imgextra/i2/606022462/TB2EYffeFXXXXbnXXXXXXXXXXXX-606022462.jpg_310x310.jpg">
+ <img src="https://img.alicdn.com/imgextra/i2/606022462/TB2EYffeFXXXXbnXXXXXXXXXXXX-606022462.png_310x310.png">
 
 <p> 本以为小雨没事，结果下山的时候车速加上风速，雨水打在身上，脸上，手上，搞得整个人都麻木了，眼睛也是疼的，被雨滴不停地打。下山的速度还很快，所以遇到第一个村子德达乡的时候，邓军就停下来了，说不走了，太冷了还比较危险。</p>
 <p> 于是，就在那个民宅歇脚了，50元包早晚，不过都餐食都很简单，晚餐是一个西红柿鸡蛋汤，一碗米饭，还有一个黄瓜凉菜。不过火炉和电热扇还不错，烤了好久才从冻僵的状态缓过神来。今天的总路程有170，估计只走了120。晚上6点多的时候雨停了，除了夕阳，山顶的雨水斗变成了雪，整个山头是雪白的金黄色。很漂亮。今天，依然没有网络。</p>
 <p> 但是，这是却最最最不爽的一天。</p>
-<p> <img src="https://img.alicdn.com/imgextra/i3/606022462/TB2L5u3eFXXXXaFXpXXXXXXXXXX-606022462.jpg_310x310.jpg"><img src="https://img.alicdn.com/imgextra/i2/606022462/TB2gVWWeFXXXXcmXpXXXXXXXXXX-606022462.jpg_310x310.jpg" style="font-size: 10pt;"></p>
+<p> <img src="https://img.alicdn.com/imgextra/i3/606022462/TB2L5u3eFXXXXaFXpXXXXXXXXXX-606022462.png_310x310.png"><img src="https://img.alicdn.com/imgextra/i2/606022462/TB2gVWWeFXXXXcmXpXXXXXXXXXX-606022462.png_310x310.png" style="font-size: 10pt;"></p>
 <p> 第十一天：</p>
 <p> 德达乡-西藏界</p>
 <p> 今天是从德达乡到西藏界，目的地是温泉山庄。</p>
 <p> 路上顺便等了一下小乾。从德达乡到巴塘，是60多的下坡路，昨天如果没有大雨，我们可能就是从巴塘出发了。在巴塘没有停留，路上有人家种的果树，应该是苹果，我摘了个，还是涩涩的。</p>
-<p> <img src="https://img.alicdn.com/imgextra/i3/606022462/TB2HHa5eFXXXXajXpXXXXXXXXXX-606022462.jpg_310x310.jpg"><img src="https://img.alicdn.com/imgextra/i1/606022462/TB2KOC3eFXXXXajXpXXXXXXXXXX-606022462.jpg_310x310.jpg" style="font-size: 10pt;"></p>
+<p> <img src="https://img.alicdn.com/imgextra/i3/606022462/TB2HHa5eFXXXXajXpXXXXXXXXXX-606022462.png_310x310.png"><img src="https://img.alicdn.com/imgextra/i1/606022462/TB2KOC3eFXXXXajXpXXXXXXXXXX-606022462.png_310x310.png" style="font-size: 10pt;"></p>
 <p> 骑过金沙江大桥的时候，我在四川界的时候看了一下手机还是没有网络的，结果过了金沙江大桥，到了对面的西藏界就有网络了，还等什么，马上装逼，发这几天的动态啊。顺便等了他们一个多小时，等小乾也赶到后，我们就继续往前走了。</p>
-<p> <img src="https://img.alicdn.com/imgextra/i1/606022462/TB2.fq0eFXXXXbgXpXXXXXXXXXX-606022462.jpg_310x310.jpg"><img src="https://img.alicdn.com/imgextra/i2/606022462/TB2lUjleFXXXXXSXXXXXXXXXXXX-606022462.jpg_310x310.jpg" style="font-size: 10pt;"></p>
+<p> <img src="https://img.alicdn.com/imgextra/i1/606022462/TB2.fq0eFXXXXbgXpXXXXXXXXXX-606022462.png_310x310.png"><img src="https://img.alicdn.com/imgextra/i2/606022462/TB2lUjleFXXXXXSXXXXXXXXXXXX-606022462.png_310x310.png" style="font-size: 10pt;"></p>
 <p> 本来入藏的关卡是有检查身份证的警厅。他们是检查身份证和驾驶证。因为我们几个都是骑行进藏的，所以没有登记，就看了一下身份证。其实本来四川应该早就有网络了，但是因为红龙乡暴动，来网时间又被推迟了。这件事也是王梦雅挺方林他们说的。听方林说，他们从红龙乡走的时候，有几波人在打群架，地上有血，旁边的老人还在哭。</p>
 <p> 本来是打算到温泉山庄休息一下的，结果骑到那块发现根本就没有那么个山庄。或者说早教被拆了，于是没办法。只能住在路边的小板房里面了。晚上板房还停电了。老板说，山上就这样，是常事。。。。。。</p>
- <img src="https://img.alicdn.com/imgextra/i3/606022462/TB2iv1ZeFXXXXbVXpXXXXXXXXXX-606022462.jpg_310x310.jpg">
+ <img src="https://img.alicdn.com/imgextra/i3/606022462/TB2iv1ZeFXXXXbVXpXXXXXXXXXX-606022462.png_310x310.png">
 
-<p> <img src="https://img.alicdn.com/imgextra/i1/606022462/TB2LKLjeFXXXXavXXXXXXXXXXXX-606022462.jpg_310x310.jpg"><img src="https://img.alicdn.com/imgextra/i4/606022462/TB2R8_eeFXXXXbsXXXXXXXXXXXX-606022462.jpg_310x310.jpg" style="font-size: 10pt;"></p>
+<p> <img src="https://img.alicdn.com/imgextra/i1/606022462/TB2LKLjeFXXXXavXXXXXXXXXXXX-606022462.png_310x310.png"><img src="https://img.alicdn.com/imgextra/i4/606022462/TB2R8_eeFXXXXbsXXXXXXXXXXXX-606022462.png_310x310.png" style="font-size: 10pt;"></p>
 <p> 第十二天：</p>
 <p> 西藏街-芒康</p>
 <p> 今天行程是从西藏界到芒康，爬的宗拉山。</p>
 <p> 路上路过了3388这个牌子。今天上山的路是大长坡，明明以为前面就是尽头了，结果一转弯，还是各种弯，总之，就是玩你没商量。还有哈，今天爬山的时候遇到了在折多塘村一起住宿的那一帮人。印象最深的就是那个大粗腿，女生撒。我就喜欢大粗腿[色]，有力量的那种，不是赘肉的那种哈。</p>
- <img src="https://img.alicdn.com/imgextra/i1/606022462/TB2Loq1eFXXXXakXpXXXXXXXXXX-606022462.jpg_310x310.jpg">
+ <img src="https://img.alicdn.com/imgextra/i1/606022462/TB2Loq1eFXXXXakXpXXXXXXXXXX-606022462.png_310x310.png">
 
 <p> 对了，今天还有遇到了第二个朝圣的，下午到芒康的时候，还遇到了小雨。</p>
 <p> 那里的土是红色的，晚上本来是打算住攻略上指定的宾馆的，但是发现已经满 了，没位置了，老板还蒙我们，我们问有没有4人间了，他说有，结果我们把车子放在车棚后，把驼包都歇下来找房间的时候，他说只有3人间了，我日！我们几个二话没说，直接走。</p>
@@ -3716,7 +3716,7 @@
 <p> 第十三天：</p>
 <p> 芒康-登巴村</p>
 <p> 今天的行程是从芒康到登巴村，早上出门就是爬山，第一座��拉乌山，只用了一个多小时就到了山顶，上山顶的路上，遇到了一个哥们一直说自己的后轮扎胎了，没气了，要打气，自己气筒没有，问我们借。邓军的气筒太小，后来拿的我的。其实，我们都觉得他的后轮根本没有缺气，只是自己心里原因造成的。可是他不信。最后只能陪在那里等他换完后轮，还好是快拆的。</p>
- <img src="https://img.alicdn.com/imgextra/i4/606022462/TB2wf6ieFXXXXaNXXXXXXXXXXXX-606022462.jpg_620x10000.jpg">
+ <img src="https://img.alicdn.com/imgextra/i4/606022462/TB2wf6ieFXXXXaNXXXXXXXXXXXX-606022462.png_620x10000.png">
 
 <p> 然后是爽下坡，一直爽到脚巴村，吃的午餐。下午要爬脚巴山，16km的上坡，开始以为可能会跟雅江到相克宗村的17千米的上坡差不多，结果蹬起来之后发现，好轻松，2个多小时就爬到了山顶。</p>
 <p> 对了，吃完午饭从餐馆出来，还遇到了一个骑充电山地车的哥们，他说那个车爬不了坡，就是平路不用蹬，能省不少力。但是我个人还是觉得上坡不能用就然并卵。小乾先下的，直接定了住宿，50包早晚，里面有35的，但是没有网络。所以，最后我们一直认为还是网络比较重要。放假是那种隔断，也是板房。用木板隔开的几个房间。我们住的是5人间，有一个哥们跟我们一起。</p>
@@ -3726,7 +3726,7 @@
 <p> 今天的行程是从登巴村到左贡，从来没想到的事故居然会发生在我们身上。</p>
 <p> 今天爬的东达山，我是第一个到的，在山顶等了王梦雅和邓军大概两个多小时，邓军说有点低血糖。结果歇了没一会，就张罗下山，吃了些压缩饼干。下山的时候，因为路比较破，都是雀斑，所以我控制速度都是20左右，跑在了队伍的最后，小乾和王梦雅在第一二，邓军在我前面，几个弯后，就看不到小乾和王梦雅了。虽然心里有些急，但是还是不停地点刹，怕出事，结果还是出事了，邓军在我前面先过的一个弯，等我过去的时候，就发现他躺地上了。等我到跟前的时候，返现他头上留的血已经把衣服和收都染红了，当时有点蒙。</p>
 <p> 然后路上还遇到个好心的大哥，把自己的药品和纱布给我们用，还好我当时带了双氧水，他们都没带外伤药。当时打120和110都没鸡巴用。最后那个大哥把电话拿过去，说你们派不派车，人就快死了。路上拦不到车，死了是不是算你们的。然后120那头才说，他们联系警车。</p>
- <img src="https://img.alicdn.com/imgextra/i4/606022462/TB2QxuUeFXXXXcKXpXXXXXXXXXX-606022462.jpg_310x310.jpg">
+ <img src="https://img.alicdn.com/imgextra/i4/606022462/TB2QxuUeFXXXXcKXpXXXXXXXXXX-606022462.png_310x310.png">
 
 <p> 其实下山之前，在山上的时候就听说有人翻车了，那小子是直接手臂和大腿粉碎性骨折。在左贡的卫生院都做不了手术，只能去邦达。相对他来说，邓军的伤算上轻的了。</p>
 <p> 后来让小乾联系了车子，把邓军和我们的车子直接拉到左贡，我们拦了车子，把邓军送到左贡，我自己在后面看车，等小乾他们来。</p>
@@ -3736,7 +3736,7 @@
 <p> 左贡-邦达</p>
 <p> 今天的行程是从左贡到邦达，从今天开始，邓军就没有跟我们，因为是病患。不过他说提前坐车到我们下一个落脚点给我们定房间。</p>
 <p> 今天的行程非常受罪，上午从邦达出来，就是烂路，各种土路，过个车尘土飞扬，吃了一路的灰。一直到中午的时候才差不多是好路的开始。柏油路，爽死的那种。不过天公不作美，下午两点多的时候，开始下雨，刚开始还是小雨点，后来大了，越来越多，最后下起了冰雹，卧槽！打在眼睛上，那个根本睁不开眼睛啊。因为还得继续骑车，没办法，只能一只手握车把，一只手遮在眼睛上面。防止冰雹再打眼睛上。因为昨天的事情，所以今天骑的都非常小心。大概半个多小时吧，冰雹就散了，雨一停了，还看到了一个小的类似布达拉宫的庙。我们开玩笑说，这是小西天。</p>
-<p> <img src="https://img.alicdn.com/imgextra/i2/606022462/TB2bEDceFXXXXb0XXXXXXXXXXXX-606022462.jpg_310x310.jpg"><img src="https://img.alicdn.com/imgextra/i2/606022462/TB2jhi8eFXXXXXwXpXXXXXXXXXX-606022462.jpg_310x310.jpg" style="font-size: 10pt;"></p>
+<p> <img src="https://img.alicdn.com/imgextra/i2/606022462/TB2bEDceFXXXXb0XXXXXXXXXXXX-606022462.png_310x310.png"><img src="https://img.alicdn.com/imgextra/i2/606022462/TB2jhi8eFXXXXXwXpXXXXXXXXXX-606022462.png_310x310.png" style="font-size: 10pt;"></p>
 <p> 休息一会，脱了雨衣就继续上路，雨衣虽然防雨但是里面还是湿了，因为汗水。外面的气温太低。今天很纠结，骑到阿四村的时候又下雨了，穿上雨衣骑一会，雨停了，脱了雨衣，继续骑，过一会又下雨了。总之，就是这样，下了停，停了下。最后六点多的时候，我们三个才到邦达。</p>
 <p> 邓军定的青旅，50不包早晚。</p>
 <p> 第十六天：</p>
@@ -3744,50 +3744,50 @@
 <p> 今天的行程是从邦达到八宿，今天真正体验了一下什么叫做在漫步云端。</p>
 <p> 昨天小乾在青旅那块换了刹车片，因为老板说昨天色季拉山撞死一个骑友。说是下坡刹车失灵，跟迎面过来的卡车撞上，直接碾压过去了。当场死亡。所以为了安全起见，我们四个都检查了一下刹车。</p>
 <p> 因为昨天晚上有下雨，所以早起的时候山上都是雪白雪白的，我是相当亢奋啊，终于可以近距离看看雪山啦。所以，今天又是我第一个到山顶，业拉山。在山顶休息了一会等他们那时候山上的景色还是超级棒的。</p>
-<p> <img src="https://img.alicdn.com/imgextra/i4/606022462/TB2Pk9ZeFXXXXbJXpXXXXXXXXXX-606022462.jpg_310x310.jpg"><img src="https://img.alicdn.com/imgextra/i1/606022462/TB2t8zbeFXXXXcXXXXXXXXXXXXX-606022462.jpg_310x310.jpg" style="font-size: 10pt;"></p>
+<p> <img src="https://img.alicdn.com/imgextra/i4/606022462/TB2Pk9ZeFXXXXbJXpXXXXXXXXXX-606022462.png_310x310.png"><img src="https://img.alicdn.com/imgextra/i1/606022462/TB2t8zbeFXXXXcXXXXXXXXXXXXX-606022462.png_310x310.png" style="font-size: 10pt;"></p>
 <p> 后来开始起雾，我们都以为是大雾，其实是云，我们就身在云层。</p>
 <p> 他们上来后说，推车下去吧，因为雾太大，5m开外都开不清。结果，我们推了一会，王梦雅那山炮就开始骑了。然后小乾也跟上了，没办法，我就只能硬着头皮上，因为有邓军的先例，我们都很小心，一直在喊，慢一点慢一点，骑了大概7&#x2F;8分钟的样子，云层就过去了，就能清晰的看到下山的路，还有72拐。对了，下72拐的时候，有个傻逼，跟王梦雅和小乾说要比谁下的快。他俩没上套，后来听说那个傻逼的刹车坏了。</p>
-<p> <img src="https://img.alicdn.com/imgextra/i2/606022462/TB2dSnXeFXXXXcAXXXXXXXXXXXX-606022462.jpg_310x310.jpg"><img src="https://img.alicdn.com/imgextra/i4/606022462/TB2qzDheFXXXXayXXXXXXXXXXXX-606022462.jpg_310x310.jpg" style="font-size: 10pt;"></p>
+<p> <img src="https://img.alicdn.com/imgextra/i2/606022462/TB2dSnXeFXXXXcAXXXXXXXXXXXX-606022462.png_310x310.png"><img src="https://img.alicdn.com/imgextra/i4/606022462/TB2qzDheFXXXXayXXXXXXXXXXXX-606022462.png_310x310.png" style="font-size: 10pt;"></p>
 <p> 下了72拐后，过怒江，里面有个军事基地，听说不让拍照，守门的小孩长得倒挺俊的。估计也就20来岁。过怒江的时候，一路上都没有吃饭的地方，一直蹬了好久，才找到一个吃饭的地方。然后还等了半个多小时，饭菜才上来。</p>
 <p> 今天还是邓军给我们定的房间，游客大本营，35不包餐。6人房间，其中有一个老大爷，下午两点多就到了，比我们骑的还快。另一个山炮是晚上十点多过来的，我们基本都睡了，结果那山炮进门后还整一句：都睡了啊？还有，就是那天邓军的床铺吱吱响，我一晚上没睡好。</p>
 <p> 第十七天：</p>
 <p> 八宿-然乌</p>
 <p> 今天的行程是从八宿到然乌。70多都是上坡，攻略上说是缓上坡。呵呵</p>
 <p> 他说的缓上坡是在海拔图上来说或的，其实根本就不是，今天的路，就是一个陡上坡，然后小下坡，然后又一个陡上坡，一个小下坡，就是这样轮流艹我们。估计当天累计攀升的高度得有2000多米。</p>
-<p> <img src="https://img.alicdn.com/imgextra/i3/606022462/TB2VWiUeFXXXXcVXpXXXXXXXXXX-606022462.jpg_310x310.jpg"><img src="https://img.alicdn.com/imgextra/i4/606022462/TB2tYe.eFXXXXc_XXXXXXXXXXXX-606022462.jpg_310x310.jpg" style="font-size: 10pt;"></p>
+<p> <img src="https://img.alicdn.com/imgextra/i3/606022462/TB2VWiUeFXXXXcVXpXXXXXXXXXX-606022462.png_310x310.png"><img src="https://img.alicdn.com/imgextra/i4/606022462/TB2tYe.eFXXXXc_XXXXXXXXXXXX-606022462.png_310x310.png" style="font-size: 10pt;"></p>
 <p> 今天早上是顶着小雨出门的，一直不停地下着，十一点左右吧，小雨才停下。中午的时候，我们路过一个小镇子，在那里吃的炒饭，我觉得那是我吃过的最难吃的炒饭了，我点的青椒肉丝的。真的超级难吃。不过还是吃完了，因为要补充能量。下午出门还是小雨，不过不是很大，骑了一会就开始逆风了，很不爽，大概骑了一个多小时的逆风吧，突然之间就转风向了，变成了顺风。</p>
 <p> 小乾还是在我们俩前面，我在第二，王梦雅在最后。顺风其实并不是好事，因为早上过去的云又被吹回来了。回头一看，黑压压的一片云，二话没说，赶紧蹬，追小乾。我和小乾先骑到了山顶，安久拉山，在山上的帐篷里面烤火，等了王梦雅半个多小时。不过，路上又看到那个粗腿妹子了[色]。</p>
-<p> <img src="https://img.alicdn.com/imgextra/i2/606022462/TB2MEW3eFXXXXa6XpXXXXXXXXXX-606022462.jpg_310x310.jpg"><img src="https://img.alicdn.com/imgextra/i3/606022462/TB2RMW5eFXXXXaXXpXXXXXXXXXX-606022462.jpg_310x310.jpg" style="font-size: 10pt;"></p>
+<p> <img src="https://img.alicdn.com/imgextra/i2/606022462/TB2MEW3eFXXXXa6XpXXXXXXXXXX-606022462.png_310x310.png"><img src="https://img.alicdn.com/imgextra/i3/606022462/TB2RMW5eFXXXXaXXpXXXXXXXXXX-606022462.png_310x310.png" style="font-size: 10pt;"></p>
 <p> 骑川藏遇到的最牛的车就是在安久拉山看到的，是特斯拉，特斯拉啊！山路那么破，居然开特斯拉！看看我们的山地车，这就是差别啊。</p>
 <p> 山顶到然乌，一个多小时，超级缓下坡，然乌湖非常非常非常漂亮。我本打算在然乌修整一天的。他们没有。住的还是邓军找的，老兵饭店，30不包餐，网络非常差。搞得我们把邓军一顿骂，哈哈其实不怪他。</p>
 <p> 第十八天：</p>
 <p> 然乌-波密</p>
 <p> 今天的行程是从然乌到波密，这是我318线一路上最棒的风景。没有之一。</p>
 <p> 早上老兵他家的洗手间被占着，没地方洗脸刷牙，我们就跑去下面的早餐店点了几十个包子，然后在他家顺便洗漱了一下。</p>
-<p> <img src="https://img.alicdn.com/imgextra/i2/606022462/TB2jPm0eFXXXXblXpXXXXXXXXXX-606022462.jpg_310x310.jpg"><img src="https://img.alicdn.com/imgextra/i1/606022462/TB2wuW8eFXXXXXFXpXXXXXXXXXX-606022462.jpg_310x310.jpg" style="font-size: 10pt;"></p>
- <img src="https://img.alicdn.com/imgextra/i1/606022462/TB28QW3eFXXXXaYXpXXXXXXXXXX-606022462.jpg_620x10000.jpg">
+<p> <img src="https://img.alicdn.com/imgextra/i2/606022462/TB2jPm0eFXXXXblXpXXXXXXXXXX-606022462.png_310x310.png"><img src="https://img.alicdn.com/imgextra/i1/606022462/TB2wuW8eFXXXXXFXpXXXXXXXXXX-606022462.png_310x310.png" style="font-size: 10pt;"></p>
+ <img src="https://img.alicdn.com/imgextra/i1/606022462/TB28QW3eFXXXXaYXpXXXXXXXXXX-606022462.png_620x10000.png">
 
 <p> 今天一路爽下坡，130公里的路，路上有村子种了果树，我依然是顺果子的那个，嘿嘿。前半天有小雨，不过不影响心情，因为真的是太漂亮了。</p>
-<p> <img src="https://img.alicdn.com/imgextra/i2/606022462/TB2oiW4eFXXXXaFXpXXXXXXXXXX-606022462.jpg_310x310.jpg"><img src="https://img.alicdn.com/imgextra/i3/606022462/TB2nRTpeFXXXXXaXXXXXXXXXXXX-606022462.jpg_310x310.jpg" style="font-size: 10pt;"></p>
+<p> <img src="https://img.alicdn.com/imgextra/i2/606022462/TB2oiW4eFXXXXaFXpXXXXXXXXXX-606022462.png_310x310.png"><img src="https://img.alicdn.com/imgextra/i3/606022462/TB2nRTpeFXXXXXaXXXXXXXXXXXX-606022462.png_310x310.png" style="font-size: 10pt;"></p>
 <p> 今天邓军定的地方叫菠萝菠萝蜜的旅店，攻略推荐的。上下铺的，还不错，我们是两个房间通着的，我们4人住在外面这间，屋里面还有其他人。到这之后，他们三个去打台球了，我就在宾馆洗衣服。看心理罪消磨时间。</p>
 <p> 晚上吃饭的时候，跟一个同在菠萝菠萝蜜宾馆的哥们一起吃的，就听他在那吹牛逼了，说自己有个日本的服务器，还有一个网站，网站能卖上万块钱，还说自己参加了什么攻击索尼的那次黑客行动。老子也有阿里的服务器，老子知道这些东西，然后我就问了他服务器怎么收费的，带宽什么的。等他说完他服务器的配置，我就在旁边呵呵了。</p>
 <p> 对了，今天破财了，因为洗衣服晚上收衣服的时候秋衣秋裤没干，所以落在了菠萝菠萝蜜的三楼阳台。。���。</p>
- <img src="https://img.alicdn.com/imgextra/i3/606022462/TB23LzgeFXXXXbgXXXXXXXXXXXX-606022462.jpg_310x310.jpg">
+ <img src="https://img.alicdn.com/imgextra/i3/606022462/TB23LzgeFXXXXbgXXXXXXXXXXXX-606022462.png_310x310.png">
 
 <p> 第十九天：</p>
 <p> 波密-八一</p>
 <p> 今天的行程是从波密到八一，为啥一下子就到八一了呢？下面告诉你</p>
 <p> 今天要路过的一段路，我们骑行的都管他叫通麦坟场，因为那里地质灾害死过很多人，通麦大桥那里也因为地质灾害塌了，目前的还在修。在骑行最初的时候，他们就说过通麦的时候绝对要搭车，4个人三个说搭车，我也只能少数服从多数了，其实，今天天气挺好的。</p>
- <img src="https://img.alicdn.com/imgextra/i4/606022462/TB2oPO0eFXXXXbLXpXXXXXXXXXX-606022462.jpg_310x310.jpg">
+ <img src="https://img.alicdn.com/imgextra/i4/606022462/TB2oPO0eFXXXXbLXpXXXXXXXXXX-606022462.png_310x310.png">
 
 <p> 最开始的时候，我们是打算直接搭车过通麦到老虎嘴就可以了，结果问了好几辆车人家都不去，去的话，又必须得包车，800，每个人就200，不包车的话，他们是到八一，才100。所以最后，一致决定，直接去八一吧。</p>
 <p> 因为还有两个人跟我们一起在找车，打算一起搭车过去，他俩总是说，咱们人多好打车，结果一辆不去，两辆不去，搭车的钱也从100涨到了140，钱在不停地涨，那两人说人多可以讲价。我就日了，最后我们六个人包了个车到八一。有车的人120，没车的人100。</p>
 <p> 到大桥之前还是好的，过大桥之后很险，江水很急，下坡土路很滑，每辆车都单独过大桥。过桥的那段路，排了几公里的队，在修路。过桥之后，也是继续排队。那一天，基本上都在排队。</p>
 <p> 晚上7点多才到，小乾找到一个六人间，35上下铺。</p>
- <img src="https://img.alicdn.com/imgextra/i1/606022462/TB2gFLmeFXXXXX3XXXXXXXXXXXX-606022462.jpg_310x310.jpg">
+ <img src="https://img.alicdn.com/imgextra/i1/606022462/TB2gFLmeFXXXXX3XXXXXXXXXXXX-606022462.png_310x310.png">
 
 <p> 好久没看见红绿灯了，大城市的感觉真好。因为觉得在八一修整一天，大城市嘛，可以吃好吃的，当天晚上，王梦雅小乾和我，我们三个就跑去网吧玩lol了，打到3点半，6块钱一小时，包夜18，机器不错。就是网费贵了一点。</p>
- <img src="https://img.alicdn.com/imgextra/i4/606022462/TB2K86jeFXXXXaxXXXXXXXXXXXX-606022462.jpg_310x310.jpg">
+ <img src="https://img.alicdn.com/imgextra/i4/606022462/TB2K86jeFXXXXaxXXXXXXXXXXXX-606022462.png_310x310.png">
 
 
 
@@ -3796,9 +3796,9 @@
 <p> 第二十天：</p>
 <p> 今天是在八一修整，我那，约了花花。绘画群里的朋友。</p>
 <p> 她请我吃饭，我请她看电影，不过藏区的电影院超级任性的，早上得先去电影院预定电影票，然后电影院会根据当天预定电影票的情况来决定是不是放映电影。也就是说，你预定了也不一定会放，只能等通知，不过还好。我预定的电影放了，煎饼侠，看完后悔了，还不如去看捉妖记了呢。其实当时最想看的是大圣归来，但是她看过了。</p>
-<p> <img src="https://img.alicdn.com/imgextra/i3/606022462/TB2wkC2eFXXXXbkXpXXXXXXXXXX-606022462.jpg_310x310.jpg"><img src="https://img.alicdn.com/imgextra/i4/606022462/TB2ptHkeFXXXXacXXXXXXXXXXXX-606022462.jpg_310x310.jpg" style="font-size: 10pt;"></p>
+<p> <img src="https://img.alicdn.com/imgextra/i3/606022462/TB2wkC2eFXXXXbkXpXXXXXXXXXX-606022462.png_310x310.png"><img src="https://img.alicdn.com/imgextra/i4/606022462/TB2ptHkeFXXXXacXXXXXXXXXXXX-606022462.png_310x310.png" style="font-size: 10pt;"></p>
 <p> 看电影之前，先是跟王梦雅和小乾去网吧玩了一会，下午花花她叔叔开车领我转了一下那个有牦牛标记的广场，还有���个博物馆，里面都是藏区的民风民俗。之后就是去看了电影，看完电影后，就往回逛，她直接请我吃了脏餐，藏面和炸羊排，他家的甜茶很好喝。本来还打算叫那个山炮来着，结果他们说吃过晚饭了。</p>
-<p> <img src="https://img.alicdn.com/imgextra/i2/606022462/TB2VfDieFXXXXaDXXXXXXXXXXXX-606022462.jpg_310x310.jpg"><img src="https://img.alicdn.com/imgextra/i4/606022462/TB2kxraeFXXXXckXXXXXXXXXXXX-606022462.jpg_310x310.jpg" style="font-size: 10pt;"></p>
+<p> <img src="https://img.alicdn.com/imgextra/i2/606022462/TB2VfDieFXXXXaDXXXXXXXXXXXX-606022462.png_310x310.png"><img src="https://img.alicdn.com/imgextra/i4/606022462/TB2kxraeFXXXXckXXXXXXXXXXXX-606022462.png_310x310.png" style="font-size: 10pt;"></p>
 <p> 后来我俩就去逛公园，八一的公园还是比较大的，里面有熊，游乐园和射箭场，六点多有大爷大妈跳藏舞，跟广场舞差不多。七点多，就送花花回去了。晚上开始定从来拉萨返程的车票，到重庆的直达没有了，改成了西宁转车，转车到西安，西安再到重庆。为了看一眼三峡我是真能折腾啊，我都佩服我自己。</p>
 <p> 第二十一天：</p>
 <p> 八一-工布江达</p>
@@ -3808,19 +3808,19 @@
 <p> 第二十二天</p>
 <p> 工布江达-松多一村</p>
 <p> 今天的路程是从工布江达到松多一村。路还是比较好走的，路上的景色已经不怎么在意了，不过金达镇的时候，有一个村子，很牛，当时路过了发现家家是瓦房，家家是太阳能。后来再往前走，发现这是一家全党村，整个村子的住户都是党员。我估计全中国可能就这么一个村子吧。</p>
-<p> <img src="https://img.alicdn.com/imgextra/i4/606022462/TB2vpG9eFXXXXXQXpXXXXXXXXXX-606022462.jpg_310x310.jpg"><img src="https://img.alicdn.com/imgextra/i3/606022462/TB22mG1eFXXXXa_XpXXXXXXXXXX-606022462.jpg_310x310.jpg" style="font-size: 10pt;"></p>
+<p> <img src="https://img.alicdn.com/imgextra/i4/606022462/TB2vpG9eFXXXXXQXpXXXXXXXXXX-606022462.png_310x310.png"><img src="https://img.alicdn.com/imgextra/i3/606022462/TB22mG1eFXXXXa_XpXXXXXXXXXX-606022462.png_310x310.png" style="font-size: 10pt;"></p>
 <p> 过了那个村子后，就是路上的4444牌子了，四连号唯一一个。3333是在悬崖上面的，看不到。他们说不然跟4444拍照，怕不吉利。而且不知道那个好事的，给4444的牌子涂色，一面是全黑的，一面是全红的。不讲究这些事情的，都觉得不舒服。还合毛照片啊。</p>
-<p> <img src="https://img.alicdn.com/imgextra/i2/606022462/TB22GLmeFXXXXXVXXXXXXXXXXXX-606022462.jpg_310x310.jpg"><img src="https://img.alicdn.com/imgextra/i4/606022462/TB2_SaZeFXXXXcdXpXXXXXXXXXX-606022462.jpg_310x310.jpg" style="font-size: 10pt;"></p>
+<p> <img src="https://img.alicdn.com/imgextra/i2/606022462/TB22GLmeFXXXXXVXXXXXXXXXXXX-606022462.png_310x310.png"><img src="https://img.alicdn.com/imgextra/i4/606022462/TB2_SaZeFXXXXcdXpXXXXXXXXXX-606022462.png_310x310.png" style="font-size: 10pt;"></p>
 <p> 路上的河���该还是尼洋河，很漂亮。下午到的时候，找了一下到底哪里是松多一村，因为地图上的不准确。最后在村口的第一家住的，20住宿，包早晚是60，刚到的时候没电，邓军还打电话催我们让我们快点到拉萨。他说他寂寞了，哈哈</p>
 <p> 第二十三天</p>
 <p> 松多一村-拉萨</p>
 <p> 今天攻略上说要骑行176km，但是实际上我们骑了近200km。早上六点我们几个就出发了。那时候天还没亮。我和小乾在米拉山等了王梦雅近一个小时，结果她还耍脾气说没有。</p>
 <p> 下山的时候依旧是王梦雅骑在前面，下山都没她速度快。到日多乡之前，她问我在哪里吃午饭，我说往前走，马上就到了。结果到日多乡的时候，她又问我，我说，就前面这块吧，等一下小乾。结果她听成了继续往前走，我等小乾上来后，发现她早就跑出了日多乡。结果我跟小乾吃午饭，就马上去追她。</p>
-<p> <img src="https://img.alicdn.com/imgextra/i2/606022462/TB2EvbkeFXXXXX9XXXXXXXXXXXX-606022462.jpg_310x310.jpg"><img src="https://img.alicdn.com/imgextra/i3/606022462/TB2ydjoeFXXXXXyXXXXXXXXXXXX-606022462.jpg_310x310.jpg" style="font-size: 10pt;"></p>
+<p> <img src="https://img.alicdn.com/imgextra/i2/606022462/TB2EvbkeFXXXXX9XXXXXXXXXXXX-606022462.png_310x310.png"><img src="https://img.alicdn.com/imgextra/i3/606022462/TB2ydjoeFXXXXXyXXXXXXXXXXXX-606022462.png_310x310.png" style="font-size: 10pt;"></p>
 <p> 最后我们三个在墨竹工卡回合的。墨竹工卡后面的高速岔路口有人看守还是不让上，但是高速肯定比国道好啊，我们没办法骑了大约7、8公里的样子，发现高速有个缺口，二话不说，赶紧抬车子上去。骑了52km，至少里程牌上面写的是52。</p>
-<p> <img src="https://img.alicdn.com/imgextra/i4/606022462/TB2c7CYeFXXXXbOXpXXXXXXXXXX-606022462.jpg_310x310.jpg"><img src="https://img.alicdn.com/imgextra/i4/606022462/TB2MBzieFXXXXaWXXXXXXXXXXXX-606022462.jpg_310x310.jpg" style="font-size: 10pt;"></p>
+<p> <img src="https://img.alicdn.com/imgextra/i4/606022462/TB2c7CYeFXXXXbOXpXXXXXXXXXX-606022462.png_310x310.png"><img src="https://img.alicdn.com/imgextra/i4/606022462/TB2MBzieFXXXXaWXXXXXXXXXXXX-606022462.png_310x310.png" style="font-size: 10pt;"></p>
 <p> 下午到拉萨的时候，应该是在扩建，因为有个像大城市的镇子在拉萨市前面，我们开始以为那就是拉萨，后来看地图才发现，那根本就不是。还好当时小乾的充电宝还有电。要不然我们就在那个镇子等王梦雅了。出了镇子又骑了1km左右才到拉萨。</p>
-<p> <img src="https://img.alicdn.com/imgextra/i3/606022462/TB26V9WeFXXXXcrXpXXXXXXXXXX-606022462.jpg_310x310.jpg"><img src="https://img.alicdn.com/imgextra/i3/606022462/TB2q46jeFXXXXasXXXXXXXXXXXX-606022462.jpg_310x310.jpg" style="font-size: 10pt;"></p>
+<p> <img src="https://img.alicdn.com/imgextra/i3/606022462/TB26V9WeFXXXXcrXpXXXXXXXXXX-606022462.png_310x310.png"><img src="https://img.alicdn.com/imgextra/i3/606022462/TB2q46jeFXXXXasXXXXXXXXXXXX-606022462.png_310x310.png" style="font-size: 10pt;"></p>
 <p> 因为下午5点就到了拉萨，我先去找的邓军，然后又继续找的旅店，第一天王梦雅还没跟我们住，邓军去他表弟那里住了。最后就我跟小乾两个人了。晚上跑去看了心仪已久的大圣归来，还得了免费的明信片。</p>
 <p> 318的骑行之路就此画上了圆满的句号。</p>
 <p> 至于之后的拉萨之行，就看50元那个帖子吧</p>
@@ -3840,96 +3840,96 @@
     <content><![CDATA[<blockquote>
 <p>来拉萨这次是一次历练</p>
 <p>我辞职了；</p>
-<p><img src="https://img.alicdn.com/imgextra/i2/606022462/TB2iI7oepXXXXaLXpXXXXXXXXXX-606022462.jpg_310x310.jpg"><img src="https://img.alicdn.com/imgextra/i1/606022462/TB2YQoBepXXXXbyXXXXXXXXXXXX-606022462.jpg_310x310.jpg"></p>
+<p><img src="https://img.alicdn.com/imgextra/i2/606022462/TB2iI7oepXXXXaLXpXXXXXXXXXX-606022462.png_310x310.png"><img src="https://img.alicdn.com/imgextra/i1/606022462/TB2YQoBepXXXXbyXXXXXXXXXXXX-606022462.png_310x310.png"></p>
 <p>6月25日开始轻装上阵；</p>
 <p>想骑行318这个想法已经很久了，那时候打算离开北京之后的那段时间里面再骑行；</p>
 <p>但是今年年初的时候突然想通了一些事情；</p>
 <p>觉得有些事情，不要等，不要等到以后再去做，能现在着手去做的事情，就不要放在后面去做。</p>
 <p>再加上这个公司做程序做的不是很开心，所以，不等了，就6月份吧。</p>
-<p>于是一月开始弄了个健身卡；健身了半年；主要是想把心肺功能提高上去，不想因为高原反应而骑不了。&gt;<br> <img src="https://img.alicdn.com/imgextra/i4/606022462/TB2gv9ZeFXXXXbOXpXXXXXXXXXX-606022462.jpg_310x310.jpg"></p>
+<p>于是一月开始弄了个健身卡；健身了半年；主要是想把心肺功能提高上去，不想因为高原反应而骑不了。&gt;<br> <img src="https://img.alicdn.com/imgextra/i4/606022462/TB2gv9ZeFXXXXbOXpXXXXXXXXXX-606022462.png_310x310.png"></p>
 <p>7月5日开始骑行，骑了23天，于7月27日抵达终点站拉萨；</p>
 <p>至于我那个骑行中遇到的景，遇到的人，看我另一篇关于318路途的日志吧~~</p>
-<p>贴两张我非常喜欢的景色哈&gt;<br> <img src="https://img.alicdn.com/imgextra/i2/606022462/TB2jPm0eFXXXXblXpXXXXXXXXXX-606022462.jpg_310x310.jpg"><img src="https://img.alicdn.com/imgextra/i2/606022462/TB21.q1eFXXXXa6XpXXXXXXXXXX-606022462.jpg_310x310.jpg"></p>
-<img src="https://img.alicdn.com/imgextra/i3/606022462/TB240EiepXXXXcmXpXXXXXXXXXX-606022462.jpg_620x10000.jpg">
+<p>贴两张我非常喜欢的景色哈&gt;<br> <img src="https://img.alicdn.com/imgextra/i2/606022462/TB2jPm0eFXXXXblXpXXXXXXXXXX-606022462.png_310x310.png"><img src="https://img.alicdn.com/imgextra/i2/606022462/TB21.q1eFXXXXa6XpXXXXXXXXXX-606022462.png_310x310.png"></p>
+<img src="https://img.alicdn.com/imgextra/i3/606022462/TB240EiepXXXXcmXpXXXXXXXXXX-606022462.png_620x10000.png">
 
-<img src="https://img.alicdn.com/imgextra/i3/606022462/TB2GD.NepXXXXXHXXXXXXXXXXXX-606022462.jpg_620x10000.jpg">
+<img src="https://img.alicdn.com/imgextra/i3/606022462/TB2GD.NepXXXXXHXXXXXXXXXXXX-606022462.png_620x10000.png">
 
 
 
 <p>到拉萨的第一天晚上，我和小乾去看了期待已久的齐天大圣；路上还遇到一个邮局式的书店，可以凭借朋友圈的318骑行记录来领取明信片</p>
-<p><img src="https://img.alicdn.com/imgextra/i1/606022462/TB2lNQzepXXXXcqXXXXXXXXXXXX-606022462.jpg_310x310.jpg"><img src="https://img.alicdn.com/imgextra/i1/606022462/TB2qwgFepXXXXaSXXXXXXXXXXXX-606022462.jpg_310x310.jpg"></p>
+<p><img src="https://img.alicdn.com/imgextra/i1/606022462/TB2lNQzepXXXXcqXXXXXXXXXXXX-606022462.png_310x310.png"><img src="https://img.alicdn.com/imgextra/i1/606022462/TB2qwgFepXXXXaSXXXXXXXXXXXX-606022462.png_310x310.png"></p>
 <p>虽然明信片不是很漂亮的，但是是免费的，嘿嘿</p>
 <p>然后滚回去，睡觉！</p>
 <p>第二天，当然是看我这次来的主要景点啊，布达拉宫，但由于门票tm贵了，所以，忍痛，没有进去看</p>
-<img src="https://img.alicdn.com/imgextra/i4/606022462/TB2yGZDepXXXXbAXXXXXXXXXXXX-606022462.jpg_620x10000.jpg">
+<img src="https://img.alicdn.com/imgextra/i4/606022462/TB2yGZDepXXXXbAXXXXXXXXXXXX-606022462.png_620x10000.png">
 
 
 
 <p>我什么都不干，就是装个逼：眼镜还是小乾买来装b的，然后被我拿过来试拍了几张，哈哈</p>
-<p> <img src="https://img.alicdn.com/imgextra/i3/606022462/TB2L9K1eFXXXXbgXpXXXXXXXXXX-606022462.jpg_310x310.jpg"><img src="https://img.alicdn.com/imgextra/i1/606022462/TB2H1m1eFXXXXbrXpXXXXXXXXXX-606022462.jpg_310x310.jpg"></p>
-<img src="https://img.alicdn.com/imgextra/i4/606022462/TB24OZoepXXXXaRXpXXXXXXXXXX-606022462.jpg_620x10000.jpg">
+<p> <img src="https://img.alicdn.com/imgextra/i3/606022462/TB2L9K1eFXXXXbgXpXXXXXXXXXX-606022462.png_310x310.png"><img src="https://img.alicdn.com/imgextra/i1/606022462/TB2H1m1eFXXXXbrXpXXXXXXXXXX-606022462.png_310x310.png"></p>
+<img src="https://img.alicdn.com/imgextra/i4/606022462/TB24OZoepXXXXaRXpXXXXXXXXXX-606022462.png_620x10000.png">
 
 
 
 <p>给我的车子和路碑合个影，算是个纪念吧</p>
-<img src="https://img.alicdn.com/imgextra/i3/606022462/TB2B0UxepXXXXcQXXXXXXXXXXXX-606022462.jpg_620x10000.jpg">
+<img src="https://img.alicdn.com/imgextra/i3/606022462/TB2B0UxepXXXXcQXXXXXXXXXXXX-606022462.png_620x10000.png">
 
 <p>对了，因为之前在八一的时候定的火车票，有一个是需要退掉的，所以我和小乾骑车去了拉萨的火车站。</p>
 <p>结果退票排了近两个小时的队。坑爹啊</p>
- <img src="https://img.alicdn.com/imgextra/i3/606022462/TB2FjPoeFXXXXXqXXXXXXXXXXXX-606022462.jpg_310x310.jpg">
+ <img src="https://img.alicdn.com/imgextra/i3/606022462/TB2FjPoeFXXXXXqXXXXXXXXXXXX-606022462.png_310x310.png">
 
 
 
 <p>至于纪念品，本来想买手转经筒，结果邮寄车子的那个哥们说：他们这头卖的手转经筒都是从无锡那头批发过来的。</p>
 <p>真正的收转经筒是庙里面喇嘛在里面手写经文的那种。但是那种一般买不到。</p>
 <p>所以，最后没有买收转经筒留念，而是买了藏刀，一把给朋友带的，一把留给我自己的。</p>
- <img src="https://img.alicdn.com/imgextra/i1/606022462/TB2HD_leFXXXXacXXXXXXXXXXXX-606022462.jpg_310x310.jpg">
+ <img src="https://img.alicdn.com/imgextra/i1/606022462/TB2HD_leFXXXXacXXXXXXXXXXXX-606022462.png_310x310.png">
 
-<img src="https://img.alicdn.com/imgextra/i3/606022462/TB2O47vepXXXXXKXpXXXXXXXXXX-606022462.jpg_620x10000.jpg">
+<img src="https://img.alicdn.com/imgextra/i3/606022462/TB2O47vepXXXXXKXpXXXXXXXXXX-606022462.png_620x10000.png">
 
 
 
 <p>当天晚上还纹了第二个纹身：</p>
-<img src="https://img.alicdn.com/imgextra/i4/606022462/TB2x8UkepXXXXbsXpXXXXXXXXXX-606022462.jpg_620x10000.jpg">
+<img src="https://img.alicdn.com/imgextra/i4/606022462/TB2x8UkepXXXXbsXpXXXXXXXXXX-606022462.png_620x10000.png">
 
 <p>藏文，汉文意思是：做自己</p>
- <img src="https://img.alicdn.com/imgextra/i3/606022462/TB2CHDleFXXXXasXXXXXXXXXXXX-606022462.jpg_310x310.jpg">
+ <img src="https://img.alicdn.com/imgextra/i3/606022462/TB2CHDleFXXXXasXXXXXXXXXXXX-606022462.png_310x310.png">
 
 
 
 <p>买了第一包烟，就想体验一下打火机不好用，烟不吸自己就会灭的感觉。后来走的时候，给小乾了。因为我也不抽</p>
-<img src="https://img.alicdn.com/imgextra/i2/606022462/TB2wHEMepXXXXXMXXXXXXXXXXXX-606022462.jpg_620x10000.jpg">
+<img src="https://img.alicdn.com/imgextra/i2/606022462/TB2wHEMepXXXXXMXXXXXXXXXXXX-606022462.png_620x10000.png">
 
 <p>剩下一天也没有出去玩，因为拉萨市内没有什么好转的，景点都在山上。</p>
 <p>这一路骑过来，觉得太累了，不想再动了</p>
- <img src="https://img.alicdn.com/imgextra/i2/606022462/TB2YK2leFXXXXagXXXXXXXXXXXX-606022462.jpg_310x310.jpg">
+ <img src="https://img.alicdn.com/imgextra/i2/606022462/TB2YK2leFXXXXagXXXXXXXXXXXX-606022462.png_310x310.png">
 
 
 
 <p>本来是打算去珠峰看看的，但是时间有点久，而且还得重新买去珠峰的装备。</p>
 <p>所以，我最终还是决定，等下次自驾游来拉萨的时候再去珠峰。这次就算了。</p>
-<p><img src="https://img.alicdn.com/imgextra/i4/606022462/TB21cAzepXXXXcqXXXXXXXXXXXX-606022462.jpg_310x310.jpg"><img src="https://img.alicdn.com/imgextra/i2/606022462/TB2rJZmepXXXXbeXpXXXXXXXXXX-606022462.jpg_310x310.jpg"></p>
+<p><img src="https://img.alicdn.com/imgextra/i4/606022462/TB21cAzepXXXXcqXXXXXXXXXXXX-606022462.png_310x310.png"><img src="https://img.alicdn.com/imgextra/i2/606022462/TB2rJZmepXXXXbeXpXXXXXXXXXX-606022462.png_310x310.png"></p>
 <p>这个是布达拉宫后面的公园，里面居然有鸡，着实让我决得惊奇</p>
- <img src="https://img.alicdn.com/imgextra/i4/606022462/TB2d212eFXXXXbhXpXXXXXXXXXX-606022462.jpg_310x310.jpg">
+ <img src="https://img.alicdn.com/imgextra/i4/606022462/TB2d212eFXXXXbhXpXXXXXXXXXX-606022462.png_310x310.png">
 
 <p>中午的时候，我们团了一个脏餐，不得不说，好难吃：</p>
-<p><img src="https://img.alicdn.com/imgextra/i2/606022462/TB2hMcCepXXXXb1XXXXXXXXXXXX-606022462.jpg_310x310.jpg"><img src="https://img.alicdn.com/imgextra/i2/606022462/TB2EC3uepXXXXXzXpXXXXXXXXXX-606022462.jpg_310x310.jpg"></p>
+<p><img src="https://img.alicdn.com/imgextra/i2/606022462/TB2hMcCepXXXXb1XXXXXXXXXXXX-606022462.png_310x310.png"><img src="https://img.alicdn.com/imgextra/i2/606022462/TB2EC3uepXXXXXzXpXXXXXXXXXX-606022462.png_310x310.png"></p>
 <p>我点的卷饼，小乾和王梦雅点的牛肉丸子什么的。反正他俩那个是根本下不去口的，我的卷饼还能充饥一点。</p>
 <p>下午的时候没干什么，去街上乱逛，去那个传说的大昭寺，原来也是收费的，所以没进去，哈哈，一群穷逼。</p>
-<p> <img src="https://img.alicdn.com/imgextra/i2/606022462/TB2xaLXeFXXXXXfXpXXXXXXXXXX-606022462.jpg_310x310.jpg"><img src="https://img.alicdn.com/imgextra/i3/606022462/TB2NdTieFXXXXbgXXXXXXXXXXXX-606022462.jpg_310x310.jpg"></p>
+<p> <img src="https://img.alicdn.com/imgextra/i2/606022462/TB2xaLXeFXXXXXfXpXXXXXXXXXX-606022462.png_310x310.png"><img src="https://img.alicdn.com/imgextra/i3/606022462/TB2NdTieFXXXXbgXXXXXXXXXXXX-606022462.png_310x310.png"></p>
 <p>晚上，我们三个去吃了自助烤肉</p>
-<img src="https://img.alicdn.com/imgextra/i4/606022462/TB2AIACepXXXXb9XXXXXXXXXXXX-606022462.jpg_620x10000.jpg">
+<img src="https://img.alicdn.com/imgextra/i4/606022462/TB2AIACepXXXXb9XXXXXXXXXXXX-606022462.png_620x10000.png">
 
 <p>这是上个月吃的最爽的一次。我们从8点吃到近10点。</p>
-<p> <img src="https://img.alicdn.com/imgextra/i4/606022462/TB2KNrdeFXXXXcXXXXXXXXXXXXX-606022462.jpg_310x310.jpg"><img src="https://img.alicdn.com/imgextra/i2/606022462/TB2dOi2eFXXXXbaXpXXXXXXXXXX-606022462.jpg_310x310.jpg"></p>
+<p> <img src="https://img.alicdn.com/imgextra/i4/606022462/TB2KNrdeFXXXXcXXXXXXXXXXXXX-606022462.png_310x310.png"><img src="https://img.alicdn.com/imgextra/i2/606022462/TB2dOi2eFXXXXbaXpXXXXXXXXXX-606022462.png_310x310.png"></p>
 <p>当天晚上，我跟王梦雅去通宵打lol；打到五点多的时候居然服务器维护，我们两个玩了一会一个3d打僵尸的局域网联机游戏，打得我想吐，后来我就先休息了，睡到了上午8点半，她叫我，然后回去她跟邓军做上午车回成都，我是坐下午的车先去西宁，然后再转车去西安，再转车去重庆，重庆再到宜昌，宜昌最终才会北京。嘿嘿</p>
-<p> <img src="https://img.alicdn.com/imgextra/i2/606022462/TB2S_92eFXXXXa7XpXXXXXXXXXX-606022462.jpg_310x310.jpg" style="font-size: 10pt;"><img src="https://img.alicdn.com/imgextra/i3/606022462/TB2P6DheFXXXXaOXXXXXXXXXXXX-606022462.jpg_310x310.jpg"></p>
-<img src="https://img.alicdn.com/imgextra/i1/606022462/TB2He.KepXXXXadXXXXXXXXXXXX-606022462.jpg_620x10000.jpg">
+<p> <img src="https://img.alicdn.com/imgextra/i2/606022462/TB2S_92eFXXXXa7XpXXXXXXXXXX-606022462.png_310x310.png" style="font-size: 10pt;"><img src="https://img.alicdn.com/imgextra/i3/606022462/TB2P6DheFXXXXaOXXXXXXXXXXXX-606022462.png_310x310.png"></p>
+<img src="https://img.alicdn.com/imgextra/i1/606022462/TB2He.KepXXXXadXXXXXXXXXXXX-606022462.png_620x10000.png">
 
 <p>拉萨，那几天，很开心</p>
 </blockquote>
 <blockquote>
- <img src="https://img.alicdn.com/imgextra/i2/606022462/TB2KMiUeFXXXXcNXpXXXXXXXXXX-606022462.jpg_620x10000.jpg"></blockquote>
+ <img src="https://img.alicdn.com/imgextra/i2/606022462/TB2KMiUeFXXXXcNXpXXXXXXXXXX-606022462.png_620x10000.png"></blockquote>
 ]]></content>
       <categories>
         <category>五味杂陈</category>
@@ -3943,22 +3943,22 @@
     <title>186元钱--北京</title>
     <url>/2015/06/29/blogs/travel/domestic/186/100%E5%9D%97%E9%92%B1%EF%BC%9A%E4%BA%BA%E6%B0%91%E5%A4%A7%E4%BC%9A%E5%A0%82/</url>
     <content><![CDATA[<blockquote>
-<p>来北京这么多年，也没怎么逛。上班嘛，总是这样对自己说。这次是因为要骑318，想在骑318之前，先把父母打算来北京看看的愿望给完成了，所以六月份离职之后的第一件事，接父母来北京玩几天。&gt;<br> <img src="https://img.alicdn.com/imgextra/i1/606022462/TB23OAyfVXXXXbeXpXXXXXXXXXX-606022462.jpg_310x310.jpg"><img src="https://img.alicdn.com/imgextra/i1/606022462/TB2tSIrfVXXXXciXpXXXXXXXXXX-606022462.jpg_310x310.jpg"></p>
+<p>来北京这么多年，也没怎么逛。上班嘛，总是这样对自己说。这次是因为要骑318，想在骑318之前，先把父母打算来北京看看的愿望给完成了，所以六月份离职之后的第一件事，接父母来北京玩几天。&gt;<br> <img src="https://img.alicdn.com/imgextra/i1/606022462/TB23OAyfVXXXXbeXpXXXXXXXXXX-606022462.png_310x310.png"><img src="https://img.alicdn.com/imgextra/i1/606022462/TB2tSIrfVXXXXciXpXXXXXXXXXX-606022462.png_310x310.png"></p>
 <p> 第一站住宿的地方：南锣鼓巷的星海琦，网上定的，一天200左右吧，到店才发现，如果提前过了半会员，可以省三分之一的钱。不过，也没办法了，都已经付了预付款了。</p>
 <p> 第一天过了后，就之间在酒店休息了，第二天才是正式的行程</p>
 <p> 早上起来领他俩转了一下南锣鼓巷</p>
-<p> <img src="https://img.alicdn.com/imgextra/i4/606022462/TB2O9cWfVXXXXXFXXXXXXXXXXXX-606022462.jpg_310x310.jpg"><img src="https://img.alicdn.com/imgextra/i3/606022462/TB2MC.wfVXXXXbsXpXXXXXXXXXX-606022462.jpg_310x310.jpg"></p>
+<p> <img src="https://img.alicdn.com/imgextra/i4/606022462/TB2O9cWfVXXXXXFXXXXXXXXXXXX-606022462.png_310x310.png"><img src="https://img.alicdn.com/imgextra/i3/606022462/TB2MC.wfVXXXXbsXpXXXXXXXXXX-606022462.png_310x310.png"></p>
 <p> 给他俩买了奶酪，死活不要，买完了还说不好吃。</p>
 <p> 下午，一家三口跑去爬长城，长城门口还有个动物园，里面都是这种熊。</p>
 <p> 我一直说：不到长城非好汉，上了长城是笨蛋</p>
- <img src="https://img.alicdn.com/imgextra/i2/606022462/TB2CYAJfVXXXXcHXXXXXXXXXXXX-606022462.jpg_310x310.jpg">
+ <img src="https://img.alicdn.com/imgextra/i2/606022462/TB2CYAJfVXXXXcHXXXXXXXXXXXX-606022462.png_310x310.png">
 
 
 
 
 
 <p> 上长城和下长城我们都做了滑梯，怕他俩爬太多累，当然，后来我发现顾虑是多余的，他俩体力比我好……</p>
- <img src="https://img.alicdn.com/imgextra/i1/606022462/TB2fGQSfVXXXXaxXXXXXXXXXXXX-606022462.jpg_310x310.jpg">
+ <img src="https://img.alicdn.com/imgextra/i1/606022462/TB2fGQSfVXXXXaxXXXXXXXXXXXX-606022462.png_310x310.png">
 
 
 
@@ -3966,37 +3966,37 @@
 
 <p> 晚上又领他俩去了水立方和鸟巢，带他俩吃了KFC，最开始，我妈说不吃，说不爱吃。我问她，你吃过么？她没说话，我没管她，买了个全家桶，等吃的时候，她又说好吃。估计肯定是以为很贵，怕我花钱。但钱赚来不就是花的么？吃完饭又领他俩往回转，去坐地铁。</p>
 <p> 后来我腿都酸了，问他俩累不累，他俩说不累。。。。。</p>
-<p> <img src="https://img.alicdn.com/imgextra/i2/606022462/TB2b_sYfVXXXXXpXXXXXXXXXXXX-606022462.jpg_310x310.jpg"><img src="https://img.alicdn.com/imgextra/i3/606022462/TB2CVwDfVXXXXXZXpXXXXXXXXXX-606022462.jpg_310x310.jpg"></p>
+<p> <img src="https://img.alicdn.com/imgextra/i2/606022462/TB2b_sYfVXXXXXpXXXXXXXXXXXX-606022462.png_310x310.png"><img src="https://img.alicdn.com/imgextra/i3/606022462/TB2CVwDfVXXXXXZXpXXXXXXXXXX-606022462.png_310x310.png"></p>
 <p> 第一天的行程，就这些，第二天是故宫、天坛、圆明园</p>
-<p> <img src="https://img.alicdn.com/imgextra/i2/606022462/TB2KucxfVXXXXbsXpXXXXXXXXXX-606022462.jpg_310x310.jpg"><img src="https://img.alicdn.com/imgextra/i1/606022462/TB2buowfVXXXXbkXpXXXXXXXXXX-606022462.jpg_310x310.jpg"></p>
+<p> <img src="https://img.alicdn.com/imgextra/i2/606022462/TB2KucxfVXXXXbsXpXXXXXXXXXX-606022462.png_310x310.png"><img src="https://img.alicdn.com/imgextra/i1/606022462/TB2buowfVXXXXbkXpXXXXXXXXXX-606022462.png_310x310.png"></p>
 <p> 虽然这几天霾比较重，但是幸好霾比较重，要不然走那么多景点真的容易中暑。我是提前问他俩想去哪里，按照3天的行程来，结果他俩列了好多，所以每天的行程都有点紧凑。</p>
-<p> <img src="https://img.alicdn.com/imgextra/i3/606022462/TB2PIQWfVXXXXXwXXXXXXXXXXXX-606022462.jpg_310x310.jpg"><img src="https://img.alicdn.com/imgextra/i4/606022462/TB2llkYfVXXXXXeXXXXXXXXXXXX-606022462.jpg_310x310.jpg"><img src="https://img.alicdn.com/imgextra/i3/606022462/TB260IAfVXXXXapXpXXXXXXXXXX-606022462.jpg_310x310.jpg"></p>
+<p> <img src="https://img.alicdn.com/imgextra/i3/606022462/TB2PIQWfVXXXXXwXXXXXXXXXXXX-606022462.png_310x310.png"><img src="https://img.alicdn.com/imgextra/i4/606022462/TB2llkYfVXXXXXeXXXXXXXXXXXX-606022462.png_310x310.png"><img src="https://img.alicdn.com/imgextra/i3/606022462/TB260IAfVXXXXapXpXXXXXXXXXX-606022462.png_310x310.png"></p>
 <p> 北京六月底的太阳还是很毒的。当时后悔没有带录音笔，可以把导游说的都录下，然后让他来带回去，想起来的时候可以听听。</p>
-<p> <img src="https://img.alicdn.com/imgextra/i1/606022462/TB2eYAVfVXXXXX3XXXXXXXXXXXX-606022462.jpg_310x310.jpg"><img src="https://img.alicdn.com/imgextra/i4/606022462/TB2bRIKfVXXXXckXXXXXXXXXXXX-606022462.jpg_310x310.jpg"><img src="http://"><img src="https://img.alicdn.com/imgextra/i3/606022462/TB2dLsrfVXXXXcuXpXXXXXXXXXX-606022462.jpg_310x310.jpg"></p>
+<p> <img src="https://img.alicdn.com/imgextra/i1/606022462/TB2eYAVfVXXXXX3XXXXXXXXXXXX-606022462.png_310x310.png"><img src="https://img.alicdn.com/imgextra/i4/606022462/TB2bRIKfVXXXXckXXXXXXXXXXXX-606022462.png_310x310.png"><img src="http://"><img src="https://img.alicdn.com/imgextra/i3/606022462/TB2dLsrfVXXXXcuXpXXXXXXXXXX-606022462.png_310x310.png"></p>
 <p> 逛完故宫，紧接着就是去天坛，都是一个团的。因为如果不抱团，我带他俩走，会更累。跟着导游还好一点，能听他说一些古迹的历史。其实我是对这些古迹不太感冒的，我还是喜欢自然风光好的，可能这些东西对他们那一带的人，算是个心结吧。总是想看看。</p>
 <p> 我发现，我爸还是很逗的，拍照时候非常配合。哈哈</p>
-<p> <img src="https://img.alicdn.com/imgextra/i3/606022462/TB2cpgCfVXXXXaiXpXXXXXXXXXX-606022462.jpg_310x310.jpg"><img src="https://img.alicdn.com/imgextra/i3/606022462/TB2AEgUfVXXXXX4XXXXXXXXXXXX-606022462.jpg_310x310.jpg"></p>
+<p> <img src="https://img.alicdn.com/imgextra/i3/606022462/TB2cpgCfVXXXXaiXpXXXXXXXXXX-606022462.png_310x310.png"><img src="https://img.alicdn.com/imgextra/i3/606022462/TB2AEgUfVXXXXX4XXXXXXXXXXXX-606022462.png_310x310.png"></p>
 <p> 中午还是有点热的，抽个空，在天坛的门洞下休息一会。</p>
 <p> 下午去圆明园的时候，拍照让他俩笑一下，结果说笑不出来，可能是因为那么一段历史吧。反正他俩都很不高兴的样子。但是景点却是他们自己选的。</p>
 <p> 圆明园里面都是毁坏的清代奢华的文物和建筑。唯一一个修复完整的是这个迷宫。用来供皇帝娱乐用的。</p>
-<p> <img src="https://img.alicdn.com/imgextra/i3/606022462/TB2.YwMfVXXXXbIXXXXXXXXXXXX-606022462.jpg_310x310.jpg"><img src="https://img.alicdn.com/imgextra/i1/606022462/TB2.eQyfVXXXXbXXpXXXXXXXXXX-606022462.jpg_310x310.jpg"><img src="https://img.alicdn.com/imgextra/i4/606022462/TB2xysCfVXXXXXIXpXXXXXXXXXX-606022462.jpg_310x310.jpg"></p>
+<p> <img src="https://img.alicdn.com/imgextra/i3/606022462/TB2.YwMfVXXXXbIXXXXXXXXXXXX-606022462.png_310x310.png"><img src="https://img.alicdn.com/imgextra/i1/606022462/TB2.eQyfVXXXXbXXpXXXXXXXXXX-606022462.png_310x310.png"><img src="https://img.alicdn.com/imgextra/i4/606022462/TB2xysCfVXXXXXIXpXXXXXXXXXX-606022462.png_310x310.png"></p>
 <p> 后来在一个树荫下休息了一会，就领他俩去看了电影。因为他俩还没进过电影院。本来想带他们看3d的，但是侏罗纪公园那个是英文的，字母估计他俩看着会累眼睛。就领他俩去看了赵薇拍的那个横冲直撞好莱坞。其实没啥意思，一个闹剧。</p>
 <p> 第二天的行程基本上就这些。</p>
 <p> 第三天是香山、颐和园</p>
 <p> 由于霾实在是太重，到香山的时候我没建议他俩上山，因为一爬山很累，而且香山的索道也不安全，二是天气太差，山上估计都看不清山底。</p>
-<p> <img src="https://img.alicdn.com/imgextra/i2/606022462/TB2Q4MyfVXXXXa1XpXXXXXXXXXX-606022462.jpg_310x310.jpg"><img src="https://img.alicdn.com/imgextra/i2/606022462/TB2d8MJfVXXXXczXXXXXXXXXXXX-606022462.jpg_310x310.jpg"></p>
+<p> <img src="https://img.alicdn.com/imgextra/i2/606022462/TB2Q4MyfVXXXXa1XpXXXXXXXXXX-606022462.png_310x310.png"><img src="https://img.alicdn.com/imgextra/i2/606022462/TB2d8MJfVXXXXczXXXXXXXXXXXX-606022462.png_310x310.png"></p>
 <p> 然后我们就之间转车去了颐和园。下午的时候天气有点阴，后来还下雨了。我们三困在那个长亭里面，多了好久的雨。</p>
-<p> <img src="https://img.alicdn.com/imgextra/i3/606022462/TB2q7gLfVXXXXb8XXXXXXXXXXXX-606022462.jpg_310x310.jpg"><img src="https://img.alicdn.com/imgextra/i2/606022462/TB2Oo.OfVXXXXa_XXXXXXXXXXXX-606022462.jpg_310x310.jpg"></p>
- <img src="https://img.alicdn.com/imgextra/i4/606022462/TB2j53wfVXXXXbtXpXXXXXXXXXX-606022462.jpg_310x310.jpg">
+<p> <img src="https://img.alicdn.com/imgextra/i3/606022462/TB2q7gLfVXXXXb8XXXXXXXXXXXX-606022462.png_310x310.png"><img src="https://img.alicdn.com/imgextra/i2/606022462/TB2Oo.OfVXXXXa_XXXXXXXXXXXX-606022462.png_310x310.png"></p>
+ <img src="https://img.alicdn.com/imgextra/i4/606022462/TB2j53wfVXXXXbtXpXXXXXXXXXX-606022462.png_310x310.png">
 
 
 
 
 
 <p> 晚上回去的时候直接领他俩去吃了全聚德的烤鸭。当他俩听说200多一只的时候，就显得很不开心。他俩就是花点钱就心疼。我就不该告诉他俩烤鸭多少钱一只。</p>
-<p> <img src="https://img.alicdn.com/imgextra/i2/606022462/TB2G67NfVXXXXbnXXXXXXXXXXXX-606022462.jpg_310x310.jpg"><img src="https://img.alicdn.com/imgextra/i4/606022462/TB2q6cKfVXXXXclXXXXXXXXXXXX-606022462.jpg_310x310.jpg"></p>
+<p> <img src="https://img.alicdn.com/imgextra/i2/606022462/TB2G67NfVXXXXbnXXXXXXXXXXXX-606022462.png_310x310.png"><img src="https://img.alicdn.com/imgextra/i4/606022462/TB2q6cKfVXXXXclXXXXXXXXXXXX-606022462.png_310x310.png"></p>
 <p> 吃完后，还剩了些，直接打包带走了。路过后海的时候，发现夜景很漂亮，给他俩拍了找。晚上还是应该开闪光灯，要不然很多细节都丢失了。</p>
- <img src="https://img.alicdn.com/imgextra/i3/606022462/TB2of.NfVXXXXbuXXXXXXXXXXXX-606022462.jpg_310x310.jpg">
+ <img src="https://img.alicdn.com/imgextra/i3/606022462/TB2of.NfVXXXXbuXXXXXXXXXXXX-606022462.png_310x310.png">
 
 
 
@@ -4004,7 +4004,7 @@
 
 <p> 第三天的行程，就这么多。</p>
 <p> 第四天，因为是下午的车。所以上午的时候领他俩去了天安门广场和毛主席纪念堂，因为这个是我爸最想去的。反正我是没有进毛主席纪念堂，不过那一辈的人还是非常想看的。</p>
-<p> <img src="https://img.alicdn.com/imgextra/i1/606022462/TB2zlARfVXXXXaLXXXXXXXXXXXX-606022462.jpg_310x310.jpg"><img src="https://img.alicdn.com/imgextra/i2/606022462/TB2.xwRfVXXXXaMXXXXXXXXXXXX-606022462.jpg_310x310.jpg"></p>
+<p> <img src="https://img.alicdn.com/imgextra/i1/606022462/TB2zlARfVXXXXaLXXXXXXXXXXXX-606022462.png_310x310.png"><img src="https://img.alicdn.com/imgextra/i2/606022462/TB2.xwRfVXXXXaMXXXXXXXXXXXX-606022462.png_310x310.png"></p>
 <p> 我就只在外面纪念碑和天安门前给他俩照了照片。</p>
 <p> 然后就送他俩去了车站。这几天的北京，天气好差。不过他俩貌似很开心的样子。特别是我爸，哈哈</p>
 </blockquote>
@@ -4036,87 +4036,87 @@
     <content><![CDATA[<blockquote>
 <p>这次去杭州，主要是因为张琦大婚；其实如果他不赶在今年结婚，我也一样会找个时间去西湖的。因为本来就打算今年走遍186元钱嘛~</p>
 <p>好久没做过绿皮车了，废话不多说……走你~</p>
-<img src="http://img03.taobaocdn.com/imgextra/i3/606022462/TB2smJsdXXXXXb3XpXXXXXXXXXX-606022462.jpg_310x310.jpg">
+<img src="http://img03.taobaocdn.com/imgextra/i3/606022462/TB2smJsdXXXXXb3XpXXXXXXXXXX-606022462.png_310x310.png">
 
 <p>睡了一晚上，早上到杭州，我觉得我真的可能是雨神，因为这次杭州之行又有雨。而且，下了火车的第一感觉是：杭州站好小，而且还有点脏。跟我印象中的美丽杭州有鲜明的对比。而且，感觉雾霾比北京还重</p>
 <p>转了一号线后，做了近一个小时到了临平终点站，这就是我三叔家的位置啦。三叔和三婶在地铁外面貌似已经等了好久，因为家里这非常近，步行五分钟的路程。</p>
-<img src="http://img04.taobaocdn.com/imgextra/i4/606022462/TB2N_4EdXXXXXXeXpXXXXXXXXXX-606022462.jpg_310x310.jpg">
+<img src="http://img04.taobaocdn.com/imgextra/i4/606022462/TB2N_4EdXXXXXXeXpXXXXXXXXXX-606022462.png_310x310.png">
 
 <p>这是我第一次吃枇杷，真的超级好吃啊啊啊啊啊啊，水分足，超爽口~~</p>
 <p>因为下午张琦还有去他老婆那头商量明天婚礼的流程上的一些问题。所以，中午在门口的小店吃了点饭后，就让他把我捎脚到西湖附近了。杭州的车辆限行是，只有市中心的景区附近有限行，其他地区不限行。我觉得这就充分说明了杭州空气质量不好的原因。</p>
-<img src="http://img01.taobaocdn.com/imgextra/i1/606022462/TB20GRudXXXXXbzXpXXXXXXXXXX-606022462.jpg_620x10000.jpg">
+<img src="http://img01.taobaocdn.com/imgextra/i1/606022462/TB20GRudXXXXXbzXpXXXXXXXXXX-606022462.png_620x10000.png">
 
 <p>天公不作美，如果是蓝天白云，一定是美不胜收啊</p>
 <p>接下来，不用想，拿着相机开始转吧，嘿嘿，我的三潭印月要等我啊</p>
-<img src="http://img04.taobaocdn.com/imgextra/i4/606022462/TB2VP8xdXXXXXaHXpXXXXXXXXXX-606022462.jpg_310x310.jpg">
+<img src="http://img04.taobaocdn.com/imgextra/i4/606022462/TB2VP8xdXXXXXaHXpXXXXXXXXXX-606022462.png_310x310.png">
 
 <p>这个画师画的不错。我发现，无论去哪里，哪个景点，哪个公园，都有这些以画画为生的人。我想有一天，我不用为钱，为生活奔波了，我可以在一个不大的城市，开一间心情小店，随意的卖着自己喜欢的或者别人喜欢的东西；或者也可以在某个不大的公园，摆一个小摊，为路人作画。我想会有那么一天的</p>
-<img src="http://img03.taobaocdn.com/imgextra/i3/606022462/TB2bDtOdXXXXXaCXXXXXXXXXXXX-606022462.jpg_310x310.jpg">
+<img src="http://img03.taobaocdn.com/imgextra/i3/606022462/TB2bDtOdXXXXXaCXXXXXXXXXXXX-606022462.png_310x310.png">
 
 <p>转角有一家软陶的人偶店。可爱死啦~</p>
 <p>接下来继续啦</p>
-<img src="http://img01.taobaocdn.com/imgextra/i1/606022462/TB26K8TdXXXXXXqXXXXXXXXXXXX-606022462.jpg_620x10000.jpg">
+<img src="http://img01.taobaocdn.com/imgextra/i1/606022462/TB26K8TdXXXXXXqXXXXXXXXXXXX-606022462.png_620x10000.png">
 
 <p>不知道这是哪个塔，只是觉得，真的是青山绿水</p>
 <p>慢慢走，在苏堤的时候，看到这对情侣，或者是兄妹</p>
-<img src="http://img01.taobaocdn.com/imgextra/i1/606022462/TB2_b4JdXXXXXciXXXXXXXXXXXX-606022462.jpg_620x10000.jpg">
+<img src="http://img01.taobaocdn.com/imgextra/i1/606022462/TB2_b4JdXXXXXciXXXXXXXXXXXX-606022462.png_620x10000.png">
 
 <p>我个人更倾向于他们是情侣。</p>
 <p>当时按下快门，女主回头看了看我，后继续微笑着跟男主聊天。从他俩身后走过之后，我就在想，多少年之后，他们还会不会记得当时在苏堤旁的长椅上，相互依偎着说的这些情话。</p>
-<img src="http://img03.taobaocdn.com/imgextra/i3/606022462/TB2nTtvdXXXXXbdXpXXXXXXXXXX-606022462.jpg_620x10000.jpg">
+<img src="http://img03.taobaocdn.com/imgextra/i3/606022462/TB2nTtvdXXXXXbdXpXXXXXXXXXX-606022462.png_620x10000.png">
 
-<img src="http://img01.taobaocdn.com/imgextra/i1/606022462/TB2SchQdXXXXXahXXXXXXXXXXXX-606022462.jpg_620x10000.jpg">
+<img src="http://img01.taobaocdn.com/imgextra/i1/606022462/TB2SchQdXXXXXahXXXXXXXXXXXX-606022462.png_620x10000.png">
 
 
 
 <p>如果天气很好一定是非常非常非常非常棒的景色啦</p>
 <p>我从东门往北绕，然后到苏堤，最后到去往三潭印月的码头，走了近三个小时。</p>
-<img src="http://img03.taobaocdn.com/imgextra/i3/606022462/TB2KZVCdXXXXXXLXpXXXXXXXXXX-606022462.jpg_310x310.jpg">
+<img src="http://img03.taobaocdn.com/imgextra/i3/606022462/TB2KZVCdXXXXXXLXpXXXXXXXXXX-606022462.png_310x310.png">
 
 <p>来西湖就是为了看看一元背后的景色。</p>
 <p>上了这个田字格的小岛，遇到了一只可爱的小狗，叫可乐，后来还遇到了一直猫咪和小孩子玩耍，但是那��是用微信录制的。所以没有转过来。</p>
-<img src="http://img04.taobaocdn.com/imgextra/i4/606022462/TB23VXCdXXXXXXRXpXXXXXXXXXX-606022462.jpg_310x310.jpg">
+<img src="http://img04.taobaocdn.com/imgextra/i4/606022462/TB23VXCdXXXXXXRXpXXXXXXXXXX-606022462.png_310x310.png">
 
 <p>然后还看到了盛开的荷花</p>
-<img src="http://img02.taobaocdn.com/imgextra/i2/606022462/TB2rfBqdXXXXXcqXpXXXXXXXXXX-606022462.jpg_310x310.jpg">
+<img src="http://img02.taobaocdn.com/imgextra/i2/606022462/TB2rfBqdXXXXXcqXpXXXXXXXXXX-606022462.png_310x310.png">
 
 <p>很小的岛，转完也就半个小时。岛上很多卖吹泡泡的。很多小孩子都在玩</p>
-<img src="http://img03.taobaocdn.com/imgextra/i3/606022462/TB2j2NvdXXXXXbwXpXXXXXXXXXX-606022462.jpg_620x10000.jpg">
+<img src="http://img03.taobaocdn.com/imgextra/i3/606022462/TB2j2NvdXXXXXbwXpXXXXXXXXXX-606022462.png_620x10000.png">
 
 
 
 <p>其实上来很失望的，根本没有一元背景那么好</p>
-<img src="http://img03.taobaocdn.com/imgextra/i3/606022462/TB2DHJOdXXXXXaRXXXXXXXXXXXX-606022462.jpg_620x10000.jpg">
+<img src="http://img03.taobaocdn.com/imgextra/i3/606022462/TB2DHJOdXXXXXaRXXXXXXXXXXXX-606022462.png_620x10000.png">
 
 <p>我用手机和单反都拍不出来。后来我去网上查了一下，说背景是经过修改的，在岸上是拍不出这个构图的。而且这三个谭的位置也被动过，之前有一个谭是夜里被游船撞翻了。所以重新修正过。</p>
-<img src="http://img03.taobaocdn.com/imgextra/i3/606022462/TB2UvXSdXXXXXXKXXXXXXXXXXXX-606022462.jpg_620x10000.jpg">
+<img src="http://img03.taobaocdn.com/imgextra/i3/606022462/TB2UvXSdXXXXXXKXXXXXXXXXXXX-606022462.png_620x10000.png">
 
 <p>后来在外面加了警戒线。</p>
 <p>三潭真的让我挺失望的。</p>
 <p>回到出发的码头继续走，往雷锋塔的方向走。</p>
-<img src="http://img03.taobaocdn.com/imgextra/i3/606022462/TB24pdIdXXXXXcCXXXXXXXXXXXX-606022462.jpg_620x10000.jpg">
+<img src="http://img03.taobaocdn.com/imgextra/i3/606022462/TB24pdIdXXXXXcCXXXXXXXXXXXX-606022462.png_620x10000.png">
 
 <p>本来还想进去看看曾经和娘子相会的地方。但是发现需要门票，而且听说雷锋塔早就已经毁了，这个是翻新的，重建的。所以，还是算了，不进去了。</p>
 <p>出来之后，继续往前走。遇到了拍婚纱照的！！还在等什么马上去蹭拍啊</p>
-<img src="http://img03.taobaocdn.com/imgextra/i3/606022462/TB2tTJMdXXXXXbbXXXXXXXXXXXX-606022462.jpg_620x10000.jpg">
+<img src="http://img03.taobaocdn.com/imgextra/i3/606022462/TB2tTJMdXXXXXbbXXXXXXXXXXXX-606022462.png_620x10000.png">
 
 <p>(<em>^__^</em>) 嘻嘻……祝幸福甜蜜啦~~</p>
 <p>后来从另一个角度看现在的雷峰塔，感觉他也是有故事的</p>
-<img src="http://img03.taobaocdn.com/imgextra/i3/606022462/TB2r0XIdXXXXXckXXXXXXXXXXXX-606022462.jpg_620x10000.jpg">
+<img src="http://img03.taobaocdn.com/imgextra/i3/606022462/TB2r0XIdXXXXXckXXXXXXXXXXXX-606022462.png_620x10000.png">
 
 <p>继续往音乐喷泉的方向走~</p>
 <p>遇到了一个弹尤克里里的姑娘</p>
-<img src="http://img04.taobaocdn.com/imgextra/i4/606022462/TB2jlhodXXXXXXlXFXXXXXXXXXX-606022462.jpg_620x10000.jpg">
+<img src="http://img04.taobaocdn.com/imgextra/i4/606022462/TB2jlhodXXXXXXlXFXXXXXXXXXX-606022462.png_620x10000.png">
 
 <p>不知道，河的对面是否有她爱的人，或者有她的爱情故事。</p>
 <p>手机当时也快没电了，就想去看看音乐喷泉，所以加快步伐朝着音乐喷泉前进！结果在路上的时候遇到了一个准备求婚的；</p>
-<img src="http://img04.taobaocdn.com/imgextra/i4/606022462/TB2LHtsdXXXXXbJXpXXXXXXXXXX-606022462.jpg_310x310.jpg">
+<img src="http://img04.taobaocdn.com/imgextra/i4/606022462/TB2LHtsdXXXXXbJXpXXXXXXXXXX-606022462.png_310x310.png">
 
 <p>当时是下午6点多。因为第一次遇到这种场景，还是蛮期待的。所以，等吧！</p>
 <p>结果，等啊等，等到人群都不耐烦了，好多人开始问女主角什么时候出现啊？负责准备的人说：路上堵车，快来了。因为蜡烛不能提前点，只能控制在女主到之前的10分钟点着。所以很多人都是等啊等。</p>
 <p>这里有个小插曲，就是那个小女生等得不耐烦了，叫她妈妈走，她妈妈不走，结果，她直接从蜡烛上面踢过去，把原本摆好的造型都打乱了，结果一群人开始喊。当时我就在想：这个小女生真没素质，不知道父母是怎么教的。以后我还在千万别这样，否则我打烂她屁股。</p>
 <p>最后等到8点左右的时候，女主才千呼万唤始出来啊</p>
-<img src="http://img04.taobaocdn.com/imgextra/i4/606022462/TB29jNMdXXXXXbtXXXXXXXXXXXX-606022462.jpg_310x310.jpg">
+<img src="http://img04.taobaocdn.com/imgextra/i4/606022462/TB29jNMdXXXXXbtXXXXXXXXXXXX-606022462.png_310x310.png">
 
 <p>结局是美好的。但是过程是煎熬的……</p>
 <p>看了看时间8点12分，音乐喷泉还有一场，所以，抓紧跑吧，赶最后一场音乐喷泉啊。</p>
@@ -4124,14 +4124,14 @@
 <p>晚上回去的时候太晚了，在西湖边上找了半天吃饭的地方，后来想想怕吃完饭赶不上最后一班地铁了。所以就索性直接去做地铁，到了临平之后再找地方吃饭吧。</p>
 <p>最后在楼下的吃的牛肉面。</p>
 <p>第二天，早上起来就跑去帮忙搬东西，都是婚礼用的，中午回来的时候，抽空去邮局买了明信片。</p>
-<p><img src="http://img03.taobaocdn.com/imgextra/i3/606022462/TB2YcVydXXXXXaEXpXXXXXXXXXX-606022462.jpg_310x310.jpg"><img src="http://img04.taobaocdn.com/imgextra/i4/606022462/TB2DhlHdXXXXXcFXXXXXXXXXXXX-606022462.jpg_310x310.jpg"></p>
+<p><img src="http://img03.taobaocdn.com/imgextra/i3/606022462/TB2YcVydXXXXXaEXpXXXXXXXXXX-606022462.png_310x310.png"><img src="http://img04.taobaocdn.com/imgextra/i4/606022462/TB2DhlHdXXXXXcFXXXXXXXXXXXX-606022462.png_310x310.png"></p>
 <p>给小伙伴和自己邮寄了当时的心情。中午在家里吃的酒酿小丸子和醉蟹。说实话，很一般，醉蟹感觉有些苦涩，但确实很咸。</p>
 <p>吃完饭就是直接去酒店帮忙布置会场啦。</p>
-<img src="http://img04.taobaocdn.com/imgextra/i4/606022462/TB20QXTdXXXXXXbXXXXXXXXXXXX-606022462.jpg_620x10000.jpg">
+<img src="http://img04.taobaocdn.com/imgextra/i4/606022462/TB20QXTdXXXXXXbXXXXXXXXXXXX-606022462.png_620x10000.png">
 
 <p>确实挺忙的，帮忙搬东西，3楼到18楼，各种搬啊，后来新娘来了还在门口发烟跟每个参加婚礼的吸烟的男同志发烟。最后坐下来的时候，腿都快软了。</p>
 <p>吃完饭后，有好多个游戏环节。其中一个是发短信指定信息到主持人的手机里。不好意思，哥手快……可能是有原因的……</p>
-<img src="http://img01.taobaocdn.com/imgextra/i1/606022462/TB2d5BBdXXXXXX1XpXXXXXXXXXX-606022462.jpg_620x10000.jpg">
+<img src="http://img01.taobaocdn.com/imgextra/i1/606022462/TB2d5BBdXXXXXX1XpXXXXXXXXXX-606022462.png_620x10000.png">
 
 <p>得了个特制的紫砂的茶杯。回去赠我老爸。让他泡茶喝。</p>
 <p>最后婚礼结束一直到晚上十点，由于车都送新人和娘家人了，所以我们几个走着回去的。到家的时候已经快11点了。本来打算是三叔早起送我们去机场的。后来发现他同学也有早上赶飞机的，而且已经滴滴叫了车。所以，跟蹭个车走吧。</p>
@@ -4157,32 +4157,32 @@
 <p>但是去之前呢，还是找了一下上海的出游和小吃。出发前看了一下天气，我发现我真的是雨神。</p>
 <p>介于天气的原因最终跟大肥敲定了下面的行程。</p>
 <p>第一天，因为没订到30号的车票，所以一号晚上才到。而且，一般的住宿酒店也被占了，所以，选了个市中心的水床房，但是好贵啊，428.</p>
-<img src="http://img02.taobaocdn.com/imgextra/i2/606022462/TB2TF1IcFXXXXaHXXXXXXXXXXXX-606022462.jpg_310x310.jpg">
+<img src="http://img02.taobaocdn.com/imgextra/i2/606022462/TB2TF1IcFXXXXaHXXXXXXXXXXXX-606022462.png_310x310.png">
 
-<img src="http://img01.taobaocdn.com/imgextra/i1/606022462/TB2tVqBcFXXXXaSXpXXXXXXXXXX-606022462.jpg_310x310.jpg">
+<img src="http://img01.taobaocdn.com/imgextra/i1/606022462/TB2tVqBcFXXXXaSXpXXXXXXXXXX-606022462.png_310x310.png">
 
 <p>第一次体验水床，也算是给自己一个安慰吧。</p>
 <p>接下来，就是去找我想吃的白斩鸡啦~</p>
-<img src="http://img04.taobaocdn.com/imgextra/i4/606022462/TB2hnSxcFXXXXczXpXXXXXXXXXX-606022462.jpg_620x10000.jpg">
+<img src="http://img04.taobaocdn.com/imgextra/i4/606022462/TB2hnSxcFXXXXczXpXXXXXXXXXX-606022462.png_620x10000.png">
 
 
 
 <p>豫园的小绍兴的白斩鸡，网上推荐的，刚刚吃的时候感觉很不错，就是一个人吃一斤吃到后来，会有点腻的感觉。</p>
 <p>吃完了白斩鸡，就是继续往外滩方向走了，去看看我三年没见的外滩现在是什么样子，虽然不是春节，不是跨年，但是外滩的人依然好多：</p>
-<img src="http://img04.taobaocdn.com/imgextra/i4/606022462/TB2pxKIcFXXXXamXXXXXXXXXXXX-606022462.jpg_620x10000.jpg">
+<img src="http://img04.taobaocdn.com/imgextra/i4/606022462/TB2pxKIcFXXXXamXXXXXXXXXXXX-606022462.png_620x10000.png">
 
 <p>贴几张我拍的外滩夜景：</p>
-<img src="http://img03.taobaocdn.com/imgextra/i3/606022462/TB2XJiIcFXXXXX8XXXXXXXXXXXX-606022462.jpg_620x10000.jpg">
+<img src="http://img03.taobaocdn.com/imgextra/i3/606022462/TB2XJiIcFXXXXX8XXXXXXXXXXXX-606022462.png_620x10000.png">
 
-<img src="http://img03.taobaocdn.com/imgextra/i3/606022462/TB2zuuDcFXXXXXdXpXXXXXXXXXX-606022462.jpg_620x10000.jpg">
+<img src="http://img03.taobaocdn.com/imgextra/i3/606022462/TB2zuuDcFXXXXXdXpXXXXXXXXXX-606022462.png_620x10000.png">
 
-<img src="http://img04.taobaocdn.com/imgextra/i4/606022462/TB2ybCGcFXXXXbvXXXXXXXXXXXX-606022462.jpg_620x10000.jpg">
+<img src="http://img04.taobaocdn.com/imgextra/i4/606022462/TB2ybCGcFXXXXbvXXXXXXXXXXXX-606022462.png_620x10000.png">
 
 <p>这个霓虹的城市啊</p>
 <p>可能是外滩踩踏事件的原因，即使是五一，也出动了警力来维持秩序，从外滩，一直延伸到南京路步行街</p>
-<img src="http://img03.taobaocdn.com/imgextra/i3/606022462/TB2iIKDcFXXXXXeXpXXXXXXXXXX-606022462.jpg_620x10000.jpg">
+<img src="http://img03.taobaocdn.com/imgextra/i3/606022462/TB2iIKDcFXXXXXeXpXXXXXXXXXX-606022462.png_620x10000.png">
 
-<img src="http://img01.taobaocdn.com/imgextra/i1/606022462/TB29t9GcFXXXXbpXXXXXXXXXXXX-606022462.jpg_620x10000.jpg">
+<img src="http://img01.taobaocdn.com/imgextra/i1/606022462/TB29t9GcFXXXXbpXXXXXXXXXXXX-606022462.png_620x10000.png">
 
 <p>回来的路上，想起之前来跨年的时候，吻的那个人，但却记不清她的样子了。那次确实很疯狂。印象中最深刻的，是那跨年的烟火。</p>
 <p>看路上这么多的人，我就在想：上海人一定会想：这群傻逼，一个五一还来这么多人。</p>
@@ -4191,37 +4191,37 @@
 <p>大肥说她还有一个朋友要跟我俩一起，所以，我就先去了大肥的学校，教学楼和宿舍很复古的感觉。</p>
 <p>去他们旁边的小店里吃了混沌，又去了旁边的桂林公园，吃早餐的时候开始下的雨，去桂林公园的时候已经很大了。</p>
 <p>我们两个在那个小亭子里面，边喝茶，边聊天。</p>
-<img src="http://img03.taobaocdn.com/imgextra/i3/606022462/TB2MVeKcFXXXXXfXXXXXXXXXXXX-606022462.jpg_620x10000.jpg">
+<img src="http://img03.taobaocdn.com/imgextra/i3/606022462/TB2MVeKcFXXXXXfXXXXXXXXXXXX-606022462.png_620x10000.png">
 
 <p>有时候，有些人即使第一次见面，也不会觉得陌生。</p>
 <p>那种感觉，很喜欢。</p>
 <p>快到中午的时候，她朋友才赶过来，我们一起去吃了大肥说很好吃的那家口水鸡。</p>
-<img src="http://img03.taobaocdn.com/imgextra/i3/606022462/TB2VIWCcFXXXXaaXpXXXXXXXXXX-606022462.jpg_620x10000.jpg">
+<img src="http://img03.taobaocdn.com/imgextra/i3/606022462/TB2VIWCcFXXXXaaXpXXXXXXXXXX-606022462.png_620x10000.png">
 
 <p>点了三盘，被大肥吃了两盘。</p>
 <p>我喜欢这个肉肉的姑娘，哈哈。</p>
 <p>饭后的甜点是哈根达斯，第一次吃啊，感���������好奢侈。太贵了</p>
-<img src="http://img01.taobaocdn.com/imgextra/i1/606022462/TB2CueJcFXXXXXxXXXXXXXXXXXX-606022462.jpg_310x310.jpg">
+<img src="http://img01.taobaocdn.com/imgextra/i1/606022462/TB2CueJcFXXXXXxXXXXXXXXXXXX-606022462.png_310x310.png">
 
 
 
 <p>后来由于下雨，我们去了水族馆，看了好多鱼，最开心的是在斑海豹那里，看到慵懒的海豹，不停地变换着泳姿从你身边经过，人群里不时地传出一阵惊呼。那种感觉，好棒。</p>
-<img src="http://img01.taobaocdn.com/imgextra/i1/606022462/TB2BmaFcFXXXXbxXXXXXXXXXXXX-606022462.jpg_620x10000.jpg">
+<img src="http://img01.taobaocdn.com/imgextra/i1/606022462/TB2BmaFcFXXXXbxXXXXXXXXXXXX-606022462.png_620x10000.png">
 
-<img src="http://img03.taobaocdn.com/imgextra/i3/606022462/TB2L69JcFXXXXXrXXXXXXXXXXXX-606022462.jpg_620x10000.jpg">
+<img src="http://img03.taobaocdn.com/imgextra/i3/606022462/TB2L69JcFXXXXXrXXXXXXXXXXXX-606022462.png_620x10000.png">
 
-<img src="http://img03.taobaocdn.com/imgextra/i3/606022462/TB21FGEcFXXXXcPXXXXXXXXXXXX-606022462.jpg_620x10000.jpg">
+<img src="http://img03.taobaocdn.com/imgextra/i3/606022462/TB21FGEcFXXXXcPXXXXXXXXXXXX-606022462.png_620x10000.png">
 
-<img src="http://img04.taobaocdn.com/imgextra/i4/606022462/TB2IqSAcFXXXXa7XpXXXXXXXXXX-606022462.jpg_620x10000.jpg">
+<img src="http://img04.taobaocdn.com/imgextra/i4/606022462/TB2IqSAcFXXXXa7XpXXXXXXXXXX-606022462.png_620x10000.png">
 
-<img src="http://img01.taobaocdn.com/imgextra/i1/606022462/TB27DuGcFXXXXbcXXXXXXXXXXXX-606022462.jpg_620x10000.jpg">
+<img src="http://img01.taobaocdn.com/imgextra/i1/606022462/TB27DuGcFXXXXbcXXXXXXXXXXXX-606022462.png_620x10000.png">
 
-<img src="http://img03.taobaocdn.com/imgextra/i3/606022462/TB23BKCcFXXXXXrXpXXXXXXXXXX-606022462.jpg_620x10000.jpg">
+<img src="http://img03.taobaocdn.com/imgextra/i3/606022462/TB23BKCcFXXXXXrXpXXXXXXXXXX-606022462.png_620x10000.png">
 
 <p>等从水族馆出来的时候已经17点了。大肥还以为我准备要去经融中心看看夜景。</p>
 <p>本来是有这打算的，但是由于下雨，我觉得什么都看不到，也看不到夕阳。所以觉定还是先去吃饭吧。</p>
 <p>最后三个人去吃了煲宫火锅，锅底还是鸡。大肥说，这一天尽吃鸡了。哈哈</p>
-<img src="http://img04.taobaocdn.com/imgextra/i4/606022462/TB2DhiHcFXXXXa6XXXXXXXXXXXX-606022462.jpg_620x10000.jpg">
+<img src="http://img04.taobaocdn.com/imgextra/i4/606022462/TB2DhiHcFXXXXa6XXXXXXXXXXXX-606022462.png_620x10000.png">
 
 
 
@@ -4248,108 +4248,108 @@
 <p>而三月份的天，北方肯定太冷没得玩，所以就选择了南方，漓江。</p>
 <p>我调了两天休，加上一个周末，正好是四天，天气预报查询是都有雨，正好体验一下烟雨漓江嘛。</p>
 <p>说走就走，去哪订机票，艺龙订酒店，淘宝订一日游。完全是上次去泰国的进化模仿版。</p>
-<img src="http://img03.taobaocdn.com/imgextra/i3/606022462/TB2OVmQcXXXXXb_XpXXXXXXXXXX-606022462.jpg_310x310.jpg">
+<img src="http://img03.taobaocdn.com/imgextra/i3/606022462/TB2OVmQcXXXXXb_XpXXXXXXXXXX-606022462.png_310x310.png">
 
 <p>到那的时候发现天气还是晴朗的，天气预报啊，不是太靠谱。所以，别太相信他啦。</p>
 <p>因为我是下午飞的，下午四点多才到两江机场。又坐了一个多小时的大巴，才到了我定的江象阖酒店。</p>
 <p>现在还记得，大巴车上的乘务员：各位乘客要注意一下，我们桂林骗子很多，不要跟陌生人说话。</p>
 <p>哈哈，想想都觉得有趣</p>
 <p>下了大巴我是坐了两站地2路公交到象山公园并走了一站地才到酒店的。环境还不错：</p>
-<img src="http://img01.taobaocdn.com/imgextra/i1/606022462/TB2uEaxcXXXXXcIXXXXXXXXXXXX-606022462.jpg_620x10000.jpg">
+<img src="http://img01.taobaocdn.com/imgextra/i1/606022462/TB2uEaxcXXXXXcIXXXXXXXXXXXX-606022462.png_620x10000.png">
 
 <p>这是130的标间啊。你能想象么？在北京，最少200！！</p>
 <p>因为也到了吃饭的时间，所以就问了前台附近哪里有好吃的。她告诉我说向北不远处有个正阳步行街，里面有很多小吃。</p>
 <p>来之前我用了两天时间查了一下都什么好吃，朋友们推荐桂林米粉、网上说螺蛳粉、还有阳朔的啤酒鱼。</p>
-<p><img src="http://img01.taobaocdn.com/imgextra/i1/606022462/TB2F7ewcXXXXXayXpXXXXXXXXXX-606022462.jpg_310x310.jpg"><img src="http://img02.taobaocdn.com/imgextra/i2/606022462/TB27bqzcXXXXXaOXXXXXXXXXXXX-606022462.jpg_310x310.jpg"></p>
+<p><img src="http://img01.taobaocdn.com/imgextra/i1/606022462/TB2F7ewcXXXXXayXpXXXXXXXXXX-606022462.png_310x310.png"><img src="http://img02.taobaocdn.com/imgextra/i2/606022462/TB27bqzcXXXXXaOXXXXXXXXXXXX-606022462.png_310x310.png"></p>
 <p>找了半天，才找到一家柳州螺蛳粉。</p>
 <p>我不觉得十分好吃，而且还有点臭臭的。不过配料到是可以肯定的。至于螺蛳，我是在另一家买的一小桶。其实我觉得就是东北下酒的田螺。</p>
 <p>干吃，不觉得好吃。</p>
 <p>第一天的行程，就此完结。溜达溜达，滚回去睡觉。</p>
 <p>第二天我定的是一日游，漓江+遇龙河</p>
 <p>第二天，天公不作美，阴雨天，不过雨是清晨下的，出去玩的时候没有下。</p>
-<img src="http://img01.taobaocdn.com/imgextra/i1/606022462/TB2XnGAcXXXXXXeXXXXXXXXXXXX-606022462.jpg_620x10000.jpg">
+<img src="http://img01.taobaocdn.com/imgextra/i1/606022462/TB2XnGAcXXXXXXeXXXXXXXXXXXX-606022462.png_620x10000.png">
 
-<img src="http://img03.taobaocdn.com/imgextra/i3/606022462/TB2dsuvcXXXXXbcXpXXXXXXXXXX-606022462.jpg_620x10000.jpg">
+<img src="http://img03.taobaocdn.com/imgextra/i3/606022462/TB2dsuvcXXXXXbcXpXXXXXXXXXX-606022462.png_620x10000.png">
 
-<img src="http://img04.taobaocdn.com/imgextra/i4/606022462/TB2txGwcXXXXXbFXXXXXXXXXXXX-606022462.jpg_620x10000.jpg">
+<img src="http://img04.taobaocdn.com/imgextra/i4/606022462/TB2txGwcXXXXXbFXXXXXXXXXXXX-606022462.png_620x10000.png">
 
-<img src="http://img04.taobaocdn.com/imgextra/i4/606022462/TB2lmeucXXXXXbKXpXXXXXXXXXX-606022462.jpg_620x10000.jpg">
+<img src="http://img04.taobaocdn.com/imgextra/i4/606022462/TB2lmeucXXXXXbKXpXXXXXXXXXX-606022462.png_620x10000.png">
 
 <p>不过，这种烟雾缭绕的感觉确实很棒的。</p>
 <p>漓江我只做到九马画山这里，后半段，坐的电瓶车去了20元北京拍摄地。</p>
-<img src="http://img04.taobaocdn.com/imgextra/i4/606022462/TB2.FqAcXXXXXX3XXXXXXXXXXXX-606022462.jpg_620x10000.jpg">
+<img src="http://img04.taobaocdn.com/imgextra/i4/606022462/TB2.FqAcXXXXXX3XXXXXXXXXXXX-606022462.png_620x10000.png">
 
 <p>估计是我还没有外明白镜头和相机，所以本来打算拍那种折一半钱，遮住一半景。结果发现焦点只能对着钱或者风景，另一个就虚到根本看不清。我估计有可能是我光圈开的太大了。</p>
 <p>所以，最后只拍了这个样子的：</p>
-<img src="http://img01.taobaocdn.com/imgextra/i1/606022462/TB2AlWxcXXXXXcOXXXXXXXXXXXX-606022462.jpg_620x10000.jpg">
+<img src="http://img01.taobaocdn.com/imgextra/i1/606022462/TB2AlWxcXXXXXcOXXXXXXXXXXXX-606022462.png_620x10000.png">
 
 
 
 <p>看完这个，下午去遇龙河，中午休息的时候呢，我们去的阳朔西街，来这里当然是吃啤酒鱼啦。嘿嘿���</p>
 <p>我在这里买了明信片，又问了明信片的师傅哪家的啤酒鱼好吃点，师傅说，其实都差不多，但是不建议在西街里面吃，因为可能会贵一点，于是，我花了半个小时转了一下西街，我唯一进去的一个小店：</p>
-<img src="http://img01.taobaocdn.com/imgextra/i1/606022462/TB2PA9AcXXXXXXnXXXXXXXXXXXX-606022462.jpg_620x10000.jpg">
+<img src="http://img01.taobaocdn.com/imgextra/i1/606022462/TB2PA9AcXXXXXXnXXXXXXXXXXXX-606022462.png_620x10000.png">
 
 <p>卖画的，实在是忍不住，就拿手机偷偷拍了。</p>
 <p>然后继续去找我的啤酒鱼，最后在西街靠北面的一条街找到了一家门面挺大的，感觉不会宰客的店。点了招牌菜：剑骨鱼啤酒鱼。让服务员来个最小的，1.8斤，88&#x2F;斤。卧槽，一条鱼花了我160。不过真心好吃啊，还想吃啊吃吃 吃吃吃啊啊啊啊啊。</p>
-<img src="http://img01.taobaocdn.com/imgextra/i1/606022462/TB2Md9wcXXXXXaPXpXXXXXXXXXX-606022462.jpg_620x10000.jpg">
+<img src="http://img01.taobaocdn.com/imgextra/i1/606022462/TB2Md9wcXXXXXaPXpXXXXXXXXXX-606022462.png_620x10000.png">
 
 <p>晚上回到酒店的时候，才从拿回的餐巾纸上发现，我去的那家叫大师傅。而且是网上评论很好的一家。</p>
-<img src="http://img03.taobaocdn.com/imgextra/i3/606022462/TB20tyYcXXXXXbjXpXXXXXXXXXX-606022462.jpg_620x10000.jpg">
+<img src="http://img03.taobaocdn.com/imgextra/i3/606022462/TB20tyYcXXXXXbjXpXXXXXXXXXX-606022462.png_620x10000.png">
 
 <p>在西街还看到了我的豆子先生：</p>
-<img src="http://img02.taobaocdn.com/imgextra/i2/606022462/TB2zkKtcXXXXXbOXpXXXXXXXXXX-606022462.jpg_620x10000.jpg">
+<img src="http://img02.taobaocdn.com/imgextra/i2/606022462/TB2zkKtcXXXXXbOXpXXXXXXXXXX-606022462.png_620x10000.png">
 
 <p>所以啊，我的运气还是很不错的嘛。嘿嘿</p>
 <p>中午急匆匆吃完啤酒鱼就跑去预定的集合地点，结果，因为两个人的迟到，还得我们多等了一个多小时，最终那错过了面见的机会。</p>
-<img src="http://img01.taobaocdn.com/imgextra/i1/606022462/TB2_.m8cXXXXXbfXXXXXXXXXXXX-606022462.jpg_620x10000.jpg">
+<img src="http://img01.taobaocdn.com/imgextra/i1/606022462/TB2_.m8cXXXXXbfXXXXXXXXXXXX-606022462.png_620x10000.png">
 
 <p> 遇龙河的景色还是不错的，在那里看了捕鱼鸟捕鱼的过程。坐了竹筏，这回不是电动的哦，是人力的。上午漓江上面做的是电动的。</p>
 <p>坐车回去的时候发现手机还没电了，破手机电池太不抗用。</p>
 <p>至于晚上的觅食过程嘛，嘿嘿，一定是传说中的桂林米粉啦。</p>
 <p>昨天在步行街走的时候，发现了一家叫神卤的米粉店，人气还不错。于是今天就主动过去了，点了传说中的金牌米粉：</p>
-<img src="http://img04.taobaocdn.com/imgextra/i4/606022462/TB2ucawcXXXXXbnXpXXXXXXXXXX-606022462.jpg_620x10000.jpg">
+<img src="http://img04.taobaocdn.com/imgextra/i4/606022462/TB2ucawcXXXXXbnXpXXXXXXXXXX-606022462.png_620x10000.png">
 
 <p>还真是其貌不扬啊。看着不会勾起食欲，但是吃下去的那一瞬间啊，哇！！整个口腔，舒爽！米粉的料挑逗着味蕾。那种感觉，太棒了啊！！！我爱桂林的米粉啊啊啊！！！</p>
 <p>吃完米粉，滚回酒店睡觉，我个人不喜欢吵闹的夜，不喜欢酒吧，所以，就直接回了酒店。</p>
 <p>因为酒店和正阳西街中间隔着杉湖，传说中的两江四湖之一。还有日月双塔。景色确实很棒，于是逗留了一会，带上耳机，把湿漉漉的空气吸进肺里，然后整个心情都潮湿了。就是那种很安静，很安静，安静地有些可怜，安静的有些可恨的程度。就好像回到了初中，那种情感青涩的年纪。</p>
-<img src="http://img03.taobaocdn.com/imgextra/i3/606022462/TB2wxOwcXXXXXaxXpXXXXXXXXXX-606022462.jpg_620x10000.jpg">
+<img src="http://img03.taobaocdn.com/imgextra/i3/606022462/TB2wxOwcXXXXXaxXpXXXXXXXXXX-606022462.png_620x10000.png">
 
 
 
 <p>第三天，我没定行程。就想围着市中心转转，感受一下桂林的风土人情。</p>
 <p>上午的时候，去邮寄了明信片，结果还把小偏的地址写错了。我真是个大头！</p>
 <p>中午的时候去了昨天导游推荐的椿记烧鹅。</p>
-<p><img src="http://img03.taobaocdn.com/imgextra/i3/606022462/TB2tU9zcXXXXXX2XXXXXXXXXXXX-606022462.jpg_310x310.jpg"><img src="http://img02.taobaocdn.com/imgextra/i2/606022462/TB2vrexcXXXXXc9XXXXXXXXXXXX-606022462.jpg_310x310.jpg"><img src="http://img04.taobaocdn.com/imgextra/i4/606022462/TB2CwCucXXXXXb1XpXXXXXXXXXX-606022462.jpg_310x310.jpg"><img src="http://img02.taobaocdn.com/imgextra/i2/606022462/TB2pDSzcXXXXXaaXXXXXXXXXXXX-606022462.jpg_310x310.jpg"></p>
+<p><img src="http://img03.taobaocdn.com/imgextra/i3/606022462/TB2tU9zcXXXXXX2XXXXXXXXXXXX-606022462.png_310x310.png"><img src="http://img02.taobaocdn.com/imgextra/i2/606022462/TB2vrexcXXXXXc9XXXXXXXXXXXX-606022462.png_310x310.png"><img src="http://img04.taobaocdn.com/imgextra/i4/606022462/TB2CwCucXXXXXb1XpXXXXXXXXXX-606022462.png_310x310.png"><img src="http://img02.taobaocdn.com/imgextra/i2/606022462/TB2pDSzcXXXXXaaXXXXXXXXXXXX-606022462.png_310x310.png"></p>
 <p>点了1&#x2F;4烧鹅，菌汤，腌茄子。烧鹅太棒了，特别是酱汁，沾上之后肥而不腻，有点甜甜的爽口。菌汤就很一般了。茄子也很不错。至于上面的果盘，是那天刚好一对新人在椿记烧鹅举行婚礼，所以果盘是他们送的，在这里再次表示感谢。果盘最后没吃完，因为实在是太多了。</p>
 <p>ps：我的运气还是不错的哦~~</p>
 <p>下午的时候会酒店休息了一会，然后直接拿着相机走起，绕四湖走了一圈，回到酒店的时候已经快十点了，当天晚上给公司的同事带了点特产，然后主食又吃了米粉，因为实在是太好吃了。</p>
 <p>下午拍了很多相片，这里挑几张放上来：</p>
 <p>下午遛弯的时候下起了小雨，湖面上泛起烟雾的感觉，真的超棒，可能相片感受不到现场那种感觉。</p>
-<img src="http://img03.taobaocdn.com/imgextra/i3/606022462/TB2UBCxcXXXXXc6XXXXXXXXXXXX-606022462.jpg_620x10000.jpg">
+<img src="http://img03.taobaocdn.com/imgextra/i3/606022462/TB2UBCxcXXXXXc6XXXXXXXXXXXX-606022462.png_620x10000.png">
 
 
 
-<img src="http://img02.taobaocdn.com/imgextra/i2/606022462/TB2Y3azcXXXXXayXXXXXXXXXXXX-606022462.jpg_620x10000.jpg">
+<img src="http://img02.taobaocdn.com/imgextra/i2/606022462/TB2Y3azcXXXXXayXXXXXXXXXXXX-606022462.png_620x10000.png">
 
 
 
-<img src="http://img01.taobaocdn.com/imgextra/i1/606022462/TB2mLSucXXXXXb6XpXXXXXXXXXX-606022462.jpg_620x10000.jpg">
+<img src="http://img01.taobaocdn.com/imgextra/i1/606022462/TB2mLSucXXXXXb6XpXXXXXXXXXX-606022462.png_620x10000.png">
 
 
 
-<img src="http://img04.taobaocdn.com/imgextra/i4/606022462/TB2bj1wcXXXXXamXpXXXXXXXXXX-606022462.jpg_620x10000.jpg">
+<img src="http://img04.taobaocdn.com/imgextra/i4/606022462/TB2bj1wcXXXXXamXpXXXXXXXXXX-606022462.png_620x10000.png">
 
 
 
-<img src="http://img02.taobaocdn.com/imgextra/i2/606022462/TB2TpqAcXXXXXX4XXXXXXXXXXXX-606022462.jpg_620x10000.jpg">
+<img src="http://img02.taobaocdn.com/imgextra/i2/606022462/TB2TpqAcXXXXXX4XXXXXXXXXXXX-606022462.png_620x10000.png">
 
 
 
-<img src="http://img04.taobaocdn.com/imgextra/i4/606022462/TB2IYmAcXXXXXXOXXXXXXXXXXXX-606022462.jpg_620x10000.jpg">
+<img src="http://img04.taobaocdn.com/imgextra/i4/606022462/TB2IYmAcXXXXXXOXXXXXXXXXXXX-606022462.png_620x10000.png">
 
 
 
-<img src="http://img04.taobaocdn.com/imgextra/i4/606022462/TB2yVuAcXXXXXX2XXXXXXXXXXXX-606022462.jpg_620x10000.jpg">
+<img src="http://img04.taobaocdn.com/imgextra/i4/606022462/TB2yVuAcXXXXXX2XXXXXXXXXXXX-606022462.png_620x10000.png">
 
 
 
@@ -4383,36 +4383,36 @@
 <p> 我个人，不喜欢跟团，所以定的自由行。</p>
 <p> 至于在那的4天都干什么，当时没有想好。就没打算。最后在12月20号左右的时候，在淘宝上面定的一日游。皮皮岛深潜、皇帝岛浮潜、还有骑大象。最后一天呢，打算在芭东沙滩瞎逛一下。</p>
 <p> 接下来还等什么，走你~</p>
- <img src="http://img04.taobaocdn.com/imgextra/i4/606022462/TB2ky.DbpXXXXbzXpXXXXXXXXXX-606022462.jpg_310x310.jpg"> 
+ <img src="http://img04.taobaocdn.com/imgextra/i4/606022462/TB2ky.DbpXXXXbzXpXXXXXXXXXX-606022462.png_310x310.png"> 
 
 <p> 这次飞机因为是白天飞的，所以景色自然很美。在飞机上偷偷把开着飞行模式的手机打开，拍了几张照。其余的，就是用相机来照的了。</p>
- <img src="http://img04.taobaocdn.com/imgextra/i4/606022462/TB28HMHbpXXXXX9XpXXXXXXXXXX-606022462.jpg_310x310.jpg">
+ <img src="http://img04.taobaocdn.com/imgextra/i4/606022462/TB28HMHbpXXXXX9XpXXXXXXXXXX-606022462.png_310x310.png">
 
 <p> 到深圳是中午的时候，深圳机场是比想象中要大好多好多。休息了一会，因为携程是在南航定的是电子客票，只能提前两个小时出票。所以中午就是在机场闲逛了两个小时。</p>
 <p> 过中国边检的时候，还有个比较有意思的事情，就是边检我的大哥，看我护照跟我本人差距有点大。就直接叫来了他们领导，把我领到边上进行了单独的核实。不过还好，有惊无险。顺利登机。</p>
- <img src="http://img03.taobaocdn.com/imgextra/i3/606022462/TB2RjQRbpXXXXaXXXXXXXXXXXXX-606022462.jpg_310x310.jpg" style="font-size: 10pt;">
+ <img src="http://img03.taobaocdn.com/imgextra/i3/606022462/TB2RjQRbpXXXXaXXXXXXXXXXXXX-606022462.png_310x310.png" style="font-size: 10pt;">
 
 <p> 景色依旧很美……</p>
 <p> 飞到普吉的时候其实是北京时间下午6点。但是，手机自动变成了5点，原因是普吉和北京有一小时的时差。哎呦，第一次体验时差的感觉，想想还有点小激动呢。</p>
 <p> 下了飞机，有个小插曲，就是我忘记在登机的时候要蓝色的入检登机表了。于是只能硬着头皮用我蹩脚的英语问机场服务人员要表格了，但是表格都尼玛是英文的啊。最后在旁边看有服务人员在帮别人填写一样的表格，等人家弄完了，就候着脸皮过去，请她帮忙，不过态度自然是要温和一点啦。填写完之后，就能顺利的入检了。就是下面这个蓝色的</p>
- <img src="http://img03.taobaocdn.com/imgextra/i3/606022462/TB2_sgGbpXXXXaDXpXXXXXXXXXX-606022462.jpg_310x310.jpg">
+ <img src="http://img03.taobaocdn.com/imgextra/i3/606022462/TB2_sgGbpXXXXaDXpXXXXXXXXXX-606022462.png_310x310.png">
 
 <p> 对泰国的第一印象嘛，普吉的机场好小。还没出机场，就赶忙给携程的客服打电话，问接送机的电话号码。还好都是会汉语的。最后在机场门外找到了携程的牌子，在国外第一次看到中文，真的是很激动啊啊啊啊</p>
- <img src="http://img04.taobaocdn.com/imgextra/i4/606022462/TB25EcCbpXXXXbnXpXXXXXXXXXX-606022462.jpg_310x310.jpg">
+ <img src="http://img04.taobaocdn.com/imgextra/i4/606022462/TB25EcCbpXXXXbnXpXXXXXXXXXX-606022462.png_310x310.png">
 
 
 
 
 
 <p> 等了十几分钟，其他游客，我们就一起被拉往各自的酒店。泰国是左侧通行的，我在想是不是就只有中国大陆是右侧通行。路上的时候，一共两个家庭和我三个单。其中一对夫妇，男的是东北的，女的应该是北京的吧。人挺好客的，主动跟我聊天来着，他们是三个人花了1.2w，我是自己花了4k，后面那一家花的更多1.8w。他们小孩每人就500，也就是说我自己找的酒店还是很便宜的。嘿嘿，一个多小时的车程，终于到了我定的酒店：dfeel</p>
- <img src="http://img02.taobaocdn.com/imgextra/i2/606022462/TB2c6wLbpXXXXbBXXXXXXXXXXXX-606022462.jpg_310x310.jpg">
+ <img src="http://img02.taobaocdn.com/imgextra/i2/606022462/TB2c6wLbpXXXXbBXXXXXXXXXXXX-606022462.png_310x310.png">
 
- <img src="http://img01.taobaocdn.com/imgextra/i1/606022462/TB2SHAIbpXXXXXvXpXXXXXXXXXX-606022462.jpg_310x310.jpg" style="font-size: 10pt;">
+ <img src="http://img01.taobaocdn.com/imgextra/i1/606022462/TB2SHAIbpXXXXXvXpXXXXXXXXXX-606022462.png_310x310.png" style="font-size: 10pt;">
 
- <img src="http://img03.taobaocdn.com/imgextra/i3/606022462/TB2_ZILbpXXXXb4XXXXXXXXXXXX-606022462.jpg_310x310.jpg">
+ <img src="http://img03.taobaocdn.com/imgextra/i3/606022462/TB2_ZILbpXXXXb4XXXXXXXXXXXX-606022462.png_310x310.png">
 
 <p> 一家还是有点逼格的酒店。入住的时候呢，又有一个小插曲。因为当时在携程第一次下单的时候，让写英文名字，我以为随便写一个就行，就写了自己的sid。但是后来携程的客服打电话问我，护照上面的英文是���么就写什么。所以又改回了ZHANGYANG。结果呢，我到这里的时候，这里的前台，没有搜到有关ZHANGYANG的的订单，就说我没有预定，我情急之下直接拿happy卡给携程客服打了电话，结果没等打完，我的happy卡从100泰铢变成了0.76泰铢，然后电话就被强行挂断了。最后等了半个小时，前台发现了原来是有个叫sid的人定了房价，但是后来又改成ZHANGYANG了，对我说了抱歉。结果依然是有惊无险啊，后来房间的保险箱不好用，等老板回来了，才给我换了个新的。老板37，但是很年轻啊，而且中午很不错。</p>
- <img src="http://img01.taobaocdn.com/imgextra/i1/606022462/TB2Op7RbpXXXXXwXXXXXXXXXXXX-606022462.jpg_310x310.jpg">
+ <img src="http://img01.taobaocdn.com/imgextra/i1/606022462/TB2Op7RbpXXXXXwXXXXXXXXXXXX-606022462.png_310x310.png">
 
 
 
@@ -4420,18 +4420,18 @@
 
 <p> 第一天，就这样在飞机上度过了，然后呢，洗洗睡吧~</p>
 <p> 第二天是在淘宝定的皮皮岛的深潜。等了差不多半个小时，接车的人才来。来泰国之前，查天气预报，说泰国这一周都是阴雨，但是订单和年假请了又没法退，所以就硬着头皮来了，但是到这里才发现，其实根本不像想象中那样阴雨，甚至可以说，根本没下什么雨。第一天的天气，虽然是阴天，但是偶尔还是可以看到蓝天的。</p>
- <img src="http://img01.taobaocdn.com/imgextra/i1/606022462/TB2xPAObpXXXXa2XXXXXXXXXXXX-606022462.jpg_310x310.jpg">
+ <img src="http://img01.taobaocdn.com/imgextra/i1/606022462/TB2xPAObpXXXXa2XXXXXXXXXXXX-606022462.png_310x310.png">
 
 <p> 这是第一天的行程单据。</p>
- <img src="http://img02.taobaocdn.com/imgextra/i2/606022462/TB2SSsMbpXXXXbgXXXXXXXXXXXX-606022462.jpg_620x10000.jpg">
+ <img src="http://img02.taobaocdn.com/imgextra/i2/606022462/TB2SSsMbpXXXXbgXXXXXXXXXXXX-606022462.png_620x10000.png">
 
 <p> 做了近两个小时的大船，才到达皮皮岛。上岛之后，在码头没有遇见接我的导游，于是就在码头瞎逛，开始找人，找了半天还是没有找到，路上还问了两个警察和一对小情侣。结果语言不通，差太多。没办法，换成自己的手机号，打电话咨询吧。还好，出来之前把手机开通了国际漫游。以后要记住，如果定了一日游，一定要在导游接你之后再从下船或者下车的地方离开，别自己乱走，否则只会给自己添乱。</p>
- <img src="http://img02.taobaocdn.com/imgextra/i2/606022462/TB2UKZObpXXXXaBXXXXXXXXXXXX-606022462.jpg_310x310.jpg">
+ <img src="http://img02.taobaocdn.com/imgextra/i2/606022462/TB2UKZObpXXXXaBXXXXXXXXXXXX-606022462.png_310x310.png">
 
 <p> 最后，是跟着一个叫阿成的教练，来了近海的一处潜点。叫了一些基本的动作和手势。就开始穿戴潜水用具，准备下水练习了。手机什么的，就直接放在的船上，教练说没事，根本没人拿。</p>
 <p> 其实这次潜水没有想象中的美好。因为近海的潜点水有点脏。下次去马来潜水吧。我前一个同事说，马来的海很漂亮。而且下次要去远海，那样可能更漂亮，还要买一个真正放水的水下摄影机。有些画面，光靠脑子是记不住的。</p>
 <p> 因为定的深潜里面是有午餐的，所以潜水后就在他们指定的地方吃了午餐，我个人觉得海鲜炒饭还是很棒的。不过我还是更喜欢这个鸡蛋。</p>
- <img src="http://img02.taobaocdn.com/imgextra/i2/606022462/TB2G7kRbpXXXXaKXXXXXXXXXXXX-606022462.jpg_310x310.jpg">
+ <img src="http://img02.taobaocdn.com/imgextra/i2/606022462/TB2G7kRbpXXXXaKXXXXXXXXXXXX-606022462.png_310x310.png">
 
 <p> 鸡蛋吃饭的时候，老板家的猫，总是不停地朝着我喵喵的叫，没办法，我就拿一些米饭喂他，结果呢，他还一脸嫌弃，继续在喵喵的叫。旁边成哥说：他吃惯了海鲜，给他米饭，他不吃的。结果没办法，我就一边找米饭里的海鲜给他，一边自己赶快吃。因为我怕我吃的慢，会把所有的海鲜都给了他。哈哈</p>
 <p> 吃完饭之后，就在岛上乱逛，买了十张明信片，准备给小伙伴和自己写，从泰国邮寄会大陆。还买了一个大象的标志性的东西。算是给自己的一个礼物吧，带回去。放在家里。告诉自己，曾经有一次，我自己一个人，去了泰国。</p>
@@ -4440,51 +4440,51 @@
 <p> 其实，我个人不是太喜欢灯红酒绿的夜，繁杂，嘈乱。不过偶尔出来，体验一下，还是不错的。</p>
 <p> 最后走饿了，就找出出行前下的普吉岛攻略应用。按照上面说的，找到了买水果的连锁超市，BigC。也找到了可以吃海鲜的99烧烤。</p>
 <p> 我在99点了下面死样，花了我700+泰铢，心疼啊。不过烤虾是真好吃啊。</p>
- <img src="http://img04.taobaocdn.com/imgextra/i4/606022462/TB2Fj.LbpXXXXbNXXXXXXXXXXXX-606022462.jpg_310x310.jpg">
+ <img src="http://img04.taobaocdn.com/imgextra/i4/606022462/TB2Fj.LbpXXXXbNXXXXXXXXXXXX-606022462.png_310x310.png">
 
- <img src="http://img04.taobaocdn.com/imgextra/i4/606022462/TB2r_F2XVXXXXbqXpXXXXXXXXXX-606022462.jpg_310x310.jpg">
+ <img src="http://img04.taobaocdn.com/imgextra/i4/606022462/TB2r_F2XVXXXXbqXpXXXXXXXXXX-606022462.png_310x310.png">
 
- <img src="http://img01.taobaocdn.com/imgextra/i1/606022462/TB2gDMIbpXXXXXbXpXXXXXXXXXX-606022462.jpg_310x310.jpg">
+ <img src="http://img01.taobaocdn.com/imgextra/i1/606022462/TB2gDMIbpXXXXXbXpXXXXXXXXXX-606022462.png_310x310.png">
 
 <p> 第一天，就这样啦，回去睡觉。第二天继续~</p>
 <p> 第二天呢，我定的是皇帝岛一日游，是游艇哦~上面直接有免费的食物和水果。不过饮料是需要收费的。</p>
 <p> 这次皇帝岛有趣的是有个跟我同名的家伙在船上，导演点名的时候：说：ZHANGYANG。结果两个人答道。导游有点蒙，又看了看名单，说有两个。</p>
-<p> <img src="http://img02.taobaocdn.com/imgextra/i2/606022462/TB24EMObpXXXXamXXXXXXXXXXXX-606022462.jpg_310x310.jpg"><img src="http://img01.taobaocdn.com/imgextra/i1/606022462/TB2y0kJbpXXXXcxXXXXXXXXXXXX-606022462.jpg_310x310.jpg" style="font-size: 10pt;"></p>
+<p> <img src="http://img02.taobaocdn.com/imgextra/i2/606022462/TB24EMObpXXXXamXXXXXXXXXXXX-606022462.png_310x310.png"><img src="http://img01.taobaocdn.com/imgextra/i1/606022462/TB2y0kJbpXXXXcxXXXXXXXXXXXX-606022462.png_310x310.png" style="font-size: 10pt;"></p>
 <p> 如果第一天还算是阴雨，那么第二天，可以说有艳阳了呢。</p>
 <p> 大海真棒。</p>
- <img src="http://img01.taobaocdn.com/imgextra/i1/606022462/TB2.j7NbpXXXXa3XXXXXXXXXXXX-606022462.jpg_620x10000.jpg">
+ <img src="http://img01.taobaocdn.com/imgextra/i1/606022462/TB2.j7NbpXXXXa3XXXXXXXXXXXX-606022462.png_620x10000.png">
 
 <p> 我们的船停在了离岸不远的地方。开始了浮潜和深潜。</p>
- <img src="http://img03.taobaocdn.com/imgextra/i3/606022462/TB289sNbpXXXXa7XXXXXXXXXXXX-606022462.jpg_620x10000.jpg">
+ <img src="http://img03.taobaocdn.com/imgextra/i3/606022462/TB289sNbpXXXXa7XXXXXXXXXXXX-606022462.png_620x10000.png">
 
 <p> 因为我报的是浮潜，是没有教练的。下水之后，我突然意识到，我尼玛还不会游泳呢，然后一阵莫名的恐惧，开始乱抓，结果抓到了一个正在上传的MM的屁股，她大叫了一声，我更怕了，结果胡乱抓到了下水的栏杆。才算是停了下来，后来又试了一次，发现自己还是克服不了怕被淹死的恐惧。于是乎再也没有下水。结果呢，钱白交了，最后就在船上吃水果看他们玩了。</p>
 <p> 等回来的时候依旧是晚上了，昨天晚上去的是芭东的主街道，今天晚上，我就直接来了芭东的沙滩。</p>
- <img src="http://img01.taobaocdn.com/imgextra/i1/606022462/TB2OkwFbpXXXXaNXpXXXXXXXXXX-606022462.jpg_620x10000.jpg">
+ <img src="http://img01.taobaocdn.com/imgextra/i1/606022462/TB2OkwFbpXXXXaNXpXXXXXXXXXX-606022462.png_620x10000.png">
 
- <img src="http://img03.taobaocdn.com/imgextra/i3/606022462/TB2jBEMbpXXXXbxXXXXXXXXXXXX-606022462.jpg_620x10000.jpg">
+ <img src="http://img03.taobaocdn.com/imgextra/i3/606022462/TB2jBEMbpXXXXbxXXXXXXXXXXXX-606022462.png_620x10000.png">
 
 <p> 听着海浪，还有岸边的笑声，马路上偶尔传来的鸣笛声。感觉一切真好，陌生的城市，陌生的人。即使一个人，也可以感受这些，不需要别人的言语，就自己一个人体会那一刻的安逸。真的超棒。</p>
 <p> 不过，晚上到了，自然少不了吃饭，今天吃哪家呢？想了想，继续看攻略，攻略说有一家叫NO.6的餐馆在主街道上面，很棒。于是乎，googlemap，最后是找到了那家餐馆，不过外面排起了长龙，人太多了，而我又很饿，没办法。就直接在旁边的餐馆吃吧。因为不识字，所以只能看图点菜了，结果，又尼玛点多了……</p>
-<p> <img src="http://img04.taobaocdn.com/imgextra/i4/606022462/TB2pSEGbpXXXXaTXpXXXXXXXXXX-606022462.jpg_310x310.jpg"><img src="http://img01.taobaocdn.com/imgextra/i1/606022462/TB2.TkRbpXXXXbrXXXXXXXXXXXX-606022462.jpg_310x310.jpg" style="font-size: 10pt;"></p>
-<p> <img src="http://img01.taobaocdn.com/imgextra/i1/606022462/TB2msMHbpXXXXaUXpXXXXXXXXXX-606022462.jpg_310x310.jpg"><img src="http://img03.taobaocdn.com/imgextra/i3/606022462/TB22l.RbpXXXXXiXXXXXXXXXXXX-606022462.jpg_310x310.jpg" style="font-size: 10pt;"></p>
+<p> <img src="http://img04.taobaocdn.com/imgextra/i4/606022462/TB2pSEGbpXXXXaTXpXXXXXXXXXX-606022462.png_310x310.png"><img src="http://img01.taobaocdn.com/imgextra/i1/606022462/TB2.TkRbpXXXXbrXXXXXXXXXXXX-606022462.png_310x310.png" style="font-size: 10pt;"></p>
+<p> <img src="http://img01.taobaocdn.com/imgextra/i1/606022462/TB2msMHbpXXXXaUXpXXXXXXXXXX-606022462.png_310x310.png"><img src="http://img03.taobaocdn.com/imgextra/i3/606022462/TB22l.RbpXXXXXiXXXXXXXXXXXX-606022462.png_310x310.png" style="font-size: 10pt;"></p>
 <p> 芒果饭、柠檬饭、海鲜汤、冰啤酒。</p>
 <p> 差点没撑死我。结果只花了500泰铢。比我预期要少了呢，所以，还是很开心。ps：芒果饭和凝眸饭都超级棒。现在想起来还是有口水流下来呢~</p>
 <p> 吃完了，依然是会酒店，睡大觉吧。我个人不喜欢人妖秀和钢管舞，觉得花那么多钱，不划算。所以，晚上的项目就是逛逛街，吃吃饭。拍拍街景。</p>
 <p> 第三天呢，自然是要体验一下泰囧里面说的啦，吻脚鱼，骑大象。泰式按摩嘛，介于预算不够，就暂不做考虑啦~</p>
- <img src="http://img04.taobaocdn.com/imgextra/i4/606022462/TB2KAsGbpXXXXaGXpXXXXXXXXXX-606022462.jpg_310x310.jpg">
+ <img src="http://img04.taobaocdn.com/imgextra/i4/606022462/TB2KAsGbpXXXXaGXpXXXXXXXXXX-606022462.png_310x310.png">
 
 <p> 这个是真的超级痒啊，刚刚放进去的时候，差点爽死我。</p>
 <p> 100泰铢，还可以接受的，体验完吻脚鱼后，就直接去了芭东海滩，拍一拍白天的样子。感觉还是很不错的嘛~</p>
- <img src="http://img04.taobaocdn.com/imgextra/i4/606022462/TB2W3.EbpXXXXbpXpXXXXXXXXXX-606022462.jpg_620x10000.jpg">
+ <img src="http://img04.taobaocdn.com/imgextra/i4/606022462/TB2W3.EbpXXXXbpXpXXXXXXXXXX-606022462.png_620x10000.png">
 
- <img src="http://img04.taobaocdn.com/imgextra/i4/606022462/TB2xnwObpXXXXbcXXXXXXXXXXXX-606022462.jpg_620x10000.jpg">
+ <img src="http://img04.taobaocdn.com/imgextra/i4/606022462/TB2xnwObpXXXXbcXXXXXXXXXXXX-606022462.png_620x10000.png">
 
 
 
 
 
 <p> 中午逛完之后，就回酒���了，等骑大象的车来接我，但是发现突然下起了大雨，还有一个小时就来车了，一会骑大象的时候，雨还不停可怎么办。不过热带就是热带，雨来的快去的也快。不一会雨声就小了，再过一会就放出太阳了，嘿���，还好。我的大象计划没有受到影响。</p>
- <img src="http://img02.taobaocdn.com/imgextra/i2/606022462/TB201sSbpXXXXXiXXXXXXXXXXXX-606022462.jpg_620x10000.jpg">
+ <img src="http://img02.taobaocdn.com/imgextra/i2/606022462/TB201sSbpXXXXXiXXXXXXXXXXXX-606022462.png_620x10000.png">
 
 <p> 大象的皮厚厚的。坐上去感觉跟做小时候的驴车没啥区别。唯一的区别是，这个花钱比较多。哈哈。</p>
 <p> 对了，当时脑袋热，还花了100泰铢买香蕉喂大象了。事后想一想，这个钱其实不该花的。不过，无所谓了，开心就好了。</p>
@@ -4493,28 +4493,28 @@
 <p> 因为本来就没安排第四天的行程，所以就在朋友圈问问同事和朋友。有人推荐我去做泰式按摩。后来我想了想，决定在纹身和按摩直接做抉择。因为觉得，自己出来一次，总要给自己一个不一样的印记，所以最终选择了纹身！我还自己上网去找了相关的字体自己弄了个纹身的设计。</p>
 <p> 接下来就是找纹身店了，我走了之前没有走的路线去芭东的主街道寻找，结果没等到主街道呢，就看到一家纹身，里面有两个妹子正在纹，我觉得还不错，就想进去，可是又想了想，还是继续去其他家看看吧，结果没走两步又走了回来。最后进店问老板，按找我自己的设计来做纹身，需要多少钱，他看了看图片的大小说要2500泰铢，我跟他说，身上只有2000泰铢了，他说好吧，让我等一下。她们两个弄完，就是我了。对话当然是英语啦，虽然我英语挺差，但是还是敢胡乱说的，嘿嘿。</p>
 <p> 这家店的位置嘛，就在这里：</p>
-<p> <img src="http://img04.taobaocdn.com/imgextra/i4/606022462/TB2VWULbpXXXXcnXXXXXXXXXXXX-606022462.png_310x310.jpg"><img src="http://img03.taobaocdn.com/imgextra/i3/606022462/TB2FwMIbpXXXXXTXpXXXXXXXXXX-606022462.jpg_310x310.jpg" style="font-size: 10pt;"></p>
+<p> <img src="http://img04.taobaocdn.com/imgextra/i4/606022462/TB2VWULbpXXXXcnXXXXXXXXXXXX-606022462.png_310x310.png"><img src="http://img03.taobaocdn.com/imgextra/i3/606022462/TB2FwMIbpXXXXXTXpXXXXXXXXXX-606022462.png_310x310.png" style="font-size: 10pt;"></p>
 <p> 还在旁边看的了纹身师的证件，所以心就放心了。结果等了两个小时才轮到我。期间无聊，就上网查纹身的护理。发现还是挺麻烦的事情。这期间呢，纹身师傅有个小弟，在帮他打扫房间什么的，问我要纹什么，给他看了之后，说大象什么的1500，字体什么的2000，所以加起来，最少3500，我把所有的钱逃出来，说，只有2020了，结果他拿走了20泰铢，说，放心吧，纹身师2000也是可以的。虽然被白拿了20，但是突然发现了小费的重要性。其实，我留了个心眼，我身上本来是2320的，我把另外的300泰铢放在另一个裤子兜里了，嘿嘿。</p>
 <p> 在经历了漫长的等待之后，我的第一个纹身终于和我见面了，我个人还是挺喜欢的</p>
- <img src="http://img01.taobaocdn.com/imgextra/i1/606022462/TB2_7oMbpXXXXbyXXXXXXXXXXXX-606022462.jpg_620x10000.jpg">
+ <img src="http://img01.taobaocdn.com/imgextra/i1/606022462/TB2_7oMbpXXXXbyXXXXXXXXXXXX-606022462.png_620x10000.png">
 
 <p> 他的英文字母是：TPDPRP记录的是我来泰国的行程。泰国-普吉岛-dfeel酒店-皮皮岛-皇帝岛-芭东海滩。最后的圣诞帽是因为我是圣诞节期间过来的，而且在下雨那天，我去骑了大象。</p>
 <p> 结果，弄完后就只能回酒店了，不敢穿鞋出去乱逛了，怕把纹身弄坏了，临走前还问老板娘要了瓶芦荟膏，用来恢复的。所以说啊，攻略什么的还是挺重要的。芦荟膏什么的都是网上说的。</p>
 <p> 网上也不想跑太远，就在街上买了炸鸡腿和香蕉鸡蛋饼。都挺好吃的。</p>
- <img src="http://img04.taobaocdn.com/imgextra/i4/606022462/TB2fygGbpXXXXayXpXXXXXXXXXX-606022462.jpg_310x310.jpg">
+ <img src="http://img04.taobaocdn.com/imgextra/i4/606022462/TB2fygGbpXXXXayXpXXXXXXXXXX-606022462.png_310x310.png">
 
 <p> 临走前，还跟这个37岁的会说中文的老板合了影。</p>
- <img src="http://img04.taobaocdn.com/imgextra/i4/606022462/TB2TgcIbpXXXXXKXpXXXXXXXXXX-606022462.jpg_620x10000.jpg">
+ <img src="http://img04.taobaocdn.com/imgextra/i4/606022462/TB2TgcIbpXXXXXKXpXXXXXXXXXX-606022462.png_620x10000.png">
 
 
 
 
 
 <p> 过普吉处境的时候，并没有传说中的，所要100美元的通关小费的情况。所以我之前换取的100美元，没有用上。不过留作纪念吧。</p>
- <img src="http://img02.taobaocdn.com/imgextra/i2/606022462/TB2F8ZIbpXXXXXaXpXXXXXXXXXX-606022462.jpg_310x310.jpg">
+ <img src="http://img02.taobaocdn.com/imgextra/i2/606022462/TB2F8ZIbpXXXXXaXpXXXXXXXXXX-606022462.png_310x310.png">
 
 <p> 最后，在机场的免税店里面给同事买了点吃的。我发现啊，免税店里面基本上都是女士的用品，香水啊，护肤品啊。果然，女生的钱太容易赚。</p>
- <img src="http://img03.taobaocdn.com/imgextra/i3/606022462/TB2MX7KbpXXXXc5XXXXXXXXXXXX-606022462.jpg_310x310.jpg">
+ <img src="http://img03.taobaocdn.com/imgextra/i3/606022462/TB2MX7KbpXXXXc5XXXXXXXXXXXX-606022462.png_310x310.png">
 
 
 
@@ -4538,7 +4538,7 @@
     <content><![CDATA[<blockquote>
 <p>这次一行八个人去八达岭滑雪。也是本人的第一次滑雪。&gt;<br> 首先呢，是上周原定的雪场没存住雪，原来的单就取消了，八达岭这次是试滑，所以呢，免费的哦~~只有去的大巴是收钱的，雪具和鞋子只是收押金。</p>
 <p> 其实这次最最开始的时候很不爽的，上一张图就明白了。</p>
- <img src="http://img01.taobaocdn.com/imgextra/i1/606022462/TB2pn_UbXXXXXaIXpXXXXXXXXXX-606022462.jpg_620x10000.jpg">
+ <img src="http://img01.taobaocdn.com/imgextra/i1/606022462/TB2pn_UbXXXXXaIXpXXXXXXXXXX-606022462.png_620x10000.png">
 
 
 
@@ -4546,7 +4546,7 @@
 
 <p> 看到了吧，全是人，中国人喜欢免费的东西，喜欢扎堆。这是当时排队领雪鞋的时候，排了40分钟，最后的8m左右的距离实在是动不了了。人群就开始攒动，开始叫嚷。最后大家都不排队了，直接跳进鞋库里面去拿适合自己的鞋，领滑雪板的时候也是这个样子。乱死了。</p>
 <p> 不过换完鞋子就心旷神怡了，虽然天公不作美。</p>
- <img src="http://img03.taobaocdn.com/imgextra/i3/606022462/TB2WhnZbXXXXXayXXXXXXXXXXXX-606022462.jpg_620x10000.jpg">
+ <img src="http://img03.taobaocdn.com/imgextra/i3/606022462/TB2WhnZbXXXXXayXXXXXXXXXXXX-606022462.png_620x10000.png">
 
 
 
@@ -4555,7 +4555,7 @@
 <p> 由于温度还是5℃，所以中级雪场的最上面那段还是没有满雪，而且是试滑嘛。首开的，所以坡度不是很高，雪道也不是太长。</p>
 <p> 刚刚开始的时候，大家都有的冷，但是滑下来两次就习惯了。</p>
 <p> 话说，第一次滑下来的感觉真的超爽，那时候雪道上人还不算多，下来的时候可以感觉到风的速度，整个身体都下压，很舒服的。反正第一次下来的感觉超爽！</p>
- <img src="http://img02.taobaocdn.com/imgextra/i2/606022462/TB2IYDWbXXXXXcgXXXXXXXXXXXX-606022462.jpg_620x10000.jpg">
+ <img src="http://img02.taobaocdn.com/imgextra/i2/606022462/TB2IYDWbXXXXXcgXXXXXXXXXXXX-606022462.png_620x10000.png">
 
 
 
@@ -4563,7 +4563,7 @@
 
 <p> 我已经爽到忘记自拍了，这张还是最开始红姐试拍手机的时候，我溜进了她的镜头里</p>
 <p> 当时我们排队拿鞋子的时候就听说单板没有了，其实我想玩单板，因为感觉单板好像更容易一点，不用拿手杖。但是老毕他们说，单板更难，下面这个就是我穿的双板。</p>
- <img src="http://img04.taobaocdn.com/imgextra/i4/606022462/TB2qSPWbXXXXXbzXXXXXXXXXXXX-606022462.jpg_620x10000.jpg">
+ <img src="http://img04.taobaocdn.com/imgextra/i4/606022462/TB2qSPWbXXXXXbzXXXXXXXXXXXX-606022462.png_620x10000.png">
 
 
 
@@ -4572,7 +4572,7 @@
 <p> 今天到雪场的时候，还有个小插曲，领导打电话，让加班……结果我都到了雪场了，也没法回去。所以呢，哈哈，逃过一次加班。不过明天还是要加班的，因为重庆的要对接了，昆明的数据也要上了，而那个全国分析的平台也开始弄了，哎，不说工作了，一说的话，就一堆事情。没玩没了的。</p>
 <p> 我们从11点多开始，一直滑到了下午快4点。</p>
 <p> 因为前面说的，鞋子和滑板都没有刷卡是自己进去抢的，结果，你们看：</p>
- <img src="http://img04.taobaocdn.com/imgextra/i4/606022462/TB2B4nZbXXXXXarXXXXXXXXXXXX-606022462.jpg_620x10000.jpg">
+ <img src="http://img04.taobaocdn.com/imgextra/i4/606022462/TB2B4nZbXXXXXarXXXXXXXXXXXX-606022462.png_620x10000.png">
 
 
 
@@ -4600,37 +4600,37 @@
 <p>没想到我人品太差，这次出游，赶上了台风……所以就有了下面的故事</p>
 <p>周三下班之后，第一件事就是去商店找雨衣，因为下午还是查了天气的。带上相机，手机，雨衣，部分现金，走你……</p>
 <p>第二天早上到南京站的时候，就已经开始阴雨绵绵的了</p>
-<img src="http://img02.taobaocdn.com/imgextra/i2/606022462/TB25QFabXXXXXcMXXXXXXXXXXXX-606022462.jpg">
+<img src="http://img02.taobaocdn.com/imgextra/i2/606022462/TB25QFabXXXXXcMXXXXXXXXXXXX-606022462.png">
 
 
 
 <p>等了半天肯德基都没有开门，后来就去了隔壁的永和大王，次了碗皮蛋瘦肉粥和两个油条。突然发现，中餐的快餐早点也是很不错的。</p>
 <p>做了几个小时的客车后，到达了黄山脚下的接待酒店，因为天气已经在下雨了，而且越下越大，酒店老板问我们，如果没有在山上定房间，就不要上山了。因为天气实在太差了，但是我一想，本来就没多少时间，而且就是一次随心的旅行，管你什么天气，说上就上吧。</p>
 <p>然后就跟着酒店的部分人搭个便车去了黄山大门，但是由于还下着暴雨，也没有跟大门合个影，算是个遗憾吧</p>
-<img src="http://img02.taobaocdn.com/imgextra/i2/606022462/TB2PAlabXXXXXXkXpXXXXXXXXXX-606022462.jpg">
+<img src="http://img02.taobaocdn.com/imgextra/i2/606022462/TB2PAlabXXXXXXkXpXXXXXXXXXX-606022462.png">
 
 
 
 <p>现在看到这张图片还能想起当时的水声。整个山都被笼罩在瓢泼大雨中。</p>
 <p>因为之前看攻略，上面说，如果只是想一天游黄山的话，最好是乘索道。所以呢，就买了门票和云谷索道票</p>
-<img src="http://img01.taobaocdn.com/imgextra/i1/606022462/TB2ijVXbXXXXXXQXpXXXXXXXXXX-606022462.jpg">
+<img src="http://img01.taobaocdn.com/imgextra/i1/606022462/TB2ijVXbXXXXXXQXpXXXXXXXXXX-606022462.png">
 
 
 
 <p>其实，暴雨真的不适合出游，好多本来可以看到的景象，在暴雨的掩盖下，都消失不见了。</p>
 <p>在暴雨中，我感叹到：我不见云海，我便是云海。</p>
-<img src="http://img03.taobaocdn.com/imgextra/i3/606022462/TB2evo4aVXXXXb.XpXXXXXXXXXX-606022462.jpg">
+<img src="http://img03.taobaocdn.com/imgextra/i3/606022462/TB2evo4aVXXXXb.XpXXXXXXXXXX-606022462.png">
 
 
 
 <p>因为你可以清晰的看到飘落的雨滴，你可以看到雨水将大地和苍穹连成一体，像在你眼前支了一匹纱，让你看不清远处的山峰。</p>
 <p>快傍晚的时候，我很冷，但是又没有提前预定房间，就只能碰碰运气了。本以为人品很差的我，却找到了最后的一张床位，在西海山庄。</p>
-<img src="http://img02.taobaocdn.com/imgextra/i2/606022462/TB2c3I7aVXXXXbuXpXXXXXXXXXX-606022462.jpg">
+<img src="http://img02.taobaocdn.com/imgextra/i2/606022462/TB2c3I7aVXXXXbuXpXXXXXXXXXX-606022462.png">
 
 
 
 <p>房间里面六张床位，两个个男孩是一起的，还有一个是父子俩人，另一个可能以为暴雨没有进山吧。由于太累了也太冷了，大家都没有怎么说话，躺在被窝里面。我把电视打开，中央六在放毛驴县令。看了一会，发现信号实在是太差了，可能是由于暴雨的原因。索性就翻了翻床头的杂志，却发现了一首不错的小诗：</p>
-<img src="http://img03.taobaocdn.com/imgextra/i3/606022462/TB2A1M2aVXXXXcxXpXXXXXXXXXX-606022462.jpg">
+<img src="http://img03.taobaocdn.com/imgextra/i3/606022462/TB2A1M2aVXXXXcxXpXXXXXXXXXX-606022462.png">
 
 
 
@@ -4638,36 +4638,36 @@
 <p>这时候，发现，旅行真好。到未知的城市，见未知的人，欣赏未知的风景，体验从未体验过的风土人情，换一种心静。让自己开开心心。</p>
 <p>第二天，早上一早，五点半左右���时候，我就起床了，虽然暴雨已经停了，但是由于它的原因，整个山上都是雾气。也看不见我想看的日出了。无所谓了，这是第一次出游体验，再看日出的时候，就等和我爱的人在泰山上面一起吧。我这样对自己说。</p>
 <p>既然醒了，早点到山顶，然后下山。因为当时住的西海那头，里光明顶比较近，所以就问了服务员怎么去，早上上山的时候，感觉像是寂静岭。因为光线不足，又没有同行的人。不过还好，我遇见了它，这个可爱的小家伙：</p>
-<img src="http://img01.taobaocdn.com/imgextra/i1/606022462/TB27Os.aVXXXXaaXpXXXXXXXXXX-606022462.jpg">
+<img src="http://img01.taobaocdn.com/imgextra/i1/606022462/TB27Os.aVXXXXaaXpXXXXXXXXXX-606022462.png">
 
 
 
 <p>爬了大概不到一个小时的路，就到了光明顶，在快到山顶的时候，听到了导游的声音，原来有起早爬山的旅游团。我歇了一会，就跑去跟光明顶合了张影。</p>
-<img src="http://img02.taobaocdn.com/imgextra/i2/606022462/TB2D4o.aVXXXXc9XXXXXXXXXXXX-606022462.jpg">
+<img src="http://img02.taobaocdn.com/imgextra/i2/606022462/TB2D4o.aVXXXXc9XXXXXXXXXXXX-606022462.png">
 
 
 
 <p>既然遇到旅行团了，那还等什么，跟着他们混吧，嘿嘿。路上听听导游解说，要不然，黄山对我来说，就是一个大石头。</p>
 <p>对了，还有这个迎客松，这时候已经是7点多了，你看着光线，就知道山上的雾气有多重了，就知道昨天的暴雨有多大了。</p>
-<img src="http://img04.taobaocdn.com/imgextra/i4/606022462/TB2nww7aVXXXXbEXpXXXXXXXXXX-606022462.jpg">
+<img src="http://img04.taobaocdn.com/imgextra/i4/606022462/TB2nww7aVXXXXbEXpXXXXXXXXXX-606022462.png">
 
 
 
 <p>由于想提前赶时间回南京，好在周末的时候也逛逛南京，下山的时候也做了索道。</p>
 <p>到山下的时候，大概十点多。</p>
 <p>回头看看黄山，我想这肯定会是我非常难忘的经历，一个人在暴雨的黄山，最后一张床位，还有那80快的西红柿鸡蛋……</p>
-<img src="http://img04.taobaocdn.com/imgextra/i4/606022462/TB2MMZ4aVXXXXb7XpXXXXXXXXXX-606022462.jpg">
+<img src="http://img04.taobaocdn.com/imgextra/i4/606022462/TB2MMZ4aVXXXXb7XpXXXXXXXXXX-606022462.png">
 
 
 
 <p>我赶上了13点半去南京的车，路上让我姐姐帮我查了南京两天都去哪里好。近下午6点的时候找了个旅店。唯一记住的是那个旅店的服务很差……</p>
-<img src="http://img04.taobaocdn.com/imgextra/i4/606022462/TB2IPg_aVXXXXaEXpXXXXXXXXXX-606022462.jpg">
+<img src="http://img04.taobaocdn.com/imgextra/i4/606022462/TB2IPg_aVXXXXaEXpXXXXXXXXXX-606022462.png">
 
 
 
 <p>至于南京，就没有去哪几个地方，周五晚上去了夫子庙，周六上午去了中山陵，下午去了总统府。没去什么景点，都是人文。我个人来说，到不是太喜欢人文景点，因为没有色彩的冲击，总觉得印象不够深刻。</p>
 <p>最后，就拿着罗，在车站等车了……</p>
-<img src="http://img01.taobaocdn.com/imgextra/i1/606022462/TB2rTM3aVXXXXcgXpXXXXXXXXXX-606022462.jpg">
+<img src="http://img01.taobaocdn.com/imgextra/i1/606022462/TB2rTM3aVXXXXcgXpXXXXXXXXXX-606022462.png">
 
 
 
@@ -4686,7 +4686,7 @@
   <entry>
     <title>很久很久……</title>
     <url>/2013/02/05/blogs/life/informal/%E5%BE%88%E4%B9%85%E5%BE%88%E4%B9%85/</url>
-    <content><![CDATA[<p><label><p>很久没闲下来，写一些东西了。有多久了？久到忘记有多久了</p><p>马上就回家了，我是遇到真心让我激动的事情就很难平静下来的那种人。所以，今天的我完全没有在学习和工作的状态。我自己那，早就不是我自己了。也不知道现在的张阳好不好，也不知道现在的张阳还是不是张阳。刚刚闲着，翻翻QQ里面的群，看看QQ里面的人。各种各样的名字。</p><p>每个人的网名都有一段故事吧。我用过比较长的两个网名，一个是白痴，一个是阳小良。小良这个网名是大学的某个努力的夏天突然想到的，想找一个不重复的网名，又想找一个自己想成为的人的形容词。阳取自我的名，小是外貌的形容词，因为个头不高，外加经常会傻逼一样的笑，所以看起来会比实际年龄小一些。而至于良这个词，可能就是我向往的明天吧。有一个不要让别人羡慕，也不要让别人唾弃的未来，只有良好，我就心满意足了。不争第一，不愿倒数。</p><p>今天就是随笔，因为闲下来，人总要想办法找一些打发时间东西，我在上班，不能画画，不能看电影，刚刚看了一下乔帮主的传记，发现电脑看txt太刺眼。所以，索性就闲下来，写一些东西。</p><p>我想，人生应该是精彩的吧。我想，未来应该是光明的吧。我想，生活总是充满希望的吧。何为成功，何为失败，这是怎样的一种定性。乔帮主是成功的。但那样的成功，太累了吧。那么的偏执。无法容忍一点点的小错误。盖茨曾经让乔帮主看windows系统如何，乔帮主一句话：这根本就是狗屎。想象一下，是吧。多么偏执啊。我想我的生活里，要不了那么耀眼的光芒，也不想去照亮别人的生活。只要给周围的人带去正面的影响，就好了。做自己喜欢做的事情。少去抱怨。因为我大学毕业以前，每天最常说的就是一个字：哎。都成了口头禅了。毕业之后才慢慢改掉的。总是叹息对自己也没有什么好处，总是抱怨对自己更没有好处，唯一的影响就是让你身边的人更烦你了。每个人都喜欢给自己带来正能量的人。那些无时无刻不在抱怨人生的人，看着就不怎么讨人喜欢。既然，你那么讨厌自己的人生，为什么非要让别人跟着你一起讨厌人生呢？你的人生并不美好，但是不代表别人的人生不美好。还记得2010年08月24日那天，我已经大四了，那天改了QQ签名和个人说明，然后就再也没改过。我觉得，那时候的我，才开始长大吧。</p><p>前两天看了一部翻拍的短片，叫《另一个我》。很不错，不同的选择，其实是相同的结局。最终两个人都放弃了原有的生活。我喜欢这部短片不是因为故事多么的写实。因为每个人都有每个人的想法，所以我不去评判这个故事如何。我只是喜欢这种表述的方式。北漂，这个词形容我们很贴切。不过对我来说还好。我这人从小就不怎么恋家，比较野。喜欢出来玩。虽然有时候也会想家。但是那种感觉并不会太浓烈。我来这的目的也很明确。没有什么背景，所以自己来海洋里面学习。然后再回到小河里。就会轻松的很多。虽然可能有时候会觉得小河很挤。但，那是家。</p><p>你没那么多观众，不用活得那么累，记住，开心就好……这是我QQ签名的话，很久没有变过了。因为我觉得这话写得真好。一个人的幸福支撑点可以很多，可以很少。支撑点很多的好处，就是，即使其中某一个支撑点坏掉了，我依旧可以很幸福的活着。所以，我在尽力让我的幸福支撑点越来越多。编代码，本来是让人生厌的一种，可能是被折磨久了。现在自己编出的小程序，自己用着都会高兴。更何况第一程序，发布这二十多天已经赚到60多块钱了。所以还是有一些小高兴的。画画，是我从小就喜欢的，但却无法追求的东西。偶尔会自己画一下，因为喜欢，所以断断续续的画着，并没有放下。而现在，可以慢慢的爬上这个旅程了。所以很开心。下一步就是遇见她，应该是我最大的幸福了吧。</p><p>早上看到一则新闻，一小伙的近两万元被风吹走，遭哄抢，我觉得吧。钱是好东西。但是，有些人既然都可以开车，那么那点钱对他来说应该就不算什么了。但是对一个什么都没有的人来说，那就是全部啊。你们残忍的拿了人家的全部，然后还在一旁窃喜。终有一天，你会还回来的。而且是加倍的奉还。</p><p>突然想起那么一句话，无能的人，用脏话来表达愤怒，我无能了二十多年，所以，也是应该改变一点了。总是有点小脾气，就一顿乱骂。然后自己生闷气，其实这样也没什么用。最后，伤得依然是自己。</p><p>对了，昨天还看到pis大神的女朋友给他带了绿帽子，其实我觉得pis赚了，虽然被背叛了，但是既然挑明了，那就已经是过去了，过去的人就过去了，什么感情，什么爱情，早就不存在了。pis白白玩了好几年别人的老婆，应该算是赚了吧。突然想起这么一个问题。如果让你减少十年的寿命，换来一样东西，你想换来什么。我想，我会去换来在我的感情世界里永远不要出现背叛者吧，不论是她是他，还是我。</p><p>今天就回家了呢，明天就到家了呢。然后就可以吃家里做的饺子，就可以跟发小去小卖店坐在麻将机前等人来。后天还有同学聚会。听说要疯一个晚上。其实我这个人不太喜欢老同学聚在一起。偶尔一两个知心的，关系要好的还行。明明没太多的共同话题，就挤在一起。太多的人，总有些人喜欢比较，这种让我很反感。在一起也免不了有人喜欢敬酒，有人喜欢疯。你根本就不能喝，但是你说不喝，人家就觉得你不够意思。真相不明白那些喜欢喝酒的人，喝多了，迷迷糊糊的有什么好的。多二啊，不过，如果是很好的兄弟，遇到什么开心或者难过的事情，还是应该陪着开心或者难过的，省得这个傻逼一个人喝闷酒做傻事。</p><p>还有啊，明年公司可能准备出国游，估计也就去最便宜的泰国。回去还得打听能不能办护照。否则过完年之后，还得来回跑。多烦啊。说到来回跑，我就觉得自己不懂事。因为不想麻烦，所以一年都没回家。其实我离家也不是很远。从北京动车7个小时，到长春，再从长春2.5个小时到松原，再转车一个多小时回家。加起来也就十个小时左右。但是就是不愿意动。总觉得麻烦。而且回家呆两天就开始烦。哎。。。矛盾的人啊</p><p>我还在等这个月的工资。但是貌似今天发不了了。哎，过年也不让我们更开心一点的回家。</p><p>啊，还有，我其实挺想不通一些人的。手机明明好好的，而且貌似还很新，而且还是iphone4，一看5出来了，马上就要换。。。是不是我的消费观上不去啊？是不是我自己有问题啊，然后才看别人有问题。你说好好一个手机你不用，非得追那种实际上没有什么差别的手机。手机这东西不就是一个交流工具么？发个短息，接个电话。想玩游戏，你买个psp就可以了。那么多钱，吃点好吃的，买点好用的衣服，干什么不好。哎，可能是我思想太落伍了吧。真的想不通他们的想法。</p><p>哎，刚刚程序又死了，楼下的问我动没动服务器，让我看看怎么回事。看了一下，又他妈报空指针异常。一个过滤器你都报空指针异常。而且是服务器，让我完全不知道是什么情况引起的错误。让我怎么排查？在本地跑好好的，弄上服务器，做个负载均衡，就妈各种问题。气死你大爷了。哎，淡定淡定，又开始骂人了，也难怪我总是改不了这个毛病，这个职业，只能通过这种方式来发泄愤怒了。苦逼的程序员啊。</p><p>望望外面，又是浓雾，北京啊北京，你这不是坑爹么？连着一周浓雾，刚刚被风刮走两天，马上就又回来了。pm2.5啊，不宅在家里都不行。雾蒙蒙的北京，也不知道北京是从什么时候空气开始这么差的，也想不通为什么那么多人拼死了想留在这里。这个城市多无趣啊。灯红酒绿的，多没意思啊。还不如老婆孩子热炕头，外加几个兄弟，打打麻将，唱唱歌那。不过在北京长大的孩子应该不会这么想吧。毕竟这是他们的家啊。不论什么样子都是他们的家啊</p><p>来国信一年多了吧。我想我在这里待不上两年吧。因为如果真的待三年，我可能就废掉了。所以，我才每天下班回家，都看看android，上班的时间看看php，学东西，很少把那时间用来聊天。计算机这个东西，每天都在更新。只能不停地学，才能不停地进步。这里就我一个程序员，也没有人可以讨论技术。所以我觉得，我是在闭门造车，但是目前还有一个很好的机会。就是接触服务器。我可以玩真实的服务器，等玩的差不多了，就是时候换个地方了。因为这里的工资确实不高，虽然待遇比以前的公司强很多。但是工资也就算是个小中等的水平。我努力，所以，我就可以要更好的，更高的待遇。否则，我为什么努力啊？公司跟员工的关系，就是剥削与被剥削，既然在哪里都是被剥削，我为什么不找一个可以给我更多的公司呢？无论再人性的公司，都是这样的。别跟你老板谈什么感情，那是骗人的。在这场利益关系里，你永远是弱势。他和你称兄道弟，不过因为你还有利益可图。否则，就送你一个字：哥屋恩……所以啊，别相信老板的空口承诺，那都没用，你把钱打进我的银行，那才是最重要的。</p><p>好了，就写这么多吧。上班一个多小时，就在这里写这个。 因为实在是看不下去了，哈哈，晚上我就踏上回家的列车喽~~</p><p>最后，也不知道用什么来做这篇日志的背景音乐。</p><p><img src="http://s.xnimg.cn/imgpro/editor/music-box.gif" thumbnail="http://music.store.renren.com/newalbum/n231/b3694867-905b-4934-a716-446fb34f0d8e.jpg"></p></label></p>
+    <content><![CDATA[<p><label><p>很久没闲下来，写一些东西了。有多久了？久到忘记有多久了</p><p>马上就回家了，我是遇到真心让我激动的事情就很难平静下来的那种人。所以，今天的我完全没有在学习和工作的状态。我自己那，早就不是我自己了。也不知道现在的张阳好不好，也不知道现在的张阳还是不是张阳。刚刚闲着，翻翻QQ里面的群，看看QQ里面的人。各种各样的名字。</p><p>每个人的网名都有一段故事吧。我用过比较长的两个网名，一个是白痴，一个是阳小良。小良这个网名是大学的某个努力的夏天突然想到的，想找一个不重复的网名，又想找一个自己想成为的人的形容词。阳取自我的名，小是外貌的形容词，因为个头不高，外加经常会傻逼一样的笑，所以看起来会比实际年龄小一些。而至于良这个词，可能就是我向往的明天吧。有一个不要让别人羡慕，也不要让别人唾弃的未来，只有良好，我就心满意足了。不争第一，不愿倒数。</p><p>今天就是随笔，因为闲下来，人总要想办法找一些打发时间东西，我在上班，不能画画，不能看电影，刚刚看了一下乔帮主的传记，发现电脑看txt太刺眼。所以，索性就闲下来，写一些东西。</p><p>我想，人生应该是精彩的吧。我想，未来应该是光明的吧。我想，生活总是充满希望的吧。何为成功，何为失败，这是怎样的一种定性。乔帮主是成功的。但那样的成功，太累了吧。那么的偏执。无法容忍一点点的小错误。盖茨曾经让乔帮主看windows系统如何，乔帮主一句话：这根本就是狗屎。想象一下，是吧。多么偏执啊。我想我的生活里，要不了那么耀眼的光芒，也不想去照亮别人的生活。只要给周围的人带去正面的影响，就好了。做自己喜欢做的事情。少去抱怨。因为我大学毕业以前，每天最常说的就是一个字：哎。都成了口头禅了。毕业之后才慢慢改掉的。总是叹息对自己也没有什么好处，总是抱怨对自己更没有好处，唯一的影响就是让你身边的人更烦你了。每个人都喜欢给自己带来正能量的人。那些无时无刻不在抱怨人生的人，看着就不怎么讨人喜欢。既然，你那么讨厌自己的人生，为什么非要让别人跟着你一起讨厌人生呢？你的人生并不美好，但是不代表别人的人生不美好。还记得2010年08月24日那天，我已经大四了，那天改了QQ签名和个人说明，然后就再也没改过。我觉得，那时候的我，才开始长大吧。</p><p>前两天看了一部翻拍的短片，叫《另一个我》。很不错，不同的选择，其实是相同的结局。最终两个人都放弃了原有的生活。我喜欢这部短片不是因为故事多么的写实。因为每个人都有每个人的想法，所以我不去评判这个故事如何。我只是喜欢这种表述的方式。北漂，这个词形容我们很贴切。不过对我来说还好。我这人从小就不怎么恋家，比较野。喜欢出来玩。虽然有时候也会想家。但是那种感觉并不会太浓烈。我来这的目的也很明确。没有什么背景，所以自己来海洋里面学习。然后再回到小河里。就会轻松的很多。虽然可能有时候会觉得小河很挤。但，那是家。</p><p>你没那么多观众，不用活得那么累，记住，开心就好……这是我QQ签名的话，很久没有变过了。因为我觉得这话写得真好。一个人的幸福支撑点可以很多，可以很少。支撑点很多的好处，就是，即使其中某一个支撑点坏掉了，我依旧可以很幸福的活着。所以，我在尽力让我的幸福支撑点越来越多。编代码，本来是让人生厌的一种，可能是被折磨久了。现在自己编出的小程序，自己用着都会高兴。更何况第一程序，发布这二十多天已经赚到60多块钱了。所以还是有一些小高兴的。画画，是我从小就喜欢的，但却无法追求的东西。偶尔会自己画一下，因为喜欢，所以断断续续的画着，并没有放下。而现在，可以慢慢的爬上这个旅程了。所以很开心。下一步就是遇见她，应该是我最大的幸福了吧。</p><p>早上看到一则新闻，一小伙的近两万元被风吹走，遭哄抢，我觉得吧。钱是好东西。但是，有些人既然都可以开车，那么那点钱对他来说应该就不算什么了。但是对一个什么都没有的人来说，那就是全部啊。你们残忍的拿了人家的全部，然后还在一旁窃喜。终有一天，你会还回来的。而且是加倍的奉还。</p><p>突然想起那么一句话，无能的人，用脏话来表达愤怒，我无能了二十多年，所以，也是应该改变一点了。总是有点小脾气，就一顿乱骂。然后自己生闷气，其实这样也没什么用。最后，伤得依然是自己。</p><p>对了，昨天还看到pis大神的女朋友给他带了绿帽子，其实我觉得pis赚了，虽然被背叛了，但是既然挑明了，那就已经是过去了，过去的人就过去了，什么感情，什么爱情，早就不存在了。pis白白玩了好几年别人的老婆，应该算是赚了吧。突然想起这么一个问题。如果让你减少十年的寿命，换来一样东西，你想换来什么。我想，我会去换来在我的感情世界里永远不要出现背叛者吧，不论是她是他，还是我。</p><p>今天就回家了呢，明天就到家了呢。然后就可以吃家里做的饺子，就可以跟发小去小卖店坐在麻将机前等人来。后天还有同学聚会。听说要疯一个晚上。其实我这个人不太喜欢老同学聚在一起。偶尔一两个知心的，关系要好的还行。明明没太多的共同话题，就挤在一起。太多的人，总有些人喜欢比较，这种让我很反感。在一起也免不了有人喜欢敬酒，有人喜欢疯。你根本就不能喝，但是你说不喝，人家就觉得你不够意思。真相不明白那些喜欢喝酒的人，喝多了，迷迷糊糊的有什么好的。多二啊，不过，如果是很好的兄弟，遇到什么开心或者难过的事情，还是应该陪着开心或者难过的，省得这个傻逼一个人喝闷酒做傻事。</p><p>还有啊，明年公司可能准备出国游，估计也就去最便宜的泰国。回去还得打听能不能办护照。否则过完年之后，还得来回跑。多烦啊。说到来回跑，我就觉得自己不懂事。因为不想麻烦，所以一年都没回家。其实我离家也不是很远。从北京动车7个小时，到长春，再从长春2.5个小时到松原，再转车一个多小时回家。加起来也就十个小时左右。但是就是不愿意动。总觉得麻烦。而且回家呆两天就开始烦。哎。。。矛盾的人啊</p><p>我还在等这个月的工资。但是貌似今天发不了了。哎，过年也不让我们更开心一点的回家。</p><p>啊，还有，我其实挺想不通一些人的。手机明明好好的，而且貌似还很新，而且还是iphone4，一看5出来了，马上就要换。。。是不是我的消费观上不去啊？是不是我自己有问题啊，然后才看别人有问题。你说好好一个手机你不用，非得追那种实际上没有什么差别的手机。手机这东西不就是一个交流工具么？发个短息，接个电话。想玩游戏，你买个psp就可以了。那么多钱，吃点好吃的，买点好用的衣服，干什么不好。哎，可能是我思想太落伍了吧。真的想不通他们的想法。</p><p>哎，刚刚程序又死了，楼下的问我动没动服务器，让我看看怎么回事。看了一下，又他妈报空指针异常。一个过滤器你都报空指针异常。而且是服务器，让我完全不知道是什么情况引起的错误。让我怎么排查？在本地跑好好的，弄上服务器，做个负载均衡，就妈各种问题。气死你大爷了。哎，淡定淡定，又开始骂人了，也难怪我总是改不了这个毛病，这个职业，只能通过这种方式来发泄愤怒了。苦逼的程序员啊。</p><p>望望外面，又是浓雾，北京啊北京，你这不是坑爹么？连着一周浓雾，刚刚被风刮走两天，马上就又回来了。pm2.5啊，不宅在家里都不行。雾蒙蒙的北京，也不知道北京是从什么时候空气开始这么差的，也想不通为什么那么多人拼死了想留在这里。这个城市多无趣啊。灯红酒绿的，多没意思啊。还不如老婆孩子热炕头，外加几个兄弟，打打麻将，唱唱歌那。不过在北京长大的孩子应该不会这么想吧。毕竟这是他们的家啊。不论什么样子都是他们的家啊</p><p>来国信一年多了吧。我想我在这里待不上两年吧。因为如果真的待三年，我可能就废掉了。所以，我才每天下班回家，都看看android，上班的时间看看php，学东西，很少把那时间用来聊天。计算机这个东西，每天都在更新。只能不停地学，才能不停地进步。这里就我一个程序员，也没有人可以讨论技术。所以我觉得，我是在闭门造车，但是目前还有一个很好的机会。就是接触服务器。我可以玩真实的服务器，等玩的差不多了，就是时候换个地方了。因为这里的工资确实不高，虽然待遇比以前的公司强很多。但是工资也就算是个小中等的水平。我努力，所以，我就可以要更好的，更高的待遇。否则，我为什么努力啊？公司跟员工的关系，就是剥削与被剥削，既然在哪里都是被剥削，我为什么不找一个可以给我更多的公司呢？无论再人性的公司，都是这样的。别跟你老板谈什么感情，那是骗人的。在这场利益关系里，你永远是弱势。他和你称兄道弟，不过因为你还有利益可图。否则，就送你一个字：哥屋恩……所以啊，别相信老板的空口承诺，那都没用，你把钱打进我的银行，那才是最重要的。</p><p>好了，就写这么多吧。上班一个多小时，就在这里写这个。 因为实在是看不下去了，哈哈，晚上我就踏上回家的列车喽~~</p><p>最后，也不知道用什么来做这篇日志的背景音乐。</p><p><img src="http://s.xnimg.cn/imgpro/editor/music-box.gif" thumbnail="http://music.store.renren.com/newalbum/n231/b3694867-905b-4934-a716-446fb34f0d8e.png"></p></label></p>
 ]]></content>
       <categories>
         <category>五味杂陈</category>
@@ -4699,7 +4699,7 @@
   <entry>
     <title>有点乱，总结一下，2013计划</title>
     <url>/2012/12/18/blogs/better/plan/2013%E8%AE%A1%E5%88%92/</url>
-    <content><![CDATA[<p><label><p>我是一个有些规律又有些随性的人。</p><p>我喜欢计划，同样也不喜欢自己的计划被打乱。</p><p>我知道计划不如变化快，但是还是喜欢有些计划的活着，即使世界算不上美丽，但至少也不是那么让我生厌。</p><p>事情是这样发生的。在我还在看教学视频的时候，翔颖姐把我叫到会议室，说跟我说些事。</p><p>然后就来了重点：因为工作任务不是很忙，所以公司想节约成本，用不了两个搞技术的，也就是留一个，说是看我平时表现很好，每天第一个到公司。加上性格还不错，所以决定留我。</p><p>因为不太喜欢别人给戴帽子，所以，没什么在意她说的。因为我自己知道，自己怎么样，知道自己哪里做的不好，哪里做的相对好一点。不过至于他说的公司节约成本应该是随便编的借口。公司用不了两个技术人员的原因，在我看来，是文文打算跳槽了。比我的计划还早，我本来是打算明年五月底再跳槽的，原因是想五月份参加一个证书考试。而在这相对轻松的工作中，我可以抽出很多时间来看考试内容。</p><p>他走了之后，唯一的好处就是工资又涨了几百块钱。但是坏处更多，他那部分的工作都得放在我肩上，这坑爹的破项目还得继续跑着。跑着就会出错，现在就只能剩我一个人去调试了。压力还是有点。</p><p>其实我唯一担心的，是会不会影响我明年跳槽的计划。如果公司只有我一个技术人员，他还会不会让我稳稳当当的走掉。可能现在想的也是多余的吧。</p><p>本来没想这么早写今年的总结，不过，今天发生的事情，与明年可能有些关联，既然说到明年，就顺带吧今年的计划总结一下。</p><p>回头去看了年初写的计划：第一：自私一点，多运动。第二：给父母攒点钱。第三：找个媳妇。第四：画画。</p><p>第一点：运动不是太多。之前天气不冷的时候，每周五都跟着公司的人去打羽毛球。所以第一点还算是完成了吧。</p><p>第二点：如果一月份的工资在年前发，那么回家的时候给家的钱能攒到3w了。也算是合格了吧</p><p>第三点：女朋友的话，还在等她给我的回复。看看明年她的安排，希望她会如期而至。</p><p>第四点：画画：（有了这么一副自己还算是认可的作品，相对其他来说，个人还是比较喜欢这个的）</p><p><img src="http://fmn.rrimg.com/fmn065/20121218/1730/large_mueP_6170000002e71191.jpg" thumbnail="http://fmn.rrimg.com/fmn065/20121218/1730/main_mueP_6170000002e71191.jpg"></p><p>总体来说还是不错的。一步一步走吧，急不来。</p><p>至于2013年的计划，大概想到如下几条：</p><p>以下计划都要基于身体健康，多运动为基础</p><p>第一条：考个证书（比起考研应该容易点）</p><p>第二条：给张月买个苹果或者其他高端一点的手机或者电脑（答应很久了，第一年给家了，第二年就可以给你攒点了）</p><p>第三条：跳个公司（这点应该是比较重要的，关系到以后的计划）</p><p>第四条：三亚&#x2F;泰山&#x2F;丽江其中之一去旅行（和她一起，以后每年都要去中国的一个地方，去三亚和丽江的话，就必须跳槽了，现在的资金情况，如果不跳会很吃力）</p><p>第五条：依然是我钟爱的画画，希望可以设计出自己的原创作品（可以是小漫画，或者是插画人物都可以）</p><p>想到的就这么多吧。</p><p>最后的话，欢快一点吧，来首甩葱歌</p><p><img src="http://s.xnimg.cn/imgpro/editor/music-box.gif" thumbnail="http://music.store.renren.com/newalbum/n113/bde97772-c237-4d3b-b8cd-e72f444eecc9.jpg"></p></label></p>
+    <content><![CDATA[<p><label><p>我是一个有些规律又有些随性的人。</p><p>我喜欢计划，同样也不喜欢自己的计划被打乱。</p><p>我知道计划不如变化快，但是还是喜欢有些计划的活着，即使世界算不上美丽，但至少也不是那么让我生厌。</p><p>事情是这样发生的。在我还在看教学视频的时候，翔颖姐把我叫到会议室，说跟我说些事。</p><p>然后就来了重点：因为工作任务不是很忙，所以公司想节约成本，用不了两个搞技术的，也就是留一个，说是看我平时表现很好，每天第一个到公司。加上性格还不错，所以决定留我。</p><p>因为不太喜欢别人给戴帽子，所以，没什么在意她说的。因为我自己知道，自己怎么样，知道自己哪里做的不好，哪里做的相对好一点。不过至于他说的公司节约成本应该是随便编的借口。公司用不了两个技术人员的原因，在我看来，是文文打算跳槽了。比我的计划还早，我本来是打算明年五月底再跳槽的，原因是想五月份参加一个证书考试。而在这相对轻松的工作中，我可以抽出很多时间来看考试内容。</p><p>他走了之后，唯一的好处就是工资又涨了几百块钱。但是坏处更多，他那部分的工作都得放在我肩上，这坑爹的破项目还得继续跑着。跑着就会出错，现在就只能剩我一个人去调试了。压力还是有点。</p><p>其实我唯一担心的，是会不会影响我明年跳槽的计划。如果公司只有我一个技术人员，他还会不会让我稳稳当当的走掉。可能现在想的也是多余的吧。</p><p>本来没想这么早写今年的总结，不过，今天发生的事情，与明年可能有些关联，既然说到明年，就顺带吧今年的计划总结一下。</p><p>回头去看了年初写的计划：第一：自私一点，多运动。第二：给父母攒点钱。第三：找个媳妇。第四：画画。</p><p>第一点：运动不是太多。之前天气不冷的时候，每周五都跟着公司的人去打羽毛球。所以第一点还算是完成了吧。</p><p>第二点：如果一月份的工资在年前发，那么回家的时候给家的钱能攒到3w了。也算是合格了吧</p><p>第三点：女朋友的话，还在等她给我的回复。看看明年她的安排，希望她会如期而至。</p><p>第四点：画画：（有了这么一副自己还算是认可的作品，相对其他来说，个人还是比较喜欢这个的）</p><p><img src="http://fmn.rrimg.com/fmn065/20121218/1730/large_mueP_6170000002e71191.png" thumbnail="http://fmn.rrimg.com/fmn065/20121218/1730/main_mueP_6170000002e71191.png"></p><p>总体来说还是不错的。一步一步走吧，急不来。</p><p>至于2013年的计划，大概想到如下几条：</p><p>以下计划都要基于身体健康，多运动为基础</p><p>第一条：考个证书（比起考研应该容易点）</p><p>第二条：给张月买个苹果或者其他高端一点的手机或者电脑（答应很久了，第一年给家了，第二年就可以给你攒点了）</p><p>第三条：跳个公司（这点应该是比较重要的，关系到以后的计划）</p><p>第四条：三亚&#x2F;泰山&#x2F;丽江其中之一去旅行（和她一起，以后每年都要去中国的一个地方，去三亚和丽江的话，就必须跳槽了，现在的资金情况，如果不跳会很吃力）</p><p>第五条：依然是我钟爱的画画，希望可以设计出自己的原创作品（可以是小漫画，或者是插画人物都可以）</p><p>想到的就这么多吧。</p><p>最后的话，欢快一点吧，来首甩葱歌</p><p><img src="http://s.xnimg.cn/imgpro/editor/music-box.gif" thumbnail="http://music.store.renren.com/newalbum/n113/bde97772-c237-4d3b-b8cd-e72f444eecc9.png"></p></label></p>
 ]]></content>
       <categories>
         <category>投资自己</category>
