@@ -166,21 +166,21 @@
 <h4 id="注册Cloudflare"><a href="#注册Cloudflare" class="headerlink" title="注册Cloudflare"></a>注册Cloudflare</h4><blockquote>
 <p>打开网络：<a href="https://www.cloudflare.com/">https://www.cloudflare.com/</a> 进行注册。</p>
 <p>注册完成后可以点击websites菜单，填写您注册的域名。</p>
-<p><img src="https://files.sid2656.space/tech/createBlogs/website.png" alt="个人博客" title="Cloudflare 设置 websites"></p>
+<p><img src="https://files.sid2656.space/tech/createBlogs/website.jpg" alt="个人博客" title="Cloudflare 设置 websites"></p>
 <p>这里我们填写自注册的域名后选择默认的模式：</p>
-<p><img src="https://files.sid2656.space/tech/createBlogs/website1.png" alt="个人博客" title="Cloudflare 设置 websites"></p>
+<p><img src="https://files.sid2656.space/tech/createBlogs/website1.jpg" alt="个人博客" title="Cloudflare 设置 websites"></p>
 <p>至于plan计划，我们选择免费版本的：</p>
-<p><img src="https://files.sid2656.space/tech/createBlogs/website2.png" alt="个人博客" title="Cloudflare 设置 websites"></p>
+<p><img src="https://files.sid2656.space/tech/createBlogs/website2.jpg" alt="个人博客" title="Cloudflare 设置 websites"></p>
 <p>接下来就到了我们要进行DNS解析的处理了，这里我们按照图下展示所做，将我们的域名通过CNAME的类型方式直接跳转到github的二级域名。</p>
-<p><img src="https://files.sid2656.space/tech/createBlogs/website3.png" alt="个人博客" title="Cloudflare 设置 websites"></p>
+<p><img src="https://files.sid2656.space/tech/createBlogs/website3.jpg" alt="个人博客" title="Cloudflare 设置 websites"></p>
 <p>并且我们需要到买到域名的域名厂商进行域名的DNS解析处理：</p>
 <p>以我个人为例，我使用的阿里云服务，所以按照提示从Cloudflare网站的DNS中的records菜单，找到了他们提供的DNS解析网站的Nameservers服务，并将其配置到域名厂商的管理配置中；</p>
-<p><img src="https://files.sid2656.space/tech/createBlogs/website6.png" alt="个人博客" title="Cloudflare 设置 websites"></p>
-<p>这里我们可以免费开启https服务，顺便说一句，如果是国内的话，需要额外申请—_—!<br><img src="https://files.sid2656.space/tech/createBlogs/website4.png" alt="个人博客" title="Cloudflare 设置 websites"></p>
+<p><img src="https://files.sid2656.space/tech/createBlogs/website6.jpg" alt="个人博客" title="Cloudflare 设置 websites"></p>
+<p>这里我们可以免费开启https服务，顺便说一句，如果是国内的话，需要额外申请—_—!<br><img src="https://files.sid2656.space/tech/createBlogs/website4.jpg" alt="个人博客" title="Cloudflare 设置 websites"></p>
 <p>理论上来说，按照上面的配置我们的网站便可以通过浏览器在国内直接访问了，但是我这里预到了一个问题，就是重定向次数过多导致网站无法打开。</p>
-<p>这是因为Cloudflare本身https和http设置会导致网站回源处理时反复在这两个协议直接横条，导致解析处理重定向次数太多，这时候我们需要设置CDN的会员方式固定位HTTPS的方式，即在SSL中选择Full(strict)，配置如图：<br><img src="https://files.sid2656.space/tech/createBlogs/website5.png" alt="个人博客" title="Cloudflare 设置 websites"></p>
+<p>这是因为Cloudflare本身https和http设置会导致网站回源处理时反复在这两个协议直接横条，导致解析处理重定向次数太多，这时候我们需要设置CDN的会员方式固定位HTTPS的方式，即在SSL中选择Full(strict)，配置如图：<br><img src="https://files.sid2656.space/tech/createBlogs/website5.jpg" alt="个人博客" title="Cloudflare 设置 websites"></p>
 <p>至此，即便在国内访问域名，也可以正常展示啦！！</p>
-<p><img src="https://files.sid2656.space/tech/createBlogs/bloghome.png" alt="个人博客" title="github domain"></p>
+<p><img src="https://files.sid2656.space/tech/createBlogs/bloghome.jpg" alt="个人博客" title="github domain"></p>
 </blockquote>
 ]]></content>
       <categories>
@@ -211,7 +211,7 @@
 </blockquote>
 <p>具体的关联代码如下：git clone <a href="https://github.com/user/xxxx.git">https://github.com/user/xxxx.git</a> localDir</p>
 <p>我们可以看一下hexo项目本身会产生变动的几个文件夹：</p>
-<p><img src="http://imgs.sid2656.space/createBlogs/hexoDir.png" alt="hexo项目目录" title="hexo项目目录 hexo"></p>
+<p><img src="http://files.sid2656.space/tech/createBlogs/hexoDir.jpg" alt="hexo项目目录" title="hexo项目目录 hexo"></p>
 <p>source：这个是你写文章的源码目录，后续的所有文章都在这里添加；</p>
 <p>public：这个是服务启动后生成的静态页面&amp;资源文件的目录；这个也就是后续需要部署到github的pages服务中的全部文件；</p>
 <p>themes：这个是hexo你依赖的主题模板，这个可以在hexo社区中找你自己喜欢的模板；</p>
@@ -240,9 +240,9 @@
 </ol>
 </blockquote>
 <p>具体的操作效果如下：</p>
-<p><img src="http://imgs.sid2656.space/createBlogs/git-push.png" alt="hexo项目目录" title="hexo项目目录 hexo"></p>
+<p><img src="http://files.sid2656.space/tech/createBlogs/git-push.jpg" alt="hexo项目目录" title="hexo项目目录 hexo"></p>
 <p>选中三个文件夹，一起进行git提交：</p>
-<p><img src="http://imgs.sid2656.space/createBlogs/git-push2.png" alt="hexo项目目录" title="hexo项目目录 hexo"></p>
+<p><img src="http://files.sid2656.space/tech/createBlogs/git-push2.jpg" alt="hexo项目目录" title="hexo项目目录 hexo"></p>
 <p>这里我们选择commit and push；</p>
 <p>PS：public中有生成的文件需要进行add操作！</p>
 <p>至此，多仓库的关联和一键提交，也完成啦！</p>
@@ -506,10 +506,10 @@
 </blockquote>
 <p>这样我们便完成了静态代码的生成，并将本地目录与github的项目进行了关系绑定。<br>接下来我们进入到  {你的根目录}&#x2F;public  文件夹中，执行如下的命令：</p>
 <blockquote>
-<p>git pull </p>
+<p>git pull</p>
 </blockquote>
 <blockquote>
-<p>git add . </p>
+<p>git add .</p>
 </blockquote>
 <blockquote>
 <p>git commit -m “init blog”</p>
@@ -523,12 +523,12 @@
 </blockquote>
 <h3 id="3-仓库的pages服务设置："><a href="#3-仓库的pages服务设置：" class="headerlink" title="3.仓库的pages服务设置："></a>3.仓库的pages服务设置：</h3><blockquote>
 <p>在github网站打开你的仓库页面，并点击setting的页签</p>
-<p><img src="https://files.sid2656.space/tech/createBlogs/gitpages.png" alt="个人博客" title="github pages"></p>
+<p><img src="https://files.sid2656.space/tech/createBlogs/gitpages.jpg" alt="个人博客" title="github pages"></p>
 <p>在setting页签下面找到pages服务，再沿着右侧的提示，找到分支，选定默认分支master；然后点击保存处理。</p>
 <p>设置后会提示如下的信息，您可以自定义域名，或者使用默认的域名。这里我们先使用github提供的域名。</p>
-<p><img src="https://files.sid2656.space/tech/createBlogs/domain.png" alt="个人博客" title="github domain"></p>
+<p><img src="https://files.sid2656.space/tech/createBlogs/domain.jpg" alt="个人博客" title="github domain"></p>
 <p>在完成步骤2种的代码提交后10分钟，我们访问步骤3种，给到我们的域名看看效果：</p>
-<p><img src="https://files.sid2656.space/tech/createBlogs/bloghome.png" alt="个人博客" title="github domain"></p>
+<p><img src="https://files.sid2656.space/tech/createBlogs/bloghome.jpg" alt="个人博客" title="github domain"></p>
 <p>至此，我们的博客基础配置全部完成！</p>
 </blockquote>
 <h3 id="4-自定义域名（备案）："><a href="#4-自定义域名（备案）：" class="headerlink" title="4.自定义域名（备案）："></a>4.自定义域名（备案）：</h3><blockquote>
@@ -575,7 +575,7 @@
 <p>通过挑选好的自定义的模板来完成自己博客的本地化运行，并理解hexo的相关配置信息和文件结构；为后续的博客精进化之路打下一定的基础。</p>
 </blockquote>
 <h2 id="博客环境："><a href="#博客环境：" class="headerlink" title="博客环境："></a>博客环境：</h2><h3 id="1-初始hexo文件目录："><a href="#1-初始hexo文件目录：" class="headerlink" title="1.初始hexo文件目录："></a>1.初始hexo文件目录：</h3><blockquote>
-<p><img src="http://imgs.sid2656.space/createBlogs/hexoDir.png" alt="个人博客" title="初始化 hexo"></p>
+<p><img src="http://files.sid2656.space/tech/createBlogs/hexoDir.jpg" alt="个人博客" title="初始化 hexo"></p>
 <p>node_modules：是你初始化博客需要的一些基础依赖的三方模块。这里不需要你关注和改动；</p>
 <p>scaffolds：应该是hexo的模板类文件；这里也不需要你关注和改动；</p>
 <p>source：这个是你写文章的源码目录，后续的所有文章都在这里添加；</p>
@@ -601,7 +601,7 @@
 <h3 id="3-设置博客的基础配置："><a href="#3-设置博客的基础配置：" class="headerlink" title="3.设置博客的基础配置："></a>3.设置博客的基础配置：</h3><blockquote>
 <p>在终端或者bash窗口中，进入到你的博客系统文件夹；就是1中图片展示的文件目录；</p>
 <p>打开基础配置文件：_config.yml（这里是系统配置）</p>
-<p><img src="http://imgs.sid2656.space/createBlogs/base_config.png" alt="个人博客" title="启动 ayer"></p>
+<p><img src="http://files.sid2656.space/tech/createBlogs/base_config.jpg" alt="个人博客" title="启动 ayer"></p>
 </blockquote>
 <details>
 <summary>展开详情——修改如下配置：</summary>
@@ -617,12 +617,12 @@
 <blockquote>
 <p>hexo s</p>
 </blockquote>
-<p><img src="http://imgs.sid2656.space/createBlogs/hexo-s.png" alt="个人博客" title="启动 ayer"></p>
+<p><img src="http://files.sid2656.space/tech/createBlogs/hexo-s.jpg" alt="个人博客" title="启动 ayer"></p>
 <p>能提示ayer主题，并打印出：<a href="http://localhost:4000/">http://localhost:4000</a> ，即表明hexo模板安装成功；</p>
 </blockquote>
 <h3 id="4-访问基础模板网页："><a href="#4-访问基础模板网页：" class="headerlink" title="4.访问基础模板网页："></a>4.访问基础模板网页：</h3><blockquote>
 <p>在浏览器中执行：<a href="http://localhost:4000/">http://localhost:4000</a> ，我们可以得到如下网页：</p>
-<p><img src="http://imgs.sid2656.space/createBlogs/home_v.gif" alt="个人博客" title="启动 ayer"></p>
+<p><img src="http://files.sid2656.space/tech/createBlogs/home_v.gif" alt="个人博客" title="启动 ayer"></p>
 <p>可以看到基本上的博客框架已经出来了，里面的页面title，网页描述，关键字这些我都没有调整；仅仅是修改了theme对应的主题；</p>
 </blockquote>
 <h3 id="5-配置分类和标签："><a href="#5-配置分类和标签：" class="headerlink" title="5.配置分类和标签："></a>5.配置分类和标签：</h3><blockquote>
@@ -632,7 +632,7 @@
 <blockquote>
 <p>hexo new page categories</p>
 </blockquote>
-<p><img src="http://imgs.sid2656.space/createBlogs/cate.png" alt="个人博客" title="启动 ayer"></p>
+<p><img src="http://files.sid2656.space/tech/createBlogs/cate.jpg" alt="个人博客" title="启动 ayer"></p>
 <p>接下来我们打开categories文件夹下面的index.md，并修改其文件内容如下：</p>
 </blockquote>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: 分类列表</span><br><span class="line">type: categories</span><br><span class="line">layout: &quot;categories&quot;</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
@@ -651,7 +651,7 @@
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: Hello World</span><br><span class="line">tags:</span><br><span class="line">  - 五味杂陈</span><br><span class="line">categories:</span><br><span class="line">  - 零基础</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>这样，我们再次打开主页，点击分类和标签，便可以看到数据都正常了；</p>
-<p><img src="http://imgs.sid2656.space/createBlogs/home_v2.gif" alt="个人博客" title="启动 ayer"></p>
+<p><img src="http://files.sid2656.space/tech/createBlogs/home_v2.gif" alt="个人博客" title="启动 ayer"></p>
 </blockquote>
 <h3 id="6-模板细节调整："><a href="#6-模板细节调整：" class="headerlink" title="6.模板细节调整："></a>6.模板细节调整：</h3><h4 id="6-1模板配置文件调整："><a href="#6-1模板配置文件调整：" class="headerlink" title="6.1模板配置文件调整："></a>6.1模板配置文件调整：</h4><blockquote>
 <p>模板的基础配置我们可以根据自己的诉求进行调整，具体调整的位置路径：</p>
@@ -662,13 +662,13 @@
 <p>这个每个人按照你自己的博客诉求进行调整即可。</p>
 </blockquote>
 <h4 id="6-2日志内容填写："><a href="#6-2日志内容填写：" class="headerlink" title="6.2日志内容填写："></a>6.2日志内容填写：</h4><blockquote>
-<p>接下来我们就可以按照自己的意愿去分类填写自己的个人博客内容了；<br><img src="https://files.sid2656.space/tech/createBlogs/post.png" alt="个人博客" title="install hexo"></p>
+<p>接下来我们就可以按照自己的意愿去分类填写自己的个人博客内容了；<br><img src="https://files.sid2656.space/tech/createBlogs/post.jpg" alt="个人博客" title="install hexo"></p>
 <p>如上图所示，你创建的md文档只有都放在_post文件夹中，这里可以安装自己的喜好设置不同的文件件，方便文章的管理和区分</p>
 <p>我们在_post下新建md文件，并设置好上面我们提到抬头分类，比如本章的抬头分类我设置如下：</p>
 </blockquote>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: 零基础-搭建个人博客3-博客环境</span><br><span class="line">date: 2015-01-14 23:13:14</span><br><span class="line">tags:</span><br><span class="line">  - 谋生手段</span><br><span class="line">  - hexo</span><br><span class="line">  - 零基础</span><br><span class="line">categories:</span><br><span class="line">  - 谋生手段</span><br><span class="line">  - [零基础,搭建个人博客]</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
 <blockquote>
-<p>其中[零基础,搭建个人博客]；这个表示的是二级分类；<br>展示效果如下：<br><img src="https://files.sid2656.space/tech/createBlogs/cate-2.png" alt="个人博客" title="启动 hexo"></p>
+<p>其中[零基础,搭建个人博客]；这个表示的是二级分类；<br>展示效果如下：<br><img src="https://files.sid2656.space/tech/createBlogs/cate-2.jpg" alt="个人博客" title="启动 hexo"></p>
 </blockquote>
 ]]></content>
       <categories>
@@ -692,7 +692,7 @@
 <p><a href="https://nodejs.org/zh-cn">https://nodejs.org/zh-cn</a></p>
 <p>点击上述网站，选择适合自己系统的nodejs安装包，一路默认安装配置。<br>安装完成后在终端执行如下命令：</p>
 <blockquote>
-<p>npm -v </p>
+<p>npm -v</p>
 </blockquote>
 <p>能正常展示版本号，即表明nodejs安装成功；</p>
 </blockquote>
@@ -727,12 +727,12 @@
 <p>打开终端或者bash窗口，进入到计划您防止代码的文件夹。</p>
 <p>然后，执行如下命令进行博客系统的初始化：</p>
 <blockquote>
-<p>hexo init test(这个可以自定义) </p>
+<p>hexo init test(这个可以自定义)</p>
 </blockquote>
 <p>test 为创建的目录，你可以自己定义(您的名字或者昵称都可以)</p>
 <p>这样便可以直接启动初始化的博客，启动后控制台输出相关信息，我们发现存在问题：</p>
-<p><img src="http://imgs.sid2656.space/createBlogs/inittest.png" alt="个人博客" title="初始化 hexo"></p>
-<p>根据提示，我们做出如下调整后，再次启动；<br><img src="https://files.sid2656.space/tech/createBlogs/install.png" alt="个人博客" title="install hexo"></p>
+<p><img src="http://files.sid2656.space/tech/createBlogs/inittest.jpg" alt="个人博客" title="初始化 hexo"></p>
+<p>根据提示，我们做出如下调整后，再次启动；<br><img src="https://files.sid2656.space/tech/createBlogs/install.jpg" alt="个人博客" title="install hexo"></p>
 </blockquote>
 <h3 id="6-初次访问系统："><a href="#6-初次访问系统：" class="headerlink" title="6.初次访问系统："></a>6.初次访问系统：</h3><blockquote>
 <p>通过步骤5我们已经完成了博客的初始化工作；</p>
@@ -740,8 +740,8 @@
 <blockquote>
 <p>hexo s</p>
 </blockquote>
-<p>我们看到本次启动成功，并提示了博客的访问路径：<br><img src="https://files.sid2656.space/tech/createBlogs/s-test.png" alt="个人博客" title="启动 hexo"></p>
-<p>我们将 <a href="http://localhost:4000/">http://localhost:4000/</a> 复制粘贴到浏览器，敲下回车<br>最终展示效果如下：<br><img src="https://files.sid2656.space/tech/createBlogs/hello.png" alt="个人博客" title="启动 hexo"></p>
+<p>我们看到本次启动成功，并提示了博客的访问路径：<br><img src="https://files.sid2656.space/tech/createBlogs/s-test.jpg" alt="个人博客" title="启动 hexo"></p>
+<p>我们将 <a href="http://localhost:4000/">http://localhost:4000/</a> 复制粘贴到浏览器，敲下回车<br>最终展示效果如下：<br><img src="https://files.sid2656.space/tech/createBlogs/hello.jpg" alt="个人博客" title="启动 hexo"></p>
 <p>至此，我们的博客初始化环境工作全部完成！</p>
 </blockquote>
 ]]></content>
